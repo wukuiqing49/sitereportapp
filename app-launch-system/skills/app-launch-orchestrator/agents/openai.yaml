@@ -1,0 +1,4 @@
+interface:
+  display_name: "App Launch Orchestrator"
+  short_description: "Coordinate Android launch workflows"
+  default_prompt: "Use $app-launch-orchestrator to plan and run the Android app launch package workflow."

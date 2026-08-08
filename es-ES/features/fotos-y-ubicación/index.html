@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es-ES" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fotos y ubicación - SiteReport</title>
+  <meta name="description" content="Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles.">
+  <meta name="theme-color" content="#2D78F0">
+  
+  
+  <link rel="manifest" href="../../../site.webmanifest">
+  <link rel="stylesheet" href="../../../assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Fotos y ubicación","description":"Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles.","mainEntity":{"@id":"#photo-evidence-app"}},{"@type":"SoftwareApplication","@id":"#photo-evidence-app","name":"SiteReport","operatingSystem":"Android","featureList":["Capturar una o varias fotos","Asociarlas a un registro","Guardar ubicación y hora cuando estén disponibles"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Las fotos se vinculan a un punto?","acceptedAnswer":{"@type":"Answer","text":"Sí, el flujo vincula la evidencia al registro y al punto actuales."}}]},{"@type":"Organization","@id":"https://heyehoi.cn/#organization","name":"上海促动科技有限公司","alternateName":"AndroidManTou","url":"https://heyehoi.cn/","email":"wukuiqing@gmail.com","address":{"@type":"PostalAddress","streetAddress":"金山区枫泾镇环东一路65弄11号（枫泾经济小区）","addressLocality":"金山区","addressRegion":"上海市","postalCode":"201501","addressCountry":"CN"}}]}</script>
+  <script id="locale-routes" type="application/json">{"sourceLocale":"en-US","currentLocale":"es-ES","autoRedirect":false,"rememberSelection":true,"storageKey":"com.wkq.site:locale","aliases":{"en":"en-US","es":"es-ES","pt":"pt-BR","fr":"fr-FR","de":"de-DE","ja":"ja-JP","ko":"ko-KR"},"locales":[{"code":"en-US","url":"../../../features/photo-evidence/"},{"code":"zh-CN","url":"../../../zh-CN/features/照片证据与位置记录/"},{"code":"es-ES","url":"./"},{"code":"pt-BR","url":"../../../pt-BR/features/fotos-e-localização/"},{"code":"fr-FR","url":"../../../fr-FR/features/photos-et-localisation/"},{"code":"de-DE","url":"../../../de-DE/features/fotos-und-standortdaten/"},{"code":"ja-JP","url":"../../../ja-JP/features/写真と位置情報/"},{"code":"ko-KR","url":"../../../ko-KR/features/사진과-위치-기록/"},{"code":"ar","url":"../../../ar/features/الصور-وسجلات-الموقع/"}]}</script>
+  <script src="../../../assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">Ir al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="../../" aria-label="SiteReport"><img src="../../../assets/icon.png" alt="" width="40" height="40"><span>SiteReport</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="../../">Inicio</a>
+      <a href="../../../blog/es-ES/">Blog</a>
+      <a href="../../about.html">Empresa</a>
+      <a href="../../support.html">Soporte</a>
+      <label class="language-picker"><span class="visually-hidden">Idioma</span><select data-locale-switcher aria-label="Idioma"><option value="en-US">English</option><option value="zh-CN">简体中文</option><option value="es-ES">Español</option><option value="pt-BR">Português (Brasil)</option><option value="fr-FR">Français</option><option value="de-DE">Deutsch</option><option value="ja-JP">日本語</option><option value="ko-KR">한국어</option><option value="ar">العربية</option></select></label>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Inicio</a><span aria-hidden="true">/</span><a href="../../#features">Funciones</a></nav>
+        <p class="category">Verified feature</p>
+        <h1>Fotos y ubicación</h1>
+        <p class="tagline">Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles.</p>
+        <p class="feature-problem"><strong>The problem it solves:</strong> Una foto sin contexto de inspección es difícil de usar como evidencia después.</p>
+      </header>
+      <figure class="feature-media"><img src="../../../assets/screenshots/04-04-works-offline.png" alt="Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles." loading="eager"><figcaption>Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles.</figcaption></figure>
+      <div class="feature-content-grid">
+        <section><h2>What you can do</h2><ul><li>Capturar una o varias fotos</li><li>Asociarlas a un registro</li><li>Guardar ubicación y hora cuando estén disponibles</li></ul></section>
+        <section><h2>Available options</h2><ul><li>Origen, punto y anotación visible</li></ul></section>
+        <section><h2>Supported inputs</h2><ul><li>Fotos, notas y permiso de ubicación</li></ul></section>
+        <section><h2>Outputs</h2><ul><li>Evidencia fotográfica organizada</li></ul></section>
+      </div>
+      <section class="feature-workflow"><h2>Workflow</h2><ol><li>Abre un punto</li><li>Captura o elige la foto</li><li>Revísala y continúa</li></ol></section>
+      <section class="feature-limitations"><h2>Limitations</h2><ul><li>Los datos de ubicación dependen del dispositivo y los permisos.</li></ul></section>
+      <section class="feature-faq"><h2>Common questions</h2><details><summary>¿Las fotos se vinculan a un punto?</summary><p>Sí, el flujo vincula la evidencia al registro y al punto actuales.</p></details></section>
+      <section class="feature-evidence"><h2>Project evidence</h2><ul class="evidence-list"><li><code>SiteReport.md</code></li><li><code>core/core_camera/src/main/res/values/strings.xml</code></li><li><code>feature/feature_app/src/main/java/com/wkq/feature/app/photo/PhotoEvidenceWriter.kt</code></li></ul></section>
+      <a class="primary-action" href="../../../blog/es-ES/fotos-y-ubicación/">Read the related guide</a>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2026 上海促动科技有限公司. Todos los derechos reservados.</p>
+    <nav aria-label="Navegación del pie">
+      <a href="../../privacy.html">Privacidad</a>
+      <a href="../../about.html">Empresa</a>
+      <a href="../../support.html">Soporte</a>
+    </nav>
+  </footer>
+</body>
+</html>

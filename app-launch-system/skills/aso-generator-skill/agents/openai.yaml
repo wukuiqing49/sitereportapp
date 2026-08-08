@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASO Generator"
+  short_description: "Create Google Play listing content"
+  default_prompt: "Use $aso-generator-skill to generate localized Google Play listing copy from app-info.yaml."

@@ -1,0 +1,107 @@
+schemaVersion: "1.0"
+sourceProject: ""
+analyzedAt: ""
+analysis:
+  status: "draft"
+  analyzerVersion: "1.0"
+  selectedModule: ""
+  selectedVariant: ""
+  validatedAt: ""
+  errors: []
+  warnings: []
+
+name: ""
+packageName: ""
+version:
+  name: ""
+  code: ""
+  minSdk: null
+  targetSdk: null
+developer:
+  name: ""
+  email: ""
+
+category: ""
+description:
+  short: ""
+  full: ""
+  valueProposition: ""
+targetUsers: []
+useCases: []
+
+features:
+  - id: ""
+    name: ""
+    description: ""
+    evidence: []
+    confidence: "unknown"
+    details:
+      problem: ""
+      capabilities: []
+      supportedInputs: []
+      supportedOutputs: []
+      options: []
+      steps: []
+      limitations: []
+      searchIntents: []
+      faq:
+        - question: ""
+          answer: ""
+    blog:
+      template: "standard-article"
+technicalHighlights: []
+
+keywords:
+  primary: []
+  secondary: []
+  branded: []
+  excluded: []
+
+brand:
+  productName: ""
+  tagline: ""
+  voice: []
+  colors: []
+  logo: ""
+
+assets:
+  root: "app-launch-system/config/assets"
+  icon: ""
+  coverImage: ""
+  socialImage: ""
+  screenshots: []
+
+languages:
+  source: "en-US"
+  targets: []
+  availableInApp: []
+  routing:
+    autoDetect: true
+    rememberSelection: true
+    sourceAtRoot: true
+    aliases: {}
+
+screenshots:
+  - path: ""
+    locale: ""
+    screen: ""
+    caption: ""
+
+googlePlayUrl: ""
+websiteUrl: ""
+editorial:
+  publishedAt: ""
+  updatedAt: ""
+support:
+  email: ""
+  url: ""
+privacy:
+  policyUrl: ""
+  dataPractices: []
+
+permissions: []
+evidence:
+  - path: ""
+    supports: []
+unknowns: []
+claimsToAvoid: []

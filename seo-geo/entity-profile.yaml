@@ -1,0 +1,46 @@
+schemaVersion: '1.0'
+application:
+  name: SiteReport
+  packageName: com.wkq.site
+  category: Business
+  operatingSystem: Android
+  verifiedFeatureIds:
+  - export-and-upload
+  - field-notes-and-signatures
+  - inspection-checklists
+  - photo-evidence
+  - project-management
+  - report-generation
+organization:
+  schemaVersion: '1.0'
+  legalName: 上海促动科技有限公司
+  displayName: AndroidManTou
+  website: https://heyehoi.cn/
+  email: wukuiqing@gmail.com
+  supportEmail: wukuiqing@gmail.com
+  privacyEmail: wukuiqing@gmail.com
+  googlePlayDeveloper:
+    name: AndroidManTou
+    accountId: '7213574091137659251'
+    url: https://play.google.com/store/apps/dev?id=7213574091137659251
+    public: false
+  address:
+    streetAddress: 金山区枫泾镇环东一路65弄11号（枫泾经济小区）
+    district: 金山区
+    region: 上海市
+    postalCode: '201501'
+    countryCode: CN
+  localized:
+    en-US:
+      description: A software company focused on the design, development, and operation
+        of dependable digital products and tools.
+      countryName: China
+    zh-CN:
+      description: 一家专注于软件产品与数字工具设计、开发和运营的科技公司，致力于提供可靠、易用的数字产品。
+      countryName: 中国
+claimConstraints:
+- Google Play availability
+- Security or privacy guarantees
+- Regulatory or inspection certification
+- User counts, ratings, reviews, awards, or customer results
+- Exact pricing, lifetime purchase, or subscription claims

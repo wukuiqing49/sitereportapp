@@ -1,0 +1,27 @@
+schemaVersion: "1.0"
+product: "{{APP_NAME}}"
+sourceLocale: "{{SOURCE_LOCALE}}"
+generatedAt: "{{GENERATED_AT}}"
+status: "draft"
+goals: []
+clusters:
+  - id: "{{CLUSTER_ID}}"
+    userProblem: "{{USER_PROBLEM}}"
+    productEvidence: []
+    topics:
+      - contentId: "{{CONTENT_ID}}"
+        locale: "{{LOCALE}}"
+        template: "{{TEMPLATE_ID}}"
+        workingTitle: "{{WORKING_TITLE}}"
+        primaryIntent: "{{PRIMARY_INTENT}}"
+        funnelStage: "{{FUNNEL_STAGE}}"
+        primaryKeyword: "{{PRIMARY_KEYWORD}}"
+        targetUrl: "{{TARGET_URL}}"
+        relatedPages: []
+        visualEvidence: []
+        evidence: []
+        priorityBasis: "qualitative"
+        status: "planned"
+localization:
+  targets: []
+  reviewRequired: true

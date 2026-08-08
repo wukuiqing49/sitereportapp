@@ -1,0 +1,40 @@
+locale: "ja-JP"
+languageName: "日本語"
+direction: "ltr"
+reviewStatus: "machine-draft"
+navigation: {primaryLabel: "メインナビゲーション", footerLabel: "フッターナビゲーション", home: "ホーム", features: "機能", screenshots: "スクリーンショット", support: "サポート", privacy: "プライバシー", about: "会社情報", blog: "ブログ", language: "言語", backToApp: "アプリに戻る"}
+common: {skipToContent: "本文へ移動", googlePlayCta: "Google Play で入手", availability: "Google Play のURLは未確認です", rights: "All rights reserved.", notFoundTitle: "ページが見つかりません", notFoundCopy: "指定されたページは存在しません。", returnHome: "ホームに戻る"}
+home:
+  pageTitle: "SiteReport - 現場検査レポート"
+  metaDescription: "写真、チェックリスト、位置情報、PDF出力で現場検査を記録します。"
+  category: "現場業務"
+  tagline: "現場レポートを、必要なときに"
+  shortDescription: "現場の証拠を記録し、検査の流れを共有できるレポートにまとめます。"
+  heroScreenshotAlt: "SiteReportのプロジェクト画面"
+  heroScreenshotCaption: "プロジェクトと検査の進捗を管理"
+  featuresHeading: "主な機能"
+  featuresIntro: "現場の記録、証拠の整理、レポートの受け渡しに対応します。"
+  features:
+    project-management: {name: "検査プロジェクト", description: "現場情報、進捗、写真、レポートをまとめて管理します。"}
+    inspection-checklists: {name: "検査チェックリスト", description: "再利用できる計画とテンプレートで作業を標準化します。"}
+    photo-evidence: {name: "写真と位置情報", description: "写真を項目に関連付け、可能な場合はメモ、時刻、位置を記録します。"}
+    field-notes-and-signatures: {name: "現場メモと署名", description: "所見、推奨対応、署名情報を記録します。"}
+    report-generation: {name: "PDFレポート", description: "検査データから構造化されたレポートを作成します。"}
+    export-and-upload: {name: "出力と配信", description: "ファイルを出力し、設定したサーバーへ送信します。"}
+  screenshotsHeading: "アプリを見る"
+  screenshotsIntro: "現在のプロジェクトに含まれる実際の画面です。"
+  workflowHeading: "明確な作業フロー"
+  workflowIntro: ""
+  workflowSteps: ["プロジェクトを作成してテンプレートを選ぶ", "写真を撮影して結果を記録する", "レポートを作成して共有または配信する"]
+  closingHeading: "現場記録をわかりやすく"
+  closingCopy: "プロジェクト、証拠、レポートを一つの流れで整理します。"
+featureDetails:
+  project-management: {problem: "プロジェクト情報、写真、レポートが分散すると、現場記録を追跡しにくくなります。", capabilities: ["検査プロジェクトを作成・管理", "状態と進捗を確認", "プロジェクトの写真とレポートをまとめて保存"], supportedInputs: ["名前、場所、顧客情報、メモ"], supportedOutputs: ["進捗と履歴を含むプロジェクト記録"], options: ["プロジェクトの状態と説明"], steps: ["新しいプロジェクトを作成", "現場情報を入力", "検査を実行して進捗を確認"], limitations: ["利用できる項目はインストールされたバージョンによって異なります。"], faq: [{question: "プロジェクトにレポートを保存できますか？", answer: "プロジェクトフローには情報、進捗、写真、生成されたレポートが含まれます。"}]}
+  inspection-checklists: {problem: "訪問ごとに確認項目が異なると、繰り返し検査を比較しにくくなります。", capabilities: ["再利用できる検査計画を作成", "テンプレートと検査ポイントを選択", "未完了の検査を再開して履歴を確認"], supportedInputs: ["項目、計画名、場所、スケジュール"], supportedOutputs: ["進捗付きの繰り返し検査タスク"], options: ["テンプレート、配信、頻度、時刻"], steps: ["検査計画を作成または選択", "テンプレートと配信設定を選ぶ", "検査を実行して各ポイントを完了"], limitations: ["リマインダーは検査を自動開始しません。"], faq: [{question: "検査計画を再利用できますか？", answer: "はい、再利用できる検査計画とテンプレートに対応しています。"}]}
+  photo-evidence: {problem: "検査の文脈がない写真は、後から証拠として使いにくくなります。", capabilities: ["1枚または複数の写真を撮影", "記録に写真を関連付け", "利用できる場合は位置と撮影時刻を記録"], supportedInputs: ["写真、メモ、位置情報の権限"], supportedOutputs: ["整理された写真証拠"], options: ["写真の入力元、検査項目、表示する注釈"], steps: ["検査項目を開く", "証拠写真を撮影または選択", "写真を確認して続行"], limitations: ["位置情報は端末と権限の状態に依存します。"], faq: [{question: "写真を検査項目に関連付けられますか？", answer: "はい、現在の検査記録と項目に証拠を関連付けます。"}]}
+  field-notes-and-signatures: {problem: "所見や署名を別に記録すると、最終レポートから抜けることがあります。", capabilities: ["結果と推奨対応を記録", "署名プロフィールを管理", "メモと署名をレポートに含める"], supportedInputs: ["メモ、問題、推奨対応、署名情報"], supportedOutputs: ["承認情報を含む検査記録"], options: ["検査員、安全担当、監督者の署名情報"], steps: ["対象項目を開く", "所見を記録", "レポート前に署名情報を追加"], limitations: ["項目は選択したレポートテンプレートによって異なります。"], faq: [{question: "署名はレポートに表示されますか？", answer: "署名プロフィールに対応し、生成されたレポートファイルに書き込みます。"}]}
+  report-generation: {problem: "現場の観察を一貫したレポートにするには、手作業の整形が必要になることがあります。", capabilities: ["PDF現場レポートを生成", "結果、写真、位置、メモ、署名を含める", "生成したファイルを確認"], supportedInputs: ["プロジェクト情報、結果、写真、メモ"], supportedOutputs: ["PDFレポートと出力ファイル"], options: ["テンプレート、スタイル、形式、署名"], steps: ["検査記録を完了", "レポート設定を選択", "ファイルを生成して確認"], limitations: ["一部のスタイルはエディションや利用プランに依存します。"], faq: [{question: "レポートには何を含められますか？", answer: "プロジェクト情報、確認結果、写真、位置、時刻、メモ、署名を含められます。"}]}
+  export-and-upload: {problem: "完成したレポートは、顧客や既存のプロジェクト保管先へ共有・送信する必要があります。", capabilities: ["PDF、画像、ZIPを出力", "端末からファイルを共有", "設定したプロトコルで送信"], supportedInputs: ["生成ファイルと配信プロファイル"], supportedOutputs: ["共有可能なファイルまたは送信結果"], options: ["形式、署名、プロトコル、サーバー、パス"], steps: ["レポートとファイルを選択", "共有または配信を選択", "状態を確認またはパッケージを共有"], limitations: ["配信には設定済みの宛先とネットワーク接続が必要です。"], faq: [{question: "対応するサーバープロトコルは？", answer: "FTP、FTPS、SFTP、WebDAV、SMB/NASの設定に対応しています。"}]}
+privacy: {pageTitle: "プライバシー - SiteReport", metaDescription: "SiteReportのプライバシー情報。", heading: "プライバシー", lastUpdatedLabel: "状態", content: [{heading: "ポリシーの状態", paragraphs: ["完全かつ確認済みのプライバシーポリシーはまだ確認されていません。"]}]}
+support: {pageTitle: "サポート - SiteReport", metaDescription: "SiteReportのヘルプとサポート。", heading: "サポート", intro: "SiteReportの情報を確認し、公開されたサポート窓口が確認できた後に利用してください。", faqHeading: "よくある質問", faq: [], contactHeading: "お問い合わせ", contactCopy: "公開サポートメールはまだ確認されていません。", contactCta: "サポートに連絡"}
+

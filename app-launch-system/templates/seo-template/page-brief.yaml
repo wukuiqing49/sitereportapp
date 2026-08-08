@@ -1,0 +1,35 @@
+schemaVersion: "1.0"
+locale: "{{LOCALE}}"
+status: "qualitative-draft"
+page:
+  type: "{{PAGE_TYPE}}"
+  url: "{{TARGET_URL}}"
+  canonical: "{{CANONICAL_URL}}"
+  primaryIntent: "{{PRIMARY_INTENT}}"
+  audience: "{{AUDIENCE}}"
+queryCluster:
+  primary: "{{PRIMARY_QUERY}}"
+  secondary: []
+  excluded: []
+metadata:
+  title: "{{TITLE}}"
+  description: "{{META_DESCRIPTION}}"
+  robots: "index,follow"
+content:
+  answer: "{{DIRECT_ANSWER}}"
+  requiredSections: []
+  verifiedClaims: []
+  limitations: []
+  faqQuestions: []
+entities:
+  primary: "{{APP_NAME}}"
+  related: []
+internalLinks:
+  incoming: []
+  outgoing: []
+structuredData: []
+evidence: []
+review:
+  nativeLanguage: false
+  productFacts: false
+  legal: false

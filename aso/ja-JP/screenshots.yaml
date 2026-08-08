@@ -1,0 +1,29 @@
+schemaVersion: '1.0'
+locale: ja-JP
+status: draft
+items:
+- position: 1
+  asset: assets/screenshots/01-01-professional-site-inspection.png
+  screen: projects
+  caption: Manage projects and review inspection progress
+  reviewRequired: true
+- position: 2
+  asset: assets/screenshots/02-02-capture-everything.png
+  screen: inspection
+  caption: Capture photos and field evidence
+  reviewRequired: true
+- position: 3
+  asset: assets/screenshots/03-03-build-professional-reports.png
+  screen: reports
+  caption: Build professional field reports
+  reviewRequired: true
+- position: 4
+  asset: assets/screenshots/04-04-works-offline.png
+  screen: offline
+  caption: Keep working when the site has no network
+  reviewRequired: true
+- position: 5
+  asset: assets/screenshots/05-05-share-anywhere.png
+  screen: sharing
+  caption: Share or deliver completed reports
+  reviewRequired: true

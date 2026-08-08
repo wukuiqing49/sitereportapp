@@ -1,0 +1,52 @@
+schemaVersion: '1.0'
+locale: de-DE
+status: draft
+appName: SiteReport
+shortDescription: SiteReport
+fullDescription: 'Erfassen Sie Belege vor Ort und machen Sie aus dem Prüfablauf einen
+  teilbaren Bericht.
+
+
+  Prüfprojekte: Standortdaten, Fortschritt, Fotos und Berichte zusammenführen. Prüfprojekte
+  erstellen und verwalten Status und Fortschritt verfolgen Projektfotos und Berichte
+  zusammenhalten
+
+
+  Prüf-Checklisten: Wiederverwendbare Pläne und Vorlagen für standardisierte Abläufe
+  nutzen. Wiederverwendbare Prüfpläne erstellen Vorlagen und Prüfpunkte wählen Prüfung
+  fortsetzen und Verlauf ansehen
+
+
+  Fotos und Standortdaten: Fotos mit Notizen, Zeit und Standort verknüpfen, sofern
+  verfügbar. Ein oder mehrere Fotos aufnehmen Fotos mit einem Eintrag verknüpfen Standort
+  und Aufnahmezeit erfassen, sofern verfügbar
+
+
+  Notizen und Unterschriften: Feststellungen, Empfehlungen und Signaturdaten dokumentieren.
+  Ergebnisse und Empfehlungen erfassen Signaturprofile verwalten Notizen und Unterschriften
+  in den Bericht aufnehmen
+
+
+  PDF-Berichte: Strukturierte Berichte aus den Prüfdaten erzeugen. PDF-Feldbericht
+  erzeugen Ergebnisse, Fotos, Standort, Notizen und Signaturen aufnehmen Erzeugte
+  Dateien prüfen
+
+
+  Export und Zustellung: Dateien exportieren und an einen konfigurierten Server senden.
+  PDF, Bilder und ZIP exportieren Dateien vom Gerät teilen Über konfigurierte Protokolle
+  senden
+
+
+  Projekte, Belege und Berichte in einem Ablauf organisieren.'
+characterCounts:
+  appName: 10
+  shortDescription: 10
+  fullDescription: 1314
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
+validation:
+  valid: true
+  violations: []

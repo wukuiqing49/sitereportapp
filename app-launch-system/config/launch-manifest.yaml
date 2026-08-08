@@ -1,0 +1,37 @@
+schemaVersion: "1.0"
+projectPath: ""
+outputRoot: "."
+createdAt: ""
+updatedAt: ""
+status: "draft"
+stages:
+  analyzer:
+    status: "pending"
+    output: "app-info.yaml"
+    validatedAt: ""
+    error: ""
+  website:
+    status: "pending"
+    output: "index.html"
+    validatedAt: ""
+    error: ""
+  seoGeo:
+    status: "pending"
+    output: "seo-geo/"
+    validatedAt: ""
+    error: ""
+  aso:
+    status: "pending"
+    output: "aso/"
+    validatedAt: ""
+    error: ""
+  blog:
+    status: "pending"
+    output: "blog/"
+    validatedAt: ""
+    error: ""
+review:
+  status: "draft"
+  requiredItems: []
+  reviewer: ""
+  reviewedAt: ""

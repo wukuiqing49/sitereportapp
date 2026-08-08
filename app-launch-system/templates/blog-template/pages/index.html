@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{TEXT_DIRECTION}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  {{CANONICAL_TAGS}}
+  {{OPEN_GRAPH_TAGS}}
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/styles.css">
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/blog.css">
+  {{COLLECTION_STRUCTURED_DATA}}
+  <script id="locale-routes" type="application/json">{{LOCALE_ROUTES_JSON}}</script>
+  <script src="{{SITE_BASE_PATH}}assets/locale-router.js" defer></script>
+</head>
+<body class="blog-page blog-index">
+  <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
+  <header class="site-header">
+    <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">
+      <img src="{{LOGO_PATH}}" alt="" width="40" height="40">
+      <span>{{APP_NAME}}</span>
+    </a>
+    <nav aria-label="{{PRIMARY_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      <a href="{{BLOG_URL}}" aria-current="page">{{NAV_BLOG}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      {{LANGUAGE_SWITCHER}}
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="blog-masthead">
+      <p class="category">{{APP_NAME}}</p>
+      <h1>{{BLOG_HEADING}}</h1>
+      <p class="blog-dek">{{BLOG_INTRO}}</p>
+      <nav class="topic-nav" aria-label="{{TOPIC_NAV_LABEL}}">
+        {{CATEGORY_LINKS}}
+      </nav>
+    </header>
+
+    <section class="featured-story" aria-labelledby="featured-title">
+      <figure class="featured-media">
+        <img src="{{FEATURED_IMAGE_PATH}}" alt="{{FEATURED_IMAGE_ALT}}" width="1440" height="810">
+      </figure>
+      <div class="featured-copy">
+        <p class="article-kicker">{{FEATURED_CATEGORY}}</p>
+        <h2 id="featured-title"><a href="{{FEATURED_URL}}">{{FEATURED_TITLE}}</a></h2>
+        <p>{{FEATURED_SUMMARY}}</p>
+        <div class="article-meta">{{FEATURED_META}}</div>
+        <a class="text-link" href="{{FEATURED_URL}}">{{READ_ARTICLE_LABEL}} <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </section>
+
+    <section class="article-feed" aria-labelledby="latest-title">
+      <div class="feed-heading">
+        <h2 id="latest-title">{{LATEST_HEADING}}</h2>
+        <p>{{LATEST_INTRO}}</p>
+      </div>
+      <div class="article-grid">
+        {{ARTICLE_CARDS}}
+      </div>
+      {{PAGINATION}}
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {{YEAR}} {{DEVELOPER_NAME}}. {{RIGHTS_TEXT}}</p>
+    <nav aria-label="{{FOOTER_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+    </nav>
+  </footer>
+  <script src="{{SITE_BASE_PATH}}assets/blog.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+schemaVersion: '1.0'
+locale: ja-JP
+pages:
+  /ja-JP/:
+    title: SiteReport - 現場検査レポート
+    description: 写真、チェックリスト、位置情報、PDF出力で現場検査を記録します。
+    primaryQuery: 主な機能
+  /ja-JP/features/検査プロジェクト/:
+    title: 検査プロジェクト - SiteReport
+    description: 現場情報、進捗、写真、レポートをまとめて管理します。
+    primaryQuery: field inspection project management Android
+  /ja-JP/features/検査チェックリスト/:
+    title: 検査チェックリスト - SiteReport
+    description: 再利用できる計画とテンプレートで作業を標準化します。
+    primaryQuery: construction inspection checklist app
+  /ja-JP/features/写真と位置情報/:
+    title: 写真と位置情報 - SiteReport
+    description: 写真を項目に関連付け、可能な場合はメモ、時刻、位置を記録します。
+    primaryQuery: inspection photo evidence app
+  /ja-JP/features/現場メモと署名/:
+    title: 現場メモと署名 - SiteReport
+    description: 所見、推奨対応、署名情報を記録します。
+    primaryQuery: field inspection notes and signatures
+  /ja-JP/features/pdfレポート/:
+    title: PDFレポート - SiteReport
+    description: 検査データから構造化されたレポートを作成します。
+    primaryQuery: generate PDF inspection report Android
+  /ja-JP/features/出力と配信/:
+    title: 出力と配信 - SiteReport
+    description: ファイルを出力し、設定したサーバーへ送信します。
+    primaryQuery: upload inspection reports to SFTP Android

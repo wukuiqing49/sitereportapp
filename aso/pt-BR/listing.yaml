@@ -1,0 +1,52 @@
+schemaVersion: '1.0'
+locale: pt-BR
+status: draft
+appName: SiteReport
+shortDescription: SiteReport
+fullDescription: 'Registre evidências de campo e transforme o fluxo de inspeção em
+  um relatório compartilhável.
+
+
+  Projetos de inspeção: Reúna dados do local, progresso, fotos e relatórios. Criar
+  e gerenciar projetos de inspeção Acompanhar status e progresso Manter fotos e relatórios
+  juntos
+
+
+  Checklists de inspeção: Use planos e modelos reutilizáveis para padronizar o trabalho.
+  Criar planos reutilizáveis Escolher modelos e pontos de inspeção Retomar uma inspeção
+  e consultar o histórico
+
+
+  Fotos e localização: Associe fotos a itens com notas, horário e localização quando
+  disponível. Capturar uma ou mais fotos Associá-las a um registro Registrar localização
+  e horário quando disponíveis
+
+
+  Notas e assinaturas: Registre descobertas, recomendações e dados de assinatura.
+  Registrar resultados e recomendações Gerenciar perfis de assinatura Incluir notas
+  e assinaturas no relatório
+
+
+  Relatórios em PDF: Gere relatórios estruturados a partir dos dados da inspeção.
+  Gerar um relatório em PDF Incluir resultados, fotos, localização, notas e assinaturas
+  Visualizar arquivos gerados
+
+
+  Exportação e entrega: Exporte arquivos e envie-os para um servidor configurado.
+  Exportar PDF, imagens e ZIP Compartilhar arquivos no dispositivo Enviar por protocolos
+  configurados
+
+
+  Organize projetos, evidências e relatórios em um único fluxo.'
+characterCounts:
+  appName: 10
+  shortDescription: 10
+  fullDescription: 1298
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
+validation:
+  valid: true
+  violations: []

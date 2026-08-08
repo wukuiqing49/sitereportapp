@@ -1,0 +1,163 @@
+locale,source,target,anchor,reason
+en-US,/,/features/project-management/,Inspection projects,home feature discovery
+en-US,/features/project-management/,/blog/project-management/,Inspection projects,task education
+en-US,/blog/project-management/,/features/project-management/,Inspection projects,feature verification
+en-US,/,/features/inspection-checklists/,Inspection checklists,home feature discovery
+en-US,/features/inspection-checklists/,/blog/inspection-checklists/,Inspection checklists,task education
+en-US,/blog/inspection-checklists/,/features/inspection-checklists/,Inspection checklists,feature verification
+en-US,/,/features/photo-evidence/,Photo evidence and location records,home feature discovery
+en-US,/features/photo-evidence/,/blog/photo-evidence/,Photo evidence and location records,task education
+en-US,/blog/photo-evidence/,/features/photo-evidence/,Photo evidence and location records,feature verification
+en-US,/,/features/field-notes-and-signatures/,Field notes and sign-off,home feature discovery
+en-US,/features/field-notes-and-signatures/,/blog/field-notes-and-signatures/,Field notes and sign-off,task education
+en-US,/blog/field-notes-and-signatures/,/features/field-notes-and-signatures/,Field notes and sign-off,feature verification
+en-US,/,/features/report-generation/,PDF and report generation,home feature discovery
+en-US,/features/report-generation/,/blog/report-generation/,PDF and report generation,task education
+en-US,/blog/report-generation/,/features/report-generation/,PDF and report generation,feature verification
+en-US,/,/features/export-and-upload/,Export and server delivery,home feature discovery
+en-US,/features/export-and-upload/,/blog/export-and-upload/,Export and server delivery,task education
+en-US,/blog/export-and-upload/,/features/export-and-upload/,Export and server delivery,feature verification
+zh-CN,/zh-CN/,/zh-CN/features/巡检项目/,巡检项目,home feature discovery
+zh-CN,/zh-CN/features/巡检项目/,/blog/zh-CN/巡检项目/,巡检项目,task education
+zh-CN,/blog/zh-CN/巡检项目/,/zh-CN/features/巡检项目/,巡检项目,feature verification
+zh-CN,/zh-CN/,/zh-CN/features/巡检清单/,巡检清单,home feature discovery
+zh-CN,/zh-CN/features/巡检清单/,/blog/zh-CN/巡检清单/,巡检清单,task education
+zh-CN,/blog/zh-CN/巡检清单/,/zh-CN/features/巡检清单/,巡检清单,feature verification
+zh-CN,/zh-CN/,/zh-CN/features/照片证据与位置记录/,照片证据与位置记录,home feature discovery
+zh-CN,/zh-CN/features/照片证据与位置记录/,/blog/zh-CN/照片证据与位置记录/,照片证据与位置记录,task education
+zh-CN,/blog/zh-CN/照片证据与位置记录/,/zh-CN/features/照片证据与位置记录/,照片证据与位置记录,feature verification
+zh-CN,/zh-CN/,/zh-CN/features/现场备注与签字/,现场备注与签字,home feature discovery
+zh-CN,/zh-CN/features/现场备注与签字/,/blog/zh-CN/现场备注与签字/,现场备注与签字,task education
+zh-CN,/blog/zh-CN/现场备注与签字/,/zh-CN/features/现场备注与签字/,现场备注与签字,feature verification
+zh-CN,/zh-CN/,/zh-CN/features/pdf-与报告生成/,PDF 与报告生成,home feature discovery
+zh-CN,/zh-CN/features/pdf-与报告生成/,/blog/zh-CN/pdf-与报告生成/,PDF 与报告生成,task education
+zh-CN,/blog/zh-CN/pdf-与报告生成/,/zh-CN/features/pdf-与报告生成/,PDF 与报告生成,feature verification
+zh-CN,/zh-CN/,/zh-CN/features/导出与服务器交付/,导出与服务器交付,home feature discovery
+zh-CN,/zh-CN/features/导出与服务器交付/,/blog/zh-CN/导出与服务器交付/,导出与服务器交付,task education
+zh-CN,/blog/zh-CN/导出与服务器交付/,/zh-CN/features/导出与服务器交付/,导出与服务器交付,feature verification
+es-ES,/es-ES/,/es-ES/features/proyectos-de-inspección/,Proyectos de inspección,home feature discovery
+es-ES,/es-ES/features/proyectos-de-inspección/,/blog/es-ES/proyectos-de-inspección/,Proyectos de inspección,task education
+es-ES,/blog/es-ES/proyectos-de-inspección/,/es-ES/features/proyectos-de-inspección/,Proyectos de inspección,feature verification
+es-ES,/es-ES/,/es-ES/features/listas-de-inspección/,Listas de inspección,home feature discovery
+es-ES,/es-ES/features/listas-de-inspección/,/blog/es-ES/listas-de-inspección/,Listas de inspección,task education
+es-ES,/blog/es-ES/listas-de-inspección/,/es-ES/features/listas-de-inspección/,Listas de inspección,feature verification
+es-ES,/es-ES/,/es-ES/features/fotos-y-ubicación/,Fotos y ubicación,home feature discovery
+es-ES,/es-ES/features/fotos-y-ubicación/,/blog/es-ES/fotos-y-ubicación/,Fotos y ubicación,task education
+es-ES,/blog/es-ES/fotos-y-ubicación/,/es-ES/features/fotos-y-ubicación/,Fotos y ubicación,feature verification
+es-ES,/es-ES/,/es-ES/features/notas-y-firmas/,Notas y firmas,home feature discovery
+es-ES,/es-ES/features/notas-y-firmas/,/blog/es-ES/notas-y-firmas/,Notas y firmas,task education
+es-ES,/blog/es-ES/notas-y-firmas/,/es-ES/features/notas-y-firmas/,Notas y firmas,feature verification
+es-ES,/es-ES/,/es-ES/features/informes-pdf/,Informes PDF,home feature discovery
+es-ES,/es-ES/features/informes-pdf/,/blog/es-ES/informes-pdf/,Informes PDF,task education
+es-ES,/blog/es-ES/informes-pdf/,/es-ES/features/informes-pdf/,Informes PDF,feature verification
+es-ES,/es-ES/,/es-ES/features/exportación-y-entrega/,Exportación y entrega,home feature discovery
+es-ES,/es-ES/features/exportación-y-entrega/,/blog/es-ES/exportación-y-entrega/,Exportación y entrega,task education
+es-ES,/blog/es-ES/exportación-y-entrega/,/es-ES/features/exportación-y-entrega/,Exportación y entrega,feature verification
+pt-BR,/pt-BR/,/pt-BR/features/projetos-de-inspeção/,Projetos de inspeção,home feature discovery
+pt-BR,/pt-BR/features/projetos-de-inspeção/,/blog/pt-BR/projetos-de-inspeção/,Projetos de inspeção,task education
+pt-BR,/blog/pt-BR/projetos-de-inspeção/,/pt-BR/features/projetos-de-inspeção/,Projetos de inspeção,feature verification
+pt-BR,/pt-BR/,/pt-BR/features/checklists-de-inspeção/,Checklists de inspeção,home feature discovery
+pt-BR,/pt-BR/features/checklists-de-inspeção/,/blog/pt-BR/checklists-de-inspeção/,Checklists de inspeção,task education
+pt-BR,/blog/pt-BR/checklists-de-inspeção/,/pt-BR/features/checklists-de-inspeção/,Checklists de inspeção,feature verification
+pt-BR,/pt-BR/,/pt-BR/features/fotos-e-localização/,Fotos e localização,home feature discovery
+pt-BR,/pt-BR/features/fotos-e-localização/,/blog/pt-BR/fotos-e-localização/,Fotos e localização,task education
+pt-BR,/blog/pt-BR/fotos-e-localização/,/pt-BR/features/fotos-e-localização/,Fotos e localização,feature verification
+pt-BR,/pt-BR/,/pt-BR/features/notas-e-assinaturas/,Notas e assinaturas,home feature discovery
+pt-BR,/pt-BR/features/notas-e-assinaturas/,/blog/pt-BR/notas-e-assinaturas/,Notas e assinaturas,task education
+pt-BR,/blog/pt-BR/notas-e-assinaturas/,/pt-BR/features/notas-e-assinaturas/,Notas e assinaturas,feature verification
+pt-BR,/pt-BR/,/pt-BR/features/relatórios-em-pdf/,Relatórios em PDF,home feature discovery
+pt-BR,/pt-BR/features/relatórios-em-pdf/,/blog/pt-BR/relatórios-em-pdf/,Relatórios em PDF,task education
+pt-BR,/blog/pt-BR/relatórios-em-pdf/,/pt-BR/features/relatórios-em-pdf/,Relatórios em PDF,feature verification
+pt-BR,/pt-BR/,/pt-BR/features/exportação-e-entrega/,Exportação e entrega,home feature discovery
+pt-BR,/pt-BR/features/exportação-e-entrega/,/blog/pt-BR/exportação-e-entrega/,Exportação e entrega,task education
+pt-BR,/blog/pt-BR/exportação-e-entrega/,/pt-BR/features/exportação-e-entrega/,Exportação e entrega,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/projets-d-inspection/,Projets d’inspection,home feature discovery
+fr-FR,/fr-FR/features/projets-d-inspection/,/blog/fr-FR/projets-d-inspection/,Projets d’inspection,task education
+fr-FR,/blog/fr-FR/projets-d-inspection/,/fr-FR/features/projets-d-inspection/,Projets d’inspection,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/listes-d-inspection/,Listes d’inspection,home feature discovery
+fr-FR,/fr-FR/features/listes-d-inspection/,/blog/fr-FR/listes-d-inspection/,Listes d’inspection,task education
+fr-FR,/blog/fr-FR/listes-d-inspection/,/fr-FR/features/listes-d-inspection/,Listes d’inspection,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/photos-et-localisation/,Photos et localisation,home feature discovery
+fr-FR,/fr-FR/features/photos-et-localisation/,/blog/fr-FR/photos-et-localisation/,Photos et localisation,task education
+fr-FR,/blog/fr-FR/photos-et-localisation/,/fr-FR/features/photos-et-localisation/,Photos et localisation,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/notes-et-signatures/,Notes et signatures,home feature discovery
+fr-FR,/fr-FR/features/notes-et-signatures/,/blog/fr-FR/notes-et-signatures/,Notes et signatures,task education
+fr-FR,/blog/fr-FR/notes-et-signatures/,/fr-FR/features/notes-et-signatures/,Notes et signatures,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/rapports-pdf/,Rapports PDF,home feature discovery
+fr-FR,/fr-FR/features/rapports-pdf/,/blog/fr-FR/rapports-pdf/,Rapports PDF,task education
+fr-FR,/blog/fr-FR/rapports-pdf/,/fr-FR/features/rapports-pdf/,Rapports PDF,feature verification
+fr-FR,/fr-FR/,/fr-FR/features/export-et-livraison/,Export et livraison,home feature discovery
+fr-FR,/fr-FR/features/export-et-livraison/,/blog/fr-FR/export-et-livraison/,Export et livraison,task education
+fr-FR,/blog/fr-FR/export-et-livraison/,/fr-FR/features/export-et-livraison/,Export et livraison,feature verification
+de-DE,/de-DE/,/de-DE/features/prüfprojekte/,Prüfprojekte,home feature discovery
+de-DE,/de-DE/features/prüfprojekte/,/blog/de-DE/prüfprojekte/,Prüfprojekte,task education
+de-DE,/blog/de-DE/prüfprojekte/,/de-DE/features/prüfprojekte/,Prüfprojekte,feature verification
+de-DE,/de-DE/,/de-DE/features/prüf-checklisten/,Prüf-Checklisten,home feature discovery
+de-DE,/de-DE/features/prüf-checklisten/,/blog/de-DE/prüf-checklisten/,Prüf-Checklisten,task education
+de-DE,/blog/de-DE/prüf-checklisten/,/de-DE/features/prüf-checklisten/,Prüf-Checklisten,feature verification
+de-DE,/de-DE/,/de-DE/features/fotos-und-standortdaten/,Fotos und Standortdaten,home feature discovery
+de-DE,/de-DE/features/fotos-und-standortdaten/,/blog/de-DE/fotos-und-standortdaten/,Fotos und Standortdaten,task education
+de-DE,/blog/de-DE/fotos-und-standortdaten/,/de-DE/features/fotos-und-standortdaten/,Fotos und Standortdaten,feature verification
+de-DE,/de-DE/,/de-DE/features/notizen-und-unterschriften/,Notizen und Unterschriften,home feature discovery
+de-DE,/de-DE/features/notizen-und-unterschriften/,/blog/de-DE/notizen-und-unterschriften/,Notizen und Unterschriften,task education
+de-DE,/blog/de-DE/notizen-und-unterschriften/,/de-DE/features/notizen-und-unterschriften/,Notizen und Unterschriften,feature verification
+de-DE,/de-DE/,/de-DE/features/pdf-berichte/,PDF-Berichte,home feature discovery
+de-DE,/de-DE/features/pdf-berichte/,/blog/de-DE/pdf-berichte/,PDF-Berichte,task education
+de-DE,/blog/de-DE/pdf-berichte/,/de-DE/features/pdf-berichte/,PDF-Berichte,feature verification
+de-DE,/de-DE/,/de-DE/features/export-und-zustellung/,Export und Zustellung,home feature discovery
+de-DE,/de-DE/features/export-und-zustellung/,/blog/de-DE/export-und-zustellung/,Export und Zustellung,task education
+de-DE,/blog/de-DE/export-und-zustellung/,/de-DE/features/export-und-zustellung/,Export und Zustellung,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/検査プロジェクト/,検査プロジェクト,home feature discovery
+ja-JP,/ja-JP/features/検査プロジェクト/,/blog/ja-JP/検査プロジェクト/,検査プロジェクト,task education
+ja-JP,/blog/ja-JP/検査プロジェクト/,/ja-JP/features/検査プロジェクト/,検査プロジェクト,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/検査チェックリスト/,検査チェックリスト,home feature discovery
+ja-JP,/ja-JP/features/検査チェックリスト/,/blog/ja-JP/検査チェックリスト/,検査チェックリスト,task education
+ja-JP,/blog/ja-JP/検査チェックリスト/,/ja-JP/features/検査チェックリスト/,検査チェックリスト,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/写真と位置情報/,写真と位置情報,home feature discovery
+ja-JP,/ja-JP/features/写真と位置情報/,/blog/ja-JP/写真と位置情報/,写真と位置情報,task education
+ja-JP,/blog/ja-JP/写真と位置情報/,/ja-JP/features/写真と位置情報/,写真と位置情報,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/現場メモと署名/,現場メモと署名,home feature discovery
+ja-JP,/ja-JP/features/現場メモと署名/,/blog/ja-JP/現場メモと署名/,現場メモと署名,task education
+ja-JP,/blog/ja-JP/現場メモと署名/,/ja-JP/features/現場メモと署名/,現場メモと署名,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/pdfレポート/,PDFレポート,home feature discovery
+ja-JP,/ja-JP/features/pdfレポート/,/blog/ja-JP/pdfレポート/,PDFレポート,task education
+ja-JP,/blog/ja-JP/pdfレポート/,/ja-JP/features/pdfレポート/,PDFレポート,feature verification
+ja-JP,/ja-JP/,/ja-JP/features/出力と配信/,出力と配信,home feature discovery
+ja-JP,/ja-JP/features/出力と配信/,/blog/ja-JP/出力と配信/,出力と配信,task education
+ja-JP,/blog/ja-JP/出力と配信/,/ja-JP/features/出力と配信/,出力と配信,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/검사-프로젝트/,검사 프로젝트,home feature discovery
+ko-KR,/ko-KR/features/검사-프로젝트/,/blog/ko-KR/검사-프로젝트/,검사 프로젝트,task education
+ko-KR,/blog/ko-KR/검사-프로젝트/,/ko-KR/features/검사-프로젝트/,검사 프로젝트,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/검사-체크리스트/,검사 체크리스트,home feature discovery
+ko-KR,/ko-KR/features/검사-체크리스트/,/blog/ko-KR/검사-체크리스트/,검사 체크리스트,task education
+ko-KR,/blog/ko-KR/검사-체크리스트/,/ko-KR/features/검사-체크리스트/,검사 체크리스트,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/사진과-위치-기록/,사진과 위치 기록,home feature discovery
+ko-KR,/ko-KR/features/사진과-위치-기록/,/blog/ko-KR/사진과-위치-기록/,사진과 위치 기록,task education
+ko-KR,/blog/ko-KR/사진과-위치-기록/,/ko-KR/features/사진과-위치-기록/,사진과 위치 기록,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/현장-메모와-서명/,현장 메모와 서명,home feature discovery
+ko-KR,/ko-KR/features/현장-메모와-서명/,/blog/ko-KR/현장-메모와-서명/,현장 메모와 서명,task education
+ko-KR,/blog/ko-KR/현장-메모와-서명/,/ko-KR/features/현장-메모와-서명/,현장 메모와 서명,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/pdf-보고서/,PDF 보고서,home feature discovery
+ko-KR,/ko-KR/features/pdf-보고서/,/blog/ko-KR/pdf-보고서/,PDF 보고서,task education
+ko-KR,/blog/ko-KR/pdf-보고서/,/ko-KR/features/pdf-보고서/,PDF 보고서,feature verification
+ko-KR,/ko-KR/,/ko-KR/features/내보내기와-전송/,내보내기와 전송,home feature discovery
+ko-KR,/ko-KR/features/내보내기와-전송/,/blog/ko-KR/내보내기와-전송/,내보내기와 전송,task education
+ko-KR,/blog/ko-KR/내보내기와-전송/,/ko-KR/features/내보내기와-전송/,내보내기와 전송,feature verification
+ar,/ar/,/ar/features/مشاريع-الفحص/,مشاريع الفحص,home feature discovery
+ar,/ar/features/مشاريع-الفحص/,/blog/ar/مشاريع-الفحص/,مشاريع الفحص,task education
+ar,/blog/ar/مشاريع-الفحص/,/ar/features/مشاريع-الفحص/,مشاريع الفحص,feature verification
+ar,/ar/,/ar/features/قوائم-فحص/,قوائم فحص,home feature discovery
+ar,/ar/features/قوائم-فحص/,/blog/ar/قوائم-فحص/,قوائم فحص,task education
+ar,/blog/ar/قوائم-فحص/,/ar/features/قوائم-فحص/,قوائم فحص,feature verification
+ar,/ar/,/ar/features/الصور-وسجلات-الموقع/,الصور وسجلات الموقع,home feature discovery
+ar,/ar/features/الصور-وسجلات-الموقع/,/blog/ar/الصور-وسجلات-الموقع/,الصور وسجلات الموقع,task education
+ar,/blog/ar/الصور-وسجلات-الموقع/,/ar/features/الصور-وسجلات-الموقع/,الصور وسجلات الموقع,feature verification
+ar,/ar/,/ar/features/الملاحظات-والتوقيعات/,الملاحظات والتوقيعات,home feature discovery
+ar,/ar/features/الملاحظات-والتوقيعات/,/blog/ar/الملاحظات-والتوقيعات/,الملاحظات والتوقيعات,task education
+ar,/blog/ar/الملاحظات-والتوقيعات/,/ar/features/الملاحظات-والتوقيعات/,الملاحظات والتوقيعات,feature verification
+ar,/ar/,/ar/features/تقارير-pdf/,تقارير PDF,home feature discovery
+ar,/ar/features/تقارير-pdf/,/blog/ar/تقارير-pdf/,تقارير PDF,task education
+ar,/blog/ar/تقارير-pdf/,/ar/features/تقارير-pdf/,تقارير PDF,feature verification
+ar,/ar/,/ar/features/التصدير-والتسليم/,التصدير والتسليم,home feature discovery
+ar,/ar/features/التصدير-والتسليم/,/blog/ar/التصدير-والتسليم/,التصدير والتسليم,task education
+ar,/blog/ar/التصدير-والتسليم/,/ar/features/التصدير-والتسليم/,التصدير والتسليم,feature verification

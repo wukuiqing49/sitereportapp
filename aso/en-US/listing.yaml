@@ -1,0 +1,56 @@
+schemaVersion: '1.0'
+locale: en-US
+status: draft
+appName: SiteReport
+shortDescription: SiteReport
+fullDescription: 'Field inspection reports with photos, checklists, location records,
+  and PDF export.
+
+
+  Inspection projects: Create projects and keep site information, progress, photos,
+  and reports together. Create and manage inspection projects Track project status
+  and inspection progress Keep project photos and reports together
+
+
+  Inspection checklists: Use reusable inspection plans and checklist templates to
+  standardize field work. Create reusable inspection plans Choose checklist templates
+  and define inspection points Resume an in-progress inspection and review run history
+
+
+  Photo evidence and location records: Capture photos for inspection items and associate
+  them with notes, time, and location information. Capture one or more photos for
+  an inspection item Associate photos with checklist records Record location and capture
+  time when available
+
+
+  Field notes and sign-off: Record findings, corrective notes, and signature profiles
+  as part of the inspection record. Record inspection results, issues, and recommendations
+  Manage signature profiles for field roles Include notes and sign-off information
+  in generated reports
+
+
+  PDF and report generation: Generate structured field reports from project information,
+  checklist results, photos, notes, and signatures. Generate a PDF field report Include
+  checklist results, photos, location records, notes, and signatures Preview and reopen
+  generated report files
+
+
+  Export and server delivery: Export report packages and send them through supported
+  server protocols when configured. Export PDF, image, and ZIP report packages Share
+  generated report files from the device Upload through FTP, FTPS, SFTP, WebDAV, or
+  SMB/NAS configurations
+
+
+  Field inspection reports with photos, checklists, location records, and PDF export.'
+characterCounts:
+  appName: 10
+  shortDescription: 10
+  fullDescription: 1753
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
+validation:
+  valid: true
+  violations: []

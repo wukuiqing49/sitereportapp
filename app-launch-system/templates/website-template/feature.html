@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{TEXT_DIRECTION}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  {{CANONICAL_TAGS}}
+  {{OPEN_GRAPH_TAGS}}
+  <link rel="manifest" href="{{SITE_BASE_PATH}}site.webmanifest">
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/styles.css">
+  {{STRUCTURED_DATA}}
+  <script id="locale-routes" type="application/json">{{LOCALE_ROUTES_JSON}}</script>
+  <script src="{{SITE_BASE_PATH}}assets/locale-router.js" defer></script>
+</head>
+<body class="feature-page">
+  <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
+  <header class="site-header">
+    <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">{{BRAND_LOGO}}<span>{{APP_NAME}}</span></a>
+    <nav aria-label="{{PRIMARY_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      {{BLOG_NAV_ITEM}}
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      {{LANGUAGE_SWITCHER}}
+    </nav>
+  </header>
+  <main id="main">
+    <article class="feature-detail">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="{{BREADCRUMB_LABEL}}">{{BREADCRUMBS}}</nav>
+        <p class="category">{{FEATURE_KICKER}}</p>
+        <h1>{{FEATURE_NAME}}</h1>
+        <p class="tagline">{{FEATURE_DESCRIPTION}}</p>
+        <p class="feature-problem"><strong>{{PROBLEM_HEADING}}:</strong> {{PROBLEM}}</p>
+      </header>
+      {{FEATURE_MEDIA}}
+      <div class="feature-content-grid">
+        <section><h2>{{CAPABILITIES_HEADING}}</h2>{{CAPABILITIES}}</section>
+        <section><h2>{{OPTIONS_HEADING}}</h2>{{OPTIONS}}</section>
+        <section><h2>{{INPUTS_HEADING}}</h2>{{INPUTS}}</section>
+        <section><h2>{{OUTPUTS_HEADING}}</h2>{{OUTPUTS}}</section>
+      </div>
+      <section class="feature-workflow"><h2>{{STEPS_HEADING}}</h2>{{STEPS}}</section>
+      <section class="feature-limitations"><h2>{{LIMITATIONS_HEADING}}</h2>{{LIMITATIONS}}</section>
+      <section class="feature-faq"><h2>{{FAQ_HEADING}}</h2>{{FAQ}}</section>
+      <section class="feature-evidence"><h2>{{EVIDENCE_HEADING}}</h2>{{EVIDENCE}}</section>
+      <a class="primary-action" href="{{BLOG_ARTICLE_URL}}">{{BLOG_LABEL}}</a>
+    </article>
+  </main>
+  <footer>
+    <p>{{COPYRIGHT_TEXT}}</p>
+    <nav aria-label="{{FOOTER_NAV_LABEL}}">
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+    </nav>
+  </footer>
+</body>
+</html>

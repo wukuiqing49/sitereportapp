@@ -1,0 +1,66 @@
+schemaVersion: '1.0'
+website:
+  status: generated
+  entry: index.html
+  output: .
+content:
+  verifiedFeatures: 6
+  readyFeatures: 6
+  skippedFeatures: []
+seoGeo:
+  status: blocked
+  websiteUrl: ''
+aso:
+  status: draft
+  googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
+localization:
+- locale: en-US
+  status: source
+  listingValid: true
+  screenshotReviewRequired: false
+- locale: zh-CN
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: es-ES
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: pt-BR
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: fr-FR
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: de-DE
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: ja-JP
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: ko-KR
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+- locale: ar
+  status: machine-draft
+  listingValid: true
+  screenshotReviewRequired: true
+publishReady: false
+warnings:
+- websiteUrl is missing; canonical URLs, hreflang URLs, Open Graph URLs, and sitemap
+  locations are blocked
+- editorial.publishedAt is missing; blog pages remain drafts and omit Article/HowTo
+  date markup
+- zh-CN content status is machine-draft
+- es-ES content status is machine-draft
+- pt-BR content status is machine-draft
+- fr-FR content status is machine-draft
+- de-DE content status is machine-draft
+- ja-JP content status is machine-draft
+- ko-KR content status is machine-draft
+- ar content status is machine-draft

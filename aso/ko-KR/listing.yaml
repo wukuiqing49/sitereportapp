@@ -1,0 +1,43 @@
+schemaVersion: '1.0'
+locale: ko-KR
+status: draft
+appName: SiteReport
+shortDescription: 사진, 체크리스트, 위치 기록과 PDF 내보내기로 현장 검사를 기록합니다.
+fullDescription: '현장 증거를 기록하고 검사 흐름을 공유 가능한 보고서로 정리합니다.
+
+
+  검사 프로젝트: 현장 정보, 진행률, 사진과 보고서를 한곳에서 관리합니다. 검사 프로젝트 생성 및 관리 상태와 진행률 확인 프로젝트 사진과 보고서
+  보관
+
+
+  검사 체크리스트: 재사용 가능한 계획과 템플릿으로 작업을 표준화합니다. 재사용 가능한 검사 계획 생성 템플릿과 검사 지점 선택 검사를 재개하고
+  실행 이력 확인
+
+
+  사진과 위치 기록: 가능한 경우 사진을 항목에 연결하고 메모, 시간, 위치를 기록합니다. 한 장 이상 사진 촬영 검사 기록에 사진 연결 가능한
+  경우 위치와 촬영 시간 기록
+
+
+  현장 메모와 서명: 발견 사항, 권고 사항과 서명 정보를 기록합니다. 결과와 권고 사항 기록 서명 프로필 관리 메모와 서명을 보고서에 포함
+
+
+  PDF 보고서: 검사 데이터에서 구조화된 현장 보고서를 생성합니다. PDF 현장 보고서 생성 결과, 사진, 위치, 메모와 서명 포함 생성된 파일
+  확인
+
+
+  내보내기와 전송: 파일을 내보내고 설정한 서버로 전송합니다. PDF, 이미지와 ZIP 내보내기 기기에서 파일 공유 설정한 프로토콜로 전송
+
+
+  프로젝트, 증거와 보고서를 하나의 흐름으로 정리합니다.'
+characterCounts:
+  appName: 10
+  shortDescription: 41
+  fullDescription: 584
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
+validation:
+  valid: true
+  violations: []

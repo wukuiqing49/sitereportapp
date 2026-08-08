@@ -1,0 +1,39 @@
+schemaVersion: '1.0'
+locale: ja-JP
+status: draft
+appName: SiteReport
+shortDescription: 写真、チェックリスト、位置情報、PDF出力で現場検査を記録します。
+fullDescription: '現場の証拠を記録し、検査の流れを共有できるレポートにまとめます。
+
+
+  検査プロジェクト: 現場情報、進捗、写真、レポートをまとめて管理します。 検査プロジェクトを作成・管理 状態と進捗を確認 プロジェクトの写真とレポートをまとめて保存
+
+
+  検査チェックリスト: 再利用できる計画とテンプレートで作業を標準化します。 再利用できる検査計画を作成 テンプレートと検査ポイントを選択 未完了の検査を再開して履歴を確認
+
+
+  写真と位置情報: 写真を項目に関連付け、可能な場合はメモ、時刻、位置を記録します。 1枚または複数の写真を撮影 記録に写真を関連付け 利用できる場合は位置と撮影時刻を記録
+
+
+  現場メモと署名: 所見、推奨対応、署名情報を記録します。 結果と推奨対応を記録 署名プロフィールを管理 メモと署名をレポートに含める
+
+
+  PDFレポート: 検査データから構造化されたレポートを作成します。 PDF現場レポートを生成 結果、写真、位置、メモ、署名を含める 生成したファイルを確認
+
+
+  出力と配信: ファイルを出力し、設定したサーバーへ送信します。 PDF、画像、ZIPを出力 端末からファイルを共有 設定したプロトコルで送信
+
+
+  プロジェクト、証拠、レポートを一つの流れで整理します。'
+characterCounts:
+  appName: 10
+  shortDescription: 33
+  fullDescription: 538
+limits:
+  appName: 30
+  shortDescription: 80
+  fullDescription: 4000
+googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
+validation:
+  valid: true
+  violations: []

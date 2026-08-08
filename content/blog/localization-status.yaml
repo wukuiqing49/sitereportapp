@@ -1,0 +1,20 @@
+sourceLocale: en-US
+locales:
+- locale: en-US
+  status: source
+- locale: zh-CN
+  status: machine-draft
+- locale: es-ES
+  status: machine-draft
+- locale: pt-BR
+  status: machine-draft
+- locale: fr-FR
+  status: machine-draft
+- locale: de-DE
+  status: machine-draft
+- locale: ja-JP
+  status: machine-draft
+- locale: ko-KR
+  status: machine-draft
+- locale: ar
+  status: machine-draft

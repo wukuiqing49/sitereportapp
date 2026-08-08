@@ -1,0 +1,11 @@
+{
+  "name": "{{APP_NAME}}",
+  "short_name": "{{APP_SHORT_NAME}}",
+  "description": "{{META_DESCRIPTION}}",
+  "lang": "{{LANG}}",
+  "start_url": "{{HOME_URL}}",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "{{THEME_COLOR}}",
+  "icons": {{MANIFEST_ICONS_JSON}}
+}

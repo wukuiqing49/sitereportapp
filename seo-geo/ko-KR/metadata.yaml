@@ -1,0 +1,31 @@
+schemaVersion: '1.0'
+locale: ko-KR
+pages:
+  /ko-KR/:
+    title: SiteReport - 현장 검사 보고서
+    description: 사진, 체크리스트, 위치 기록과 PDF 내보내기로 현장 검사를 기록합니다.
+    primaryQuery: 주요 기능
+  /ko-KR/features/검사-프로젝트/:
+    title: 검사 프로젝트 - SiteReport
+    description: 현장 정보, 진행률, 사진과 보고서를 한곳에서 관리합니다.
+    primaryQuery: field inspection project management Android
+  /ko-KR/features/검사-체크리스트/:
+    title: 검사 체크리스트 - SiteReport
+    description: 재사용 가능한 계획과 템플릿으로 작업을 표준화합니다.
+    primaryQuery: construction inspection checklist app
+  /ko-KR/features/사진과-위치-기록/:
+    title: 사진과 위치 기록 - SiteReport
+    description: 가능한 경우 사진을 항목에 연결하고 메모, 시간, 위치를 기록합니다.
+    primaryQuery: inspection photo evidence app
+  /ko-KR/features/현장-메모와-서명/:
+    title: 현장 메모와 서명 - SiteReport
+    description: 발견 사항, 권고 사항과 서명 정보를 기록합니다.
+    primaryQuery: field inspection notes and signatures
+  /ko-KR/features/pdf-보고서/:
+    title: PDF 보고서 - SiteReport
+    description: 검사 데이터에서 구조화된 현장 보고서를 생성합니다.
+    primaryQuery: generate PDF inspection report Android
+  /ko-KR/features/내보내기와-전송/:
+    title: 내보내기와 전송 - SiteReport
+    description: 파일을 내보내고 설정한 서버로 전송합니다.
+    primaryQuery: upload inspection reports to SFTP Android

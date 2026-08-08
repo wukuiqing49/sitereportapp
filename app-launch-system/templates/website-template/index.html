@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{TEXT_DIRECTION}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  {{CANONICAL_TAGS}}
+  {{OPEN_GRAPH_TAGS}}
+  <link rel="manifest" href="{{BASE_PATH}}site.webmanifest">
+  <link rel="stylesheet" href="{{BASE_PATH}}assets/styles.css">
+  <script type="application/ld+json">{{SOFTWARE_APPLICATION_JSON_LD}}</script>
+  <script id="locale-routes" type="application/json">{{LOCALE_ROUTES_JSON}}</script>
+  <script src="{{BASE_PATH}}assets/locale-router.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
+  <header class="site-header">
+    <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">
+      {{BRAND_LOGO}}
+      <span>{{APP_NAME}}</span>
+    </a>
+    <nav aria-label="{{PRIMARY_NAV_LABEL}}">
+      <a href="#features">{{NAV_FEATURES}}</a>
+      {{BLOG_NAV_ITEM}}
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+      {{LANGUAGE_SWITCHER}}
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="category">{{CATEGORY}}</p>
+        <h1 id="hero-title">{{APP_NAME}}</h1>
+        <p class="tagline">{{TAGLINE}}</p>
+        <p class="summary">{{SHORT_DESCRIPTION}}</p>
+        {{PRIMARY_ACTION}}
+      </div>
+      {{HERO_MEDIA}}
+    </section>
+
+    {{OVERVIEW_SECTION}}
+
+    {{SCREENSHOT_SECTION}}
+
+    <section id="features" class="content-band" aria-labelledby="features-title">
+      <div class="section-heading">
+        <h2 id="features-title">{{FEATURES_HEADING}}</h2>
+        <p>{{FEATURES_INTRO}}</p>
+      </div>
+      <div class="feature-list">
+        {{FEATURE_ITEMS}}
+      </div>
+    </section>
+
+    {{WORKFLOW_SECTION}}
+
+    <section class="closing" aria-labelledby="closing-title">
+      <h2 id="closing-title">{{CLOSING_HEADING}}</h2>
+      <p>{{CLOSING_COPY}}</p>
+      {{PRIMARY_ACTION}}
+    </section>
+  </main>
+
+  <footer>
+    <p>{{COPYRIGHT_TEXT}}</p>
+    <nav aria-label="{{FOOTER_NAV_LABEL}}">
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      {{BLOG_NAV_ITEM}}
+    </nav>
+  </footer>
+  <script src="{{BASE_PATH}}assets/app.js" defer></script>
+</body>
+</html>

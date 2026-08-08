@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{TEXT_DIRECTION}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  {{HREFLANG_LINKS}}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{PAGE_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/styles.css">
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/blog.css">
+  <script type="application/ld+json">{{ARTICLE_JSON_LD}}</script>
+  <script id="locale-routes" type="application/json">{{LOCALE_ROUTES_JSON}}</script>
+  <script src="{{SITE_BASE_PATH}}assets/locale-router.js" defer></script>
+</head>
+<body class="blog-page article-page release-page">
+  <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
+  <header class="site-header">
+    <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">
+      <img src="{{LOGO_PATH}}" alt="" width="40" height="40">
+      <span>{{APP_NAME}}</span>
+    </a>
+    <nav aria-label="{{PRIMARY_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      <a href="{{BLOG_URL}}" aria-current="page">{{NAV_BLOG}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      {{LANGUAGE_SWITCHER}}
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="release-header">
+        <nav class="breadcrumbs" aria-label="{{BREADCRUMB_LABEL}}">{{BREADCRUMBS}}</nav>
+        <p class="article-kicker">{{RELEASE_NOTES_LABEL}}</p>
+        <div class="release-title-row">
+          <div>
+            <h1>{{ARTICLE_TITLE}}</h1>
+            <p class="article-dek">{{ARTICLE_SUMMARY}}</p>
+          </div>
+          <p class="version-mark"><span>{{VERSION_LABEL}}</span><strong>{{VERSION_NAME}}</strong></p>
+        </div>
+        <div class="article-meta">{{ARTICLE_META}}</div>
+      </header>
+
+      {{ARTICLE_HERO_MEDIA}}
+
+      <div class="release-layout">
+        <aside class="release-facts" aria-label="{{RELEASE_DETAILS_LABEL}}">
+          <dl>
+            <div><dt>{{RELEASE_DATE_LABEL}}</dt><dd>{{RELEASE_DATE}}</dd></div>
+            <div><dt>{{PLATFORM_LABEL}}</dt><dd>{{PLATFORM_VALUE}}</dd></div>
+            <div><dt>{{MIN_VERSION_LABEL}}</dt><dd>{{MIN_VERSION_VALUE}}</dd></div>
+          </dl>
+        </aside>
+        <div class="article-body release-body">
+          <section class="release-summary" aria-labelledby="summary-title">
+            <h2 id="summary-title">{{SUMMARY_HEADING}}</h2>
+            {{SUMMARY_CONTENT}}
+          </section>
+          {{CHANGE_GROUPS}}
+          {{COMPATIBILITY_SECTION}}
+          {{KNOWN_LIMITATIONS_SECTION}}
+        </div>
+      </div>
+    </article>
+
+    <section class="release-archive" aria-labelledby="archive-title">
+      <h2 id="archive-title">{{ARCHIVE_HEADING}}</h2>
+      <div class="release-list">{{RELEASE_ARCHIVE_ITEMS}}</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {{YEAR}} {{DEVELOPER_NAME}}. {{RIGHTS_TEXT}}</p>
+    <nav aria-label="{{FOOTER_NAV_LABEL}}">
+      <a href="{{BLOG_URL}}">{{NAV_BLOG}}</a>
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+    </nav>
+  </footer>
+  <script src="{{SITE_BASE_PATH}}assets/blog.js" defer></script>
+</body>
+</html>

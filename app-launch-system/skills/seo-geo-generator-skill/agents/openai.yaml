@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO and GEO Generator"
+  short_description: "Optimize content for search and AI answers"
+  default_prompt: "Use $seo-geo-generator-skill to generate localized SEO and generative-engine optimization assets from app-info.yaml."

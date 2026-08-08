@@ -1,0 +1,31 @@
+schemaVersion: '1.0'
+locale: zh-CN
+pages:
+  /zh-CN/:
+    title: SiteReport - 现场巡检报告
+    description: SiteReport 面向工程、施工、物业设施和安全验收团队，集中管理巡检项目、检查清单、照片证据、位置记录、签字与 PDF 报告。
+    primaryQuery: 核心功能
+  /zh-CN/features/巡检项目/:
+    title: 巡检项目 - SiteReport
+    description: 集中管理项目资料、进度、照片和报告。
+    primaryQuery: field inspection project management Android
+  /zh-CN/features/巡检清单/:
+    title: 巡检清单 - SiteReport
+    description: 使用可复用的巡检计划和检查模板。
+    primaryQuery: construction inspection checklist app
+  /zh-CN/features/照片证据与位置记录/:
+    title: 照片证据与位置记录 - SiteReport
+    description: 为检查项拍照，并关联备注、时间和位置信息。
+    primaryQuery: inspection photo evidence app
+  /zh-CN/features/现场备注与签字/:
+    title: 现场备注与签字 - SiteReport
+    description: 记录问题、整改建议和签字资料。
+    primaryQuery: field inspection notes and signatures
+  /zh-CN/features/pdf-与报告生成/:
+    title: PDF 与报告生成 - SiteReport
+    description: 从巡检数据生成结构化现场报告。
+    primaryQuery: generate PDF inspection report Android
+  /zh-CN/features/导出与服务器交付/:
+    title: 导出与服务器交付 - SiteReport
+    description: 导出报告文件，并在配置后发送到服务器。
+    primaryQuery: upload inspection reports to SFTP Android

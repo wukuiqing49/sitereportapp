@@ -1,0 +1,17 @@
+{
+  "name": "SiteReport",
+  "short_name": "SiteReport",
+  "description": "Field inspection reports with photos, checklists, location records, and PDF export.",
+  "lang": "en-US",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#2D78F0",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

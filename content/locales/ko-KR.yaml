@@ -1,0 +1,40 @@
+locale: "ko-KR"
+languageName: "한국어"
+direction: "ltr"
+reviewStatus: "machine-draft"
+navigation: {primaryLabel: "주요 탐색", footerLabel: "푸터 탐색", home: "홈", features: "기능", screenshots: "스크린샷", support: "지원", privacy: "개인정보 보호", about: "회사", blog: "블로그", language: "언어", backToApp: "앱으로 돌아가기"}
+common: {skipToContent: "본문으로 이동", googlePlayCta: "Google Play에서 이용 가능", availability: "Google Play 주소는 아직 확인되지 않았습니다", rights: "All rights reserved.", notFoundTitle: "페이지를 찾을 수 없습니다", notFoundCopy: "요청한 페이지가 존재하지 않습니다.", returnHome: "홈으로 돌아가기"}
+home:
+  pageTitle: "SiteReport - 현장 검사 보고서"
+  metaDescription: "사진, 체크리스트, 위치 기록과 PDF 내보내기로 현장 검사를 기록합니다."
+  category: "현장 업무"
+  tagline: "필요할 때 바로 준비되는 현장 보고서"
+  shortDescription: "현장 증거를 기록하고 검사 흐름을 공유 가능한 보고서로 정리합니다."
+  heroScreenshotAlt: "SiteReport 프로젝트 화면"
+  heroScreenshotCaption: "프로젝트와 검사 진행률 관리"
+  featuresHeading: "주요 기능"
+  featuresIntro: "현장 기록, 증거 정리, 보고서 전달을 위한 기능입니다."
+  features:
+    project-management: {name: "검사 프로젝트", description: "현장 정보, 진행률, 사진과 보고서를 한곳에서 관리합니다."}
+    inspection-checklists: {name: "검사 체크리스트", description: "재사용 가능한 계획과 템플릿으로 작업을 표준화합니다."}
+    photo-evidence: {name: "사진과 위치 기록", description: "가능한 경우 사진을 항목에 연결하고 메모, 시간, 위치를 기록합니다."}
+    field-notes-and-signatures: {name: "현장 메모와 서명", description: "발견 사항, 권고 사항과 서명 정보를 기록합니다."}
+    report-generation: {name: "PDF 보고서", description: "검사 데이터에서 구조화된 현장 보고서를 생성합니다."}
+    export-and-upload: {name: "내보내기와 전송", description: "파일을 내보내고 설정한 서버로 전송합니다."}
+  screenshotsHeading: "앱 화면 보기"
+  screenshotsIntro: "현재 프로젝트의 실제 화면입니다."
+  workflowHeading: "명확한 작업 흐름"
+  workflowIntro: ""
+  workflowSteps: ["프로젝트를 만들고 템플릿 선택", "사진을 촬영하고 결과 기록", "보고서를 생성하고 공유 또는 전송"]
+  closingHeading: "현장 기록을 더 명확하게"
+  closingCopy: "프로젝트, 증거와 보고서를 하나의 흐름으로 정리합니다."
+featureDetails:
+  project-management: {problem: "프로젝트 정보, 사진과 보고서가 흩어져 있으면 현장 기록을 추적하기 어렵습니다.", capabilities: ["검사 프로젝트 생성 및 관리", "상태와 진행률 확인", "프로젝트 사진과 보고서 보관"], supportedInputs: ["이름, 위치, 고객 정보와 메모"], supportedOutputs: ["진행률과 이력이 포함된 프로젝트 기록"], options: ["프로젝트 상태와 설명"], steps: ["프로젝트 생성", "현장 정보 입력", "검사를 실행하고 진행률 확인"], limitations: ["사용 가능한 항목은 설치된 버전에 따라 달라집니다."], faq: [{question: "프로젝트에 보고서를 저장할 수 있나요?", answer: "프로젝트 흐름에는 정보, 진행률, 사진과 생성된 보고서가 포함됩니다."}]}
+  inspection-checklists: {problem: "방문마다 다른 검사를 사용하면 반복 검사를 비교하기 어렵습니다.", capabilities: ["재사용 가능한 검사 계획 생성", "템플릿과 검사 지점 선택", "검사를 재개하고 실행 이력 확인"], supportedInputs: ["항목, 계획 이름, 위치와 일정"], supportedOutputs: ["진행률이 표시된 반복 검사 작업"], options: ["템플릿, 전송, 빈도와 기본 시간"], steps: ["계획 생성 또는 선택", "템플릿과 전송 설정 선택", "검사를 실행하고 각 지점 완료"], limitations: ["알림은 검사를 자동으로 시작하지 않습니다."], faq: [{question: "검사 계획을 재사용할 수 있나요?", answer: "예. 재사용 가능한 검사 계획과 템플릿을 지원합니다."}]}
+  photo-evidence: {problem: "검사 맥락이 없는 사진은 나중에 증거로 활용하기 어렵습니다.", capabilities: ["한 장 이상 사진 촬영", "검사 기록에 사진 연결", "가능한 경우 위치와 촬영 시간 기록"], supportedInputs: ["사진, 메모와 위치 권한"], supportedOutputs: ["정리된 사진 증거"], options: ["사진 출처, 검사 항목과 표시 주석"], steps: ["검사 항목 열기", "증거 사진 촬영 또는 선택", "사진 확인 후 계속"], limitations: ["위치 정보는 기기와 권한 상태에 따라 달라집니다."], faq: [{question: "사진을 검사 항목에 연결할 수 있나요?", answer: "예. 현재 검사 기록과 항목에 증거를 연결합니다."}]}
+  field-notes-and-signatures: {problem: "발견 사항과 서명을 따로 기록하면 최종 보고서에서 빠질 수 있습니다.", capabilities: ["결과와 권고 사항 기록", "서명 프로필 관리", "메모와 서명을 보고서에 포함"], supportedInputs: ["메모, 문제, 권고 사항과 서명 정보"], supportedOutputs: ["승인 정보가 포함된 검사 기록"], options: ["검사자, 안전 담당자와 감독자 서명 정보"], steps: ["항목 열기", "발견 사항 기록", "보고서 전에 서명 정보 추가"], limitations: ["항목은 선택한 보고서 템플릿에 따라 달라집니다."], faq: [{question: "서명이 보고서에 표시되나요?", answer: "서명 프로필을 지원하며 생성된 보고서 파일에 기록합니다."}]}
+  report-generation: {problem: "현장 관찰 내용을 일관된 보고서로 만들려면 수동 서식 작업이 필요할 수 있습니다.", capabilities: ["PDF 현장 보고서 생성", "결과, 사진, 위치, 메모와 서명 포함", "생성된 파일 확인"], supportedInputs: ["프로젝트 정보, 결과, 사진과 메모"], supportedOutputs: ["PDF 보고서와 내보내기 파일"], options: ["템플릿, 스타일, 형식과 서명"], steps: ["검사 기록 완료", "보고서 옵션 선택", "파일 생성 및 확인"], limitations: ["일부 스타일은 에디션 또는 이용 플랜에 따라 달라집니다."], faq: [{question: "보고서에 무엇을 포함할 수 있나요?", answer: "프로젝트 정보, 검사 결과, 사진, 위치, 시간, 메모와 서명을 포함할 수 있습니다."}]}
+  export-and-upload: {problem: "완료된 보고서는 고객과 공유하거나 프로젝트 저장소로 보내야 하는 경우가 많습니다.", capabilities: ["PDF, 이미지와 ZIP 내보내기", "기기에서 파일 공유", "설정한 프로토콜로 전송"], supportedInputs: ["생성된 파일과 전송 프로필"], supportedOutputs: ["공유 가능한 파일 또는 전송 결과"], options: ["형식, 서명, 프로토콜, 서버와 경로"], steps: ["보고서와 파일 선택", "공유 또는 전송 선택", "상태 확인 또는 패키지 공유"], limitations: ["전송에는 설정된 대상과 네트워크 연결이 필요합니다."], faq: [{question: "어떤 서버 프로토콜을 지원하나요?", answer: "FTP, FTPS, SFTP, WebDAV와 SMB/NAS 설정을 지원합니다."}]}
+privacy: {pageTitle: "개인정보 보호 - SiteReport", metaDescription: "SiteReport 개인정보 보호 정보.", heading: "개인정보 보호", lastUpdatedLabel: "상태", content: [{heading: "정책 상태", paragraphs: ["완전하고 검토된 개인정보 보호정책은 아직 확인되지 않았습니다."]}]}
+support: {pageTitle: "지원 - SiteReport", metaDescription: "SiteReport 도움말 및 지원.", heading: "지원", intro: "SiteReport 정보를 확인하고 공개 지원 채널이 확인되면 이용하세요.", faqHeading: "자주 묻는 질문", faq: [], contactHeading: "문의", contactCopy: "공개 지원 이메일은 아직 확인되지 않았습니다.", contactCta: "지원 문의"}
+

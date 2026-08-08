@@ -1,0 +1,37 @@
+schemaVersion: '1.0'
+locale: en-US
+pages:
+  /:
+    title: SiteReport - official website
+    description: SiteReport
+    primaryQuery: What it does
+  /features/project-management/:
+    title: Inspection projects - SiteReport
+    description: Create projects and keep site information, progress, photos, and
+      reports together.
+    primaryQuery: field inspection project management Android
+  /features/inspection-checklists/:
+    title: Inspection checklists - SiteReport
+    description: Use reusable inspection plans and checklist templates to standardize
+      field work.
+    primaryQuery: construction inspection checklist app
+  /features/photo-evidence/:
+    title: Photo evidence and location records - SiteReport
+    description: Capture photos for inspection items and associate them with notes,
+      time, and location information.
+    primaryQuery: inspection photo evidence app
+  /features/field-notes-and-signatures/:
+    title: Field notes and sign-off - SiteReport
+    description: Record findings, corrective notes, and signature profiles as part
+      of the inspection record.
+    primaryQuery: field inspection notes and signatures
+  /features/report-generation/:
+    title: PDF and report generation - SiteReport
+    description: Generate structured field reports from project information, checklist
+      results, photos, notes, and signatures.
+    primaryQuery: generate PDF inspection report Android
+  /features/export-and-upload/:
+    title: Export and server delivery - SiteReport
+    description: Export report packages and send them through supported server protocols
+      when configured.
+    primaryQuery: upload inspection reports to SFTP Android

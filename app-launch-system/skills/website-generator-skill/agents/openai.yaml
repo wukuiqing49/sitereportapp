@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Generator"
+  short_description: "Build localized Android app websites"
+  default_prompt: "Use $website-generator-skill to generate a production-ready localized website from app-info.yaml."

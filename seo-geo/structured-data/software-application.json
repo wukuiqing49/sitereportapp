@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SiteReport",
+  "operatingSystem": "Android",
+  "applicationCategory": "Business",
+  "description": "Field inspection reports with photos, checklists, location records, and PDF export.",
+  "featureList": [
+    "Inspection projects",
+    "Inspection checklists",
+    "Photo evidence and location records",
+    "Field notes and sign-off",
+    "PDF and report generation",
+    "Export and server delivery"
+  ],
+  "publisher": {
+    "@id": "https://heyehoi.cn/#organization"
+  }
+}

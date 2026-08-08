@@ -1,0 +1,91 @@
+# Copy this file to <project-root>/content/locales/<locale>.yaml for each
+# non-source locale. Every target locale must provide its own public copy.
+locale: "en-US"
+languageName: "English"
+direction: "ltr"
+reviewStatus: "machine-draft"
+
+navigation:
+  primaryLabel: "Primary navigation"
+  footerLabel: "Footer navigation"
+  home: "Home"
+  features: "Features"
+  screenshots: "Screenshots"
+  support: "Support"
+  privacy: "Privacy"
+  about: "Company"
+  blog: "Blog"
+  language: "Language"
+  backToApp: "Back to app"
+
+common:
+  skipToContent: "Skip to content"
+  googlePlayCta: "Get it on Google Play"
+  availability: "Google Play link coming soon"
+  rights: "All rights reserved."
+  notFoundTitle: "Page not found"
+  notFoundCopy: "The requested page does not exist."
+  returnHome: "Return home"
+
+home:
+  pageTitle: "App name - official website"
+  metaDescription: "A concise, factual description of the app."
+  category: "Android app"
+  tagline: "A localized product tagline"
+  shortDescription: "A localized summary grounded in verified app facts."
+  heroScreenshotAlt: "App interface screenshot"
+  heroScreenshotCaption: "The app interface"
+  featuresHeading: "What it does"
+  featuresIntro: "Verified capabilities available in the app."
+  features: {}
+  screenshotsHeading: "See the app"
+  screenshotsIntro: "Real screens from the current app version."
+  workflowHeading: "How it fits your workflow"
+  workflowIntro: ""
+  workflowSteps: []
+  closingHeading: "Ready to try the app?"
+  closingCopy: "Download it from Google Play when available."
+
+# Add one translated entry for every content-ready feature ID in app-info.yaml.
+featureDetails:
+  feature-id:
+    problem: "The localized user problem this feature solves."
+    capabilities:
+      - "A verified localized capability."
+      - "Another verified localized capability."
+    supportedInputs:
+      - "A supported input."
+    supportedOutputs:
+      - "A supported output."
+    options:
+      - "A real configurable option."
+    steps:
+      - "First verified step."
+      - "Second verified step."
+      - "Third verified step."
+    limitations:
+      - "A known limitation."
+    faq:
+      - question: "A factual user question?"
+        answer: "The evidence-backed answer."
+
+privacy:
+  pageTitle: "Privacy - App name"
+  metaDescription: "Privacy information for the app."
+  heading: "Privacy"
+  lastUpdatedLabel: "Last updated"
+  content:
+    - heading: "Policy status"
+      paragraphs:
+        - "Replace this sample with reviewed privacy text before publishing."
+
+support:
+  pageTitle: "Support - App name"
+  metaDescription: "Help and contact information for the app."
+  heading: "Support"
+  intro: "Find help and contact the app team."
+  faqHeading: "Common questions"
+  faq: []
+  contactHeading: "Contact"
+  contactCopy: "Use the confirmed support channel for assistance."
+  contactCta: "Email support"

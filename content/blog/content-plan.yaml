@@ -1,0 +1,51 @@
+schemaVersion: '1.0'
+app: SiteReport
+topics:
+- contentId: project-management
+  title: 'Inspection projects: what it does in SiteReport'
+  template: standard-article
+  status: draft
+  evidence:
+  - SiteReport.md
+  - feature/feature_app/src/main/res/layout/fragment_projects.xml
+  - feature/feature_res/src/main/res/home_workspace_strings.xml
+- contentId: inspection-checklists
+  title: How to use Inspection checklists in SiteReport
+  template: tutorial
+  status: draft
+  evidence:
+  - SiteReport.md
+  - feature/feature_res/src/main/res/workflow_strings.xml
+  - feature/feature_app/src/main/res/layout/fragment_workflow_editor.xml
+- contentId: photo-evidence
+  title: 'Photo evidence and location records: what it does in SiteReport'
+  template: standard-article
+  status: draft
+  evidence:
+  - SiteReport.md
+  - core/core_camera/src/main/res/values/strings.xml
+  - feature/feature_app/src/main/java/com/wkq/feature/app/photo/PhotoEvidenceWriter.kt
+- contentId: field-notes-and-signatures
+  title: 'Field notes and sign-off: what it does in SiteReport'
+  template: standard-article
+  status: draft
+  evidence:
+  - SiteReport.md
+  - feature/feature_res/src/main/res/strings.xml
+  - feature/feature_app/src/main/res/layout/fragment_new_signature.xml
+- contentId: report-generation
+  title: How to use PDF and report generation in SiteReport
+  template: tutorial
+  status: draft
+  evidence:
+  - SiteReport.md
+  - core/core_pdf/src/main/java/com/wkq/nativepdf/NativeReportPdfRenderer.kt
+  - feature/feature_app/src/main/java/com/wkq/feature/app/upload/NativeSiteReportPdfGateway.kt
+- contentId: export-and-upload
+  title: 'Export and server delivery: what it does in SiteReport'
+  template: standard-article
+  status: draft
+  evidence:
+  - SiteReport.md
+  - core/core_upload/src/main/java/com/wkq/iptc/upload/UploadProtocolType.kt
+  - feature/feature_app/src/main/java/com/wkq/feature/app/upload/ReportPackageGateway.kt

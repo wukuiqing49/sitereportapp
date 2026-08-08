@@ -1,0 +1,40 @@
+locale: "de-DE"
+languageName: "Deutsch"
+direction: "ltr"
+reviewStatus: "machine-draft"
+navigation: {primaryLabel: "Hauptnavigation", footerLabel: "Footer-Navigation", home: "Startseite", features: "Funktionen", screenshots: "Screenshots", support: "Support", privacy: "Datenschutz", about: "Unternehmen", blog: "Blog", language: "Sprache", backToApp: "Zurück zur App"}
+common: {skipToContent: "Zum Inhalt springen", googlePlayCta: "Bei Google Play verfügbar", availability: "Die Google-Play-Adresse ist noch nicht bestätigt", rights: "Alle Rechte vorbehalten.", notFoundTitle: "Seite nicht gefunden", notFoundCopy: "Die angeforderte Seite existiert nicht.", returnHome: "Zur Startseite"}
+home:
+  pageTitle: "SiteReport - Berichte für Außeneinsätze"
+  metaDescription: "Außeneinsätze mit Fotos, Checklisten, Standortdaten und PDF-Export dokumentieren."
+  category: "Außendienst"
+  tagline: "Außenberichte, bereit wenn Sie es sind"
+  shortDescription: "Erfassen Sie Belege vor Ort und machen Sie aus dem Prüfablauf einen teilbaren Bericht."
+  heroScreenshotAlt: "SiteReport-Projektoberfläche"
+  heroScreenshotCaption: "Projekte verwalten und Fortschritt prüfen"
+  featuresHeading: "Wichtige Funktionen"
+  featuresIntro: "Werkzeuge für die Dokumentation vor Ort, geordnete Belege und die Berichtslieferung."
+  features:
+    project-management: {name: "Prüfprojekte", description: "Standortdaten, Fortschritt, Fotos und Berichte zusammenführen."}
+    inspection-checklists: {name: "Prüf-Checklisten", description: "Wiederverwendbare Pläne und Vorlagen für standardisierte Abläufe nutzen."}
+    photo-evidence: {name: "Fotos und Standortdaten", description: "Fotos mit Notizen, Zeit und Standort verknüpfen, sofern verfügbar."}
+    field-notes-and-signatures: {name: "Notizen und Unterschriften", description: "Feststellungen, Empfehlungen und Signaturdaten dokumentieren."}
+    report-generation: {name: "PDF-Berichte", description: "Strukturierte Berichte aus den Prüfdaten erzeugen."}
+    export-and-upload: {name: "Export und Zustellung", description: "Dateien exportieren und an einen konfigurierten Server senden."}
+  screenshotsHeading: "Die App ansehen"
+  screenshotsIntro: "Echte Ansichten des aktuellen Projekts."
+  workflowHeading: "Ein klarer Ablauf"
+  workflowIntro: ""
+  workflowSteps: ["Projekt erstellen und Vorlage wählen", "Fotos aufnehmen und Ergebnisse erfassen", "Bericht erzeugen, teilen oder zustellen"]
+  closingHeading: "Dokumentieren Sie Außeneinsätze klarer"
+  closingCopy: "Projekte, Belege und Berichte in einem Ablauf organisieren."
+featureDetails:
+  project-management: {problem: "Feldaufzeichnungen sind schwer nachzuverfolgen, wenn Projektdaten, Fotos und Berichte getrennt liegen.", capabilities: ["Prüfprojekte erstellen und verwalten", "Status und Fortschritt verfolgen", "Projektfotos und Berichte zusammenhalten"], supportedInputs: ["Name, Ort, Kunde und Notizen"], supportedOutputs: ["Geordnete Projektakte mit Fortschritt und Verlauf"], options: ["Projektstatus und Beschreibung"], steps: ["Projekt erstellen", "Standortdaten eingeben", "Prüfungen durchführen und Fortschritt prüfen"], limitations: ["Verfügbare Felder hängen von der installierten Version ab."], faq: [{question: "Kann ein Projekt seine Berichte speichern?", answer: "Der Projektablauf umfasst Daten, Fortschritt, Fotos und erzeugte Berichte."}]}
+  inspection-checklists: {problem: "Wiederholte Prüfungen lassen sich schwer vergleichen, wenn jeder Besuch andere Kontrollen nutzt.", capabilities: ["Wiederverwendbare Prüfpläne erstellen", "Vorlagen und Prüfpunkte wählen", "Prüfung fortsetzen und Verlauf ansehen"], supportedInputs: ["Punkte, Name, Ort und Zeitplanung"], supportedOutputs: ["Wiederholbare Aufgabe mit Fortschritt"], options: ["Vorlage, Zustellung, Häufigkeit und Zeit"], steps: ["Plan erstellen oder wählen", "Vorlage und Zustellung auswählen", "Prüfung durchführen und Punkte abschließen"], limitations: ["Erinnerungen starten keine Prüfung automatisch."], faq: [{question: "Kann ein Prüfplan wiederverwendet werden?", answer: "Ja, die App unterstützt wiederverwendbare Prüfpläne und Vorlagen."}]}
+  photo-evidence: {problem: "Ein Foto ohne Prüfkontext ist später schwer als Beleg zu verwenden.", capabilities: ["Ein oder mehrere Fotos aufnehmen", "Fotos mit einem Eintrag verknüpfen", "Standort und Aufnahmezeit erfassen, sofern verfügbar"], supportedInputs: ["Fotos, Notizen und Standortberechtigung"], supportedOutputs: ["Geordnete Fotobelege"], options: ["Quelle, Prüfpunkt und sichtbare Markierung"], steps: ["Prüfpunkt öffnen", "Belegfoto aufnehmen oder auswählen", "Foto prüfen und fortfahren"], limitations: ["Standortdaten hängen von Gerät und Berechtigungen ab."], faq: [{question: "Können Fotos einem Prüfpunkt zugeordnet werden?", answer: "Ja, der Fotofluss verknüpft den Beleg mit dem aktuellen Eintrag und Prüfpunkt."}]}
+  field-notes-and-signatures: {problem: "Feststellungen und Unterschriften können außerhalb des Berichts bleiben, wenn sie separat erfasst werden.", capabilities: ["Ergebnisse und Empfehlungen erfassen", "Signaturprofile verwalten", "Notizen und Unterschriften in den Bericht aufnehmen"], supportedInputs: ["Notizen, Probleme, Empfehlungen und Signaturen"], supportedOutputs: ["Dokumentierter Prüfdatensatz mit Freigabeinformationen"], options: ["Prüfer, Sicherheitsbeauftragter und Vorgesetzter"], steps: ["Prüfpunkt öffnen", "Feststellungen erfassen", "Vor dem Bericht Signaturdaten hinzufügen"], limitations: ["Felder hängen von der gewählten Vorlage ab."], faq: [{question: "Erscheinen Unterschriften im Bericht?", answer: "Signaturprofile werden unterstützt und in erzeugte Berichtdateien geschrieben."}]}
+  report-generation: {problem: "Beobachtungen in einen einheitlichen Bericht zu übertragen, kann viel manuelle Formatierung erfordern.", capabilities: ["PDF-Feldbericht erzeugen", "Ergebnisse, Fotos, Standort, Notizen und Signaturen aufnehmen", "Erzeugte Dateien prüfen"], supportedInputs: ["Projektdaten, Ergebnisse, Fotos und Notizen"], supportedOutputs: ["PDF-Bericht und Exportdateien"], options: ["Vorlage, Stil, Format und Signaturen"], steps: ["Datensatz abschließen", "Optionen wählen", "Dateien erzeugen und prüfen"], limitations: ["Einige Stile hängen von Edition oder Zugangsplan ab."], faq: [{question: "Was kann ein Bericht enthalten?", answer: "Projektdaten, Kontrollen, Fotos, Standort, Zeit, Notizen und Signaturen können enthalten sein."}]}
+  export-and-upload: {problem: "Fertige Berichte müssen oft geteilt oder an den Projektspeicher gesendet werden.", capabilities: ["PDF, Bilder und ZIP exportieren", "Dateien vom Gerät teilen", "Über konfigurierte Protokolle senden"], supportedInputs: ["Erzeugte Dateien und Zustellprofil"], supportedOutputs: ["Teilbare Dateien oder ein Sendestatus"], options: ["Format, Signaturen, Protokoll, Server und Pfad"], steps: ["Bericht erzeugen und Dateien wählen", "Teilen oder Zustellen auswählen", "Status prüfen oder Paket teilen"], limitations: ["Die Zustellung benötigt ein konfiguriertes Ziel und Netzwerkzugriff."], faq: [{question: "Welche Serverprotokolle werden unterstützt?", answer: "Das Projekt enthält FTP-, FTPS-, SFTP-, WebDAV- und SMB/NAS-Unterstützung."}]}
+privacy: {pageTitle: "Datenschutz - SiteReport", metaDescription: "Datenschutzinformationen zu SiteReport.", heading: "Datenschutz", lastUpdatedLabel: "Status", content: [{heading: "Status der Richtlinie", paragraphs: ["Eine vollständige und geprüfte Datenschutzrichtlinie ist noch nicht bestätigt."]}]}
+support: {pageTitle: "Support - SiteReport", metaDescription: "Hilfe und Support für SiteReport.", heading: "Support", intro: "Sehen Sie die SiteReport-Informationen ein und nutzen Sie den bestätigten Supportkanal, sobald er verfügbar ist.", faqHeading: "Häufige Fragen", faq: [], contactHeading: "Kontakt", contactCopy: "Eine öffentliche Support-E-Mail ist noch nicht bestätigt.", contactCta: "Support kontaktieren"}
+

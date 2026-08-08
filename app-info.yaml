@@ -1,0 +1,404 @@
+schemaVersion: "1.0"
+sourceProject: "C:/work/AI/SiteReport"
+analyzedAt: "2026-08-08"
+analysis:
+  status: "verified"
+  analyzerVersion: "1.0"
+  selectedModule: "app"
+  selectedVariant: "release"
+  validatedAt: "2026-08-08"
+  errors: []
+  warnings:
+    - "The release artifact was not built during this content analysis."
+
+name: "SiteReport"
+packageName: "com.wkq.site"
+version:
+  name: "1.2.5"
+  code: "125"
+  minSdk: 24
+  targetSdk: 36
+developer:
+  name: ""
+  email: ""
+
+category: "Business"
+description:
+  short: "Field inspection reports with photos, checklists, location records, and PDF export."
+  full: "SiteReport helps field teams document inspections with projects, checklists, photos, notes, signatures, location records, and generated reports."
+  valueProposition: "Capture field evidence and turn an inspection workflow into a shareable report."
+targetUsers:
+  - "Field inspectors"
+  - "Construction and engineering teams"
+  - "Property and facilities teams"
+  - "Safety and acceptance teams"
+useCases:
+  - "Record a construction or site inspection"
+  - "Run a repeatable checklist on site"
+  - "Attach photos, notes, and signatures to inspection items"
+  - "Generate and share a field report"
+
+features:
+  - id: "project-management"
+    name: "Inspection projects"
+    description: "Create projects and keep site information, progress, photos, and reports together."
+    evidence:
+      - "SiteReport.md"
+      - "feature/feature_app/src/main/res/layout/fragment_projects.xml"
+      - "feature/feature_res/src/main/res/home_workspace_strings.xml"
+    confidence: "verified"
+    details:
+      problem: "Field records become difficult to follow when project details, photos, and reports are kept separately."
+      capabilities:
+        - "Create and manage inspection projects"
+        - "Track project status and inspection progress"
+        - "Keep project photos and reports together"
+      supportedInputs:
+        - "Project name, location, client information, and inspection notes"
+      supportedOutputs:
+        - "An organized project record with progress and report history"
+      options:
+        - "Project status and project description"
+      steps:
+        - "Create a new project"
+        - "Enter the site and project information"
+        - "Run inspections and review the project progress"
+      limitations:
+        - "The available project fields and report outputs depend on the installed app version."
+      searchIntents:
+        - "field inspection project management Android"
+        - "construction inspection project records"
+      faq:
+        - question: "Can a project keep inspection reports together?"
+          answer: "The project workflow includes project information, inspection progress, photos, and generated reports."
+    blog:
+      template: "standard-article"
+  - id: "inspection-checklists"
+    name: "Inspection checklists"
+    description: "Use reusable inspection plans and checklist templates to standardize field work."
+    evidence:
+      - "SiteReport.md"
+      - "feature/feature_res/src/main/res/workflow_strings.xml"
+      - "feature/feature_app/src/main/res/layout/fragment_workflow_editor.xml"
+    confidence: "verified"
+    details:
+      problem: "Repeated inspections are harder to compare when each field visit follows a different set of checks."
+      capabilities:
+        - "Create reusable inspection plans"
+        - "Choose checklist templates and define inspection points"
+        - "Resume an in-progress inspection and review run history"
+      supportedInputs:
+        - "Checklist items, inspection plan name, location, and schedule settings"
+      supportedOutputs:
+        - "A repeatable inspection task with completion progress"
+      options:
+        - "Checklist template, delivery profile, frequency, and default time"
+      steps:
+        - "Create or select an inspection plan"
+        - "Choose the checklist template and delivery settings"
+        - "Run the inspection and complete each inspection point"
+      limitations:
+        - "A scheduled plan provides reminders; it does not start an inspection automatically."
+      searchIntents:
+        - "construction inspection checklist app"
+        - "repeatable site inspection workflow"
+      faq:
+        - question: "Can an inspection plan be reused?"
+          answer: "Yes. The app provides reusable inspection plans and checklist templates for repeated field work."
+    blog:
+      template: "tutorial"
+  - id: "photo-evidence"
+    name: "Photo evidence and location records"
+    description: "Capture photos for inspection items and associate them with notes, time, and location information."
+    evidence:
+      - "SiteReport.md"
+      - "core/core_camera/src/main/res/values/strings.xml"
+      - "feature/feature_app/src/main/java/com/wkq/feature/app/photo/PhotoEvidenceWriter.kt"
+    confidence: "verified"
+    details:
+      problem: "A photo without its inspection context is difficult to use as evidence later."
+      capabilities:
+        - "Capture one or more photos for an inspection item"
+        - "Associate photos with checklist records"
+        - "Record location and capture time when available"
+      supportedInputs:
+        - "Camera photos, gallery photos, inspection notes, and location permission"
+      supportedOutputs:
+        - "Organized photo evidence linked to an inspection record"
+      options:
+        - "Photo source, inspection item, and visible evidence annotations"
+      steps:
+        - "Open an inspection item"
+        - "Capture or select the evidence photo"
+        - "Review the photo and continue the inspection"
+      limitations:
+        - "Location details depend on device location availability and permission."
+      searchIntents:
+        - "inspection photo evidence app"
+        - "site inspection photos with GPS"
+      faq:
+        - question: "Can photos be linked to an inspection item?"
+          answer: "Yes. The photo workflow associates captured evidence with the current inspection record and item."
+    blog:
+      template: "standard-article"
+  - id: "field-notes-and-signatures"
+    name: "Field notes and sign-off"
+    description: "Record findings, corrective notes, and signature profiles as part of the inspection record."
+    evidence:
+      - "SiteReport.md"
+      - "feature/feature_res/src/main/res/strings.xml"
+      - "feature/feature_app/src/main/res/layout/fragment_new_signature.xml"
+    confidence: "verified"
+    details:
+      problem: "Inspection findings and sign-off details can be lost when they are recorded outside the report workflow."
+      capabilities:
+        - "Record inspection results, issues, and recommendations"
+        - "Manage signature profiles for field roles"
+        - "Include notes and sign-off information in generated reports"
+      supportedInputs:
+        - "Inspection notes, issue descriptions, recommendations, and signature details"
+      supportedOutputs:
+        - "A documented inspection record with sign-off information"
+      options:
+        - "Inspector, safety officer, supervisor, and company signature details"
+      steps:
+        - "Open the relevant inspection item"
+        - "Record findings and corrective recommendations"
+        - "Add or select sign-off details before report generation"
+      limitations:
+        - "The available signature fields and report presentation depend on the selected report template."
+      searchIntents:
+        - "field inspection notes and signatures"
+        - "construction inspection sign off app"
+      faq:
+        - question: "Can sign-off information appear in the report?"
+          answer: "The report workflow supports signature profiles and writes signature information into generated report files."
+    blog:
+      template: "standard-article"
+  - id: "report-generation"
+    name: "PDF and report generation"
+    description: "Generate structured field reports from project information, checklist results, photos, notes, and signatures."
+    evidence:
+      - "SiteReport.md"
+      - "core/core_pdf/src/main/java/com/wkq/nativepdf/NativeReportPdfRenderer.kt"
+      - "feature/feature_app/src/main/java/com/wkq/feature/app/upload/NativeSiteReportPdfGateway.kt"
+    confidence: "verified"
+    details:
+      problem: "Turning field observations into a consistent report can take significant manual formatting work."
+      capabilities:
+        - "Generate a PDF field report"
+        - "Include checklist results, photos, location records, notes, and signatures"
+        - "Preview and reopen generated report files"
+      supportedInputs:
+        - "Project details, checklist results, photos, notes, and sign-off data"
+      supportedOutputs:
+        - "A generated PDF report and related export files"
+      options:
+        - "Report template, PDF style, export format, and signature inclusion"
+      steps:
+        - "Complete the inspection record"
+        - "Choose report and PDF presentation options"
+        - "Generate the report and review the exported files"
+      limitations:
+        - "Some report styles and templates may depend on the app edition or selected access plan."
+      searchIntents:
+        - "generate PDF inspection report Android"
+        - "construction field report PDF app"
+      faq:
+        - question: "What can a generated field report contain?"
+          answer: "The report can include project information, checklist results, inspection photos, location records, time records, notes, and signatures."
+    blog:
+      template: "tutorial"
+  - id: "export-and-upload"
+    name: "Export and server delivery"
+    description: "Export report packages and send them through supported server protocols when configured."
+    evidence:
+      - "SiteReport.md"
+      - "core/core_upload/src/main/java/com/wkq/iptc/upload/UploadProtocolType.kt"
+      - "feature/feature_app/src/main/java/com/wkq/feature/app/upload/ReportPackageGateway.kt"
+    confidence: "verified"
+    details:
+      problem: "Completed reports often need to be shared with clients or delivered to an existing project storage system."
+      capabilities:
+        - "Export PDF, image, and ZIP report packages"
+        - "Share generated report files from the device"
+        - "Upload through FTP, FTPS, SFTP, WebDAV, or SMB/NAS configurations"
+      supportedInputs:
+        - "Generated report files and a configured delivery profile"
+      supportedOutputs:
+        - "Shareable export files or an upload result"
+      options:
+        - "Output format, signatures, upload protocol, server address, and remote path"
+      steps:
+        - "Generate the report and select export files"
+        - "Choose share or configured server delivery"
+        - "Review the upload state or share the exported package"
+      limitations:
+        - "Server delivery requires a configured endpoint and suitable network access."
+      searchIntents:
+        - "upload inspection reports to SFTP Android"
+        - "share construction report ZIP from phone"
+      faq:
+        - question: "Which server delivery protocols are supported?"
+          answer: "The project includes delivery support for FTP, FTPS, SFTP, WebDAV, and SMB/NAS configurations."
+    blog:
+      template: "standard-article"
+
+technicalHighlights:
+  - "Kotlin Android application with a modular Gradle project"
+  - "Release target configured for Android API 36"
+  - "Localizable Android resources for English, Chinese, Spanish, Portuguese, French, German, Japanese, Korean, and Arabic"
+
+keywords:
+  primary:
+    - "field inspection app"
+    - "site inspection report"
+    - "construction inspection checklist"
+  secondary:
+    - "photo evidence"
+    - "PDF field report"
+    - "inspection workflow"
+    - "report export"
+  branded:
+    - "SiteReport"
+  excluded:
+    - "guaranteed compliance"
+    - "certified inspection"
+    - "unlimited"
+    - "price"
+
+brand:
+  productName: "SiteReport"
+  tagline: "Field reports, ready when you are"
+  voice:
+    - "Practical"
+    - "Clear"
+    - "Professional"
+  colors:
+    - "#2D78F0"
+    - "#071323"
+  logo: "feature/feature_res/src/main/res/playstore-icon.png"
+
+assets:
+  root: "../SiteReport"
+  icon: "feature/feature_res/src/main/res/playstore-icon.png"
+  coverImage: ""
+  socialImage: ""
+  screenshots:
+    - "marketing/google-play/output-blue/01-professional-site-inspection.png"
+    - "marketing/google-play/output-blue/02-capture-everything.png"
+    - "marketing/google-play/output-blue/03-build-professional-reports.png"
+    - "marketing/google-play/output-blue/04-works-offline.png"
+    - "marketing/google-play/output-blue/05-share-anywhere.png"
+
+languages:
+  source: "en-US"
+  targets:
+    - "zh-CN"
+    - "es-ES"
+    - "pt-BR"
+    - "fr-FR"
+    - "de-DE"
+    - "ja-JP"
+    - "ko-KR"
+    - "ar"
+  availableInApp:
+    - "en-US"
+    - "zh-CN"
+    - "es-ES"
+    - "pt-BR"
+    - "fr-FR"
+    - "de-DE"
+    - "ja-JP"
+    - "ko-KR"
+    - "ar"
+  routing:
+    autoDetect: true
+    rememberSelection: true
+    sourceAtRoot: true
+    aliases:
+      en: "en-US"
+      es: "es-ES"
+      pt: "pt-BR"
+      fr: "fr-FR"
+      de: "de-DE"
+      ja: "ja-JP"
+      ko: "ko-KR"
+
+screenshots:
+  - path: "marketing/google-play/output-blue/01-professional-site-inspection.png"
+    locale: "en-US"
+    screen: "projects"
+    caption: "Manage projects and review inspection progress"
+  - path: "marketing/google-play/output-blue/02-capture-everything.png"
+    locale: "en-US"
+    screen: "inspection"
+    caption: "Capture photos and field evidence"
+  - path: "marketing/google-play/output-blue/03-build-professional-reports.png"
+    locale: "en-US"
+    screen: "reports"
+    caption: "Build professional field reports"
+  - path: "marketing/google-play/output-blue/04-works-offline.png"
+    locale: "en-US"
+    screen: "offline"
+    caption: "Keep working when the site has no network"
+  - path: "marketing/google-play/output-blue/05-share-anywhere.png"
+    locale: "en-US"
+    screen: "sharing"
+    caption: "Share or deliver completed reports"
+
+googlePlayUrl: "https://play.google.com/store/apps/details?id=com.wkq.site"
+videoUrl: "https://www.youtube.com/watch?v=w5BVcThNpvQ"
+websiteUrl: ""
+editorial:
+  publishedAt: ""
+  updatedAt: ""
+support:
+  email: ""
+  url: ""
+privacy:
+  policyUrl: ""
+  dataPractices: []
+
+permissions:
+  - "android.permission.CAMERA"
+  - "android.permission.ACCESS_FINE_LOCATION"
+  - "android.permission.ACCESS_COARSE_LOCATION"
+  - "android.permission.INTERNET"
+  - "android.permission.POST_NOTIFICATIONS"
+  - "android.permission.FOREGROUND_SERVICE"
+  - "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+  - "com.android.vending.BILLING"
+
+evidence:
+  - path: "SiteReport.md"
+    supports:
+      - "product positioning"
+      - "projects"
+      - "checklists"
+      - "photo evidence"
+      - "PDF reports"
+      - "offline workflow"
+      - "export and server delivery"
+  - path: "app/src/main/AndroidManifest.xml"
+    supports:
+      - "application package and permissions"
+      - "camera and location capability"
+  - path: "app/build.gradle"
+    supports:
+      - "application module"
+      - "applicationId"
+  - path: "feature/feature_app/src/main/java/com/wkq/feature/app/photo/PhotoEvidenceWriter.kt"
+    supports:
+      - "photo evidence metadata"
+unknowns:
+  - "Official website domain is not confirmed."
+  - "Public support email and privacy policy URL are not confirmed."
+  - "Developer identity for this specific app is not confirmed in the Android source project."
+  - "Exact pricing and edition limits require product-owner confirmation."
+claimsToAvoid:
+  - "Google Play availability"
+  - "Security or privacy guarantees"
+  - "Regulatory or inspection certification"
+  - "User counts, ratings, reviews, awards, or customer results"
+  - "Exact pricing, lifetime purchase, or subscription claims"

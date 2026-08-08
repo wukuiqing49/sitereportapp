@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog & Editorial Site"
+  short_description: "Create branded blog sites and localized articles"
+  default_prompt: "Use $blog-generator-skill to create a branded blog with the right page templates from app-info.yaml."

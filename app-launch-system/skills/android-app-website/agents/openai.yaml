@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android App Website"
+  short_description: "Turn an Android project into a static app website"
+  default_prompt: "Use $android-app-website to analyze my Android project and generate a Cloudflare Pages-ready static website."

@@ -1,0 +1,31 @@
+schemaVersion: '1.0'
+locale: ar
+pages:
+  /ar/:
+    title: SiteReport - تقارير الفحص الميداني
+    description: سجّل الفحوصات الميدانية بالصور وقوائم التحقق والموقع وتصدير PDF.
+    primaryQuery: الميزات الرئيسية
+  /ar/features/مشاريع-الفحص/:
+    title: مشاريع الفحص - SiteReport
+    description: اجمع معلومات الموقع والتقدم والصور والتقارير في مكان واحد.
+    primaryQuery: field inspection project management Android
+  /ar/features/قوائم-فحص/:
+    title: قوائم فحص - SiteReport
+    description: استخدم خططاً وقوالب قابلة لإعادة الاستخدام لتوحيد العمل.
+    primaryQuery: construction inspection checklist app
+  /ar/features/الصور-وسجلات-الموقع/:
+    title: الصور وسجلات الموقع - SiteReport
+    description: اربط الصور بالعناصر وسجّل الملاحظات والوقت والموقع عند توفرها.
+    primaryQuery: inspection photo evidence app
+  /ar/features/الملاحظات-والتوقيعات/:
+    title: الملاحظات والتوقيعات - SiteReport
+    description: سجّل النتائج والتوصيات وبيانات التوقيع.
+    primaryQuery: field inspection notes and signatures
+  /ar/features/تقارير-pdf/:
+    title: تقارير PDF - SiteReport
+    description: أنشئ تقارير ميدانية منظمة من بيانات الفحص.
+    primaryQuery: generate PDF inspection report Android
+  /ar/features/التصدير-والتسليم/:
+    title: التصدير والتسليم - SiteReport
+    description: صدّر الملفات وأرسلها إلى خادم تم إعداده.
+    primaryQuery: upload inspection reports to SFTP Android

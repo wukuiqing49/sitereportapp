@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://heyehoi.cn/#organization",
+  "name": "上海促动科技有限公司",
+  "alternateName": "AndroidManTou",
+  "url": "https://heyehoi.cn/",
+  "email": "wukuiqing@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "金山区枫泾镇环东一路65弄11号（枫泾经济小区）",
+    "addressLocality": "金山区",
+    "addressRegion": "上海市",
+    "postalCode": "201501",
+    "addressCountry": "CN"
+  }
+}

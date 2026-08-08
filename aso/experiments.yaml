@@ -1,0 +1,11 @@
+schemaVersion: '1.0'
+status: planned
+experiments:
+- id: short-description-value
+  variable: shortDescription
+  metric: store listing conversion
+  requiresLiveListing: true
+- id: screenshot-order
+  variable: firstThreeScreenshots
+  metric: store listing conversion
+  requiresReleaseScreenshots: true

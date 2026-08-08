@@ -1,0 +1,40 @@
+locale: "es-ES"
+languageName: "Español"
+direction: "ltr"
+reviewStatus: "machine-draft"
+navigation: {primaryLabel: "Navegación principal", footerLabel: "Navegación del pie", home: "Inicio", features: "Funciones", screenshots: "Capturas", support: "Soporte", privacy: "Privacidad", about: "Empresa", blog: "Blog", language: "Idioma", backToApp: "Volver a la aplicación"}
+common: {skipToContent: "Ir al contenido", googlePlayCta: "Disponible en Google Play", availability: "La dirección de Google Play aún no está confirmada", rights: "Todos los derechos reservados.", notFoundTitle: "Página no encontrada", notFoundCopy: "La página solicitada no existe.", returnHome: "Volver al inicio"}
+home:
+  pageTitle: "SiteReport - informes de inspección de campo"
+  metaDescription: "Completa inspecciones de campo con fotos, listas de comprobación, ubicación y exportación PDF."
+  category: "Trabajo de campo"
+  tagline: "Informes de campo, listos cuando los necesitas"
+  shortDescription: "Captura evidencias de campo y convierte el flujo de inspección en un informe compartible."
+  heroScreenshotAlt: "Interfaz de proyectos de SiteReport"
+  heroScreenshotCaption: "Gestiona proyectos y revisa el progreso"
+  featuresHeading: "Funciones principales"
+  featuresIntro: "Herramientas para registrar el trabajo de campo, ordenar evidencias y entregar informes."
+  features:
+    project-management: {name: "Proyectos de inspección", description: "Reúne datos del sitio, progreso, fotos e informes."}
+    inspection-checklists: {name: "Listas de inspección", description: "Usa planes y plantillas reutilizables para estandarizar el trabajo."}
+    photo-evidence: {name: "Fotos y ubicación", description: "Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles."}
+    field-notes-and-signatures: {name: "Notas y firmas", description: "Registra hallazgos, recomendaciones y datos de firma."}
+    report-generation: {name: "Informes PDF", description: "Genera informes estructurados a partir de los datos de inspección."}
+    export-and-upload: {name: "Exportación y entrega", description: "Exporta archivos y envíalos a un servidor configurado."}
+  screenshotsHeading: "Mira la aplicación"
+  screenshotsIntro: "Pantallas reales del proyecto actual."
+  workflowHeading: "Un flujo de trabajo claro"
+  workflowIntro: ""
+  workflowSteps: ["Crea un proyecto y elige una plantilla", "Captura fotos y registra resultados", "Genera, comparte o entrega el informe"]
+  closingHeading: "Haz más claros tus registros de campo"
+  closingCopy: "Organiza proyectos, evidencias e informes en un solo flujo."
+featureDetails:
+  project-management: {problem: "Los registros son difíciles de seguir cuando los datos del proyecto, las fotos y los informes están separados.", capabilities: ["Crear y gestionar proyectos de inspección", "Seguir el estado y el progreso", "Conservar fotos e informes del proyecto"], supportedInputs: ["Nombre, ubicación, cliente y notas"], supportedOutputs: ["Registro organizado con progreso e historial"], options: ["Estado y descripción del proyecto"], steps: ["Crea un proyecto", "Introduce los datos del sitio", "Ejecuta inspecciones y revisa el progreso"], limitations: ["Los campos disponibles dependen de la versión instalada."], faq: [{question: "¿Un proyecto puede conservar sus informes?", answer: "El flujo del proyecto incluye información, progreso, fotos e informes generados."}]}
+  inspection-checklists: {problem: "Las inspecciones repetidas son difíciles de comparar si cada visita usa controles distintos.", capabilities: ["Crear planes reutilizables", "Elegir plantillas y puntos de inspección", "Reanudar una inspección y ver su historial"], supportedInputs: ["Puntos, nombre, ubicación y programación"], supportedOutputs: ["Tarea repetible con progreso"], options: ["Plantilla, entrega, frecuencia y hora"], steps: ["Crea o elige un plan", "Selecciona plantilla y entrega", "Ejecuta y completa cada punto"], limitations: ["Los recordatorios no inician una inspección automáticamente."], faq: [{question: "¿Se puede reutilizar un plan?", answer: "Sí, la aplicación admite planes y plantillas reutilizables."}]}
+  photo-evidence: {problem: "Una foto sin contexto de inspección es difícil de usar como evidencia después.", capabilities: ["Capturar una o varias fotos", "Asociarlas a un registro", "Guardar ubicación y hora cuando estén disponibles"], supportedInputs: ["Fotos, notas y permiso de ubicación"], supportedOutputs: ["Evidencia fotográfica organizada"], options: ["Origen, punto y anotación visible"], steps: ["Abre un punto", "Captura o elige la foto", "Revísala y continúa"], limitations: ["Los datos de ubicación dependen del dispositivo y los permisos."], faq: [{question: "¿Las fotos se vinculan a un punto?", answer: "Sí, el flujo vincula la evidencia al registro y al punto actuales."}]}
+  field-notes-and-signatures: {problem: "Los hallazgos y las firmas pueden quedar fuera del informe si se registran aparte.", capabilities: ["Registrar resultados y recomendaciones", "Gestionar perfiles de firma", "Incluir notas y firmas en el informe"], supportedInputs: ["Notas, problemas, recomendaciones y firmas"], supportedOutputs: ["Registro con información de aprobación"], options: ["Inspector, responsable de seguridad y supervisor"], steps: ["Abre el punto", "Registra hallazgos", "Añade los datos de firma antes del informe"], limitations: ["Los campos dependen de la plantilla elegida."], faq: [{question: "¿Las firmas aparecen en el informe?", answer: "El flujo admite perfiles de firma y los escribe en los archivos generados."}]}
+  report-generation: {problem: "Convertir observaciones en un informe consistente puede exigir mucho trabajo manual.", capabilities: ["Generar un informe PDF", "Incluir resultados, fotos, ubicación, notas y firmas", "Previsualizar archivos generados"], supportedInputs: ["Datos del proyecto, resultados, fotos y notas"], supportedOutputs: ["Informe PDF y archivos de exportación"], options: ["Plantilla, estilo, formato y firmas"], steps: ["Completa el registro", "Elige las opciones", "Genera y revisa los archivos"], limitations: ["Algunos estilos dependen de la edición o del plan de acceso."], faq: [{question: "¿Qué puede incluir el informe?", answer: "Puede incluir datos del proyecto, controles, fotos, ubicación, tiempo, notas y firmas."}]}
+  export-and-upload: {problem: "Los informes terminados suelen necesitar compartirlos o enviarlos al almacenamiento del proyecto.", capabilities: ["Exportar PDF, imágenes y ZIP", "Compartir archivos desde el dispositivo", "Enviar mediante protocolos configurados"], supportedInputs: ["Archivos generados y perfil de entrega"], supportedOutputs: ["Archivos compartibles o resultado de carga"], options: ["Formato, firmas, protocolo, servidor y ruta"], steps: ["Genera y elige archivos", "Selecciona compartir o entregar", "Revisa el estado o comparte el paquete"], limitations: ["La entrega necesita un destino configurado y acceso de red."], faq: [{question: "¿Qué protocolos admite?", answer: "El proyecto incluye FTP, FTPS, SFTP, WebDAV y SMB/NAS."}]}
+privacy: {pageTitle: "Privacidad - SiteReport", metaDescription: "Información de privacidad de SiteReport.", heading: "Privacidad", lastUpdatedLabel: "Estado", content: [{heading: "Estado de la política", paragraphs: ["La política de privacidad completa y revisada aún no está confirmada."]}]}
+support: {pageTitle: "Soporte - SiteReport", metaDescription: "Ayuda y soporte de SiteReport.", heading: "Soporte", intro: "Consulta la información de SiteReport y utiliza el canal de soporte confirmado cuando esté disponible.", faqHeading: "Preguntas frecuentes", faq: [], contactHeading: "Contacto", contactCopy: "El correo público de soporte aún no está confirmado.", contactCta: "Contactar con soporte"}
+

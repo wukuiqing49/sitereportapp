@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{TEXT_DIRECTION}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  {{CANONICAL_TAGS}}
+  {{OPEN_GRAPH_TAGS}}
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/styles.css">
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/blog.css">
+  {{HOW_TO_STRUCTURED_DATA}}
+  <script id="locale-routes" type="application/json">{{LOCALE_ROUTES_JSON}}</script>
+  <script src="{{SITE_BASE_PATH}}assets/locale-router.js" defer></script>
+</head>
+<body class="blog-page article-page tutorial-page">
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
+  <header class="site-header">
+    <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">
+      <img src="{{LOGO_PATH}}" alt="" width="40" height="40">
+      <span>{{APP_NAME}}</span>
+    </a>
+    <nav aria-label="{{PRIMARY_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      <a href="{{BLOG_URL}}" aria-current="page">{{NAV_BLOG}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      {{LANGUAGE_SWITCHER}}
+    </nav>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="article-header tutorial-header">
+        <nav class="breadcrumbs" aria-label="{{BREADCRUMB_LABEL}}">{{BREADCRUMBS}}</nav>
+        <p class="article-kicker">{{TUTORIAL_LABEL}}</p>
+        <h1>{{ARTICLE_TITLE}}</h1>
+        <p class="article-dek">{{ARTICLE_SUMMARY}}</p>
+        <div class="article-meta">{{ARTICLE_META}}</div>
+      </header>
+
+      {{ARTICLE_HERO_MEDIA}}
+
+      <div class="tutorial-overview" aria-label="{{TUTORIAL_OVERVIEW_LABEL}}">
+        <div>
+          <span>{{DIFFICULTY_LABEL}}</span>
+          <strong>{{DIFFICULTY_VALUE}}</strong>
+        </div>
+        <div>
+          <span>{{STEPS_LABEL}}</span>
+          <strong>{{STEPS_VALUE}}</strong>
+        </div>
+        <div>
+          <span>{{REQUIREMENTS_LABEL}}</span>
+          <strong>{{REQUIREMENTS_VALUE}}</strong>
+        </div>
+      </div>
+
+      <div class="article-layout">
+        <aside class="article-toc" aria-label="{{TABLE_OF_CONTENTS_LABEL}}">
+          <p>{{TABLE_OF_CONTENTS_LABEL}}</p>
+          <nav>{{TABLE_OF_CONTENTS}}</nav>
+        </aside>
+        <div class="article-body tutorial-body">
+          <section class="prerequisites" aria-labelledby="prerequisites-title">
+            <h2 id="prerequisites-title">{{PREREQUISITES_HEADING}}</h2>
+            {{PREREQUISITES_CONTENT}}
+          </section>
+          <div class="tutorial-steps">
+            {{TUTORIAL_STEPS}}
+          </div>
+          <section aria-labelledby="result-title">
+            <h2 id="result-title">{{RESULT_HEADING}}</h2>
+            {{RESULT_CONTENT}}
+          </section>
+          {{LIMITATIONS_SECTION}}
+        </div>
+      </div>
+    </article>
+
+    <section class="related-band" aria-labelledby="related-title">
+      <div class="related-heading">
+        <h2 id="related-title">{{RELATED_HEADING}}</h2>
+        <a class="text-link" href="{{BLOG_URL}}">{{VIEW_ALL_LABEL}} <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="article-grid article-grid-compact">{{RELATED_ARTICLE_CARDS}}</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {{YEAR}} {{DEVELOPER_NAME}}. {{RIGHTS_TEXT}}</p>
+    <nav aria-label="{{FOOTER_NAV_LABEL}}">
+      <a href="{{BLOG_URL}}">{{NAV_BLOG}}</a>
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+    </nav>
+  </footer>
+  <script src="{{SITE_BASE_PATH}}assets/blog.js" defer></script>
+</body>
+</html>

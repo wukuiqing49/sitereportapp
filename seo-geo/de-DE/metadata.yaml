@@ -1,0 +1,32 @@
+schemaVersion: '1.0'
+locale: de-DE
+pages:
+  /de-DE/:
+    title: SiteReport - Berichte für Außeneinsätze
+    description: SiteReport
+    primaryQuery: Wichtige Funktionen
+  /de-DE/features/prüfprojekte/:
+    title: Prüfprojekte - SiteReport
+    description: Standortdaten, Fortschritt, Fotos und Berichte zusammenführen.
+    primaryQuery: field inspection project management Android
+  /de-DE/features/prüf-checklisten/:
+    title: Prüf-Checklisten - SiteReport
+    description: Wiederverwendbare Pläne und Vorlagen für standardisierte Abläufe
+      nutzen.
+    primaryQuery: construction inspection checklist app
+  /de-DE/features/fotos-und-standortdaten/:
+    title: Fotos und Standortdaten - SiteReport
+    description: Fotos mit Notizen, Zeit und Standort verknüpfen, sofern verfügbar.
+    primaryQuery: inspection photo evidence app
+  /de-DE/features/notizen-und-unterschriften/:
+    title: Notizen und Unterschriften - SiteReport
+    description: Feststellungen, Empfehlungen und Signaturdaten dokumentieren.
+    primaryQuery: field inspection notes and signatures
+  /de-DE/features/pdf-berichte/:
+    title: PDF-Berichte - SiteReport
+    description: Strukturierte Berichte aus den Prüfdaten erzeugen.
+    primaryQuery: generate PDF inspection report Android
+  /de-DE/features/export-und-zustellung/:
+    title: Export und Zustellung - SiteReport
+    description: Dateien exportieren und an einen konfigurierten Server senden.
+    primaryQuery: upload inspection reports to SFTP Android

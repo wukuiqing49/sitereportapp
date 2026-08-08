@@ -1,0 +1,40 @@
+locale: "pt-BR"
+languageName: "Português (Brasil)"
+direction: "ltr"
+reviewStatus: "machine-draft"
+navigation: {primaryLabel: "Navegação principal", footerLabel: "Navegação do rodapé", home: "Início", features: "Recursos", screenshots: "Capturas de tela", support: "Suporte", privacy: "Privacidade", about: "Empresa", blog: "Blog", language: "Idioma", backToApp: "Voltar ao aplicativo"}
+common: {skipToContent: "Ir para o conteúdo", googlePlayCta: "Disponível no Google Play", availability: "O endereço do Google Play ainda não foi confirmado", rights: "Todos os direitos reservados.", notFoundTitle: "Página não encontrada", notFoundCopy: "A página solicitada não existe.", returnHome: "Voltar ao início"}
+home:
+  pageTitle: "SiteReport - relatórios de inspeção de campo"
+  metaDescription: "Faça inspeções de campo com fotos, checklists, registros de localização e exportação em PDF."
+  category: "Trabalho em campo"
+  tagline: "Relatórios de campo, prontos quando você estiver"
+  shortDescription: "Registre evidências de campo e transforme o fluxo de inspeção em um relatório compartilhável."
+  heroScreenshotAlt: "Interface de projetos do SiteReport"
+  heroScreenshotCaption: "Gerencie projetos e acompanhe o progresso"
+  featuresHeading: "Principais recursos"
+  featuresIntro: "Ferramentas para registrar o trabalho em campo, organizar evidências e entregar relatórios."
+  features:
+    project-management: {name: "Projetos de inspeção", description: "Reúna dados do local, progresso, fotos e relatórios."}
+    inspection-checklists: {name: "Checklists de inspeção", description: "Use planos e modelos reutilizáveis para padronizar o trabalho."}
+    photo-evidence: {name: "Fotos e localização", description: "Associe fotos a itens com notas, horário e localização quando disponível."}
+    field-notes-and-signatures: {name: "Notas e assinaturas", description: "Registre descobertas, recomendações e dados de assinatura."}
+    report-generation: {name: "Relatórios em PDF", description: "Gere relatórios estruturados a partir dos dados da inspeção."}
+    export-and-upload: {name: "Exportação e entrega", description: "Exporte arquivos e envie-os para um servidor configurado."}
+  screenshotsHeading: "Veja o aplicativo"
+  screenshotsIntro: "Telas reais do projeto atual."
+  workflowHeading: "Um fluxo de trabalho claro"
+  workflowIntro: ""
+  workflowSteps: ["Crie um projeto e escolha um modelo", "Capture fotos e registre resultados", "Gere, compartilhe ou entregue o relatório"]
+  closingHeading: "Torne os registros de campo mais claros"
+  closingCopy: "Organize projetos, evidências e relatórios em um único fluxo."
+featureDetails:
+  project-management: {problem: "Os registros ficam difíceis de acompanhar quando dados do projeto, fotos e relatórios ficam separados.", capabilities: ["Criar e gerenciar projetos de inspeção", "Acompanhar status e progresso", "Manter fotos e relatórios juntos"], supportedInputs: ["Nome, localização, cliente e notas"], supportedOutputs: ["Registro organizado com progresso e histórico"], options: ["Status e descrição do projeto"], steps: ["Crie um projeto", "Informe os dados do local", "Execute inspeções e revise o progresso"], limitations: ["Os campos disponíveis dependem da versão instalada."], faq: [{question: "Um projeto pode guardar seus relatórios?", answer: "O fluxo do projeto reúne informações, progresso, fotos e relatórios gerados."}]}
+  inspection-checklists: {problem: "Inspeções repetidas são difíceis de comparar quando cada visita usa controles diferentes.", capabilities: ["Criar planos reutilizáveis", "Escolher modelos e pontos de inspeção", "Retomar uma inspeção e consultar o histórico"], supportedInputs: ["Itens, nome, local e programação"], supportedOutputs: ["Tarefa repetível com progresso"], options: ["Modelo, entrega, frequência e horário"], steps: ["Crie ou escolha um plano", "Selecione o modelo e a entrega", "Execute e conclua cada ponto"], limitations: ["Os lembretes não iniciam uma inspeção automaticamente."], faq: [{question: "Um plano pode ser reutilizado?", answer: "Sim, o aplicativo oferece planos e modelos de inspeção reutilizáveis."}]}
+  photo-evidence: {problem: "Uma foto sem contexto da inspeção é difícil de usar como evidência depois.", capabilities: ["Capturar uma ou mais fotos", "Associá-las a um registro", "Registrar localização e horário quando disponíveis"], supportedInputs: ["Fotos, notas e permissão de localização"], supportedOutputs: ["Evidência fotográfica organizada"], options: ["Origem, item e anotação visível"], steps: ["Abra um item", "Capture ou escolha a foto", "Revise e continue"], limitations: ["Os dados de localização dependem do dispositivo e das permissões."], faq: [{question: "As fotos podem ser vinculadas a um item?", answer: "Sim, o fluxo vincula a evidência ao registro e item atuais."}]}
+  field-notes-and-signatures: {problem: "Descobertas e assinaturas podem ficar fora do relatório quando são registradas separadamente.", capabilities: ["Registrar resultados e recomendações", "Gerenciar perfis de assinatura", "Incluir notas e assinaturas no relatório"], supportedInputs: ["Notas, problemas, recomendações e assinaturas"], supportedOutputs: ["Registro com dados de aprovação"], options: ["Inspetor, segurança e supervisor"], steps: ["Abra o item", "Registre as descobertas", "Adicione os dados de assinatura antes do relatório"], limitations: ["Os campos dependem do modelo escolhido."], faq: [{question: "As assinaturas aparecem no relatório?", answer: "O fluxo aceita perfis de assinatura e os grava nos arquivos gerados."}]}
+  report-generation: {problem: "Transformar observações em um relatório consistente pode exigir muita formatação manual.", capabilities: ["Gerar um relatório em PDF", "Incluir resultados, fotos, localização, notas e assinaturas", "Visualizar arquivos gerados"], supportedInputs: ["Dados do projeto, resultados, fotos e notas"], supportedOutputs: ["Relatório PDF e arquivos exportados"], options: ["Modelo, estilo, formato e assinaturas"], steps: ["Conclua o registro", "Escolha as opções", "Gere e revise os arquivos"], limitations: ["Alguns estilos dependem da edição ou do plano de acesso."], faq: [{question: "O que o relatório pode incluir?", answer: "Ele pode incluir dados do projeto, checklists, fotos, localização, horário, notas e assinaturas."}]}
+  export-and-upload: {problem: "Relatórios concluídos geralmente precisam ser compartilhados ou enviados ao armazenamento do projeto.", capabilities: ["Exportar PDF, imagens e ZIP", "Compartilhar arquivos no dispositivo", "Enviar por protocolos configurados"], supportedInputs: ["Arquivos gerados e perfil de entrega"], supportedOutputs: ["Arquivos compartilháveis ou resultado do envio"], options: ["Formato, assinaturas, protocolo, servidor e caminho"], steps: ["Gere e escolha os arquivos", "Selecione compartilhar ou entregar", "Revise o status ou compartilhe o pacote"], limitations: ["A entrega exige destino configurado e acesso à rede."], faq: [{question: "Quais protocolos de servidor são aceitos?", answer: "O projeto inclui FTP, FTPS, SFTP, WebDAV e SMB/NAS."}]}
+privacy: {pageTitle: "Privacidade - SiteReport", metaDescription: "Informações de privacidade do SiteReport.", heading: "Privacidade", lastUpdatedLabel: "Status", content: [{heading: "Status da política", paragraphs: ["A política de privacidade completa e revisada ainda não foi confirmada."]}]}
+support: {pageTitle: "Suporte - SiteReport", metaDescription: "Ajuda e suporte do SiteReport.", heading: "Suporte", intro: "Consulte as informações do SiteReport e use o canal de suporte confirmado quando disponível.", faqHeading: "Perguntas frequentes", faq: [], contactHeading: "Contato", contactCopy: "O e-mail público de suporte ainda não foi confirmado.", contactCta: "Contatar suporte"}
+

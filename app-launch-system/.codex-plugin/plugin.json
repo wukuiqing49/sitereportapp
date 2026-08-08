@@ -1,0 +1,37 @@
+{
+  "name": "app-launch-system",
+  "version": "0.2.0+codex.20260808025445",
+  "description": "Generate a multilingual static app website from an Android project path.",
+  "author": {
+    "name": "Local Workspace"
+  },
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "launch",
+    "aso",
+    "seo",
+    "website",
+    "content"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Android App Launch System",
+    "shortDescription": "Turn an Android project into a static website",
+    "longDescription": "Analyze an Android project from a local path and generate a multilingual, Cloudflare Pages-ready static app website with real screenshots.",
+    "developerName": "Local Workspace",
+    "category": "Productivity",
+    "capabilities": [
+      "Analyze",
+      "Generate",
+      "Localize",
+      "Validate"
+    ],
+    "defaultPrompt": [
+      "Analyze this Android project path and generate its static app website.",
+      "Generate a multilingual Cloudflare Pages-ready app website.",
+      "Refresh the static website from the latest Android project and screenshots."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

@@ -1,0 +1,121 @@
+locale: "zh-CN"
+languageName: "简体中文"
+direction: "ltr"
+reviewStatus: "machine-draft"
+navigation:
+  primaryLabel: "主导航"
+  footerLabel: "页脚导航"
+  home: "首页"
+  features: "功能"
+  screenshots: "应用截图"
+  support: "支持"
+  privacy: "隐私"
+  about: "公司"
+  blog: "博客"
+  language: "语言"
+  backToApp: "返回应用首页"
+common:
+  skipToContent: "跳到主要内容"
+  googlePlayCta: "前往 Google Play"
+  availability: "Google Play 地址暂未确认"
+  rights: "保留所有权利。"
+  notFoundTitle: "页面未找到"
+  notFoundCopy: "请求的页面不存在。"
+  returnHome: "返回首页"
+home:
+  pageTitle: "SiteReport - 现场巡检报告"
+  metaDescription: "SiteReport 面向工程、施工、物业设施和安全验收团队，集中管理巡检项目、检查清单、照片证据、位置记录、签字与 PDF 报告。"
+  category: "现场巡检与报告"
+  tagline: "从现场记录到专业报告，一套工作流完成"
+  shortDescription: "SiteReport 面向工程、施工、物业和安全验收团队，帮助你创建巡检项目、使用检查清单、关联照片与位置记录，补充现场备注和签字，并生成可分享的 PDF 报告。"
+  fullDescription: "SiteReport 面向工程、施工、物业设施和安全验收团队，将项目管理、检查清单、照片证据、位置记录、现场备注、签字确认与 PDF 报告集中在一个工作流中。无论是在现场采集信息，还是在巡检完成后整理、分享和上传报告，都可以围绕同一份项目记录持续推进。"
+  heroScreenshotAlt: "SiteReport 项目管理界面"
+  heroScreenshotCaption: "管理项目并查看巡检进度"
+  featuresHeading: "核心功能"
+  featuresIntro: "从创建项目和标准化检查，到采集带上下文的照片证据、完成签字，并将结果整理为 PDF 或交付文件。"
+  features:
+    project-management: {name: "巡检项目", description: "集中管理项目资料、进度、照片和报告。"}
+    inspection-checklists: {name: "巡检清单", description: "使用可复用的巡检计划和检查模板。"}
+    photo-evidence: {name: "照片证据与位置记录", description: "为检查项拍照，并关联备注、时间和位置信息。"}
+    field-notes-and-signatures: {name: "现场备注与签字", description: "记录问题、整改建议和签字资料。"}
+    report-generation: {name: "PDF 与报告生成", description: "从巡检数据生成结构化现场报告。"}
+    export-and-upload: {name: "导出与服务器交付", description: "导出报告文件，并在配置后发送到服务器。"}
+  screenshotsHeading: "查看应用界面"
+  screenshotsIntro: "来自当前项目的真实应用画面。"
+  workflowHeading: "适用工作流程"
+  workflowIntro: ""
+  workflowSteps: ["创建项目并选择检查模板", "拍摄照片并记录检查结果", "生成报告并分享或上传"]
+  closingHeading: "让现场记录更清晰"
+  closingCopy: "把项目资料、巡检证据、问题记录、签字信息与最终报告放在同一条工作流中，减少现场记录与报告整理之间的重复工作。"
+featureDetails:
+  project-management:
+    problem: "当项目资料、照片和报告分散保存时，现场记录难以跟进。"
+    capabilities: ["创建和管理巡检项目", "跟踪项目状态和巡检进度", "集中保存项目照片和报告"]
+    supportedInputs: ["项目名称、地点、客户信息和巡检备注"]
+    supportedOutputs: ["包含进度和报告历史的项目记录"]
+    options: ["项目状态和项目描述"]
+    steps: ["创建新项目", "填写现场和项目资料", "执行巡检并查看项目进度"]
+    limitations: ["可用字段和报告输出取决于安装的应用版本。"]
+    faq: [{question: "项目可以保存巡检报告吗？", answer: "项目流程包含项目信息、巡检进度、照片和已生成的报告。"}]
+  inspection-checklists:
+    problem: "重复巡检如果每次使用不同的检查项目，就很难进行比较。"
+    capabilities: ["创建可复用的巡检计划", "选择检查模板并定义检查点", "恢复未完成的巡检并查看运行历史"]
+    supportedInputs: ["检查项、巡检计划名称、地点和计划设置"]
+    supportedOutputs: ["带完成进度的可重复巡检任务"]
+    options: ["检查模板、交付配置、频率和默认时间"]
+    steps: ["创建或选择巡检计划", "选择检查模板和交付设置", "执行巡检并完成每个检查点"]
+    limitations: ["计划提醒不会自动启动巡检。"]
+    faq: [{question: "巡检计划可以重复使用吗？", answer: "可以，应用支持可复用的巡检计划和检查模板。"}]
+  photo-evidence:
+    problem: "没有检查上下文的照片，之后很难作为证据使用。"
+    capabilities: ["为检查项拍摄一张或多张照片", "将照片关联到检查记录", "在条件允许时记录位置和拍摄时间"]
+    supportedInputs: ["相机照片、图库照片、巡检备注和位置权限"]
+    supportedOutputs: ["关联到巡检记录的照片证据"]
+    options: ["照片来源、检查项和可见证据标注"]
+    steps: ["打开检查项", "拍摄或选择证据照片", "检查照片并继续巡检"]
+    limitations: ["位置详情取决于设备位置服务和权限。"]
+    faq: [{question: "照片可以关联到检查项吗？", answer: "可以，照片流程会将证据关联到当前巡检记录和检查项。"}]
+  field-notes-and-signatures:
+    problem: "如果在报告流程之外记录问题和签字信息，内容可能无法进入最终报告。"
+    capabilities: ["记录巡检结果、问题和建议", "管理现场角色的签字资料", "将备注和签字信息纳入报告"]
+    supportedInputs: ["巡检备注、问题描述、整改建议和签字资料"]
+    supportedOutputs: ["包含签字信息的巡检记录"]
+    options: ["检查员、安全员、主管和公司签字资料"]
+    steps: ["打开对应检查项", "记录发现的问题和整改建议", "生成报告前添加或选择签字资料"]
+    limitations: ["签字字段和报告呈现取决于所选报告模板。"]
+    faq: [{question: "签字信息会出现在报告中吗？", answer: "报告流程支持签字资料，并会将其写入生成的报告文件。"}]
+  report-generation:
+    problem: "把现场观察整理成格式一致的报告，通常需要大量手动排版。"
+    capabilities: ["生成 PDF 现场报告", "包含检查结果、照片、位置、备注和签字", "预览并重新打开已生成的报告"]
+    supportedInputs: ["项目资料、检查结果、照片、备注和签字数据"]
+    supportedOutputs: ["生成的 PDF 报告和相关导出文件"]
+    options: ["报告模板、PDF 样式、导出格式和签字选项"]
+    steps: ["完成巡检记录", "选择报告和 PDF 呈现选项", "生成报告并检查导出文件"]
+    limitations: ["部分报告样式和模板取决于应用版本或访问计划。"]
+    faq: [{question: "现场报告可以包含哪些内容？", answer: "报告可以包含项目资料、检查结果、照片、位置、时间、备注和签字。"}]
+  export-and-upload:
+    problem: "完成的报告经常需要分享给客户，或发送到已有的项目存储系统。"
+    capabilities: ["导出 PDF、图片和 ZIP 报告包", "从设备分享生成的报告文件", "使用已配置的服务器协议上传"]
+    supportedInputs: ["生成的报告文件和交付配置"]
+    supportedOutputs: ["可分享的导出文件或上传结果"]
+    options: ["输出格式、签字、上传协议、服务器地址和远程路径"]
+    steps: ["生成报告并选择导出文件", "选择分享或已配置的服务器交付", "查看上传状态或分享导出包"]
+    limitations: ["服务器交付需要配置端点并具备合适的网络访问。"]
+    faq: [{question: "支持哪些服务器交付协议？", answer: "项目包含 FTP、FTPS、SFTP、WebDAV 和 SMB/NAS 配置支持。"}]
+privacy:
+  pageTitle: "隐私 - SiteReport"
+  metaDescription: "SiteReport 的隐私信息。"
+  heading: "隐私"
+  lastUpdatedLabel: "状态"
+  content: [{heading: "政策状态", paragraphs: ["完整且经过审核的隐私政策尚未确认。发布前请补充官方政策链接和数据处理说明。"]}]
+support:
+  pageTitle: "支持 - SiteReport"
+  metaDescription: "SiteReport 的帮助和支持信息。"
+  heading: "支持"
+  intro: "查看 SiteReport 的功能信息，并在确认支持渠道后获得帮助。"
+  faqHeading: "常见问题"
+  faq: []
+  contactHeading: "联系支持"
+  contactCopy: "公开支持邮箱和联系地址尚未确认。"
+  contactCta: "联系支持"
+

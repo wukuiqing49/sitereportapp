@@ -1,0 +1,32 @@
+schemaVersion: '1.0'
+locale: es-ES
+pages:
+  /es-ES/:
+    title: SiteReport - informes de inspección de campo
+    description: SiteReport
+    primaryQuery: Funciones principales
+  /es-ES/features/proyectos-de-inspección/:
+    title: Proyectos de inspección - SiteReport
+    description: Reúne datos del sitio, progreso, fotos e informes.
+    primaryQuery: field inspection project management Android
+  /es-ES/features/listas-de-inspección/:
+    title: Listas de inspección - SiteReport
+    description: Usa planes y plantillas reutilizables para estandarizar el trabajo.
+    primaryQuery: construction inspection checklist app
+  /es-ES/features/fotos-y-ubicación/:
+    title: Fotos y ubicación - SiteReport
+    description: Asocia fotos de cada punto con notas, hora y ubicación cuando estén
+      disponibles.
+    primaryQuery: inspection photo evidence app
+  /es-ES/features/notas-y-firmas/:
+    title: Notas y firmas - SiteReport
+    description: Registra hallazgos, recomendaciones y datos de firma.
+    primaryQuery: field inspection notes and signatures
+  /es-ES/features/informes-pdf/:
+    title: Informes PDF - SiteReport
+    description: Genera informes estructurados a partir de los datos de inspección.
+    primaryQuery: generate PDF inspection report Android
+  /es-ES/features/exportación-y-entrega/:
+    title: Exportación y entrega - SiteReport
+    description: Exporta archivos y envíalos a un servidor configurado.
+    primaryQuery: upload inspection reports to SFTP Android
