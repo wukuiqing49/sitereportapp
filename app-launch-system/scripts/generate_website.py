@@ -34,6 +34,8 @@ BLOG_TEMPLATE_ROOT = SYSTEM_ROOT / "templates" / "blog-template"
 IMAGE_EXTENSIONS = {".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"}
 TOKEN_PATTERN = re.compile(r"\{\{[^{}]+\}\}")
 LOCAL_REFERENCE = re.compile(r"(?:href|src)=[\"']([^\"']+)[\"']", re.IGNORECASE)
+SEARCH_CONSOLE_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
+SEARCH_CONSOLE_FILE = re.compile(r"^google[A-Za-z0-9_-]+\.html$")
 
 
 ENGLISH_UI = {
@@ -173,6 +175,50 @@ def merge(base: dict, override: dict) -> dict:
         else:
             result[key] = value
     return result
+
+
+def search_console_settings(app: dict) -> tuple[str, tuple[str, str] | None]:
+    """Resolve optional Search Console HTML-tag and HTML-file verification data."""
+    config = app.get("searchConsole") or {}
+    if not isinstance(config, dict):
+        raise GenerationError("searchConsole must be a mapping")
+
+    raw_token = str(config.get("verificationToken") or "").strip()
+    token = raw_token
+    if token.lower().startswith("google-site-verification="):
+        token = token.split("=", 1)[1].strip()
+    elif token.lower().startswith("google-site-verification:"):
+        token = token.split(":", 1)[1].strip()
+    meta_match = re.fullmatch(r"<meta[^>]+content=[\"']([^\"']+)[\"'][^>]*>", token, re.IGNORECASE)
+    if meta_match:
+        token = meta_match.group(1).strip()
+    if token and not SEARCH_CONSOLE_TOKEN.fullmatch(token):
+        raise GenerationError(
+            "searchConsole.verificationToken must contain only the Google token, "
+            "or a google-site-verification=... value"
+        )
+    tag = f'<meta name="google-site-verification" content="{esc(token)}">' if token else ""
+
+    file_name = str(config.get("verificationFileName") or "").strip()
+    file_content = str(config.get("verificationContent") or "").strip()
+    if bool(file_name) != bool(file_content):
+        raise GenerationError(
+            "searchConsole.verificationFileName and verificationContent must be provided together"
+        )
+    verification_file = None
+    if file_name:
+        if not SEARCH_CONSOLE_FILE.fullmatch(file_name):
+            raise GenerationError(
+                "searchConsole.verificationFileName must look like google1234567890abcdef.html"
+            )
+        expected = f"google-site-verification: {file_name}"
+        if file_content != expected:
+            raise GenerationError(
+                "searchConsole.verificationContent must exactly match "
+                f"{expected!r}"
+            )
+        verification_file = (file_name, file_content + "\n")
+    return tag, verification_file
 
 
 def load_organization(path: Path | None) -> dict:
@@ -1946,6 +1992,7 @@ def render_site(
     video_url = str(app.get("videoUrl") or "").strip()
     if video_url:
         youtube_embed_url(video_url)
+    search_console_tag, search_console_file = search_console_settings(app)
     base_url = website_url.rstrip("/") + "/" if website_url else ""
     package_name = str(app.get("packageName") or "")
     app_name = str(app.get("name") or "")
@@ -2107,6 +2154,7 @@ def render_site(
             "PAGE_TITLE": esc(nested(content, "home.pageTitle")),
             "META_DESCRIPTION": esc(nested(content, "home.metaDescription")),
             "THEME_COLOR": theme_color,
+            "SEARCH_CONSOLE_TAG": search_console_tag if locale == source else "",
             "OPEN_GRAPH_TAGS": open_graph,
             "SOFTWARE_APPLICATION_JSON_LD": json.dumps(software_data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"),
             "BLOG_NAV_ITEM": blog_nav_item,
@@ -2336,6 +2384,9 @@ def render_site(
         render_template("404.html", not_found_values), encoding="utf-8"
     )
     shutil.copy2(TEMPLATE_ROOT / "_headers", stage / "_headers")
+    if search_console_file:
+        file_name, file_content = search_console_file
+        (stage / file_name).write_text(file_content, encoding="utf-8")
     excluded_roots = {"content", "aso", "seo-geo"}
     excluded_files = {"launch-readiness.yaml"}
     public_files = sorted(
@@ -2362,6 +2413,8 @@ def validate_stage(stage: Path) -> None:
     errors: list[str] = []
     for path in stage.rglob("*"):
         if not path.is_file():
+            continue
+        if SEARCH_CONSOLE_FILE.fullmatch(path.name):
             continue
         if path.suffix.lower() in {".html", ".json", ".xml", ".yaml", ".txt", ".js", ".css", ".webmanifest"}:
             text = path.read_text(encoding="utf-8")

@@ -109,6 +109,7 @@ class GenerateWebsiteTests(unittest.TestCase):
             ],
             "googlePlayUrl": "",
             "websiteUrl": "",
+            "searchConsole": {},
             "support": {"email": "support@example.test", "url": ""},
             "privacy": {"policyUrl": "", "dataPractices": []},
             "evidence": [{"path": "res/layout/main.xml", "supports": ["visual-notes"]}],
@@ -252,6 +253,43 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertNotIn('video-band', index)
         self.assertNotIn('<iframe', index)
         self.assertIn('href="https://www.youtube.com/watch?v=w5BVcThNpvQ"', index)
+
+    def test_search_console_html_tag_token_renders(self) -> None:
+        data = self.app_data()
+        data["searchConsole"] = {
+            "verificationToken": "google-site-verification=n5QG4SZ3UK5U8ajW3Q4eE7b4rxrFej-lzdzrz_E7b0A"
+        }
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+        index = (self.output / "index.html").read_text(encoding="utf-8")
+        self.assertIn(
+            '<meta name="google-site-verification" content="n5QG4SZ3UK5U8ajW3Q4eE7b4rxrFej-lzdzrz_E7b0A">',
+            index,
+        )
+
+    def test_search_console_html_file_is_generated_and_manifested(self) -> None:
+        data = self.app_data()
+        data["searchConsole"] = {
+            "verificationFileName": "google1234567890abcdef.html",
+            "verificationContent": "google-site-verification: google1234567890abcdef.html",
+        }
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+        verification = self.output / "google1234567890abcdef.html"
+        self.assertEqual("google-site-verification: google1234567890abcdef.html\n", verification.read_text(encoding="utf-8"))
+        manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
+        self.assertIn("google1234567890abcdef.html", manifest["files"])
+
+    def test_invalid_search_console_html_file_configuration_stops_generation(self) -> None:
+        data = self.app_data()
+        data["searchConsole"] = {"verificationFileName": "google123.html"}
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        with self.assertRaisesRegex(GenerationError, "provided together"):
+            generate(app_info, self.output, self.locales)
+        self.assertFalse(self.output.exists())
 
     def test_invalid_video_url_stops_generation(self) -> None:
         data = self.app_data()

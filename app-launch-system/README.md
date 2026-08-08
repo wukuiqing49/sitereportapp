@@ -403,6 +403,27 @@ python -m pip install -r app-launch-system/requirements.txt
 
 校验器会检查必填信息、功能 evidence、证据文件、URL、locale、未替换 token 和占位文本。
 
+## Google Search Console 验证
+
+Cloudflare Pages 的 `pages.dev` 地址应在 Search Console 中添加为“网址前缀”资源，例如 `https://sitereport-app.pages.dev/`；“域名”资源只能用 DNS TXT 验证。
+
+如果选择 HTML 标签验证，把 Google 提供的 token 写入 `app-info.yaml`：
+
+```yaml
+searchConsole:
+  verificationToken: "google-site-verification=你的token"
+```
+
+官网生成器会把它写入根首页的 `<head>`。如果选择 HTML 文件验证，必须填写 Google 下载文件中的真实文件名和完整内容：
+
+```yaml
+searchConsole:
+  verificationFileName: "google1234567890abcdef.html"
+  verificationContent: "google-site-verification: google1234567890abcdef.html"
+```
+
+验证文件会写入站点根目录并加入 `static-site-manifest.json`；不完整或伪造的配置会直接阻止生成。
+
 ## 需要人工确认的信息
 
 如果 Android 项目中没有明确证据，系统不会猜测：
