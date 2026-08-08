@@ -1,61 +1,61 @@
 locale,page,primary_query,supporting_queries,intent,status
-en-US,/,What it does,SiteReport,product discovery,draft
+en-US,/,field inspection app,SiteReport,product discovery,draft
 en-US,/features/project-management/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 en-US,/features/inspection-checklists/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 en-US,/features/photo-evidence/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 en-US,/features/field-notes-and-signatures/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 en-US,/features/report-generation/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 en-US,/features/export-and-upload/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-zh-CN,/zh-CN/,核心功能,SiteReport,product discovery,draft
+zh-CN,/zh-CN/,现场巡检报告 app,SiteReport,product discovery,draft
 zh-CN,/zh-CN/features/巡检项目/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 zh-CN,/zh-CN/features/巡检清单/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 zh-CN,/zh-CN/features/照片证据与位置记录/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 zh-CN,/zh-CN/features/现场备注与签字/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 zh-CN,/zh-CN/features/pdf-与报告生成/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 zh-CN,/zh-CN/features/导出与服务器交付/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-es-ES,/es-ES/,Funciones principales,SiteReport,product discovery,draft
+es-ES,/es-ES/,aplicación de inspección de campo,SiteReport,product discovery,draft
 es-ES,/es-ES/features/proyectos-de-inspección/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 es-ES,/es-ES/features/listas-de-inspección/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 es-ES,/es-ES/features/fotos-y-ubicación/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 es-ES,/es-ES/features/notas-y-firmas/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 es-ES,/es-ES/features/informes-pdf/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 es-ES,/es-ES/features/exportación-y-entrega/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-pt-BR,/pt-BR/,Principais recursos,SiteReport,product discovery,draft
+pt-BR,/pt-BR/,app de inspeção de campo,SiteReport,product discovery,draft
 pt-BR,/pt-BR/features/projetos-de-inspeção/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 pt-BR,/pt-BR/features/checklists-de-inspeção/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 pt-BR,/pt-BR/features/fotos-e-localização/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 pt-BR,/pt-BR/features/notas-e-assinaturas/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 pt-BR,/pt-BR/features/relatórios-em-pdf/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 pt-BR,/pt-BR/features/exportação-e-entrega/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-fr-FR,/fr-FR/,Fonctions principales,SiteReport,product discovery,draft
+fr-FR,/fr-FR/,application d'inspection terrain,SiteReport,product discovery,draft
 fr-FR,/fr-FR/features/projets-d-inspection/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 fr-FR,/fr-FR/features/listes-d-inspection/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 fr-FR,/fr-FR/features/photos-et-localisation/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 fr-FR,/fr-FR/features/notes-et-signatures/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 fr-FR,/fr-FR/features/rapports-pdf/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 fr-FR,/fr-FR/features/export-et-livraison/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-de-DE,/de-DE/,Wichtige Funktionen,SiteReport,product discovery,draft
+de-DE,/de-DE/,App für Feldinspektionen,SiteReport,product discovery,draft
 de-DE,/de-DE/features/prüfprojekte/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 de-DE,/de-DE/features/prüf-checklisten/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 de-DE,/de-DE/features/fotos-und-standortdaten/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 de-DE,/de-DE/features/notizen-und-unterschriften/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 de-DE,/de-DE/features/pdf-berichte/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 de-DE,/de-DE/features/export-und-zustellung/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-ja-JP,/ja-JP/,主な機能,SiteReport,product discovery,draft
+ja-JP,/ja-JP/,現場検査アプリ,SiteReport,product discovery,draft
 ja-JP,/ja-JP/features/検査プロジェクト/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 ja-JP,/ja-JP/features/検査チェックリスト/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 ja-JP,/ja-JP/features/写真と位置情報/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 ja-JP,/ja-JP/features/現場メモと署名/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 ja-JP,/ja-JP/features/pdfレポート/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 ja-JP,/ja-JP/features/出力と配信/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-ko-KR,/ko-KR/,주요 기능,SiteReport,product discovery,draft
+ko-KR,/ko-KR/,현장 검사 앱,SiteReport,product discovery,draft
 ko-KR,/ko-KR/features/검사-프로젝트/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 ko-KR,/ko-KR/features/검사-체크리스트/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 ko-KR,/ko-KR/features/사진과-위치-기록/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 ko-KR,/ko-KR/features/현장-메모와-서명/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 ko-KR,/ko-KR/features/pdf-보고서/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 ko-KR,/ko-KR/features/내보내기와-전송/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
-ar,/ar/,الميزات الرئيسية,SiteReport,product discovery,draft
+ar,/ar/,تطبيق فحص ميداني,SiteReport,product discovery,draft
 ar,/ar/features/مشاريع-الفحص/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 ar,/ar/features/قوائم-فحص/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 ar,/ar/features/الصور-وسجلات-الموقع/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft

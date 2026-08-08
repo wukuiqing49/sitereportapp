@@ -8,8 +8,8 @@ content:
   readyFeatures: 6
   skippedFeatures: []
 seoGeo:
-  status: blocked
-  websiteUrl: ''
+  status: draft
+  websiteUrl: https://sitereport-app.pages.dev/
 aso:
   status: draft
   googlePlayUrl: https://play.google.com/store/apps/details?id=com.wkq.site
@@ -52,8 +52,6 @@ localization:
   screenshotReviewRequired: true
 publishReady: false
 warnings:
-- websiteUrl is missing; canonical URLs, hreflang URLs, Open Graph URLs, and sitemap
-  locations are blocked
 - editorial.publishedAt is missing; blog pages remain drafts and omit Article/HowTo
   date markup
 - zh-CN content status is machine-draft

@@ -4,7 +4,7 @@ pages:
   /zh-CN/:
     title: SiteReport - 现场巡检报告
     description: SiteReport 面向工程、施工、物业设施和安全验收团队，集中管理巡检项目、检查清单、照片证据、位置记录、签字与 PDF 报告。
-    primaryQuery: 核心功能
+    primaryQuery: 现场巡检报告 app
   /zh-CN/features/巡检项目/:
     title: 巡检项目 - SiteReport
     description: 集中管理项目资料、进度、照片和报告。

@@ -4,7 +4,7 @@ pages:
   /ar/:
     title: SiteReport - تقارير الفحص الميداني
     description: سجّل الفحوصات الميدانية بالصور وقوائم التحقق والموقع وتصدير PDF.
-    primaryQuery: الميزات الرئيسية
+    primaryQuery: تطبيق فحص ميداني
   /ar/features/مشاريع-الفحص/:
     title: مشاريع الفحص - SiteReport
     description: اجمع معلومات الموقع والتقدم والصور والتقارير في مكان واحد.

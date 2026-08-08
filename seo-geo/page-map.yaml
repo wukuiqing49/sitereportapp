@@ -3,12 +3,12 @@ pages:
 - locale: en-US
   path: /
   type: home
-  status: blocked
+  status: ready
 - locale: en-US
   path: /features/project-management/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/project-management/
   type: guide
@@ -18,7 +18,7 @@ pages:
   path: /features/inspection-checklists/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/inspection-checklists/
   type: guide
@@ -28,7 +28,7 @@ pages:
   path: /features/photo-evidence/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/photo-evidence/
   type: guide
@@ -38,7 +38,7 @@ pages:
   path: /features/field-notes-and-signatures/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/field-notes-and-signatures/
   type: guide
@@ -48,7 +48,7 @@ pages:
   path: /features/report-generation/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/report-generation/
   type: guide
@@ -58,7 +58,7 @@ pages:
   path: /features/export-and-upload/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: en-US
   path: /blog/export-and-upload/
   type: guide
@@ -67,12 +67,12 @@ pages:
 - locale: zh-CN
   path: /zh-CN/
   type: home
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /zh-CN/features/巡检项目/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/zh-CN/巡检项目/
   type: guide
@@ -82,7 +82,7 @@ pages:
   path: /zh-CN/features/巡检清单/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/zh-CN/巡检清单/
   type: guide
@@ -92,7 +92,7 @@ pages:
   path: /zh-CN/features/照片证据与位置记录/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/zh-CN/照片证据与位置记录/
   type: guide
@@ -102,7 +102,7 @@ pages:
   path: /zh-CN/features/现场备注与签字/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/zh-CN/现场备注与签字/
   type: guide
@@ -112,7 +112,7 @@ pages:
   path: /zh-CN/features/pdf-与报告生成/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/zh-CN/pdf-与报告生成/
   type: guide
@@ -122,7 +122,7 @@ pages:
   path: /zh-CN/features/导出与服务器交付/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: zh-CN
   path: /blog/zh-CN/导出与服务器交付/
   type: guide
@@ -131,12 +131,12 @@ pages:
 - locale: es-ES
   path: /es-ES/
   type: home
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /es-ES/features/proyectos-de-inspección/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /blog/es-ES/proyectos-de-inspección/
   type: guide
@@ -146,7 +146,7 @@ pages:
   path: /es-ES/features/listas-de-inspección/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /blog/es-ES/listas-de-inspección/
   type: guide
@@ -156,7 +156,7 @@ pages:
   path: /es-ES/features/fotos-y-ubicación/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /blog/es-ES/fotos-y-ubicación/
   type: guide
@@ -166,7 +166,7 @@ pages:
   path: /es-ES/features/notas-y-firmas/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /blog/es-ES/notas-y-firmas/
   type: guide
@@ -176,7 +176,7 @@ pages:
   path: /es-ES/features/informes-pdf/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /blog/es-ES/informes-pdf/
   type: guide
@@ -186,7 +186,7 @@ pages:
   path: /es-ES/features/exportación-y-entrega/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: es-ES
   path: /blog/es-ES/exportación-y-entrega/
   type: guide
@@ -195,12 +195,12 @@ pages:
 - locale: pt-BR
   path: /pt-BR/
   type: home
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /pt-BR/features/projetos-de-inspeção/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /blog/pt-BR/projetos-de-inspeção/
   type: guide
@@ -210,7 +210,7 @@ pages:
   path: /pt-BR/features/checklists-de-inspeção/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /blog/pt-BR/checklists-de-inspeção/
   type: guide
@@ -220,7 +220,7 @@ pages:
   path: /pt-BR/features/fotos-e-localização/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /blog/pt-BR/fotos-e-localização/
   type: guide
@@ -230,7 +230,7 @@ pages:
   path: /pt-BR/features/notas-e-assinaturas/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /blog/pt-BR/notas-e-assinaturas/
   type: guide
@@ -240,7 +240,7 @@ pages:
   path: /pt-BR/features/relatórios-em-pdf/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /blog/pt-BR/relatórios-em-pdf/
   type: guide
@@ -250,7 +250,7 @@ pages:
   path: /pt-BR/features/exportação-e-entrega/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: pt-BR
   path: /blog/pt-BR/exportação-e-entrega/
   type: guide
@@ -259,12 +259,12 @@ pages:
 - locale: fr-FR
   path: /fr-FR/
   type: home
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /fr-FR/features/projets-d-inspection/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /blog/fr-FR/projets-d-inspection/
   type: guide
@@ -274,7 +274,7 @@ pages:
   path: /fr-FR/features/listes-d-inspection/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /blog/fr-FR/listes-d-inspection/
   type: guide
@@ -284,7 +284,7 @@ pages:
   path: /fr-FR/features/photos-et-localisation/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /blog/fr-FR/photos-et-localisation/
   type: guide
@@ -294,7 +294,7 @@ pages:
   path: /fr-FR/features/notes-et-signatures/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /blog/fr-FR/notes-et-signatures/
   type: guide
@@ -304,7 +304,7 @@ pages:
   path: /fr-FR/features/rapports-pdf/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /blog/fr-FR/rapports-pdf/
   type: guide
@@ -314,7 +314,7 @@ pages:
   path: /fr-FR/features/export-et-livraison/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: fr-FR
   path: /blog/fr-FR/export-et-livraison/
   type: guide
@@ -323,12 +323,12 @@ pages:
 - locale: de-DE
   path: /de-DE/
   type: home
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /de-DE/features/prüfprojekte/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /blog/de-DE/prüfprojekte/
   type: guide
@@ -338,7 +338,7 @@ pages:
   path: /de-DE/features/prüf-checklisten/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /blog/de-DE/prüf-checklisten/
   type: guide
@@ -348,7 +348,7 @@ pages:
   path: /de-DE/features/fotos-und-standortdaten/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /blog/de-DE/fotos-und-standortdaten/
   type: guide
@@ -358,7 +358,7 @@ pages:
   path: /de-DE/features/notizen-und-unterschriften/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /blog/de-DE/notizen-und-unterschriften/
   type: guide
@@ -368,7 +368,7 @@ pages:
   path: /de-DE/features/pdf-berichte/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /blog/de-DE/pdf-berichte/
   type: guide
@@ -378,7 +378,7 @@ pages:
   path: /de-DE/features/export-und-zustellung/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: de-DE
   path: /blog/de-DE/export-und-zustellung/
   type: guide
@@ -387,12 +387,12 @@ pages:
 - locale: ja-JP
   path: /ja-JP/
   type: home
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /ja-JP/features/検査プロジェクト/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /blog/ja-JP/検査プロジェクト/
   type: guide
@@ -402,7 +402,7 @@ pages:
   path: /ja-JP/features/検査チェックリスト/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /blog/ja-JP/検査チェックリスト/
   type: guide
@@ -412,7 +412,7 @@ pages:
   path: /ja-JP/features/写真と位置情報/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /blog/ja-JP/写真と位置情報/
   type: guide
@@ -422,7 +422,7 @@ pages:
   path: /ja-JP/features/現場メモと署名/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /blog/ja-JP/現場メモと署名/
   type: guide
@@ -432,7 +432,7 @@ pages:
   path: /ja-JP/features/pdfレポート/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /blog/ja-JP/pdfレポート/
   type: guide
@@ -442,7 +442,7 @@ pages:
   path: /ja-JP/features/出力と配信/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: ja-JP
   path: /blog/ja-JP/出力と配信/
   type: guide
@@ -451,12 +451,12 @@ pages:
 - locale: ko-KR
   path: /ko-KR/
   type: home
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /ko-KR/features/검사-프로젝트/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /blog/ko-KR/검사-프로젝트/
   type: guide
@@ -466,7 +466,7 @@ pages:
   path: /ko-KR/features/검사-체크리스트/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /blog/ko-KR/검사-체크리스트/
   type: guide
@@ -476,7 +476,7 @@ pages:
   path: /ko-KR/features/사진과-위치-기록/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /blog/ko-KR/사진과-위치-기록/
   type: guide
@@ -486,7 +486,7 @@ pages:
   path: /ko-KR/features/현장-메모와-서명/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /blog/ko-KR/현장-메모와-서명/
   type: guide
@@ -496,7 +496,7 @@ pages:
   path: /ko-KR/features/pdf-보고서/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /blog/ko-KR/pdf-보고서/
   type: guide
@@ -506,7 +506,7 @@ pages:
   path: /ko-KR/features/내보내기와-전송/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: ko-KR
   path: /blog/ko-KR/내보내기와-전송/
   type: guide
@@ -515,12 +515,12 @@ pages:
 - locale: ar
   path: /ar/
   type: home
-  status: blocked
+  status: ready
 - locale: ar
   path: /ar/features/مشاريع-الفحص/
   type: feature
   contentId: project-management
-  status: blocked
+  status: ready
 - locale: ar
   path: /blog/ar/مشاريع-الفحص/
   type: guide
@@ -530,7 +530,7 @@ pages:
   path: /ar/features/قوائم-فحص/
   type: feature
   contentId: inspection-checklists
-  status: blocked
+  status: ready
 - locale: ar
   path: /blog/ar/قوائم-فحص/
   type: guide
@@ -540,7 +540,7 @@ pages:
   path: /ar/features/الصور-وسجلات-الموقع/
   type: feature
   contentId: photo-evidence
-  status: blocked
+  status: ready
 - locale: ar
   path: /blog/ar/الصور-وسجلات-الموقع/
   type: guide
@@ -550,7 +550,7 @@ pages:
   path: /ar/features/الملاحظات-والتوقيعات/
   type: feature
   contentId: field-notes-and-signatures
-  status: blocked
+  status: ready
 - locale: ar
   path: /blog/ar/الملاحظات-والتوقيعات/
   type: guide
@@ -560,7 +560,7 @@ pages:
   path: /ar/features/تقارير-pdf/
   type: feature
   contentId: report-generation
-  status: blocked
+  status: ready
 - locale: ar
   path: /blog/ar/تقارير-pdf/
   type: guide
@@ -570,7 +570,7 @@ pages:
   path: /ar/features/التصدير-والتسليم/
   type: feature
   contentId: export-and-upload
-  status: blocked
+  status: ready
 - locale: ar
   path: /blog/ar/التصدير-والتسليم/
   type: guide

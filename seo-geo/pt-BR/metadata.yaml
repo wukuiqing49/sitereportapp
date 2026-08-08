@@ -4,7 +4,7 @@ pages:
   /pt-BR/:
     title: SiteReport - relatórios de inspeção de campo
     description: SiteReport
-    primaryQuery: Principais recursos
+    primaryQuery: app de inspeção de campo
   /pt-BR/features/projetos-de-inspeção/:
     title: Projetos de inspeção - SiteReport
     description: Reúna dados do local, progresso, fotos e relatórios.

@@ -4,7 +4,7 @@ pages:
   /de-DE/:
     title: SiteReport - Berichte für Außeneinsätze
     description: SiteReport
-    primaryQuery: Wichtige Funktionen
+    primaryQuery: App für Feldinspektionen
   /de-DE/features/prüfprojekte/:
     title: Prüfprojekte - SiteReport
     description: Standortdaten, Fortschritt, Fotos und Berichte zusammenführen.

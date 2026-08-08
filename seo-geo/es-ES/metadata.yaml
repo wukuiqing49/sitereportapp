@@ -4,7 +4,7 @@ pages:
   /es-ES/:
     title: SiteReport - informes de inspección de campo
     description: SiteReport
-    primaryQuery: Funciones principales
+    primaryQuery: aplicación de inspección de campo
   /es-ES/features/proyectos-de-inspección/:
     title: Proyectos de inspección - SiteReport
     description: Reúne datos del sitio, progreso, fotos e informes.

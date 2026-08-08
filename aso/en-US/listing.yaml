@@ -2,9 +2,10 @@ schemaVersion: '1.0'
 locale: en-US
 status: draft
 appName: SiteReport
-shortDescription: SiteReport
-fullDescription: 'Field inspection reports with photos, checklists, location records,
-  and PDF export.
+shortDescription: 'Field inspection reports: photos, checklists, location records
+  and PDF export.'
+fullDescription: 'Field inspection reports: photos, checklists, location records and
+  PDF export.
 
 
   Inspection projects: Create projects and keep site information, progress, photos,
@@ -41,11 +42,11 @@ fullDescription: 'Field inspection reports with photos, checklists, location rec
   SMB/NAS configurations
 
 
-  Field inspection reports with photos, checklists, location records, and PDF export.'
+  Field inspection reports: photos, checklists, location records and PDF export.'
 characterCounts:
   appName: 10
-  shortDescription: 10
-  fullDescription: 1753
+  shortDescription: 78
+  fullDescription: 1743
 limits:
   appName: 30
   shortDescription: 80

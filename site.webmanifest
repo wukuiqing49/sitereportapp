@@ -1,7 +1,7 @@
 {
   "name": "SiteReport",
   "short_name": "SiteReport",
-  "description": "Field inspection reports with photos, checklists, location records, and PDF export.",
+  "description": "Field inspection reports: photos, checklists, location records and PDF export.",
   "lang": "en-US",
   "start_url": "./",
   "display": "browser",

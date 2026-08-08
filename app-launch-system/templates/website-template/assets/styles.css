@@ -5,8 +5,8 @@
   --surface: #ffffff;
   --soft: #f3f5f7;
   --line: #d7dce2;
-  --accent: #006b5f;
-  --accent-strong: #004f47;
+  --accent: #2D78F0;
+  --accent-strong: #1557C0;
   --focus: #b51d50;
   --max: 72rem;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -78,11 +78,6 @@ h2 { font-size: 2.5rem; }
 .screenshot-list figure { min-width: 0; margin: 0; }
 .screenshot-list img { width: 100%; max-height: 36rem; object-fit: contain; background: var(--soft); border-radius: 8px; }
 .screenshot-list figcaption { margin-top: 0.65rem; color: var(--muted); font-size: 0.9rem; }
-.video-band { padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 2.5rem); background: var(--soft); }
-.video-band > * { max-width: var(--max); margin-inline: auto; }
-.video-frame { max-width: 56rem; aspect-ratio: 16 / 9; margin-top: 2rem; background: #111; border-radius: 8px; overflow: hidden; }
-.video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
-.video-fallback { max-width: 56rem; margin-top: 1rem; color: var(--muted); }
 .workflow ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; padding-left: 1.5rem; }
 .closing { text-align: center; }
 .closing p { max-width: 38rem; margin-inline: auto; }

@@ -707,6 +707,19 @@ OVERVIEW_LABELS = {
 }
 
 
+SEO_PRIMARY_QUERIES = {
+    "en": "field inspection app",
+    "zh": "现场巡检报告 app",
+    "es": "aplicación de inspección de campo",
+    "pt": "app de inspeção de campo",
+    "fr": "application d'inspection terrain",
+    "de": "App für Feldinspektionen",
+    "ja": "現場検査アプリ",
+    "ko": "현장 검사 앱",
+    "ar": "تطبيق فحص ميداني",
+}
+
+
 YOUTUBE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 
 
@@ -764,6 +777,15 @@ def render_overview_section(content: dict, locale: str) -> str:
         '</div><div class="overview-points">'
         + "".join(items)
         + "</div></section>"
+    )
+
+
+def seo_primary_query(locale: str, app: dict) -> str:
+    language = locale.split("-")[0].lower()
+    return str(
+        SEO_PRIMARY_QUERIES.get(language)
+        or nested(app, "keywords.primary.0", "")
+        or nested(app, "name", "")
     )
 
 
@@ -1735,10 +1757,10 @@ def write_launch_artifacts(
         locale_metadata[home_path] = {
             "title": str(nested(content, "home.pageTitle", "")),
             "description": short_description,
-            "primaryQuery": str(nested(content, "home.featuresHeading", "")),
+            "primaryQuery": seo_primary_query(locale, app),
         }
         page_map.append({"locale": locale, "path": home_path, "type": "home", "status": "blocked" if not base_url else "ready"})
-        keyword_rows.append([locale, home_path, str(nested(content, "home.featuresHeading", "")), app_name, "product discovery", "draft"])
+        keyword_rows.append([locale, home_path, seo_primary_query(locale, app), app_name, "product discovery", "draft"])
         for feature in ready:
             feature_id = str(feature["id"])
             localized = localized_features[feature_id]
@@ -2056,7 +2078,14 @@ def render_site(
             "applicationCategory": str(app.get("category") or "Application"),
             "operatingSystem": "Android",
             "description": str(nested(content, "home.metaDescription")),
+            "featureList": [
+                str(item.get("name") or "")
+                for item in (nested(content, "home.features", {}) or {}).values()
+                if isinstance(item, dict) and str(item.get("name") or "").strip()
+            ],
         }
+        if app.get("googlePlayUrl"):
+            software_data["downloadUrl"] = str(app["googlePlayUrl"])
         if base_url:
             software_data["url"] = page_url(base_url, locale, source, "index.html")
         organization_data = organization_entity(organization)

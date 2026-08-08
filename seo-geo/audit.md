@@ -1,8 +1,8 @@
 # SEO and GEO audit
 
-Status: blocked
+Status: draft
 
-- Canonical website URL: missing
+- Canonical website URL: https://sitereport-app.pages.dev/
 - Planned pages: 117
 - Content-ready features: 6
 - Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.

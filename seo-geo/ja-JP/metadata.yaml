@@ -4,7 +4,7 @@ pages:
   /ja-JP/:
     title: SiteReport - 現場検査レポート
     description: 写真、チェックリスト、位置情報、PDF出力で現場検査を記録します。
-    primaryQuery: 主な機能
+    primaryQuery: 現場検査アプリ
   /ja-JP/features/検査プロジェクト/:
     title: 検査プロジェクト - SiteReport
     description: 現場情報、進捗、写真、レポートをまとめて管理します。

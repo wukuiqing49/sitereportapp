@@ -4,7 +4,7 @@
   "name": "SiteReport",
   "operatingSystem": "Android",
   "applicationCategory": "Business",
-  "description": "Field inspection reports with photos, checklists, location records, and PDF export.",
+  "description": "Field inspection reports: photos, checklists, location records and PDF export.",
   "featureList": [
     "Inspection projects",
     "Inspection checklists",
@@ -13,6 +13,7 @@
     "PDF and report generation",
     "Export and server delivery"
   ],
+  "url": "https://sitereport-app.pages.dev/",
   "publisher": {
     "@id": "https://heyehoi.cn/#organization"
   }

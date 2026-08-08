@@ -4,7 +4,7 @@ pages:
   /fr-FR/:
     title: SiteReport - rapports d’inspection terrain
     description: SiteReport
-    primaryQuery: Fonctions principales
+    primaryQuery: application d'inspection terrain
   /fr-FR/features/projets-d-inspection/:
     title: Projets d’inspection - SiteReport
     description: Réunissez informations du site, progression, photos et rapports.

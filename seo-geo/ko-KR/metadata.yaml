@@ -4,7 +4,7 @@ pages:
   /ko-KR/:
     title: SiteReport - 현장 검사 보고서
     description: 사진, 체크리스트, 위치 기록과 PDF 내보내기로 현장 검사를 기록합니다.
-    primaryQuery: 주요 기능
+    primaryQuery: 현장 검사 앱
   /ko-KR/features/검사-프로젝트/:
     title: 검사 프로젝트 - SiteReport
     description: 현장 정보, 진행률, 사진과 보고서를 한곳에서 관리합니다.

@@ -24,7 +24,7 @@ developer:
 
 category: "Business"
 description:
-  short: "Field inspection reports with photos, checklists, location records, and PDF export."
+  short: "Field inspection reports: photos, checklists, location records and PDF export."
   full: "SiteReport helps field teams document inspections with projects, checklists, photos, notes, signatures, location records, and generated reports."
   valueProposition: "Capture field evidence and turn an inspection workflow into a shareable report."
 targetUsers:
@@ -349,7 +349,7 @@ screenshots:
 
 googlePlayUrl: "https://play.google.com/store/apps/details?id=com.wkq.site"
 videoUrl: "https://www.youtube.com/watch?v=w5BVcThNpvQ"
-websiteUrl: ""
+websiteUrl: "https://sitereport-app.pages.dev/"
 editorial:
   publishedAt: ""
   updatedAt: ""

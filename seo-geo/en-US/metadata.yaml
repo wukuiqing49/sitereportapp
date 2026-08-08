@@ -3,8 +3,9 @@ locale: en-US
 pages:
   /:
     title: SiteReport - official website
-    description: SiteReport
-    primaryQuery: What it does
+    description: 'Field inspection reports: photos, checklists, location records and
+      PDF export.'
+    primaryQuery: field inspection app
   /features/project-management/:
     title: Inspection projects - SiteReport
     description: Create projects and keep site information, progress, photos, and
