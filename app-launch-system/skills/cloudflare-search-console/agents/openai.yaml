@@ -1,0 +1,5 @@
+interface:
+  display_name: "Cloudflare Search Console"
+  short_description: "Connect Cloudflare Pages sites to Google Search Console"
+  default_prompt: "Use $cloudflare-search-console to configure my Cloudflare Pages site for Google Search Console and verify indexing readiness."
+
