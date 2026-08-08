@@ -2387,6 +2387,10 @@ def render_site(
     if search_console_file:
         file_name, file_content = search_console_file
         (stage / file_name).write_text(file_content, encoding="utf-8")
+        # Cloudflare Pages Clean URLs otherwise redirects the official .html path.
+        (stage / "_redirects").write_text(
+            f"/{file_name} /{file_name} 200\n", encoding="utf-8"
+        )
     excluded_roots = {"content", "aso", "seo-geo"}
     excluded_files = {"launch-readiness.yaml"}
     public_files = sorted(
