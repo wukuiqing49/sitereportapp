@@ -2387,10 +2387,31 @@ def render_site(
     if search_console_file:
         file_name, file_content = search_console_file
         (stage / file_name).write_text(file_content, encoding="utf-8")
-        # Cloudflare Pages Clean URLs otherwise redirects the official .html path.
-        (stage / "_redirects").write_text(
-            f"/{file_name} /{file_name} 200\n", encoding="utf-8"
+        # Cloudflare Pages Clean URLs redirects .html paths before _redirects runs.
+        worker = (
+            "const verificationPath = "
+            + json.dumps("/" + file_name)
+            + ";\n"
+            "const verificationContent = "
+            + json.dumps(file_content)
+            + ";\n\n"
+            "export default {\n"
+            "  async fetch(request, env) {\n"
+            "    const url = new URL(request.url);\n"
+            "    if (url.pathname === verificationPath) {\n"
+            "      return new Response(verificationContent, {\n"
+            "        status: 200,\n"
+            "        headers: {\n"
+            "          \"content-type\": \"text/html; charset=UTF-8\",\n"
+            "          \"cache-control\": \"no-store\"\n"
+            "        }\n"
+            "      });\n"
+            "    }\n"
+            "    return env.ASSETS.fetch(request);\n"
+            "  }\n"
+            "};\n"
         )
+        (stage / "_worker.js").write_text(worker, encoding="utf-8")
     excluded_roots = {"content", "aso", "seo-geo"}
     excluded_files = {"launch-readiness.yaml"}
     public_files = sorted(

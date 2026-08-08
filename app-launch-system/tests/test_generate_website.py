@@ -279,13 +279,13 @@ class GenerateWebsiteTests(unittest.TestCase):
         generate(app_info, self.output, self.locales)
         verification = self.output / "google1234567890abcdef.html"
         self.assertEqual("google-site-verification: google1234567890abcdef.html\n", verification.read_text(encoding="utf-8"))
-        self.assertEqual(
-            "/google1234567890abcdef.html /google1234567890abcdef.html 200\n",
-            (self.output / "_redirects").read_text(encoding="utf-8"),
-        )
+        worker = (self.output / "_worker.js").read_text(encoding="utf-8")
+        self.assertIn('const verificationPath = "/google1234567890abcdef.html";', worker)
+        self.assertIn('const verificationContent = "google-site-verification: google1234567890abcdef.html\\n";', worker)
         manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
         self.assertIn("google1234567890abcdef.html", manifest["files"])
-        self.assertIn("_redirects", manifest["files"])
+        self.assertIn("_worker.js", manifest["files"])
+        self.assertNotIn("_redirects", manifest["files"])
 
     def test_invalid_search_console_html_file_configuration_stops_generation(self) -> None:
         data = self.app_data()

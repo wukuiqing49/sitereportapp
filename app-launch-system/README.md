@@ -422,7 +422,7 @@ searchConsole:
   verificationContent: "google-site-verification: google1234567890abcdef.html"
 ```
 
-验证文件会写入站点根目录并加入 `static-site-manifest.json`；不完整或伪造的配置会直接阻止生成。
+验证文件会写入站点根目录并加入 `static-site-manifest.json`。由于 Cloudflare Pages 默认会清理 `.html` 后缀，生成器会同时生成 `_worker.js`，让 Google 官方文件名直接返回 `200`；不完整或伪造的配置会直接阻止生成。
 
 ## 需要人工确认的信息
 

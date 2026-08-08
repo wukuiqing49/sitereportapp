@@ -4,7 +4,7 @@
   "files": [
     "404.html",
     "_headers",
-    "_redirects",
+    "_worker.js",
     "about.html",
     "ar/about.html",
     "ar/features/التصدير-والتسليم/index.html",
