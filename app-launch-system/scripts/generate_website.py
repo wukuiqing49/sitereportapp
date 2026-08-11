@@ -2458,6 +2458,7 @@ def render_site(
             prefix = "" if index == 0 and search_console_file else "bing"
             path_name = "verificationPath" if not prefix else f"{prefix}VerificationPath"
             content_name = "verificationContent" if not prefix else f"{prefix}VerificationContent"
+            content_type = "application/xml; charset=UTF-8" if file_name.lower().endswith(".xml") else "text/html; charset=UTF-8"
             declarations.append(
                 f"const {path_name} = {json.dumps('/' + file_name)};\n"
                 f"const {content_name} = {json.dumps(file_content)};"
@@ -2467,7 +2468,7 @@ def render_site(
                 f"      return new Response({content_name}, {{\n"
                 "        status: 200,\n"
                 "        headers: {\n"
-                "          \"content-type\": \"text/html; charset=UTF-8\",\n"
+                f"          \"content-type\": \"{content_type}\",\n"
                 "          \"cache-control\": \"no-store\"\n"
                 "        }\n"
                 "      });\n"

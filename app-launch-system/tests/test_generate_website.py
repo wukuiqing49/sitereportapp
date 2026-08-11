@@ -306,6 +306,7 @@ class GenerateWebsiteTests(unittest.TestCase):
         worker = (self.output / "_worker.js").read_text(encoding="utf-8")
         self.assertIn('const bingVerificationPath = "/BingSiteAuth.xml";', worker)
         self.assertIn("bingVerificationContent", worker)
+        self.assertIn('"content-type": "application/xml; charset=UTF-8"', worker)
         manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
         self.assertIn("BingSiteAuth.xml", manifest["files"])
 
