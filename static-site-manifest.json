@@ -3,6 +3,7 @@
   "entry": "index.html",
   "files": [
     "404.html",
+    "BingSiteAuth.xml",
     "_headers",
     "_worker.js",
     "about.html",

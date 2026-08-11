@@ -1,0 +1,16 @@
+schemaVersion: '1.0'
+searchEngine: Bing
+webmasterVerification:
+  status: configured
+  file: BingSiteAuth.xml
+  url: https://sitereport-app.pages.dev/BingSiteAuth.xml
+crawlSignals:
+  robotsUrl: https://sitereport-app.pages.dev/robots.txt
+  sitemapUrl: https://sitereport-app.pages.dev/sitemap.xml
+  indexNow: not configured; requires a separate IndexNow key
+geoGuidance:
+- Keep SiteReport, com.wkq.site, and the publisher identity consistent across pages
+  and the Play listing.
+- Answer feature questions directly from verified capabilities before adding product
+  context.
+- Review machine-draft locale copy before treating it as public search content.

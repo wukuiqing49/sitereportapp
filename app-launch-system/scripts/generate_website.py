@@ -36,6 +36,8 @@ TOKEN_PATTERN = re.compile(r"\{\{[^{}]+\}\}")
 LOCAL_REFERENCE = re.compile(r"(?:href|src)=[\"']([^\"']+)[\"']", re.IGNORECASE)
 SEARCH_CONSOLE_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
 SEARCH_CONSOLE_FILE = re.compile(r"^google[A-Za-z0-9_-]+\.html$")
+BING_WEBMASTER_FILE = re.compile(r"^BingSiteAuth\.xml$")
+BING_WEBMASTER_TOKEN = re.compile(r"^[A-Fa-f0-9]{32}$")
 
 
 ENGLISH_UI = {
@@ -219,6 +221,31 @@ def search_console_settings(app: dict) -> tuple[str, tuple[str, str] | None]:
             )
         verification_file = (file_name, file_content + "\n")
     return tag, verification_file
+
+
+def bing_webmaster_settings(app: dict) -> tuple[str, str] | None:
+    """Resolve Bing Webmaster XML-file verification data without deriving tokens."""
+    config = app.get("bingWebmaster") or {}
+    if not isinstance(config, dict):
+        raise GenerationError("bingWebmaster must be a mapping")
+
+    file_name = str(config.get("verificationFileName") or "").strip()
+    file_content = str(config.get("verificationContent") or "").strip()
+    if bool(file_name) != bool(file_content):
+        raise GenerationError(
+            "bingWebmaster.verificationFileName and verificationContent must be provided together"
+        )
+    if not file_name:
+        return None
+    if not BING_WEBMASTER_FILE.fullmatch(file_name):
+        raise GenerationError("bingWebmaster.verificationFileName must be BingSiteAuth.xml")
+
+    token_match = re.search(r"<user>\s*([^<\s]+)\s*</user>", file_content, re.IGNORECASE)
+    if not token_match or not BING_WEBMASTER_TOKEN.fullmatch(token_match.group(1)):
+        raise GenerationError(
+            "bingWebmaster.verificationContent must contain one 32-character hexadecimal user token"
+        )
+    return file_name, file_content + "\n"
 
 
 def load_organization(path: Path | None) -> dict:
@@ -1708,6 +1735,12 @@ def write_launch_artifacts(
     ready_ids = {str(feature["id"]) for feature in ready}
     app_name = str(app.get("name") or "")
     google_play_url = str(app.get("googlePlayUrl") or "").strip()
+    bing_config = app.get("bingWebmaster") or {}
+    bing_configured = bool(
+        isinstance(bing_config, dict)
+        and bing_config.get("verificationFileName")
+        and bing_config.get("verificationContent")
+    )
     publisher = str(organization.get("legalName") or nested(app, "developer.name", "") or app_name)
     screenshots = assets.get("screenshots") or []
 
@@ -1870,6 +1903,7 @@ def write_launch_artifacts(
         f"- Google Play URL: {google_play_url or 'missing'}\n"
         f"- Locales: {', '.join(locales)}\n"
         f"- Content-ready features used: {len(ready)}\n"
+        "- Bing scope: Bing discovers the website and linked Play listing; ASO fields are managed in Google Play Console.\n"
         "- Listing text is a draft until product and language review are complete.\n",
         encoding="utf-8",
     )
@@ -1926,8 +1960,35 @@ def write_launch_artifacts(
         f"- Canonical website URL: {base_url or 'missing'}\n"
         f"- Planned pages: {len(page_map)}\n"
         f"- Content-ready features: {len(ready)}\n"
+        f"- Bing Webmaster verification: {'configured' if bing_configured else 'missing'}\n"
         "- Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.\n"
         "- FAQ answers and entity claims come from verified product facts; review machine-draft locales before publication.\n",
+        encoding="utf-8",
+    )
+    (seo_root / "bing-search.yaml").write_text(
+        yaml.safe_dump(
+            {
+                "schemaVersion": "1.0",
+                "searchEngine": "Bing",
+                "webmasterVerification": {
+                    "status": "configured" if bing_configured else "missing",
+                    "file": "BingSiteAuth.xml" if bing_configured else "",
+                    "url": urljoin(base_url, "BingSiteAuth.xml") if base_url and bing_configured else "",
+                },
+                "crawlSignals": {
+                    "robotsUrl": urljoin(base_url, "robots.txt") if base_url else "",
+                    "sitemapUrl": urljoin(base_url, "sitemap.xml") if base_url else "",
+                    "indexNow": "not configured; requires a separate IndexNow key",
+                },
+                "geoGuidance": [
+                    "Keep SiteReport, com.wkq.site, and the publisher identity consistent across pages and the Play listing.",
+                    "Answer feature questions directly from verified capabilities before adding product context.",
+                    "Review machine-draft locale copy before treating it as public search content.",
+                ],
+            },
+            allow_unicode=True,
+            sort_keys=False,
+        ),
         encoding="utf-8",
     )
 
@@ -1993,6 +2054,7 @@ def render_site(
     if video_url:
         youtube_embed_url(video_url)
     search_console_tag, search_console_file = search_console_settings(app)
+    bing_webmaster_file = bing_webmaster_settings(app)
     base_url = website_url.rstrip("/") + "/" if website_url else ""
     package_name = str(app.get("packageName") or "")
     app_name = str(app.get("name") or "")
@@ -2384,30 +2446,40 @@ def render_site(
         render_template("404.html", not_found_values), encoding="utf-8"
     )
     shutil.copy2(TEMPLATE_ROOT / "_headers", stage / "_headers")
-    if search_console_file:
-        file_name, file_content = search_console_file
-        (stage / file_name).write_text(file_content, encoding="utf-8")
-        # Cloudflare Pages Clean URLs redirects .html paths before _redirects runs.
+    verification_files = [item for item in (search_console_file, bing_webmaster_file) if item]
+    if verification_files:
+        for file_name, file_content in verification_files:
+            (stage / file_name).write_text(file_content, encoding="utf-8")
+
+        # Cloudflare Pages Clean URLs can redirect verification paths before assets run.
+        declarations = []
+        handlers = []
+        for index, (file_name, file_content) in enumerate(verification_files):
+            prefix = "" if index == 0 and search_console_file else "bing"
+            path_name = "verificationPath" if not prefix else f"{prefix}VerificationPath"
+            content_name = "verificationContent" if not prefix else f"{prefix}VerificationContent"
+            declarations.append(
+                f"const {path_name} = {json.dumps('/' + file_name)};\n"
+                f"const {content_name} = {json.dumps(file_content)};"
+            )
+            handlers.append(
+                f"    if (url.pathname === {path_name}) {{\n"
+                f"      return new Response({content_name}, {{\n"
+                "        status: 200,\n"
+                "        headers: {\n"
+                "          \"content-type\": \"text/html; charset=UTF-8\",\n"
+                "          \"cache-control\": \"no-store\"\n"
+                "        }\n"
+                "      });\n"
+                "    }"
+            )
         worker = (
-            "const verificationPath = "
-            + json.dumps("/" + file_name)
-            + ";\n"
-            "const verificationContent = "
-            + json.dumps(file_content)
-            + ";\n\n"
-            "export default {\n"
+            "\n".join(declarations)
+            + "\n\nexport default {\n"
             "  async fetch(request, env) {\n"
             "    const url = new URL(request.url);\n"
-            "    if (url.pathname === verificationPath) {\n"
-            "      return new Response(verificationContent, {\n"
-            "        status: 200,\n"
-            "        headers: {\n"
-            "          \"content-type\": \"text/html; charset=UTF-8\",\n"
-            "          \"cache-control\": \"no-store\"\n"
-            "        }\n"
-            "      });\n"
-            "    }\n"
-            "    return env.ASSETS.fetch(request);\n"
+            + "\n".join(handlers)
+            + "\n    return env.ASSETS.fetch(request);\n"
             "  }\n"
             "};\n"
         )

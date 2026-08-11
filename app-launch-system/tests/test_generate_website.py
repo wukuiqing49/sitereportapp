@@ -287,6 +287,28 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertIn("_worker.js", manifest["files"])
         self.assertNotIn("_redirects", manifest["files"])
 
+    def test_bing_webmaster_xml_is_generated_and_manifested(self) -> None:
+        data = self.app_data()
+        data["bingWebmaster"] = {
+            "verificationFileName": "BingSiteAuth.xml",
+            "verificationContent": (
+                '<?xml version="1.0"?>\n'
+                "<users>\n"
+                "\t<user>DC4AB582C527A7A168FC391B84B8995E</user>\n"
+                "</users>"
+            ),
+        }
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+        verification = self.output / "BingSiteAuth.xml"
+        self.assertEqual(data["bingWebmaster"]["verificationContent"] + "\n", verification.read_text(encoding="utf-8"))
+        worker = (self.output / "_worker.js").read_text(encoding="utf-8")
+        self.assertIn('const bingVerificationPath = "/BingSiteAuth.xml";', worker)
+        self.assertIn("bingVerificationContent", worker)
+        manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
+        self.assertIn("BingSiteAuth.xml", manifest["files"])
+
     def test_invalid_search_console_html_file_configuration_stops_generation(self) -> None:
         data = self.app_data()
         data["searchConsole"] = {"verificationFileName": "google123.html"}

@@ -354,6 +354,9 @@ searchConsole:
   verificationToken: ""
   verificationFileName: "google939576fea7c9232c.html"
   verificationContent: "google-site-verification: google939576fea7c9232c.html"
+bingWebmaster:
+  verificationFileName: "BingSiteAuth.xml"
+  verificationContent: "<?xml version=\"1.0\"?>\n<users>\n\t<user>DC4AB582C527A7A168FC391B84B8995E</user>\n</users>"
 editorial:
   publishedAt: ""
   updatedAt: ""
