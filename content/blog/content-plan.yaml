@@ -10,7 +10,7 @@ topics:
   - feature/feature_app/src/main/res/layout/fragment_projects.xml
   - feature/feature_res/src/main/res/home_workspace_strings.xml
 - contentId: inspection-checklists
-  title: How to use Inspection checklists in SiteReport
+  title: How to use Inspection checklist app in SiteReport
   template: tutorial
   status: draft
   evidence:
@@ -34,7 +34,7 @@ topics:
   - feature/feature_res/src/main/res/strings.xml
   - feature/feature_app/src/main/res/layout/fragment_new_signature.xml
 - contentId: report-generation
-  title: How to use PDF and report generation in SiteReport
+  title: How to use Inspection report app in SiteReport
   template: tutorial
   status: draft
   evidence:

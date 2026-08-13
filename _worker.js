@@ -10,7 +10,7 @@ export default {
       return new Response(verificationContent, {
         status: 200,
         headers: {
-          "content-type": "application/xml; charset=UTF-8",
+          "content-type": "text/html; charset=UTF-8",
           "cache-control": "no-store"
         }
       });
@@ -19,7 +19,7 @@ export default {
       return new Response(bingVerificationContent, {
         status: 200,
         headers: {
-          "content-type": "text/html; charset=UTF-8",
+          "content-type": "application/xml; charset=UTF-8",
           "cache-control": "no-store"
         }
       });

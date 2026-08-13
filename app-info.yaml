@@ -24,9 +24,9 @@ developer:
 
 category: "Business"
 description:
-  short: "Field inspection reports: photos, checklists, location records and PDF export."
-  full: "SiteReport helps field teams document inspections with projects, checklists, photos, notes, signatures, location records, and generated reports."
-  valueProposition: "Capture field evidence and turn an inspection workflow into a shareable report."
+  short: "Site inspection app for field teams to capture photos, complete checklists, and generate shareable reports."
+  full: "SiteReport is a site inspection app for Android field teams. Capture inspection photos, complete reusable checklists, record notes and locations, add sign-off details, and generate a shareable site inspection report."
+  valueProposition: "Use one field inspection app to capture evidence, complete inspection checklists, and turn site visits into shareable reports."
 targetUsers:
   - "Field inspectors"
   - "Construction and engineering teams"
@@ -74,7 +74,7 @@ features:
     blog:
       template: "standard-article"
   - id: "inspection-checklists"
-    name: "Inspection checklists"
+    name: "Inspection checklist app"
     description: "Use reusable inspection plans and checklist templates to standardize field work."
     evidence:
       - "SiteReport.md"
@@ -176,7 +176,7 @@ features:
     blog:
       template: "standard-article"
   - id: "report-generation"
-    name: "PDF and report generation"
+    name: "Inspection report app"
     description: "Generate structured field reports from project information, checklist results, photos, notes, and signatures."
     evidence:
       - "SiteReport.md"
@@ -251,14 +251,20 @@ technicalHighlights:
 
 keywords:
   primary:
-    - "field inspection app"
-    - "site inspection report"
-    - "construction inspection checklist"
+    - "site inspection app"
   secondary:
-    - "photo evidence"
-    - "PDF field report"
-    - "inspection workflow"
-    - "report export"
+    - "field inspection app"
+    - "inspection report app"
+    - "inspection checklist app"
+    - "site inspection report"
+    - "site inspection software"
+    - "field inspection software"
+    - "mobile inspection software"
+    - "inspection form app"
+    - "construction inspection software"
+    - "property inspection app"
+    - "inspection checklist"
+    - "construction site inspection report"
   branded:
     - "SiteReport"
   excluded:

@@ -490,10 +490,11 @@ def source_content(app: dict, locale: str, features: list[dict]) -> dict:
             "locale": locale,
             "reviewStatus": "source",
             "home": {
-                "pageTitle": f"{name} - official website",
+                "pageTitle": f"Site Inspection App for Field Teams | {name}",
                 "metaDescription": short,
                 "category": category,
-                "tagline": tagline,
+                "tagline": "Capture inspections. Build clear field reports.",
+                "heading": "Site Inspection App",
                 "shortDescription": short,
                 "fullDescription": str(description.get("full") or short),
                 "heroScreenshotAlt": f"{name} app interface screenshot",
@@ -781,7 +782,7 @@ OVERVIEW_LABELS = {
 
 
 SEO_PRIMARY_QUERIES = {
-    "en": "field inspection app",
+    "en": "site inspection app",
     "zh": "现场巡检报告 app",
     "es": "aplicación de inspección de campo",
     "pt": "app de inspeção de campo",
@@ -791,6 +792,118 @@ SEO_PRIMARY_QUERIES = {
     "ko": "현장 검사 앱",
     "ar": "تطبيق فحص ميداني",
 }
+
+
+SEO_LANDING_PAGES = (
+    {
+        "slug": "construction-inspection-software",
+        "primary": "construction inspection software",
+        "title": "Construction Inspection Software | SiteReport",
+        "description": "Construction inspection software for recording site visits, checklists, photos, notes, locations, and shareable field reports on Android.",
+        "h1": "Construction Inspection Software",
+        "intro": "SiteReport gives construction and engineering teams a practical Android workflow for documenting site inspections with consistent checklists and evidence.",
+        "sections": (
+            ("Document each construction site visit", "Create an inspection project, record site information, and work through repeatable inspection points while you are in the field."),
+            ("Keep evidence with the inspection record", "Attach photos, notes, timestamps, and available location details to the relevant inspection item instead of keeping evidence in separate tools."),
+            ("Turn completed checks into a field report", "Generate a structured report from project details, checklist results, photos, notes, and sign-off information, then share or deliver the exported files."),
+        ),
+        "supporting": ("construction inspection app", "construction site inspection app", "construction site inspection software", "construction field report app"),
+        "faq": (
+            ("What does construction inspection software help record?", "SiteReport can record project information, inspection checklist results, photos, notes, available location details, and sign-off information in a field inspection workflow."),
+            ("Can SiteReport create a construction site inspection report?", "Yes. The Android app can generate a report from the completed inspection record and export supported report files for sharing or delivery."),
+        ),
+    },
+    {
+        "slug": "property-inspection-app",
+        "primary": "property inspection app",
+        "title": "Property Inspection App | SiteReport",
+        "description": "Property inspection app for capturing condition photos, inspection checklists, notes, locations, signatures, and shareable property inspection reports on Android.",
+        "h1": "Property Inspection App",
+        "intro": "Use SiteReport to document property and facilities inspections with a repeatable mobile workflow for observations, photos, checklists, and reports.",
+        "sections": (
+            ("Capture property condition evidence", "Record inspection findings with photos, notes, and available location information linked to the relevant project or inspection item."),
+            ("Use a repeatable property checklist", "Set up inspection plans and checklist items for recurring visits so field teams can follow the same inspection sequence and review progress."),
+            ("Share a property inspection report", "Generate a structured report from the inspection record, including supported photos, checklist results, notes, and sign-off details."),
+        ),
+        "supporting": ("property inspection software", "mobile property inspection software", "inspection software for property managers", "property inspection report app", "property inspection checklist app"),
+        "faq": (
+            ("Is SiteReport property management software?", "SiteReport is an inspection documentation app. It focuses on recording inspection projects, checklists, evidence, notes, and reports; it does not claim to manage leases, tenants, or property operations."),
+            ("Can a property inspection include photos and notes?", "Yes. Photos and notes can be associated with inspection records and items, subject to device permissions and the available app workflow."),
+        ),
+    },
+    {
+        "slug": "inspection-checklist",
+        "primary": "inspection checklist",
+        "title": "Inspection Checklist | SiteReport",
+        "description": "Learn how to use an inspection checklist app to organize repeatable site visits, inspection points, photos, notes, and report outputs on Android.",
+        "h1": "Inspection Checklist",
+        "intro": "A clear inspection checklist helps field teams follow the same inspection sequence, capture evidence in context, and produce a more complete report.",
+        "sections": (
+            ("Plan the inspection points", "Create or select an inspection plan, choose checklist templates, and define the points that need to be reviewed during a site visit."),
+            ("Complete checks with context", "Record results while attaching photos, notes, and available location details to the inspection item that they support."),
+            ("Review progress and report", "Resume an in-progress inspection, review completion progress, and use the completed checklist as part of a generated field report."),
+        ),
+        "supporting": ("inspection check list", "inspection check sheet", "inspection checklist app", "mobile inspection software"),
+        "faq": (
+            ("What should an inspection checklist contain?", "The right points depend on the site and workflow. SiteReport supports checklist items, inspection plans, notes, photos, and report outputs without presenting a universal regulatory template."),
+            ("Can an inspection checklist be reused?", "Yes. SiteReport supports reusable inspection plans and checklist templates for repeated field work."),
+        ),
+    },
+    {
+        "slug": "construction-inspection-checklist",
+        "primary": "construction inspection checklist",
+        "title": "Construction Inspection Checklist | SiteReport",
+        "description": "Construction inspection checklist workflow for recording site visit checks, photos, notes, location details, and construction field reports on Android.",
+        "h1": "Construction Inspection Checklist",
+        "intro": "Organize construction site visits around repeatable inspection points, then connect each check to the field evidence and report your team needs.",
+        "sections": (
+            ("Start with a repeatable site visit checklist", "Use inspection plans and checklist templates to make recurring construction visits easier to follow and compare."),
+            ("Link photos to checklist items", "Capture or select evidence photos for the current inspection item and keep notes, time, and available location information with the record."),
+            ("Export a construction field report", "Combine completed checks and supporting evidence into a generated report that can be previewed, shared, or delivered through supported options."),
+        ),
+        "supporting": ("construction site visit checklist", "construction site inspection app", "construction site visit report", "building inspection checklist"),
+        "faq": (
+            ("Does this provide a certified construction checklist?", "No. SiteReport provides a configurable inspection workflow and does not claim regulatory certification, legal compliance, or a universal construction standard."),
+            ("Can construction site visits include photos?", "Yes. The photo evidence workflow links captured or selected photos to inspection records and items."),
+        ),
+    },
+    {
+        "slug": "building-inspection-checklist",
+        "primary": "building inspection checklist",
+        "title": "Building Inspection Checklist | SiteReport",
+        "description": "Building inspection checklist workflow for organizing inspection points, condition photos, notes, locations, signatures, and generated reports on Android.",
+        "h1": "Building Inspection Checklist",
+        "intro": "Use a structured mobile checklist to organize building inspection observations and keep the evidence needed for a clear site report together.",
+        "sections": (
+            ("Organize building inspection observations", "Create an inspection project and work through the points relevant to the visit, with progress and report history kept together."),
+            ("Record condition evidence", "Add photos, notes, and available location details to the inspection item they describe so the report retains its context."),
+            ("Prepare a documented report", "Generate a report containing supported project information, checklist results, photos, notes, and sign-off details for review and sharing."),
+        ),
+        "supporting": ("inspection check sheet", "property inspection checklist app", "inspection checklist app", "site inspection report"),
+        "faq": (
+            ("Is this a building code inspection tool?", "SiteReport is a field documentation app. It does not determine code compliance or replace a qualified inspection, engineering, or certification process."),
+            ("Can I adapt the checklist to a building visit?", "The app supports inspection plans, checklist templates, and inspection points so teams can configure a workflow for their own documented visits."),
+        ),
+    },
+    {
+        "slug": "site-inspection-report",
+        "primary": "site inspection report",
+        "title": "Site Inspection Report | SiteReport",
+        "description": "Create a site inspection report from project details, checklist results, photos, notes, locations, and signatures with an Android inspection report app.",
+        "h1": "Site Inspection Report",
+        "intro": "SiteReport turns a completed site inspection into a structured report, keeping field observations and supporting evidence connected from capture to export.",
+        "sections": (
+            ("Build the report from field records", "Use project information, completed checklist results, photos, notes, available location details, and sign-off information as the source for the report."),
+            ("Generate a shareable inspection report", "Create a PDF field report and supported export packages, then preview, reopen, share, or deliver the generated files."),
+            ("Keep the workflow on Android", "Capture inspection evidence and prepare the report in the same app so a site visit does not depend on retyping every observation later."),
+        ),
+        "supporting": ("inspection report app", "site inspection report pdf", "field report app", "construction site inspection report"),
+        "faq": (
+            ("What can a SiteReport inspection report contain?", "Depending on the workflow and available device data, a report can include project information, checklist results, photos, location records, time records, notes, and signatures."),
+            ("Can I share a site inspection report?", "Yes. The app supports previewing and sharing generated report files, with additional server delivery available when configured."),
+        ),
+    },
+)
 
 
 YOUTUBE_VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
@@ -878,8 +991,18 @@ def page_relative(locale: str, source: str, page: str) -> str:
     return f"{locale}/" if page == "index.html" else f"{locale}/{page}"
 
 
+def public_page_relative(locale: str, source: str, page: str) -> str:
+    """Return the clean URL exposed by Cloudflare Pages for a generated page."""
+    relative = page_relative(locale, source, page)
+    if relative.endswith("index.html"):
+        return relative.removesuffix("index.html")
+    if relative.endswith(".html"):
+        return relative.removesuffix(".html")
+    return relative
+
+
 def page_url(base_url: str, locale: str, source: str, page: str) -> str:
-    return urljoin(base_url, page_relative(locale, source, page))
+    return urljoin(base_url, public_page_relative(locale, source, page))
 
 
 def route_url(current: str, target: str, source: str, page: str, base_url: str) -> str:
@@ -1378,6 +1501,157 @@ def render_feature_pages(
     return generated
 
 
+def render_seo_landing_pages(
+    app: dict,
+    organization: dict,
+    source: str,
+    contents: dict[str, dict],
+    assets: dict,
+    stage: Path,
+    base_url: str,
+    theme_color: str,
+    copyright_text: str,
+    has_blog: bool,
+    feature_ids: set[str],
+) -> tuple[list[str], str]:
+    """Render English search-intent pages from verified product capabilities."""
+    if source != "en-US":
+        return [], ""
+
+    app_name = str(app.get("name") or "")
+    content = contents[source]
+    icon = str(assets.get("icon") or "")
+    home_page = "index.html"
+    privacy_page = "privacy.html"
+    support_page = "support.html"
+    about_page = "about.html"
+    generated: list[str] = []
+    links = []
+    for page in SEO_LANDING_PAGES:
+        path = f'{page["slug"]}/index.html'
+        public_url = urljoin(base_url, page["slug"] + "/") if base_url else ""
+        links.append(
+            f'<article><h3><a href="{esc(relative_href(home_page, path))}">{esc(page["h1"])}</a></h3>'
+            f'<p>{esc(page["intro"])}</p></article>'
+        )
+    nav_section = (
+        '<section class="seo-topic-band" aria-labelledby="seo-topics-title">'
+        '<div class="section-heading"><h2 id="seo-topics-title">Use cases and guides</h2>'
+        '<p>Explore practical workflows for construction, property, checklists, and inspection reports.</p></div>'
+        '<div class="seo-topic-list">' + "".join(links) + "</div></section>"
+    )
+    related = []
+    for page in SEO_LANDING_PAGES:
+        related.append(
+            f'<li><a href="{esc("../" + page["slug"] + "/")}">{esc(page["h1"])}</a></li>'
+        )
+    for feature_id, label, page in (
+        ("inspection-checklists", "Inspection Checklist App", "features/inspection-checklists/index.html"),
+        ("report-generation", "Inspection Report App", "features/report-generation/index.html"),
+    ):
+        if feature_id in feature_ids:
+            related.append(f'<li><a href="{esc("../" + page.removesuffix("index.html"))}">{esc(label)}</a></li>')
+    for page in SEO_LANDING_PAGES:
+        current_page = f'{page["slug"]}/index.html'
+        canonical_url = urljoin(base_url, page["slug"] + "/") if base_url else ""
+        sections = "".join(
+            f'<section><h2>{esc(heading)}</h2><p>{esc(copy)}</p></section>'
+            for heading, copy in page["sections"]
+        )
+        faq = "".join(
+            f'<details><summary>{esc(question)}</summary><p>{esc(answer)}</p></details>'
+            for question, answer in page["faq"]
+        )
+        graph: list[dict[str, object]] = [
+            {
+                "@type": "WebPage",
+                "name": page["title"],
+                "description": page["description"],
+                "url": canonical_url,
+                "about": {"@id": f"{base_url}#app"} if base_url else {"@id": "#app"},
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": f"{canonical_url}#app" if canonical_url else "#app",
+                "name": app_name,
+                "operatingSystem": "Android",
+                "applicationCategory": str(app.get("category") or "Business"),
+                "description": page["description"],
+                "featureList": ["Inspection projects", "Inspection checklists", "Photo evidence", "PDF and report generation"],
+            },
+        ]
+        if app.get("googlePlayUrl"):
+            graph[1]["downloadUrl"] = str(app["googlePlayUrl"])
+        if faq:
+            graph.append({
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": question,
+                        "acceptedAnswer": {"@type": "Answer", "text": answer},
+                    }
+                    for question, answer in page["faq"]
+                ],
+            })
+        organization_data = organization_entity(organization)
+        if organization_data:
+            graph.append(organization_data)
+        structured = '<script type="application/ld+json">' + json.dumps(
+            {"@context": "https://schema.org", "@graph": graph}, ensure_ascii=True, separators=(",", ":")
+        ).replace("</", "<\\/") + "</script>"
+        values = {
+            "LANG": "en-US",
+            "TEXT_DIRECTION": "ltr",
+            "PAGE_TITLE": esc(page["title"]),
+            "META_DESCRIPTION": esc(page["description"]),
+            "THEME_COLOR": theme_color,
+            "CANONICAL_TAGS": f'<link rel="canonical" href="{esc(canonical_url)}">' if canonical_url else "",
+            "OPEN_GRAPH_TAGS": "\n  ".join([
+                '<meta property="og:type" content="website">',
+                f'<meta property="og:title" content="{esc(page["title"])}">',
+                f'<meta property="og:description" content="{esc(page["description"])}">',
+                f'<meta property="og:url" content="{esc(canonical_url)}">',
+            ]) if canonical_url else "",
+            "SITE_BASE_PATH": "../",
+            "STRUCTURED_DATA": structured,
+            "APP_NAME": esc(app_name),
+            "HOME_H1": esc(nested(content, "home.heading", app_name)),
+            "BRAND_LOGO": f'<img src="{esc(relative_href(current_page, icon))}" alt="" width="40" height="40">' if icon else "",
+            "HOME_URL": esc(relative_href(current_page, home_page)),
+            "SUPPORT_URL": esc(relative_href(current_page, "support")),
+            "ABOUT_URL": esc(relative_href(current_page, "about")),
+            "PRIVACY_URL": esc(relative_href(current_page, "privacy")),
+            "BLOG_NAV_ITEM": f'<a href="{esc(relative_href(current_page, "blog/index.html"))}">Blog</a>' if has_blog else "",
+            "NAV_HOME": "Home",
+            "NAV_ABOUT": "About",
+            "NAV_SUPPORT": "Support",
+            "NAV_PRIVACY": "Privacy",
+            "PRIMARY_NAV_LABEL": "Primary navigation",
+            "FOOTER_NAV_LABEL": "Footer navigation",
+            "SKIP_TO_CONTENT": "Skip to content",
+            "BREADCRUMB_LABEL": "Breadcrumb",
+            "BREADCRUMBS": f'<a href="{esc(relative_href(current_page, home_page))}">Home</a><span aria-hidden="true">/</span><span>{esc(page["h1"])}</span>',
+            "SEO_KICKER": "Site inspection workflow",
+            "SEO_H1": esc(page["h1"]),
+            "SEO_INTRO": esc(page["intro"]),
+            "SEO_SECTIONS": sections,
+            "SEO_SUPPORTING": ", ".join(page["supporting"]),
+            "SEO_FAQ": faq,
+            "SEO_RELATED": "".join(related),
+            "GOOGLE_PLAY_ACTION": (
+                f'<a class="primary-action" href="{esc(app["googlePlayUrl"])}">Get it on Google Play</a>'
+                if app.get("googlePlayUrl") else ""
+            ),
+            "COPYRIGHT_TEXT": copyright_text,
+        }
+        page_dir = stage / page["slug"]
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / "index.html").write_text(render_template("seo-landing.html", values), encoding="utf-8")
+        generated.append(current_page)
+    return generated, nav_section
+
+
 def render_blog(
     app: dict,
     organization: dict,
@@ -1865,6 +2139,31 @@ def write_launch_artifacts(
                 [locale, feature_path, article_path, str(localized["name"]), "task education"],
                 [locale, article_path, feature_path, str(localized["name"]), "feature verification"],
             ])
+        if locale == source == "en-US":
+            for landing in SEO_LANDING_PAGES:
+                landing_path = f'/{landing["slug"]}/'
+                locale_metadata[landing_path] = {
+                    "title": landing["title"],
+                    "description": landing["description"],
+                    "primaryQuery": landing["primary"],
+                    "supportingQueries": list(landing["supporting"]),
+                }
+                page_map.append({
+                    "locale": locale,
+                    "path": landing_path,
+                    "type": "seo-landing",
+                    "primaryQuery": landing["primary"],
+                    "status": "blocked" if not base_url else "ready",
+                })
+                keyword_rows.append([
+                    locale,
+                    landing_path,
+                    landing["primary"],
+                    " | ".join(landing["supporting"]),
+                    "search intent landing page",
+                    "draft",
+                ])
+                internal_rows.append([locale, home_path, landing_path, landing["h1"], "search intent discovery"])
         metadata_by_locale[locale] = locale_metadata
         locale_seo_dir = seo_root / locale
         locale_seo_dir.mkdir(parents=True, exist_ok=True)
@@ -2081,6 +2380,7 @@ def render_site(
     social_relative = assets.get("socialImage")
     generated_pages: list[str] = []
     has_blog = bool(content_ready_features(features))
+    seo_topic_section = ""
 
     for locale in locales:
         content = contents[locale]
@@ -2152,6 +2452,7 @@ def render_site(
                 "TEXT_DIRECTION": esc(content["direction"]),
                 "BASE_PATH": base_path,
                 "APP_NAME": esc(app_name),
+                "HOME_H1": esc(nested(content, "home.heading", app_name)),
                 "BRAND_LOGO": brand_logo,
                 "HOME_URL": "./" if page == "index.html" else "./",
                 "PRIVACY_URL": "privacy.html",
@@ -2236,6 +2537,7 @@ def render_site(
                 content, assets["screenshots"], base_path, locale == source
             ),
             "WORKFLOW_SECTION": workflow_html,
+            "SEO_TOPIC_SECTION": "<!-- SEO_TOPIC_SECTION -->" if locale == source else "",
             "CLOSING_HEADING": esc(nested(content, "home.closingHeading")),
             "CLOSING_COPY": esc(nested(content, "home.closingCopy")),
         })
@@ -2357,6 +2659,28 @@ def render_site(
         )
     )
 
+    seo_pages, seo_topic_section = render_seo_landing_pages(
+        app,
+        organization,
+        source,
+        contents,
+        assets,
+        stage,
+        base_url,
+        theme_color,
+        copyright_text,
+        has_blog,
+        {str(feature.get("id") or "") for feature in content_ready_features(features)},
+    )
+    generated_pages.extend(seo_pages)
+
+    if seo_topic_section and source == "en-US":
+        root_index = stage / "index.html"
+        if root_index.is_file():
+            rendered = root_index.read_text(encoding="utf-8")
+            rendered = rendered.replace("<!-- SEO_TOPIC_SECTION -->", seo_topic_section)
+            root_index.write_text(rendered, encoding="utf-8")
+
     generated_pages.extend(
         render_blog(
             app,
@@ -2394,7 +2718,7 @@ def render_site(
     sitemap_entries = []
     if base_url:
         for page in sorted(set(generated_pages)):
-            relative_url = "" if page == "index.html" else page.removesuffix("index.html")
+            relative_url = public_page_relative(source, source, page)
             sitemap_entries.append(f"  <url><loc>{esc(urljoin(base_url, relative_url))}</loc></url>")
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(sitemap_entries) + "\n</urlset>\n"
     (stage / "sitemap.xml").write_text(sitemap, encoding="utf-8")
@@ -2529,6 +2853,12 @@ def validate_stage(stage: Path) -> None:
                     target = (path.parent / reference.split("#", 1)[0].split("?", 1)[0]).resolve()
                     if reference.endswith("/"):
                         target /= "index.html"
+                    elif not target.exists() and target.suffix == ".html":
+                        target = target.with_suffix("")
+                    if not target.exists() and target.suffix == "":
+                        clean_html = target.with_suffix(".html")
+                        if clean_html.exists():
+                            target = clean_html
                     if not target.exists():
                         errors.append(f"{path.relative_to(stage)}: missing local reference {reference}")
     try:

@@ -1,11 +1,17 @@
 locale,page,primary_query,supporting_queries,intent,status
-en-US,/,field inspection app,SiteReport,product discovery,draft
+en-US,/,site inspection app,SiteReport,product discovery,draft
 en-US,/features/project-management/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 en-US,/features/inspection-checklists/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft
 en-US,/features/photo-evidence/,inspection photo evidence app,site inspection photos with GPS,feature evaluation,draft
 en-US,/features/field-notes-and-signatures/,field inspection notes and signatures,construction inspection sign off app,feature evaluation,draft
 en-US,/features/report-generation/,generate PDF inspection report Android,construction field report PDF app,feature evaluation,draft
 en-US,/features/export-and-upload/,upload inspection reports to SFTP Android,share construction report ZIP from phone,feature evaluation,draft
+en-US,/construction-inspection-software/,construction inspection software,construction inspection app | construction site inspection app | construction site inspection software | construction field report app,search intent landing page,draft
+en-US,/property-inspection-app/,property inspection app,property inspection software | mobile property inspection software | inspection software for property managers | property inspection report app | property inspection checklist app,search intent landing page,draft
+en-US,/inspection-checklist/,inspection checklist,inspection check list | inspection check sheet | inspection checklist app | mobile inspection software,search intent landing page,draft
+en-US,/construction-inspection-checklist/,construction inspection checklist,construction site visit checklist | construction site inspection app | construction site visit report | building inspection checklist,search intent landing page,draft
+en-US,/building-inspection-checklist/,building inspection checklist,inspection check sheet | property inspection checklist app | inspection checklist app | site inspection report,search intent landing page,draft
+en-US,/site-inspection-report/,site inspection report,inspection report app | site inspection report pdf | field report app | construction site inspection report,search intent landing page,draft
 zh-CN,/zh-CN/,现场巡检报告 app,SiteReport,product discovery,draft
 zh-CN,/zh-CN/features/巡检项目/,field inspection project management Android,construction inspection project records,feature evaluation,draft
 zh-CN,/zh-CN/features/巡检清单/,construction inspection checklist app,repeatable site inspection workflow,feature evaluation,draft

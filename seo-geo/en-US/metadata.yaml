@@ -2,17 +2,16 @@ schemaVersion: '1.0'
 locale: en-US
 pages:
   /:
-    title: SiteReport - official website
-    description: 'Field inspection reports: photos, checklists, location records and
-      PDF export.'
-    primaryQuery: field inspection app
+    title: Site Inspection App for Field Teams | SiteReport
+    description: SiteReport
+    primaryQuery: site inspection app
   /features/project-management/:
     title: Inspection projects - SiteReport
     description: Create projects and keep site information, progress, photos, and
       reports together.
     primaryQuery: field inspection project management Android
   /features/inspection-checklists/:
-    title: Inspection checklists - SiteReport
+    title: Inspection checklist app - SiteReport
     description: Use reusable inspection plans and checklist templates to standardize
       field work.
     primaryQuery: construction inspection checklist app
@@ -27,7 +26,7 @@ pages:
       of the inspection record.
     primaryQuery: field inspection notes and signatures
   /features/report-generation/:
-    title: PDF and report generation - SiteReport
+    title: Inspection report app - SiteReport
     description: Generate structured field reports from project information, checklist
       results, photos, notes, and signatures.
     primaryQuery: generate PDF inspection report Android
@@ -36,3 +35,66 @@ pages:
     description: Export report packages and send them through supported server protocols
       when configured.
     primaryQuery: upload inspection reports to SFTP Android
+  /construction-inspection-software/:
+    title: Construction Inspection Software | SiteReport
+    description: Construction inspection software for recording site visits, checklists,
+      photos, notes, locations, and shareable field reports on Android.
+    primaryQuery: construction inspection software
+    supportingQueries:
+    - construction inspection app
+    - construction site inspection app
+    - construction site inspection software
+    - construction field report app
+  /property-inspection-app/:
+    title: Property Inspection App | SiteReport
+    description: Property inspection app for capturing condition photos, inspection
+      checklists, notes, locations, signatures, and shareable property inspection
+      reports on Android.
+    primaryQuery: property inspection app
+    supportingQueries:
+    - property inspection software
+    - mobile property inspection software
+    - inspection software for property managers
+    - property inspection report app
+    - property inspection checklist app
+  /inspection-checklist/:
+    title: Inspection Checklist | SiteReport
+    description: Learn how to use an inspection checklist app to organize repeatable
+      site visits, inspection points, photos, notes, and report outputs on Android.
+    primaryQuery: inspection checklist
+    supportingQueries:
+    - inspection check list
+    - inspection check sheet
+    - inspection checklist app
+    - mobile inspection software
+  /construction-inspection-checklist/:
+    title: Construction Inspection Checklist | SiteReport
+    description: Construction inspection checklist workflow for recording site visit
+      checks, photos, notes, location details, and construction field reports on Android.
+    primaryQuery: construction inspection checklist
+    supportingQueries:
+    - construction site visit checklist
+    - construction site inspection app
+    - construction site visit report
+    - building inspection checklist
+  /building-inspection-checklist/:
+    title: Building Inspection Checklist | SiteReport
+    description: Building inspection checklist workflow for organizing inspection
+      points, condition photos, notes, locations, signatures, and generated reports
+      on Android.
+    primaryQuery: building inspection checklist
+    supportingQueries:
+    - inspection check sheet
+    - property inspection checklist app
+    - inspection checklist app
+    - site inspection report
+  /site-inspection-report/:
+    title: Site Inspection Report | SiteReport
+    description: Create a site inspection report from project details, checklist results,
+      photos, notes, locations, and signatures with an Android inspection report app.
+    primaryQuery: site inspection report
+    supportingQueries:
+    - inspection report app
+    - site inspection report pdf
+    - field report app
+    - construction site inspection report

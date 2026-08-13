@@ -2,7 +2,7 @@
 contentId: report-generation
 locale: en-US
 status: draft
-title: How to use PDF and report generation in SiteReport
+title: How to use Inspection report app in SiteReport
 description: Generate structured field reports from project information, checklist
   results, photos, notes, and signatures. Learn the exact problem, options, verified
   steps, and known limitations.
@@ -14,14 +14,14 @@ evidence:
 - SiteReport.md
 - core/core_pdf/src/main/java/com/wkq/nativepdf/NativeReportPdfRenderer.kt
 - feature/feature_app/src/main/java/com/wkq/feature/app/upload/NativeSiteReportPdfGateway.kt
-primaryKeyword: How to use PDF and report generation in SiteReport
+primaryKeyword: How to use Inspection report app in SiteReport
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use PDF and report generation in SiteReport
+# How to use Inspection report app in SiteReport
 
 Turning field observations into a consistent report can take significant manual formatting work.
 

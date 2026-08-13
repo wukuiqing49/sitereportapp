@@ -254,6 +254,29 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertNotIn('<iframe', index)
         self.assertIn('href="https://www.youtube.com/watch?v=w5BVcThNpvQ"', index)
 
+    def test_public_urls_use_cloudflare_clean_paths(self) -> None:
+        data = self.app_data()
+        data["websiteUrl"] = "https://pixel-notes.pages.dev/"
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+        sitemap = (self.output / "sitemap.xml").read_text(encoding="utf-8")
+        about = (self.output / "about.html").read_text(encoding="utf-8")
+        self.assertIn("https://pixel-notes.pages.dev/about</loc>", sitemap)
+        self.assertNotIn("https://pixel-notes.pages.dev/about.html", sitemap)
+        self.assertIn('rel="canonical" href="https://pixel-notes.pages.dev/about"', about)
+        self.assertNotIn("https://pixel-notes.pages.dev/about.html", about)
+
+    def test_clean_url_references_validate_against_html_assets(self) -> None:
+        data = self.app_data()
+        data["websiteUrl"] = "https://pixel-notes.pages.dev/"
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+        page = (self.output / "about.html").read_text(encoding="utf-8")
+        self.assertNotIn("../about.html", page)
+        self.assertIn("privacy.html", page)
+
     def test_search_console_html_tag_token_renders(self) -> None:
         data = self.app_data()
         data["searchConsole"] = {

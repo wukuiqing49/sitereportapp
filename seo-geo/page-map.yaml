@@ -64,6 +64,36 @@ pages:
   type: guide
   contentId: export-and-upload
   status: draft
+- locale: en-US
+  path: /construction-inspection-software/
+  type: seo-landing
+  primaryQuery: construction inspection software
+  status: ready
+- locale: en-US
+  path: /property-inspection-app/
+  type: seo-landing
+  primaryQuery: property inspection app
+  status: ready
+- locale: en-US
+  path: /inspection-checklist/
+  type: seo-landing
+  primaryQuery: inspection checklist
+  status: ready
+- locale: en-US
+  path: /construction-inspection-checklist/
+  type: seo-landing
+  primaryQuery: construction inspection checklist
+  status: ready
+- locale: en-US
+  path: /building-inspection-checklist/
+  type: seo-landing
+  primaryQuery: building inspection checklist
+  status: ready
+- locale: en-US
+  path: /site-inspection-report/
+  type: seo-landing
+  primaryQuery: site inspection report
+  status: ready
 - locale: zh-CN
   path: /zh-CN/
   type: home

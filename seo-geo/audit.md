@@ -3,7 +3,7 @@
 Status: draft
 
 - Canonical website URL: https://sitereport-app.pages.dev/
-- Planned pages: 117
+- Planned pages: 123
 - Content-ready features: 6
 - Bing Webmaster verification: configured
 - Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.

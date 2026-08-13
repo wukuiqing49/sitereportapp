@@ -2,21 +2,27 @@ locale,source,target,anchor,reason
 en-US,/,/features/project-management/,Inspection projects,home feature discovery
 en-US,/features/project-management/,/blog/project-management/,Inspection projects,task education
 en-US,/blog/project-management/,/features/project-management/,Inspection projects,feature verification
-en-US,/,/features/inspection-checklists/,Inspection checklists,home feature discovery
-en-US,/features/inspection-checklists/,/blog/inspection-checklists/,Inspection checklists,task education
-en-US,/blog/inspection-checklists/,/features/inspection-checklists/,Inspection checklists,feature verification
+en-US,/,/features/inspection-checklists/,Inspection checklist app,home feature discovery
+en-US,/features/inspection-checklists/,/blog/inspection-checklists/,Inspection checklist app,task education
+en-US,/blog/inspection-checklists/,/features/inspection-checklists/,Inspection checklist app,feature verification
 en-US,/,/features/photo-evidence/,Photo evidence and location records,home feature discovery
 en-US,/features/photo-evidence/,/blog/photo-evidence/,Photo evidence and location records,task education
 en-US,/blog/photo-evidence/,/features/photo-evidence/,Photo evidence and location records,feature verification
 en-US,/,/features/field-notes-and-signatures/,Field notes and sign-off,home feature discovery
 en-US,/features/field-notes-and-signatures/,/blog/field-notes-and-signatures/,Field notes and sign-off,task education
 en-US,/blog/field-notes-and-signatures/,/features/field-notes-and-signatures/,Field notes and sign-off,feature verification
-en-US,/,/features/report-generation/,PDF and report generation,home feature discovery
-en-US,/features/report-generation/,/blog/report-generation/,PDF and report generation,task education
-en-US,/blog/report-generation/,/features/report-generation/,PDF and report generation,feature verification
+en-US,/,/features/report-generation/,Inspection report app,home feature discovery
+en-US,/features/report-generation/,/blog/report-generation/,Inspection report app,task education
+en-US,/blog/report-generation/,/features/report-generation/,Inspection report app,feature verification
 en-US,/,/features/export-and-upload/,Export and server delivery,home feature discovery
 en-US,/features/export-and-upload/,/blog/export-and-upload/,Export and server delivery,task education
 en-US,/blog/export-and-upload/,/features/export-and-upload/,Export and server delivery,feature verification
+en-US,/,/construction-inspection-software/,Construction Inspection Software,search intent discovery
+en-US,/,/property-inspection-app/,Property Inspection App,search intent discovery
+en-US,/,/inspection-checklist/,Inspection Checklist,search intent discovery
+en-US,/,/construction-inspection-checklist/,Construction Inspection Checklist,search intent discovery
+en-US,/,/building-inspection-checklist/,Building Inspection Checklist,search intent discovery
+en-US,/,/site-inspection-report/,Site Inspection Report,search intent discovery
 zh-CN,/zh-CN/,/zh-CN/features/巡检项目/,巡检项目,home feature discovery
 zh-CN,/zh-CN/features/巡检项目/,/blog/zh-CN/巡检项目/,巡检项目,task education
 zh-CN,/blog/zh-CN/巡检项目/,/zh-CN/features/巡检项目/,巡检项目,feature verification

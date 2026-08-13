@@ -2,10 +2,9 @@ schemaVersion: '1.0'
 locale: en-US
 status: draft
 appName: SiteReport
-shortDescription: 'Field inspection reports: photos, checklists, location records
-  and PDF export.'
-fullDescription: 'Field inspection reports: photos, checklists, location records and
-  PDF export.
+shortDescription: SiteReport
+fullDescription: 'Site inspection app for field teams to capture photos, complete
+  checklists, and generate shareable reports.
 
 
   Inspection projects: Create projects and keep site information, progress, photos,
@@ -13,8 +12,8 @@ fullDescription: 'Field inspection reports: photos, checklists, location records
   and inspection progress Keep project photos and reports together
 
 
-  Inspection checklists: Use reusable inspection plans and checklist templates to
-  standardize field work. Create reusable inspection plans Choose checklist templates
+  Inspection checklist app: Use reusable inspection plans and checklist templates
+  to standardize field work. Create reusable inspection plans Choose checklist templates
   and define inspection points Resume an in-progress inspection and review run history
 
 
@@ -30,7 +29,7 @@ fullDescription: 'Field inspection reports: photos, checklists, location records
   in generated reports
 
 
-  PDF and report generation: Generate structured field reports from project information,
+  Inspection report app: Generate structured field reports from project information,
   checklist results, photos, notes, and signatures. Generate a PDF field report Include
   checklist results, photos, location records, notes, and signatures Preview and reopen
   generated report files
@@ -42,11 +41,12 @@ fullDescription: 'Field inspection reports: photos, checklists, location records
   SMB/NAS configurations
 
 
-  Field inspection reports: photos, checklists, location records and PDF export.'
+  Site inspection app for field teams to capture photos, complete checklists, and
+  generate shareable reports.'
 characterCounts:
   appName: 10
-  shortDescription: 78
-  fullDescription: 1743
+  shortDescription: 10
+  fullDescription: 1800
 limits:
   appName: 30
   shortDescription: 80

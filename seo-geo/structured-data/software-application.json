@@ -4,13 +4,13 @@
   "name": "SiteReport",
   "operatingSystem": "Android",
   "applicationCategory": "Business",
-  "description": "Field inspection reports: photos, checklists, location records and PDF export.",
+  "description": "Site inspection app for field teams to capture photos, complete checklists, and generate shareable reports.",
   "featureList": [
     "Inspection projects",
-    "Inspection checklists",
+    "Inspection checklist app",
     "Photo evidence and location records",
     "Field notes and sign-off",
-    "PDF and report generation",
+    "Inspection report app",
     "Export and server delivery"
   ],
   "url": "https://sitereport-app.pages.dev/",

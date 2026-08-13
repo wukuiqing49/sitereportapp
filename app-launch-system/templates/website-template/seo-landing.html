@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{TEXT_DIRECTION}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="{{THEME_COLOR}}">
+  {{CANONICAL_TAGS}}
+  {{OPEN_GRAPH_TAGS}}
+  <link rel="manifest" href="{{SITE_BASE_PATH}}site.webmanifest">
+  <link rel="stylesheet" href="{{SITE_BASE_PATH}}assets/styles.css">
+  {{STRUCTURED_DATA}}
+</head>
+<body class="feature-page seo-landing-page">
+  <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
+  <header class="site-header">
+    <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">{{BRAND_LOGO}}<span>{{APP_NAME}}</span></a>
+    <nav aria-label="{{PRIMARY_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      {{BLOG_NAV_ITEM}}
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+    </nav>
+  </header>
+  <main id="main">
+    <article class="seo-landing-content">
+      <header class="feature-hero">
+        <nav class="breadcrumbs" aria-label="{{BREADCRUMB_LABEL}}">{{BREADCRUMBS}}</nav>
+        <p class="category">{{SEO_KICKER}}</p>
+        <h1>{{SEO_H1}}</h1>
+        <p class="tagline">{{SEO_INTRO}}</p>
+        <p class="seo-supporting"><strong>Related topics:</strong> {{SEO_SUPPORTING}}</p>
+        {{GOOGLE_PLAY_ACTION}}
+      </header>
+      <div class="seo-sections">{{SEO_SECTIONS}}</div>
+      <section class="feature-faq" aria-labelledby="seo-faq-title">
+        <h2 id="seo-faq-title">Common questions</h2>
+        {{SEO_FAQ}}
+      </section>
+      <section class="seo-related" aria-labelledby="seo-related-title">
+        <h2 id="seo-related-title">Related inspection workflows</h2>
+        <ul>{{SEO_RELATED}}</ul>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <p>{{COPYRIGHT_TEXT}}</p>
+    <nav aria-label="{{FOOTER_NAV_LABEL}}">
+      <a href="{{HOME_URL}}">{{NAV_HOME}}</a>
+      <a href="{{ABOUT_URL}}">{{NAV_ABOUT}}</a>
+      <a href="{{SUPPORT_URL}}">{{NAV_SUPPORT}}</a>
+      <a href="{{PRIVACY_URL}}">{{NAV_PRIVACY}}</a>
+    </nav>
+  </footer>
+</body>
+</html>

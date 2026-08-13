@@ -2,7 +2,7 @@
 contentId: inspection-checklists
 locale: en-US
 status: draft
-title: How to use Inspection checklists in SiteReport
+title: How to use Inspection checklist app in SiteReport
 description: Use reusable inspection plans and checklist templates to standardize
   field work. Learn the exact problem, options, verified steps, and known limitations.
 slug: inspection-checklists
@@ -13,14 +13,14 @@ evidence:
 - SiteReport.md
 - feature/feature_res/src/main/res/workflow_strings.xml
 - feature/feature_app/src/main/res/layout/fragment_workflow_editor.xml
-primaryKeyword: How to use Inspection checklists in SiteReport
+primaryKeyword: How to use Inspection checklist app in SiteReport
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use Inspection checklists in SiteReport
+# How to use Inspection checklist app in SiteReport
 
 Repeated inspections are harder to compare when each field visit follows a different set of checks.
 

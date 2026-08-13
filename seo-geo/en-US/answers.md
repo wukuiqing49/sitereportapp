@@ -8,7 +8,7 @@ Field records become difficult to follow when project details, photos, and repor
 
 The project workflow includes project information, inspection progress, photos, and generated reports.
 
-## Inspection checklists
+## Inspection checklist app
 
 Repeated inspections are harder to compare when each field visit follows a different set of checks.
 
@@ -32,7 +32,7 @@ Inspection findings and sign-off details can be lost when they are recorded outs
 
 The report workflow supports signature profiles and writes signature information into generated report files.
 
-## PDF and report generation
+## Inspection report app
 
 Turning field observations into a consistent report can take significant manual formatting work.
 

@@ -1,7 +1,7 @@
 {
   "name": "SiteReport",
   "short_name": "SiteReport",
-  "description": "Field inspection reports: photos, checklists, location records and PDF export.",
+  "description": "Site inspection app for field teams to capture photos, complete checklists, and generate shareable reports.",
   "lang": "en-US",
   "start_url": "./",
   "display": "browser",

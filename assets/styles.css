@@ -111,6 +111,20 @@ h2 { font-size: 2.5rem; }
 .feature-evidence code { overflow-wrap: anywhere; }
 .breadcrumbs { color: var(--muted); font-size: 0.9rem; }
 .breadcrumbs span { margin: 0 0.5rem; }
+.seo-topic-band { padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 2.5rem); border-top: 1px solid var(--line); }
+.seo-topic-band > * { max-width: var(--max); margin-inline: auto; }
+.seo-topic-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.seo-topic-list article { min-width: 0; padding: 1.25rem 0; border-top: 2px solid var(--accent); }
+.seo-topic-list h3 { margin: 0; font-size: 1.15rem; }
+.seo-topic-list p { color: var(--muted); }
+.seo-landing-content { max-width: var(--max); margin: 0 auto; padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 2.5rem); }
+.seo-landing-content .feature-hero { max-width: 58rem; }
+.seo-supporting { max-width: 52rem; color: var(--muted); }
+.seo-sections { max-width: 52rem; margin-top: 3rem; }
+.seo-sections section { padding: 1.5rem 0; border-top: 1px solid var(--line); }
+.seo-sections h2 { margin: 0; font-size: 1.75rem; }
+.seo-related { max-width: 52rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.seo-related li + li { margin-top: 0.55rem; }
 footer { border-top: 1px solid var(--line); color: var(--muted); }
 
 @media (max-width: 760px) {
@@ -118,7 +132,7 @@ footer { border-top: 1px solid var(--line); color: var(--muted); }
   .hero { min-height: auto; grid-template-columns: 1fr; }
   .hero-copy { order: 1; }
   .hero-media { order: 2; }
-  .feature-list, .workflow ol, .feature-content-grid, .overview-points { grid-template-columns: 1fr; }
+  .feature-list, .workflow ol, .feature-content-grid, .overview-points, .seo-topic-list { grid-template-columns: 1fr; }
   .company-details { grid-template-columns: 1fr; }
   h1, .prose h1, .feature-hero h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
