@@ -15,7 +15,7 @@ import shutil
 import sys
 import tempfile
 from pathlib import Path
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import parse_qs, quote, urljoin, urlparse
 
 try:
     import yaml
@@ -2719,7 +2719,8 @@ def render_site(
     if base_url:
         for page in sorted(set(generated_pages)):
             relative_url = public_page_relative(source, source, page)
-            sitemap_entries.append(f"  <url><loc>{esc(urljoin(base_url, relative_url))}</loc></url>")
+            sitemap_url = quote(urljoin(base_url, relative_url), safe=":/?#[]@!$&'()*+,;=%")
+            sitemap_entries.append(f"  <url><loc>{esc(sitemap_url)}</loc></url>")
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(sitemap_entries) + "\n</urlset>\n"
     (stage / "sitemap.xml").write_text(sitemap, encoding="utf-8")
     robots = "User-agent: *\nAllow: /\n"
