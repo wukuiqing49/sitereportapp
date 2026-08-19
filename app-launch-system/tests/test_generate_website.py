@@ -333,6 +333,35 @@ class GenerateWebsiteTests(unittest.TestCase):
         manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
         self.assertIn("BingSiteAuth.xml", manifest["files"])
 
+    def test_indexnow_file_is_generated_and_manifested(self) -> None:
+        data = self.app_data()
+        data["websiteUrl"] = "https://example.pages.dev/"
+        data["indexNow"] = {"key": "DC4AB582C527A7A168FC391B84B8995E"}
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(app_info, self.output, self.locales)
+        key_file = self.output / "DC4AB582C527A7A168FC391B84B8995E.txt"
+        self.assertEqual("DC4AB582C527A7A168FC391B84B8995E\n", key_file.read_text(encoding="utf-8"))
+        worker = (self.output / "_worker.js").read_text(encoding="utf-8")
+        self.assertIn('const indexNowPath = "/DC4AB582C527A7A168FC391B84B8995E.txt";', worker)
+        self.assertIn("indexNowContent", worker)
+        self.assertIn('"content-type": "text/plain; charset=UTF-8"', worker)
+        manifest = json.loads((self.output / "static-site-manifest.json").read_text(encoding="utf-8"))
+        self.assertIn("DC4AB582C527A7A168FC391B84B8995E.txt", manifest["files"])
+        bing_yaml = yaml.safe_load((self.output / "seo-geo" / "bing-search.yaml").read_text(encoding="utf-8"))
+        self.assertEqual("configured", bing_yaml["crawlSignals"]["indexNow"]["status"])
+        self.assertEqual("DC4AB582C527A7A168FC391B84B8995E", bing_yaml["crawlSignals"]["indexNow"]["key"])
+        self.assertEqual("https://example.pages.dev/DC4AB582C527A7A168FC391B84B8995E.txt", bing_yaml["crawlSignals"]["indexNow"]["keyLocation"])
+
+    def test_invalid_indexnow_key_stops_generation(self) -> None:
+        data = self.app_data()
+        data["indexNow"] = {"key": "short"}
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        with self.assertRaisesRegex(GenerationError, "indexNow.key"):
+            generate(app_info, self.output, self.locales)
+        self.assertFalse(self.output.exists())
+
     def test_invalid_search_console_html_file_configuration_stops_generation(self) -> None:
         data = self.app_data()
         data["searchConsole"] = {"verificationFileName": "google123.html"}

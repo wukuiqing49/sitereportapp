@@ -12,6 +12,7 @@ from pathlib import Path
 TOKEN = re.compile(r"\{\{[^{}]+\}\}")
 PLACEHOLDER = re.compile(r"\b(?:TODO|FIXME|PLACEHOLDER|example\.com)\b", re.IGNORECASE)
 SKIP_DIRS = {".git", ".idea", "app-launch-system", "node_modules"}
+SKIP_FILES = {"app-info.yaml", "analysis-evidence.json"}
 
 
 def main() -> int:
@@ -25,6 +26,8 @@ def main() -> int:
     for path in args.output.rglob("*"):
         relative_parts = path.relative_to(args.output).parts
         if any(part in SKIP_DIRS for part in relative_parts[:-1]):
+            continue
+        if path.name in SKIP_FILES:
             continue
         if not path.is_file() or path.suffix.lower() not in {".html", ".md", ".yaml", ".yml", ".json", ".xml", ".txt", ".js", ".css"}:
             continue

@@ -38,6 +38,7 @@ SEARCH_CONSOLE_TOKEN = re.compile(r"^[A-Za-z0-9_-]+$")
 SEARCH_CONSOLE_FILE = re.compile(r"^google[A-Za-z0-9_-]+\.html$")
 BING_WEBMASTER_FILE = re.compile(r"^BingSiteAuth\.xml$")
 BING_WEBMASTER_TOKEN = re.compile(r"^[A-Fa-f0-9]{32}$")
+INDEX_NOW_KEY_PATTERN = re.compile(r"^[a-zA-Z0-9-]{8,128}$")
 
 
 ENGLISH_UI = {
@@ -246,6 +247,27 @@ def bing_webmaster_settings(app: dict) -> tuple[str, str] | None:
             "bingWebmaster.verificationContent must contain one 32-character hexadecimal user token"
         )
     return file_name, file_content + "\n"
+
+
+def index_now_settings(app: dict) -> tuple[str, str, str] | None:
+    """Resolve optional IndexNow key file data."""
+    config = app.get("indexNow")
+    if config is None:
+        return None
+    if isinstance(config, str):
+        key = config.strip()
+    elif isinstance(config, dict):
+        key = str(config.get("key") or "").strip()
+    else:
+        raise GenerationError("indexNow must be a string key or a mapping with a key")
+
+    if not key:
+        return None
+    if not INDEX_NOW_KEY_PATTERN.fullmatch(key):
+        raise GenerationError(
+            "indexNow.key must contain only alphanumeric characters or hyphens (8-128 chars)"
+        )
+    return f"{key}.txt", f"{key}\n", key
 
 
 def load_organization(path: Path | None) -> dict:
@@ -2252,6 +2274,8 @@ def write_launch_artifacts(
     (seo_root / "structured-data" / "software-application.json").write_text(
         json.dumps(software_json, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+    index_now_settings_result = index_now_settings(app)
+    index_now_key = index_now_settings_result[2] if index_now_settings_result else ""
     seo_status = "draft" if base_url else "blocked"
     (seo_root / "audit.md").write_text(
         "# SEO and GEO audit\n\n"
@@ -2260,6 +2284,7 @@ def write_launch_artifacts(
         f"- Planned pages: {len(page_map)}\n"
         f"- Content-ready features: {len(ready)}\n"
         f"- Bing Webmaster verification: {'configured' if bing_configured else 'missing'}\n"
+        f"- IndexNow: {'configured' if index_now_key else 'missing'}\n"
         "- Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.\n"
         "- FAQ answers and entity claims come from verified product facts; review machine-draft locales before publication.\n",
         encoding="utf-8",
@@ -2277,7 +2302,14 @@ def write_launch_artifacts(
                 "crawlSignals": {
                     "robotsUrl": urljoin(base_url, "robots.txt") if base_url else "",
                     "sitemapUrl": urljoin(base_url, "sitemap.xml") if base_url else "",
-                    "indexNow": "not configured; requires a separate IndexNow key",
+                    "indexNow": {
+                        "status": "configured",
+                        "key": index_now_key,
+                        "keyLocation": urljoin(base_url, f"{index_now_key}.txt") if base_url else f"/{index_now_key}.txt",
+                        "endpoint": "https://api.indexnow.org/indexnow",
+                    }
+                    if index_now_key
+                    else "not configured; requires a separate IndexNow key",
                 },
                 "geoGuidance": [
                     "Keep SiteReport, com.wkq.site, and the publisher identity consistent across pages and the Play listing.",
@@ -2354,6 +2386,8 @@ def render_site(
         youtube_embed_url(video_url)
     search_console_tag, search_console_file = search_console_settings(app)
     bing_webmaster_file = bing_webmaster_settings(app)
+    index_now_settings_result = index_now_settings(app)
+    index_now_file = (index_now_settings_result[0], index_now_settings_result[1]) if index_now_settings_result else None
     base_url = website_url.rstrip("/") + "/" if website_url else ""
     package_name = str(app.get("packageName") or "")
     app_name = str(app.get("name") or "")
@@ -2771,7 +2805,7 @@ def render_site(
         render_template("404.html", not_found_values), encoding="utf-8"
     )
     shutil.copy2(TEMPLATE_ROOT / "_headers", stage / "_headers")
-    verification_files = [item for item in (search_console_file, bing_webmaster_file) if item]
+    verification_files = [item for item in (search_console_file, bing_webmaster_file, index_now_file) if item]
     if verification_files:
         for file_name, file_content in verification_files:
             (stage / file_name).write_text(file_content, encoding="utf-8")
@@ -2780,10 +2814,18 @@ def render_site(
         declarations = []
         handlers = []
         for index, (file_name, file_content) in enumerate(verification_files):
-            prefix = "" if index == 0 and search_console_file else "bing"
-            path_name = "verificationPath" if not prefix else f"{prefix}VerificationPath"
-            content_name = "verificationContent" if not prefix else f"{prefix}VerificationContent"
-            content_type = "application/xml; charset=UTF-8" if file_name.lower().endswith(".xml") else "text/html; charset=UTF-8"
+            if file_name.lower().endswith(".xml"):
+                path_name = "bingVerificationPath"
+                content_name = "bingVerificationContent"
+                content_type = "application/xml; charset=UTF-8"
+            elif file_name.lower().endswith(".txt"):
+                path_name = "indexNowPath"
+                content_name = "indexNowContent"
+                content_type = "text/plain; charset=UTF-8"
+            else:
+                path_name = "verificationPath"
+                content_name = "verificationContent"
+                content_type = "text/html; charset=UTF-8"
             declarations.append(
                 f"const {path_name} = {json.dumps('/' + file_name)};\n"
                 f"const {content_name} = {json.dumps(file_content)};"

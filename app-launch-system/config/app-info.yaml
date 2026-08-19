@@ -92,6 +92,8 @@ websiteUrl: ""
 bingWebmaster:
   verificationFileName: ""
   verificationContent: ""
+indexNow:
+  key: ""
 editorial:
   publishedAt: ""
   updatedAt: ""

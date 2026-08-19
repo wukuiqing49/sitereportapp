@@ -6,5 +6,6 @@ Status: draft
 - Planned pages: 123
 - Content-ready features: 6
 - Bing Webmaster verification: configured
+- IndexNow: configured
 - Canonical, hreflang, Open Graph URLs, robots sitemap reference, and populated sitemap require websiteUrl.
 - FAQ answers and entity claims come from verified product facts; review machine-draft locales before publication.

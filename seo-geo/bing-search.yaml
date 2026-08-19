@@ -7,7 +7,11 @@ webmasterVerification:
 crawlSignals:
   robotsUrl: https://sitereport-app.pages.dev/robots.txt
   sitemapUrl: https://sitereport-app.pages.dev/sitemap.xml
-  indexNow: not configured; requires a separate IndexNow key
+  indexNow:
+    status: configured
+    key: DC4AB582C527A7A168FC391B84B8995E
+    keyLocation: https://sitereport-app.pages.dev/DC4AB582C527A7A168FC391B84B8995E.txt
+    endpoint: https://api.indexnow.org/indexnow
 geoGuidance:
 - Keep SiteReport, com.wkq.site, and the publisher identity consistent across pages
   and the Play listing.

@@ -42,6 +42,18 @@ def main() -> int:
     website.add_argument("--organization", type=Path)
     website.add_argument("--force", action="store_true")
 
+    indexnow = subparsers.add_parser("submit-indexnow")
+    indexnow.add_argument("--app-info", type=Path)
+    indexnow.add_argument("--sitemap", type=Path)
+    indexnow.add_argument("--host", type=str)
+    indexnow.add_argument("--key", type=str)
+    indexnow.add_argument("--key-location", type=str)
+    indexnow.add_argument("--urls", nargs="*")
+    indexnow.add_argument("--endpoint", type=str)
+    indexnow.add_argument("--limit", type=int)
+    indexnow.add_argument("--dry-run", action="store_true")
+    indexnow.add_argument("--verbose", action="store_true")
+
     args = parser.parse_args()
     if args.command == "validate-app-info":
         return run_script("validate_app_info.py", [absolute(args.app_info)])
@@ -68,6 +80,29 @@ def main() -> int:
         if args.force:
             command_args.append("--force")
         return run_script("generate_website.py", command_args)
+    if args.command == "submit-indexnow":
+        command_args = []
+        if args.app_info:
+            command_args.extend(["--app-info", absolute(args.app_info)])
+        if args.sitemap:
+            command_args.extend(["--sitemap", absolute(args.sitemap)])
+        if args.host:
+            command_args.extend(["--host", args.host])
+        if args.key:
+            command_args.extend(["--key", args.key])
+        if args.key_location:
+            command_args.extend(["--key-location", args.key_location])
+        if args.urls:
+            command_args.extend(["--urls", *args.urls])
+        if args.endpoint:
+            command_args.extend(["--endpoint", args.endpoint])
+        if args.limit:
+            command_args.extend(["--limit", str(args.limit)])
+        if args.dry_run:
+            command_args.append("--dry-run")
+        if args.verbose:
+            command_args.append("--verbose")
+        return run_script("submit_indexnow.py", command_args)
     parser.error(f"unsupported command: {args.command}")
     return 2
 

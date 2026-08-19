@@ -12,6 +12,7 @@ LOCALE = re.compile(r"^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?$
 PACKAGE = re.compile(r"^[a-zA-Z_][\w]*(?:\.[a-zA-Z_][\w]*)+$")
 URL = re.compile(r"^https?://[^\s]+$")
 TOKEN = re.compile(r"\{\{[^{}]+\}\}")
+INDEX_NOW_KEY = re.compile(r"^[a-zA-Z0-9-]{8,128}$")
 ANALYSIS_STATUSES = {"draft", "verified", "blocked"}
 
 
@@ -130,6 +131,12 @@ def errors_for(path: Path) -> list[str]:
         value = scalar(text, key)
         if value and not URL.fullmatch(value):
             errors.append(f"invalid {key}: {value}")
+
+    index_now_block = section(text, "indexNow")
+    if index_now_block:
+        index_now_key = scalar(index_now_block, "key")
+        if index_now_key and not INDEX_NOW_KEY.fullmatch(index_now_key):
+            errors.append(f"invalid indexNow.key: {index_now_key}")
 
     evidence_block = section(text, "evidence")
     evidence_paths = re.findall(r"(?m)^\s*-\s+path:\s*['\"]?([^'\"\s]+)", evidence_block)
