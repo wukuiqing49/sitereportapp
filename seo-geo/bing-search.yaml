@@ -9,8 +9,8 @@ crawlSignals:
   sitemapUrl: https://sitereport-app.pages.dev/sitemap.xml
   indexNow:
     status: configured
-    key: DC4AB582C527A7A168FC391B84B8995E
-    keyLocation: https://sitereport-app.pages.dev/DC4AB582C527A7A168FC391B84B8995E.txt
+    key: 8533992191f84fd89569e65989a804c7
+    keyLocation: https://sitereport-app.pages.dev/8533992191f84fd89569e65989a804c7.txt
     endpoint: https://api.indexnow.org/indexnow
 geoGuidance:
 - Keep SiteReport, com.wkq.site, and the publisher identity consistent across pages

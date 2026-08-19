@@ -2,8 +2,8 @@ const verificationPath = "/google939576fea7c9232c.html";
 const verificationContent = "google-site-verification: google939576fea7c9232c.html\n";
 const bingVerificationPath = "/BingSiteAuth.xml";
 const bingVerificationContent = "<?xml version=\"1.0\"?>\n<users>\n\t<user>DC4AB582C527A7A168FC391B84B8995E</user>\n</users>\n";
-const indexNowPath = "/DC4AB582C527A7A168FC391B84B8995E.txt";
-const indexNowContent = "DC4AB582C527A7A168FC391B84B8995E\n";
+const indexNowPath = "/8533992191f84fd89569e65989a804c7.txt";
+const indexNowContent = "8533992191f84fd89569e65989a804c7\n";
 
 export default {
   async fetch(request, env) {
