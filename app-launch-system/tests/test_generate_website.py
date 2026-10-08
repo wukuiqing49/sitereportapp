@@ -12,10 +12,42 @@ import yaml
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from generate_website import GenerationError, generate  # noqa: E402
+from generate_website import GenerationError, generate, render_screenshots  # noqa: E402
 
 
 class GenerateWebsiteTests(unittest.TestCase):
+    def test_screenshot_alt_uses_each_images_caption(self) -> None:
+        content = {"home": {"heroScreenshotAlt": "App screenshot"}}
+        screenshots = [
+            {"path": "assets/projects.png", "caption": "Manage inspection projects"},
+            {"path": "assets/photos.png", "caption": "Capture field evidence"},
+        ]
+        rendered = render_screenshots(content, screenshots, "", True)
+        self.assertIn('alt="Manage inspection projects"', rendered)
+        self.assertIn('alt="Capture field evidence"', rendered)
+        fallback = render_screenshots(content, screenshots, "", False)
+        self.assertIn('alt="App screenshot"', fallback)
+        self.assertNotIn('alt="Capture field evidence"', fallback)
+
+    def test_tutorial_descriptions_and_explicit_language_selection(self) -> None:
+        data = self.app_data()
+        data["languages"]["routing"]["autoDetect"] = False
+        data["features"][0]["blog"] = {"template": "tutorial"}
+        data["features"][0]["details"]["stepDescriptions"] = [
+            "Select an image for this note.",
+            "Describe the observation in context.",
+            "Review the note before saving it.",
+        ]
+        path = self.root / "app-info.yaml"
+        path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+        generate(path, self.output, self.locales, False)
+        article = (self.output / "blog/visual-notes/index.html").read_text(encoding="utf-8")
+        for description in data["features"][0]["details"]["stepDescriptions"]:
+            self.assertIn(f"<p>{description}</p>", article)
+        self.assertIn('"autoRedirect":false', article)
+        feature = (self.output / "features/visual-notes/index.html").read_text(encoding="utf-8")
+        self.assertNotIn('class="feature-evidence"', feature)
+
     def setUp(self) -> None:
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
@@ -441,6 +473,8 @@ class GenerateWebsiteTests(unittest.TestCase):
         article = (self.output / "blog" / "visual-notes" / "index.html").read_text(encoding="utf-8")
         self.assertIn("Example Company Limited", about)
         self.assertIn("A reusable company description.", about)
+        self.assertIn('id="company-product-title">Pixel Notes</h2>', about)
+        self.assertIn('href="features/visual-notes/"', about)
         self.assertIn("Example Company Limited", index)
         self.assertIn("Example Company Limited", article)
 

@@ -18,8 +18,8 @@ address:
   countryCode: "CN"
 localized:
   en-US:
-    description: "A software company focused on the design, development, and operation of dependable digital products and tools."
+    description: "上海促动科技有限公司 publishes SiteReport under the developer name AndroidManTou. SiteReport is an Android app for documenting site inspections with reusable checklists, photos, field notes, signatures, and PDF reports."
     countryName: "China"
   zh-CN:
-    description: "一家专注于软件产品与数字工具设计、开发和运营的科技公司，致力于提供可靠、易用的数字产品。"
+    description: "上海促动科技有限公司以 AndroidManTou 开发者名称发布 SiteReport。SiteReport 是一款 Android 现场巡检应用，支持复用巡检清单、记录照片和现场备注、添加签字信息并生成 PDF 报告。"
     countryName: "中国"

@@ -956,7 +956,7 @@ def render_video_poster(video_url: str, locale: str, base_path: str, poster_path
     return (
         f'<a class="hero-video-poster" href="{esc(video_url)}" target="_blank" '
         f'rel="noopener noreferrer" aria-label="{esc(labels["link"])}: {esc(labels["title"])}">'
-        f'<img src="{esc(base_path + poster_path)}" alt="" width="1280" height="720">'
+        f'<img src="{esc(base_path + poster_path)}" alt="{esc(labels["title"])}" width="1280" height="720">'
         '<span class="video-play-icon" aria-hidden="true"></span></a>'
     )
 
@@ -1142,8 +1142,9 @@ def render_screenshots(content: dict, screenshots: list[dict], base_path: str, u
     alt = str(nested(content, "home.heroScreenshotAlt", ""))
     for screenshot in screenshots:
         caption = (screenshot.get("caption") if use_asset_captions else "") or default_caption
+        image_alt = caption or alt
         figures.append(
-            f'<figure><img src="{esc(base_path + screenshot["path"])}" alt="{esc(alt)}" loading="lazy">'
+            f'<figure><img src="{esc(base_path + screenshot["path"])}" alt="{esc(image_alt)}" loading="lazy">'
             f'<figcaption>{esc(caption)}</figcaption></figure>'
         )
     return (
@@ -1194,6 +1195,15 @@ def feature_page_path(locale: str, source: str, slug: str) -> str:
 
 
 def feature_labels(locale: str) -> dict[str, str]:
+    if locale.split("-")[0].lower() == "fr":
+        return {
+            "kicker": "Fonction de SiteReport", "problem": "Le besoin",
+            "capabilities": "Ce que vous pouvez faire", "inputs": "Informations à préparer",
+            "outputs": "Résultats", "options": "Options disponibles",
+            "steps": "Déroulement de l’inspection", "limitations": "Limites à connaître",
+            "faq": "Questions fréquentes", "evidence": "Références",
+            "blog": "Lire le guide associé", "breadcrumb": "Fil d’Ariane",
+        }
     if locale.split("-")[0].lower() == "zh":
         return {
             "kicker": "已验证功能",
@@ -1933,9 +1943,12 @@ def render_blog(
             details = item["details"]
             if item["template"] == "tutorial":
                 workflow_steps = [str(step) for step in (details.get("steps") or []) if str(step).strip()]
+                step_descriptions = details.get("stepDescriptions") or []
                 steps_html = "".join(
                     f'<section class="tutorial-step" id="step-{number}"><span class="tutorial-step-number" aria-hidden="true">{number}</span>'
-                    f'<h2>{esc(step)}</h2></section>'
+                    f'<h2>{esc(step)}</h2>'
+                    + (f'<p>{esc(step_descriptions[number - 1])}</p>' if number <= len(step_descriptions) else "")
+                    + '</section>'
                     for number, step in enumerate(workflow_steps, start=1)
                 )
                 toc = "".join(f'<a href="#step-{number}">{esc(step)}</a>' for number, step in enumerate(workflow_steps, start=1))
@@ -1995,6 +2008,9 @@ def render_blog(
             markdown += f'# {item["title"]}\n\n{item["text"]["opening"]}\n\n'
             for heading, key in ((labels["what"], "capabilities"), (labels["workflow"], "steps"), (labels["review"], "options"), (labels["limitations"], "limitations")):
                 markdown += f'## {heading}\n\n' + "".join(f'- {value}\n' for value in details.get(key) or []) + "\n"
+                if key == "steps":
+                    for step, description in zip(details.get("steps") or [], details.get("stepDescriptions") or []):
+                        markdown += f'### {step}\n\n{description}\n\n'
             source_path = stage / "content" / "blog" / locale / f'{item["slug"]}.md'
             source_path.parent.mkdir(parents=True, exist_ok=True)
             source_path.write_text(markdown, encoding="utf-8")
@@ -2534,7 +2550,7 @@ def render_site(
             software_data["url"] = page_url(base_url, locale, source, "index.html")
         organization_data = organization_entity(organization)
         if organization_data:
-            software_data["publisher"] = {"@id": organization_data["@id"]}
+            software_data["publisher"] = organization_data
         open_graph = ""
         if base_url:
             og_lines = [
@@ -2659,6 +2675,16 @@ def render_site(
             "COMPANY_KICKER": esc(about_labels["kicker"]),
             "ABOUT_HEADING": esc(about_labels["heading"]),
             "COMPANY_DESCRIPTION": esc(about_description),
+            "COMPANY_PRODUCT_SECTION": (
+                '<section aria-labelledby="company-product-title">'
+                f'<h2 id="company-product-title">{esc(app_name)}</h2>'
+                f'<p>{esc(nested(content, "home.shortDescription"))}</p>'
+                '<ul>' + "".join(
+                    f'<li><a href="{esc(relative_href(page_relative(locale, source, "about.html"), feature_page_path(locale, source, feature_slug(locale, source, content, feature))))}">'
+                    f'{esc(nested(content, "home.features.{}.name".format(feature["id"]), feature.get("name")))}</a></li>'
+                    for feature in content_ready_features(features)
+                ) + '</ul></section>'
+            ),
             "COMPANY_DETAILS_HEADING": esc(about_labels["details"]),
             "COMPANY_DETAILS": detail_html,
             "COMPANY_CONTACT_HEADING": esc(about_labels["contact"]),

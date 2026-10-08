@@ -13,8 +13,10 @@ fullDescription: 'Capturez les preuves terrain et transformez le flux d’inspec
 
 
   Listes d’inspection: Utilisez des plans et modèles réutilisables pour standardiser
-  le travail. Créer des plans réutilisables Choisir des modèles et points d’inspection
-  Reprendre une inspection et consulter l’historique
+  le travail. Créer un plan réutilisable pour les visites d’un même site ou pour un
+  type d’inspection récurrent. Choisir un modèle de liste de contrôle et définir les
+  points à examiner avant la visite. Reprendre une inspection en cours et consulter
+  l’historique des exécutions.
 
 
   Photos et localisation: Associez des photos aux points avec notes, heure et position
@@ -41,7 +43,7 @@ fullDescription: 'Capturez les preuves terrain et transformez le flux d’inspec
 characterCounts:
   appName: 10
   shortDescription: 10
-  fullDescription: 1369
+  fullDescription: 1509
 limits:
   appName: 30
   shortDescription: 80

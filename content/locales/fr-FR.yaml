@@ -30,7 +30,36 @@ home:
   closingCopy: "Organisez projets, preuves et rapports dans un seul flux."
 featureDetails:
   project-management: {problem: "Les comptes rendus sont difficiles à suivre lorsque les données du projet, les photos et les rapports sont séparés.", capabilities: ["Créer et gérer des projets d’inspection", "Suivre l’état et la progression", "Conserver photos et rapports ensemble"], supportedInputs: ["Nom, lieu, client et notes"], supportedOutputs: ["Dossier organisé avec progression et historique"], options: ["État et description du projet"], steps: ["Créez un projet", "Saisissez les informations du site", "Réalisez les inspections et vérifiez la progression"], limitations: ["Les champs disponibles dépendent de la version installée."], faq: [{question: "Un projet peut-il conserver ses rapports ?", answer: "Le flux du projet réunit informations, progression, photos et rapports générés."}]}
-  inspection-checklists: {problem: "Les inspections répétées sont difficiles à comparer si chaque visite utilise des contrôles différents.", capabilities: ["Créer des plans réutilisables", "Choisir des modèles et points d’inspection", "Reprendre une inspection et consulter l’historique"], supportedInputs: ["Points, nom, lieu et programmation"], supportedOutputs: ["Tâche répétable avec progression"], options: ["Modèle, livraison, fréquence et heure"], steps: ["Créez ou choisissez un plan", "Sélectionnez le modèle et la livraison", "Réalisez l’inspection et terminez chaque point"], limitations: ["Les rappels ne démarrent pas automatiquement une inspection."], faq: [{question: "Un plan peut-il être réutilisé ?", answer: "Oui, l’application prend en charge des plans et modèles réutilisables."}]}
+  inspection-checklists:
+    problem: "Lors de visites répétées d’un chantier ou d’un bâtiment, des contrôles différents rendent les résultats difficiles à comparer. Un plan réutilisable permet de conserver les mêmes points de contrôle et de suivre la progression de chaque inspection."
+    capabilities:
+      - "Créer un plan réutilisable pour les visites d’un même site ou pour un type d’inspection récurrent."
+      - "Choisir un modèle de liste de contrôle et définir les points à examiner avant la visite."
+      - "Reprendre une inspection en cours et consulter l’historique des exécutions."
+    supportedInputs:
+      - "Préparez le nom du plan, le lieu de la visite et les points de contrôle adaptés à votre périmètre."
+      - "Vérifiez la fréquence et l’heure prévues si vous souhaitez utiliser les rappels."
+    supportedOutputs:
+      - "Une tâche d’inspection répétable avec une progression consultable et un historique des exécutions."
+      - "Des observations qui restent liées aux points de contrôle pour préparer le rapport de terrain."
+    options:
+      - "Modèle de liste de contrôle : choisissez les points adaptés au chantier ou au bâtiment."
+      - "Profil de livraison : vérifiez la destination si vous utilisez l’envoi vers un serveur."
+      - "Fréquence et heure : configurez les rappels selon le rythme des visites."
+    steps:
+      - "Créez ou choisissez un plan. Vérifiez son nom, son lieu et les points à contrôler pour cette visite."
+      - "Sélectionnez le modèle et vérifiez les paramètres de livraison et de programmation. Réutilisez le même modèle lorsque les visites doivent être comparables."
+      - "Démarrez l’inspection et renseignez chaque point. Ajoutez les notes et photos utiles, puis vérifiez la progression avant de préparer le rapport. Reprenez une inspection inachevée plutôt que de perdre son contexte."
+    limitations:
+      - "Les rappels ne démarrent pas automatiquement une inspection : l’inspecteur doit lancer la visite."
+      - "Adaptez les points de contrôle à votre site. Une liste réutilisable ne remplace pas les exigences techniques ou réglementaires applicables."
+    faq:
+      - question: "Un plan peut-il être réutilisé ?"
+        answer: "Oui. Les plans et modèles réutilisables permettent de suivre les mêmes points lors de visites répétées. Revoyez le périmètre avant chaque visite lorsque le site ou les travaux ont changé."
+      - question: "Puis-je reprendre une inspection inachevée ?"
+        answer: "Oui. SiteReport permet de reprendre une inspection en cours et de consulter son historique. Vérifiez la progression et les points restant à traiter avant de préparer le rapport."
+      - question: "Une inspection programmée démarre-t-elle seule ?"
+        answer: "Non. La programmation fournit des rappels ; le démarrage de l’inspection reste une action de l’utilisateur."
   photo-evidence: {problem: "Une photo sans contexte d’inspection est difficile à utiliser comme preuve par la suite.", capabilities: ["Capturer une ou plusieurs photos", "Les associer à un enregistrement", "Enregistrer lieu et heure lorsqu’ils sont disponibles"], supportedInputs: ["Photos, notes et autorisation de localisation"], supportedOutputs: ["Preuves photo organisées"], options: ["Source, point et annotation visible"], steps: ["Ouvrez un point", "Capturez ou choisissez la photo", "Vérifiez-la puis continuez"], limitations: ["Les informations de localisation dépendent de l’appareil et des autorisations."], faq: [{question: "Les photos peuvent-elles être liées à un point ?", answer: "Oui, le flux lie la preuve à l’enregistrement et au point actuels."}]}
   field-notes-and-signatures: {problem: "Les constats et signatures peuvent rester hors du rapport s’ils sont saisis séparément.", capabilities: ["Consigner résultats et recommandations", "Gérer des profils de signature", "Inclure notes et signatures dans le rapport"], supportedInputs: ["Notes, problèmes, recommandations et signatures"], supportedOutputs: ["Enregistrement avec informations de validation"], options: ["Inspecteur, sécurité et superviseur"], steps: ["Ouvrez le point", "Consignez les constats", "Ajoutez les signatures avant le rapport"], limitations: ["Les champs dépendent du modèle choisi."], faq: [{question: "Les signatures apparaissent-elles dans le rapport ?", answer: "Le flux prend en charge les profils de signature et les écrit dans les fichiers générés."}]}
   report-generation: {problem: "Transformer des observations en rapport cohérent peut demander beaucoup de mise en forme manuelle.", capabilities: ["Générer un rapport PDF", "Inclure résultats, photos, lieu, notes et signatures", "Prévisualiser les fichiers générés"], supportedInputs: ["Données du projet, résultats, photos et notes"], supportedOutputs: ["Rapport PDF et fichiers exportés"], options: ["Modèle, style, format et signatures"], steps: ["Terminez l’enregistrement", "Choisissez les options", "Générez et vérifiez les fichiers"], limitations: ["Certains styles dépendent de l’édition ou du plan d’accès."], faq: [{question: "Que peut contenir le rapport ?", answer: "Il peut inclure données du projet, contrôles, photos, lieu, heure, notes et signatures."}]}

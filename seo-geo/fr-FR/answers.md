@@ -10,11 +10,19 @@ Le flux du projet réunit informations, progression, photos et rapports génér�
 
 ## Listes d’inspection
 
-Les inspections répétées sont difficiles à comparer si chaque visite utilise des contrôles différents.
+Lors de visites répétées d’un chantier ou d’un bâtiment, des contrôles différents rendent les résultats difficiles à comparer. Un plan réutilisable permet de conserver les mêmes points de contrôle et de suivre la progression de chaque inspection.
 
 ### Un plan peut-il être réutilisé ?
 
-Oui, l’application prend en charge des plans et modèles réutilisables.
+Oui. Les plans et modèles réutilisables permettent de suivre les mêmes points lors de visites répétées. Revoyez le périmètre avant chaque visite lorsque le site ou les travaux ont changé.
+
+### Puis-je reprendre une inspection inachevée ?
+
+Oui. SiteReport permet de reprendre une inspection en cours et de consulter son historique. Vérifiez la progression et les points restant à traiter avant de préparer le rapport.
+
+### Une inspection programmée démarre-t-elle seule ?
+
+Non. La programmation fournit des rappels ; le démarrage de l’inspection reste une action de l’utilisateur.
 
 ## Photos et localisation
 

@@ -5,10 +5,10 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -22,8 +22,15 @@ def extract_urls_from_sitemap(sitemap_path: Path) -> list[str]:
     """Extract public URLs from sitemap.xml."""
     if not sitemap_path.is_file():
         return []
-    content = sitemap_path.read_text(encoding="utf-8")
-    return re.findall(r"<loc>\s*(https?://[^\s<]+)\s*</loc>", content)
+    root = ET.parse(sitemap_path).getroot()
+    if root.tag.split("}")[-1] != "urlset":
+        raise ValueError("IndexNow requires a URL sitemap, not a sitemap index.")
+    urls = []
+    for element in root.findall("{*}url/{*}loc"):
+        url = (element.text or "").strip()
+        if urlparse(url).scheme in {"http", "https"} and url not in urls:
+            urls.append(url)
+    return urls
 
 
 def load_app_info(app_info_path: Path) -> dict:
@@ -58,13 +65,6 @@ def resolve_indexnow_config(
             key = str(index_now_cfg.get("key") or "").strip()
         elif isinstance(index_now_cfg, str):
             key = index_now_cfg.strip()
-    if not key:
-        bing_cfg = app_info.get("bingWebmaster")
-        if isinstance(bing_cfg, dict):
-            content = str(bing_cfg.get("verificationContent") or "")
-            match = re.search(r"<user>\s*([^<\s]+)\s*</user>", content, re.IGNORECASE)
-            if match:
-                key = match.group(1).strip()
     if not key:
         raise ValueError("IndexNow key could not be determined. Provide --key or configure indexNow.key in app-info.yaml.")
 
@@ -165,7 +165,11 @@ def main() -> int:
             alt_sitemap = Path(__file__).resolve().parents[2] / "sitemap.xml"
             if alt_sitemap.is_file():
                 sitemap_path = alt_sitemap
-        url_list = extract_urls_from_sitemap(sitemap_path)
+        try:
+            url_list = extract_urls_from_sitemap(sitemap_path)
+        except (ET.ParseError, ValueError) as error:
+            print(f"ERROR: Invalid URL sitemap: {error}", file=sys.stderr)
+            return 2
 
     if not url_list:
         website_url = str(app_info.get("websiteUrl") or f"https://{host}/").strip()

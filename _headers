@@ -9,3 +9,7 @@
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
+
+/sitemap.xml
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=0, must-revalidate
