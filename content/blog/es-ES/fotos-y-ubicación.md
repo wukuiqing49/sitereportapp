@@ -2,9 +2,8 @@
 contentId: photo-evidence
 locale: es-ES
 status: machine-draft
-title: 'Fotos y ubicación: what it does in SiteReport'
+title: Tomar fotos de inspección que conserven su contexto
 description: Asocia fotos de cada punto con notas, hora y ubicación cuando estén disponibles.
-  Learn the exact problem, options, verified steps, and known limitations.
 slug: fotos-y-ubicación
 intent: feature education
 audience: app users
@@ -13,34 +12,40 @@ evidence:
 - SiteReport.md
 - core/core_camera/src/main/res/values/strings.xml
 - feature/feature_app/src/main/java/com/wkq/feature/app/photo/PhotoEvidenceWriter.kt
-primaryKeyword: 'Fotos y ubicación: what it does in SiteReport'
+primaryKeyword: Tomar fotos de inspección que conserven su contexto
 relatedPages:
 - /
 - /support.html
 template: standard-article
 ---
 
-# Fotos y ubicación: what it does in SiteReport
+# Tomar fotos de inspección que conserven su contexto
 
 Una foto sin contexto de inspección es difícil de usar como evidencia después.
 
-## What this feature helps you do
+## Qué puedes hacer
 
 - Capturar una o varias fotos
 - Asociarlas a un registro
 - Guardar ubicación y hora cuando estén disponibles
 
-## Where it fits in the workflow
+## Procedimiento
 
 - Abre un punto
 - Captura o elige la foto
 - Revísala y continúa
 
-## What to check before export
+## Opciones que debes revisar
 
 - Origen, punto y anotación visible
 
-## What to keep in mind
+## Limitaciones
 
 - Los datos de ubicación dependen del dispositivo y los permisos.
+
+## Explicar la evidencia a quien no estuvo allí
+
+Abre el punto correcto antes de añadir la foto. Para un defecto, considera una vista general que identifique la zona y otra cercana que muestre el detalle. Comprueba el enfoque y la legibilidad antes de salir del sitio: una nota posterior no recupera una imagen borrosa.
+
+Anota la habitación, el punto y la condición observada. La ubicación del dispositivo es información complementaria, no sustituye esos datos. Si falta, revisa la disponibilidad y los permisos; no supongas que una foto de la galería contiene ubicación completa. Comprueba después la evidencia en el informe generado.
 

@@ -25,6 +25,7 @@ except ImportError:  # pragma: no cover - exercised only without the declared de
 
 from validate_app_info import errors_for as app_info_errors
 from validate_output import PLACEHOLDER, TOKEN
+from editorial_copy import COPY, localized_labels
 
 
 SYSTEM_ROOT = Path(__file__).resolve().parent.parent
@@ -1195,6 +1196,9 @@ def feature_page_path(locale: str, source: str, slug: str) -> str:
 
 
 def feature_labels(locale: str) -> dict[str, str]:
+    translated = localized_labels(locale, "feature")
+    if translated:
+        return translated
     if locale.split("-")[0].lower() == "fr":
         return {
             "kicker": "Fonction de SiteReport", "problem": "Le besoin",
@@ -1250,6 +1254,9 @@ def relative_href(current_page: str, target_page: str) -> str:
 
 
 def blog_labels(locale: str, app_name: str) -> dict[str, str]:
+    translated = localized_labels(locale, "blog", app_name)
+    if translated:
+        return translated
     if locale.split("-")[0].lower() == "zh":
         return {
             "heading": f"{app_name} 功能指南",
@@ -1327,6 +1334,17 @@ def blog_article_text(
     inputs = sentences("supportedInputs")
     outputs = sentences("supportedOutputs")
     limitations = sentences("limitations")
+    translated = COPY.get(locale.split("-")[0].lower())
+    if translated:
+        standard, tutorial = translated["titles"].split("|")
+        return {
+            "standardTitle": standard.format(feature=feature_name, app=app_name),
+            "tutorialTitle": tutorial.format(feature=feature_name, app=app_name),
+            "summary": description,
+            "opening": problem, "what": capabilities, "workflow": steps,
+            "review": options, "prerequisites": inputs, "result": outputs,
+            "limitations": limitations,
+        }
     if locale.split("-")[0].lower() == "zh":
         return {
             "standardTitle": f"{feature_name}：在 {app_name} 中能做什么",
@@ -1698,7 +1716,11 @@ def render_blog(
     aliases: dict,
     auto_detect: bool,
     remember_selection: bool,
+    editorial_path: Path | None = None,
 ) -> list[str]:
+    editorial = load_yaml(editorial_path) if editorial_path and editorial_path.is_file() else {}
+    if not isinstance(editorial, dict):
+        raise GenerationError("blog editorial content must be a locale mapping")
     if not content_ready_features(features):
         content_root = stage / "content" / "blog"
         content_root.mkdir(parents=True, exist_ok=True)
@@ -1727,10 +1749,22 @@ def render_blog(
             description = str(translated.get("description") or feature.get("description") or "")
             details = localized_feature_details(contents[locale], feature)
             text = blog_article_text(locale, app_name, name, description, details)
+            guide = nested(editorial, f"{locale}.{feature_id}", {}) or {}
+            if not isinstance(guide, dict):
+                raise GenerationError(f"invalid blog editorial content: {locale}/{feature_id}")
+            extra_sections = guide.get("sections") or []
+            if not isinstance(extra_sections, list) or any(
+                not isinstance(section, dict) or not isinstance(section.get("heading"), str)
+                or not section["heading"].strip() or not isinstance(section.get("paragraphs"), list)
+                or not section["paragraphs"] or any(not isinstance(p, str) or not p.strip() for p in section["paragraphs"])
+                for section in extra_sections
+            ):
+                raise GenerationError(f"invalid blog editorial sections: {locale}/{feature_id}")
             template = str(nested(feature, "blog.template", feature.get("blogTemplate", "standard-article")))
             if template not in {"standard-article", "tutorial"}:
                 template = "standard-article"
             title = text["tutorialTitle"] if template == "tutorial" else text["standardTitle"]
+            title = str(guide.get("title") or title)
             slug_source = feature_id if locale == source else name
             screenshot = screenshots[min(index + 1, len(screenshots) - 1)] if screenshots else {}
             locale_models.append({
@@ -1742,6 +1776,7 @@ def render_blog(
                 "template": template,
                 "text": text,
                 "details": details,
+                "sections": extra_sections,
                 "evidence": [str(item) for item in (feature.get("evidence") or [])],
                 "image": str(screenshot.get("path") or ""),
             })
@@ -1941,6 +1976,19 @@ def render_blog(
             }
             text_data = item["text"]
             details = item["details"]
+            extra_toc = "".join(
+                f'<a href="#guide-{number}">{esc(section["heading"])}</a>'
+                for number, section in enumerate(item["sections"], 1)
+            )
+            extra_body = "".join(
+                f'<section id="guide-{number}"><h2>{esc(section["heading"])}</h2>'
+                + "".join(f'<p>{esc(paragraph)}</p>' for paragraph in section["paragraphs"]) + '</section>'
+                for number, section in enumerate(item["sections"], 1)
+            )
+            feature_target = feature_page_path(locale, source, feature_slug(locale, source, contents[locale], next(
+                feature for feature in features if feature["id"] == item["contentId"]
+            )))
+            feature_link = f'<p><a href="{esc(relative_href(article_page, feature_target))}">{esc(nested(contents[locale], "home.features." + item["contentId"] + ".name", item["contentId"]))}</a></p>'
             if item["template"] == "tutorial":
                 workflow_steps = [str(step) for step in (details.get("steps") or []) if str(step).strip()]
                 step_descriptions = details.get("stepDescriptions") or []
@@ -1966,11 +2014,11 @@ def render_blog(
                     "REQUIREMENTS_LABEL": esc(labels["requirements"]), "REQUIREMENTS_VALUE": esc(labels["android"]),
                     "PREREQUISITES_HEADING": esc(labels["prerequisites"]),
                     "PREREQUISITES_CONTENT": '<ul>' + "".join(f'<li>{esc(value)}</li>' for value in details.get("supportedInputs") or []) + '</ul>',
-                    "TABLE_OF_CONTENTS": toc, "TUTORIAL_STEPS": steps_html,
+                    "TABLE_OF_CONTENTS": toc + extra_toc, "TUTORIAL_STEPS": steps_html,
                     "RESULT_HEADING": esc(labels["result"]),
                     "RESULT_CONTENT": '<ul>' + "".join(f'<li>{esc(value)}</li>' for value in details.get("supportedOutputs") or []) + '</ul>',
                     "LIMITATIONS_SECTION": f'<section id="limitations"><h2>{esc(labels["limitations"])}</h2><ul>'
-                    + "".join(f'<li>{esc(value)}</li>' for value in details.get("limitations") or []) + '</ul></section>',
+                    + "".join(f'<li>{esc(value)}</li>' for value in details.get("limitations") or []) + '</ul></section>' + extra_body + feature_link,
                 })
                 rendered = render_blog_template("tutorial.html", tutorial_values)
             else:
@@ -1982,12 +2030,12 @@ def render_blog(
                 ]
                 article_values = merge(common, {
                     "ARTICLE_STRUCTURED_DATA": structured, "ARTICLE_CATEGORY": esc(labels["guide"]),
-                    "TABLE_OF_CONTENTS": "".join(f'<a href="#{anchor}">{esc(heading)}</a>' for anchor, heading, _, _ in sections),
+                    "TABLE_OF_CONTENTS": "".join(f'<a href="#{anchor}">{esc(heading)}</a>' for anchor, heading, _, _ in sections) + extra_toc,
                     "ARTICLE_BODY": f'<p>{esc(text_data["opening"])}</p>' + "".join(
                         f'<section id="{anchor}"><h2>{esc(heading)}</h2><{tag}>'
                         + "".join(f'<li>{esc(value)}</li>' for value in values)
                         + f'</{tag}></section>' for anchor, heading, values, tag in sections
-                    ),
+                    ) + extra_body + feature_link,
                 })
                 rendered = render_blog_template("article.html", article_values)
             (stage / article_page).write_text(rendered, encoding="utf-8")
@@ -2012,6 +2060,8 @@ def render_blog(
                     for step, description in zip(details.get("steps") or [], details.get("stepDescriptions") or []):
                         markdown += f'### {step}\n\n{description}\n\n'
             source_path = stage / "content" / "blog" / locale / f'{item["slug"]}.md'
+            for section in item["sections"]:
+                markdown += f'## {section["heading"]}\n\n' + "\n\n".join(section["paragraphs"]) + "\n\n"
             source_path.parent.mkdir(parents=True, exist_ok=True)
             source_path.write_text(markdown, encoding="utf-8")
             if locale == source:
@@ -2756,6 +2806,7 @@ def render_site(
             aliases,
             auto_detect,
             remember_selection,
+            editorial_path=app_info_path.parent / "content" / "blog" / "editorial.yaml",
         )
     )
 

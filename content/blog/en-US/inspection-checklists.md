@@ -2,7 +2,7 @@
 contentId: inspection-checklists
 locale: en-US
 status: draft
-title: How to use Inspection checklist app in SiteReport
+title: Prepare a reusable checklist for repeat site inspections
 description: Use reusable inspection plans and checklist templates to standardize
   field work. Learn the exact problem, options, verified steps, and known limitations.
 slug: inspection-checklists
@@ -13,14 +13,14 @@ evidence:
 - SiteReport.md
 - feature/feature_res/src/main/res/workflow_strings.xml
 - feature/feature_app/src/main/res/layout/fragment_workflow_editor.xml
-primaryKeyword: How to use Inspection checklist app in SiteReport
+primaryKeyword: Prepare a reusable checklist for repeat site inspections
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use Inspection checklist app in SiteReport
+# Prepare a reusable checklist for repeat site inspections
 
 Repeated inspections are harder to compare when each field visit follows a different set of checks.
 
@@ -55,4 +55,10 @@ Start the inspection and work through its points. Record the result and relevant
 ## What to keep in mind
 
 - A scheduled plan provides reminders; it does not start an inspection automatically.
+
+## Keep repeat visits comparable
+
+Define what each inspection point covers before the first run. A point such as 'check the site' is difficult to compare over time; a location and a concrete observation give the next inspector a clearer task. Reuse the plan when the scope is unchanged, and review the points when the work area or inspection purpose changes.
+
+At the end of a run, review incomplete points and attach context to any recorded issue. A reminder is a prompt to perform the inspection, not evidence that it happened. When resuming an unfinished run, inspect its progress and history before starting another run for the same visit.
 

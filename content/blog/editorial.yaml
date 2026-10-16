@@ -1,0 +1,359 @@
+# Editorial input. The generator reads this file; generated Markdown is output.
+# Practical recommendations do not assert unverified controls or automatic behavior.
+en-US:
+  project-management:
+    title: "Organize a site inspection project before the first visit"
+    sections:
+      - heading: "Separate the project from the individual visit"
+        paragraphs:
+          - "Use a project name that identifies the site, building, or work package. Put enough location and client context in the record that another inspector can recognize the job without relying on a photograph. For repeat visits, review the existing project before creating another one: splitting the same job across several projects makes its history harder to follow."
+          - "Before leaving the site, review progress alongside the inspection records, photos, and generated reports. A project status alone does not explain an unresolved finding. Keep the observation and its evidence together, and check which report corresponds to the visit you intend to deliver. Available fields depend on the installed version."
+  inspection-checklists:
+    title: "Prepare a reusable checklist for repeat site inspections"
+    sections:
+      - heading: "Keep repeat visits comparable"
+        paragraphs:
+          - "Define what each inspection point covers before the first run. A point such as 'check the site' is difficult to compare over time; a location and a concrete observation give the next inspector a clearer task. Reuse the plan when the scope is unchanged, and review the points when the work area or inspection purpose changes."
+          - "At the end of a run, review incomplete points and attach context to any recorded issue. A reminder is a prompt to perform the inspection, not evidence that it happened. When resuming an unfinished run, inspect its progress and history before starting another run for the same visit."
+  photo-evidence:
+    title: "Capture inspection photos that keep their site context"
+    sections:
+      - heading: "Make a photo useful to someone who was not there"
+        paragraphs:
+          - "Open the relevant inspection point before adding a photo so that the image is linked to the correct record. For a defect, consider taking an overview that identifies the area and a close view that shows the observation. Check focus and legibility while you are still on site; a detailed note cannot recover an unreadable image."
+          - "Add the location within the site and the observed condition to your notes. Device location is supporting context, not a substitute for identifying the room or inspection point. If location data is absent, check device availability and permissions; do not assume a gallery image will provide complete location information. Review the evidence again in the generated report."
+  field-notes-and-signatures:
+    title: "Write inspection findings and review sign-off before reporting"
+    sections:
+      - heading: "Separate the observation from the recommendation"
+        paragraphs:
+          - "Describe what you observed, where it occurred, and which evidence supports it. Keep a corrective recommendation distinct from the observed condition. For example, identify a damaged item and its location before stating that it should be repaired. Avoid recording an assumed cause as an established fact."
+          - "Before generating the report, review the selected signature profiles and the people or roles they represent. Check the output itself: signature fields and their presentation depend on the chosen template. A signature image in a report does not by itself establish a particular legal approval process."
+  report-generation:
+    title: "Review an inspection PDF before sending it to a client"
+    sections:
+      - heading: "Check the source record and then the exported PDF"
+        paragraphs:
+          - "Review the project identity, inspection results, photos, notes, and sign-off data before generating the file. Choose the template, PDF style, and signature inclusion for the intended recipient. Some styles depend on the edition or access plan, so check the options actually available in your installed app."
+          - "Open the generated PDF and check the project name, readability of photos, findings, and signature presentation. If something is missing, check the source record and template options before generating a replacement. Open the replacement too, and make sure you select that file when sharing. Creating a PDF and delivering it to the recipient are separate checks."
+  export-and-upload:
+    title: "Export an inspection report and verify server delivery"
+    sections:
+      - heading: "Choose a file handoff or a server destination"
+        paragraphs:
+          - "Generate and review the report first. Decide whether the recipient needs a PDF, image files, or a ZIP package, using the export formats available in the app. Device sharing is suitable when you want to pass the file to another installed app. Configured server delivery needs a reachable destination and a matching delivery profile."
+          - "SiteReport supports configured FTP, FTPS, SFTP, WebDAV, and SMB/NAS delivery. These protocols are not interchangeable. Ask the server administrator for the supported protocol, server address, account permissions, and destination path rather than guessing from a web login address."
+      - heading: "Check the destination before uploading real reports"
+        paragraphs:
+          - "Confirm the server and remote path with the person responsible for project storage. The account must be allowed to write to that destination; being able to browse a folder does not establish upload permission. If you need to test access, use a report without client or site details until the destination is confirmed."
+          - "After delivery, review the upload state and check the destination for the expected file. Open that copy and verify its contents. Generating a report locally does not confirm that it reached the server, and handing a file to a sharing app does not confirm receipt by the client."
+      - heading: "If delivery fails, isolate the failing step"
+        paragraphs:
+          - "First confirm that the generated file opens locally. Then check network access, the selected protocol, server address, account, and remote path. A private company server may require access to the company network. Keep the failure message for support, but do not include passwords or other credentials."
+          - "Before retrying, check whether a file already exists at the destination. Do not assume failed or repeated attempts are automatically resumed, deduplicated, or renamed. When server access cannot be restored immediately, keep the reviewed local export and agree on an alternative delivery method with the recipient."
+zh-CN:
+  project-management:
+    title: "首次巡检前，如何整理项目和现场资料"
+    sections:
+      - heading: "区分长期项目与单次巡检"
+        paragraphs:
+          - "项目名称建议包含现场、楼栋或工作区域，地点和客户信息应足以让其他巡检人员辨认任务。复查同一现场时，先查看现有项目，避免把同一工作的照片、报告和历史拆散到多个项目中。检查范围发生变化时，再明确本次任务的边界。"
+          - "离场前同时核对项目进度、巡检记录、照片和报告。仅修改项目状态，不能说明某个问题是否已经处理；应在相应记录中保留观察结果和证据。交付前确认选中的报告对应本次巡检，具体可用字段以安装版本为准。"
+  inspection-checklists:
+    title: "如何准备可复用的巡检清单并核对未完成项"
+    sections:
+      - heading: "让复查结果能够相互比较"
+        paragraphs:
+          - "首次执行前，明确每个检查点的位置和观察对象。笼统的“检查现场”难以复查，具体到区域和可观察现象，下一位巡检人员才知道要检查什么。范围不变时可以复用计划；区域或检查目的变化时，先复核清单，不要直接沿用旧任务。"
+          - "完成一轮巡检后，检查未完成的点位，为发现的问题补上备注和相关照片。定时提醒只是在提示人员执行，并不代表巡检已经发生。继续未完成任务时，先看进度和历史，避免为同一次到访重复创建记录。"
+  photo-evidence:
+    title: "如何拍摄有现场上下文的巡检证据照片"
+    sections:
+      - heading: "让未到现场的人也能理解照片"
+        paragraphs:
+          - "添加照片前先打开对应检查点，避免把证据挂到其他位置。记录缺陷时，可以拍摄一张说明区域的全景，再拍一张展示细节的近景。离开现场前检查对焦、光线和文字是否清楚；图片本身模糊，后补备注也无法恢复细节。"
+          - "备注中写清楼层、房间、检查对象和观察到的情况。设备定位只能提供辅助信息，不能代替具体点位说明。没有位置信息时，检查设备定位状态和权限；不要假设相册照片一定带有完整位置数据。生成报告后再核对照片与记录的对应关系。"
+  field-notes-and-signatures:
+    title: "如何记录巡检发现并在出报告前核对签字"
+    sections:
+      - heading: "把观察事实和整改建议分开写"
+        paragraphs:
+          - "先描述在哪里发现了什么现象，再写对应的证据和整改建议。例如先说明某房间的构件破损及照片，再建议维修。未经确认的成因不要写成既定事实，以免接收报告的人把推测当作现场结论。备注应跟随对应检查点保留。"
+          - "生成报告前，核对选择的签字资料及其代表的人员和角色，再打开导出的文件确认实际显示效果。签字字段和呈现方式取决于所选模板。报告中出现签名图片，本身不能证明已经完成某种法定审批流程。"
+  report-generation:
+    title: "巡检 PDF 发给客户前，应检查哪些内容"
+    sections:
+      - heading: "先检查原始记录，再检查导出文件"
+        paragraphs:
+          - "生成前核对项目身份、检查结果、照片、备注和签字资料。根据接收方需要选择模板、PDF 样式和签字选项；部分样式受版本或访问方案限制，应以当前安装版本实际提供的选项为准。不要把尚未录入的内容寄希望于模板自动补齐。"
+          - "打开生成的 PDF，检查项目名称、照片清晰度、问题描述以及签字显示。发现遗漏时，先回到源记录和模板选项检查，再生成替换文件。重新打开替换文件，并确认分享时选中的是这一份。文件生成成功和对方收到文件是两个不同的验收步骤。"
+  export-and-upload:
+    title: "如何导出巡检报告并确认服务器交付成功"
+    sections:
+      - heading: "先确定交付文件和接收方式"
+        paragraphs:
+          - "先生成并打开报告，确认内容无误，再按接收方需要选择应用支持的 PDF、图片或 ZIP。通过设备分享，可以把文件交给其他已安装的应用；服务器交付则需要可访问的目标地址和匹配的交付配置。这两种方式的完成判断不同。"
+          - "SiteReport 的交付配置支持 FTP、FTPS、SFTP、WebDAV 和 SMB/NAS。这些协议不能相互替代，应向服务器管理员确认实际协议、服务器地址、账号权限和目标路径，不要直接把网页登录地址当作上传配置。"
+      - heading: "上传前核对目标，上传后核对文件"
+        paragraphs:
+          - "与项目存储负责人核对服务器和远程路径，并确认账号有写入权限。能浏览目录不代表能上传。如果需要测试连通性，先使用不包含客户和现场信息的报告，确认目标无误后再交付真实资料。"
+          - "交付后检查上传状态，并到目标位置确认文件存在、能够打开且内容正确。本地生成成功不等于已上传；把文件交给分享应用，也不等于客户已经收到。需要客户确认时，应单独核对接收结果。"
+      - heading: "失败时按文件、网络、配置顺序排查"
+        paragraphs:
+          - "先确认本地报告能打开，再检查网络、协议、服务器地址、账号和远程路径。公司内部服务器可能需要接入公司网络。保留失败提示有助于支持人员定位，但不要在截图或支持信息中暴露密码等凭据。"
+          - "重试前先看目标目录是否已有文件，不要假设重复上传会自动续传、去重或改名。暂时无法恢复服务器访问时，保留核对过的本地导出文件，与接收方约定替代交付方式。"
+pt-BR:
+  project-management:
+    sections:
+      - heading: "Distinguir o projeto de cada visita"
+        paragraphs:
+          - "Identifique o local e a área no nome do projeto e registre o contexto do cliente. Em uma visita de retorno, confira o projeto existente para não dividir seu histórico. Antes de sair, compare o progresso com os registros, fotos e relatórios; o status do projeto, sozinho, não explica um problema pendente."
+  inspection-checklists:
+    sections:
+      - heading: "Manter as visitas comparáveis"
+        paragraphs:
+          - "Defina a localização e o objeto de cada ponto antes da primeira execução. Reutilize o plano quando o escopo for o mesmo; revise os pontos se a área ou a finalidade mudar. Ao retomar uma inspeção, confira o progresso e o histórico. Um lembrete não significa que a inspeção foi executada. Revise os pontos incompletos antes de gerar o relatório."
+  photo-evidence:
+    sections:
+      - heading: "Preservar o contexto da foto"
+        paragraphs:
+          - "Abra o ponto correto antes de adicionar a foto. Considere uma vista geral da área e outra do detalhe, verificando o foco ainda no local. Registre a sala e a condição observada nas notas. A localização do dispositivo não substitui esses dados e depende das permissões. Confira novamente a associação entre a foto e o registro no relatório."
+  field-notes-and-signatures:
+    sections:
+      - heading: "Separar o fato da recomendação"
+        paragraphs:
+          - "Descreva o que foi observado e onde, indique a evidência e só então registre a recomendação. Não apresente uma causa presumida como fato. Antes da geração, confira os perfis de assinatura e seus responsáveis; depois abra o relatório para verificar a apresentação. A imagem de uma assinatura não comprova, por si só, um processo legal de aprovação."
+  report-generation:
+    sections:
+      - heading: "Revisar o arquivo que será enviado"
+        paragraphs:
+          - "Confira projeto, resultados, fotos, notas e assinaturas antes da geração. Abra o PDF e verifique a legibilidade e a apresentação das informações. Se algo faltar, revise o registro e as opções do modelo antes de gerar um substituto. Abra também o novo arquivo e selecione essa versão ao compartilhar. Gerar o PDF e confirmar a entrega são verificações diferentes."
+  export-and-upload:
+    sections:
+      - heading: "Confirmar o destino antes da entrega"
+        paragraphs:
+          - "Revise o relatório local e escolha PDF, imagens ou ZIP entre os formatos disponíveis. Para entrega ao servidor, confirme protocolo, endereço, conta e caminho com o administrador. FTP, FTPS, SFTP, WebDAV e SMB/NAS não são intercambiáveis. Ver uma pasta não garante permissão de escrita. Use um arquivo sem dados de clientes para testar um destino ainda não confirmado."
+      - heading: "Verificar o recebimento e investigar falhas"
+        paragraphs:
+          - "Após o envio, confira o estado da carga e abra a cópia no destino. Compartilhar com outro aplicativo não confirma o recebimento pelo cliente. Se falhar, verifique arquivo local, rede e configuração. Antes de tentar novamente, procure uma cópia existente; não presuma retomada ou eliminação automática de duplicatas. Envie a mensagem de erro ao suporte sem senhas."
+fr-FR:
+  project-management:
+    sections:
+      - heading: "Distinguer le projet de chaque visite"
+        paragraphs:
+          - "Identifiez le site et la zone dans le nom du projet, puis précisez le contexte du client. Avant une visite de suivi, consultez le projet existant pour ne pas disperser son historique. Avant de partir, comparez l’avancement aux observations, photos et rapports : un statut de projet ne décrit pas à lui seul un problème non résolu."
+  inspection-checklists:
+    sections:
+      - heading: "Rendre les visites comparables"
+        paragraphs:
+          - "Définissez le lieu et l’objet de chaque point avant la première inspection. Réutilisez le plan si le périmètre reste identique ; revoyez les points si la zone ou l’objectif change. Avant de reprendre une inspection, consultez sa progression et son historique. Un rappel ne prouve pas son exécution. Vérifiez les points incomplets avant de produire le rapport."
+  photo-evidence:
+    sections:
+      - heading: "Conserver le contexte de la photo"
+        paragraphs:
+          - "Ouvrez le bon point avant d’ajouter la photo. Envisagez une vue générale et une vue rapprochée, puis vérifiez la netteté sur place. Notez la pièce et la situation observée. La position du téléphone ne remplace pas ces indications et dépend des autorisations. Vérifiez ensuite dans le rapport que l’image correspond à la bonne observation."
+  field-notes-and-signatures:
+    sections:
+      - heading: "Séparer le constat de la recommandation"
+        paragraphs:
+          - "Décrivez ce qui a été observé et où, indiquez la preuve, puis formulez la recommandation. Ne présentez pas une cause supposée comme un fait. Vérifiez les profils de signature et les personnes concernées avant la génération, puis leur présentation dans le fichier. Une image de signature ne prouve pas à elle seule une procédure légale d’approbation."
+  report-generation:
+    sections:
+      - heading: "Relire le fichier destiné au client"
+        paragraphs:
+          - "Vérifiez le projet, les résultats, les photos, les notes et les signatures avant la génération. Ouvrez le PDF et contrôlez leur lisibilité. En cas d’omission, revoyez le dossier et les options du modèle avant de produire un remplacement. Ouvrez également ce nouveau fichier et sélectionnez cette version au partage. Produire le PDF et confirmer sa réception sont deux contrôles distincts."
+  export-and-upload:
+    sections:
+      - heading: "Confirmer la destination avant l’envoi"
+        paragraphs:
+          - "Relisez le rapport local et choisissez PDF, images ou ZIP parmi les formats disponibles. Pour un serveur, confirmez le protocole, l’adresse, le compte et le chemin avec l’administrateur. FTP, FTPS, SFTP, WebDAV et SMB/NAS ne sont pas interchangeables. Pouvoir consulter un dossier ne garantit pas le droit d’y écrire. Testez une destination non confirmée avec un fichier sans données client."
+      - heading: "Vérifier la réception et isoler un échec"
+        paragraphs:
+          - "Après l’envoi, consultez son état et ouvrez la copie à destination. Le partage vers une autre application ne confirme pas la réception par le client. En cas d’échec, vérifiez le fichier local, le réseau et la configuration. Avant de réessayer, recherchez une copie existante ; ne supposez ni reprise ni dédoublonnage automatique. Communiquez l’erreur au support sans mot de passe."
+de-DE:
+  project-management:
+    sections:
+      - heading: "Projekt und einzelnen Besuch unterscheiden"
+        paragraphs:
+          - "Benennen Sie Standort und Arbeitsbereich im Projektnamen und ergänzen Sie den Kundenkontext. Prüfen Sie bei einem Folgebesuch das vorhandene Projekt, damit die Historie zusammenbleibt. Vergleichen Sie vor der Abreise den Fortschritt mit Beobachtungen, Fotos und Berichten. Ein Projektstatus allein erklärt keinen offenen Befund. Prüfen Sie, welcher Bericht zum aktuellen Besuch gehört."
+  inspection-checklists:
+    sections:
+      - heading: "Wiederholte Besuche vergleichbar machen"
+        paragraphs:
+          - "Bestimmen Sie Ort und Gegenstand jedes Prüfpunkts vor dem ersten Durchlauf. Verwenden Sie den Plan bei gleichem Umfang erneut und prüfen Sie die Punkte bei Änderungen. Kontrollieren Sie vor dem Fortsetzen Fortschritt und Historie. Eine Erinnerung bedeutet nicht, dass die Inspektion stattgefunden hat. Prüfen Sie offene Punkte vor der Berichtserstellung."
+  photo-evidence:
+    sections:
+      - heading: "Den Zusammenhang eines Fotos erhalten"
+        paragraphs:
+          - "Öffnen Sie den richtigen Prüfpunkt, bevor Sie ein Foto hinzufügen. Eine Übersicht und eine Nahaufnahme können gemeinsam den Befund erklären. Prüfen Sie die Schärfe vor Ort und notieren Sie Raum und Zustand. Der Gerätestandort ersetzt diese Angaben nicht und hängt von Berechtigungen ab. Kontrollieren Sie die Zuordnung des Fotos auch im Bericht."
+  field-notes-and-signatures:
+    sections:
+      - heading: "Beobachtung und Empfehlung trennen"
+        paragraphs:
+          - "Beschreiben Sie zuerst Ort und Beobachtung, nennen Sie den Beleg und ergänzen Sie dann die Empfehlung. Stellen Sie eine vermutete Ursache nicht als Tatsache dar. Prüfen Sie die Unterschriftsprofile und zugehörigen Personen vor der Erstellung sowie ihre Darstellung im fertigen Bericht. Ein Unterschriftsbild allein belegt keinen bestimmten rechtlichen Freigabeprozess."
+  report-generation:
+    sections:
+      - heading: "Die zu versendende Datei prüfen"
+        paragraphs:
+          - "Prüfen Sie Projekt, Ergebnisse, Fotos, Notizen und Unterschriften vor der Erstellung. Öffnen Sie das PDF und kontrollieren Sie Lesbarkeit und Darstellung. Fehlen Angaben, prüfen Sie den Datensatz und die Vorlage, bevor Sie eine Ersatzdatei erstellen. Öffnen Sie auch diese und wählen Sie beim Teilen die richtige Version. Erstellung und bestätigter Empfang sind getrennte Prüfungen."
+  export-and-upload:
+    sections:
+      - heading: "Das Ziel vor der Übertragung bestätigen"
+        paragraphs:
+          - "Prüfen Sie den lokalen Bericht und wählen Sie PDF, Bilder oder ZIP aus den verfügbaren Formaten. Klären Sie für eine Serverübertragung Protokoll, Adresse, Konto und Zielpfad mit der Administration. FTP, FTPS, SFTP, WebDAV und SMB/NAS sind nicht austauschbar. Ein lesbarer Ordner erlaubt nicht automatisch Schreibzugriffe. Testen Sie unbekannte Ziele mit einer Datei ohne Kundendaten."
+      - heading: "Empfang prüfen und Fehler eingrenzen"
+        paragraphs:
+          - "Prüfen Sie nach der Übertragung den Status und öffnen Sie die Datei am Ziel. Die Übergabe an eine andere App bestätigt keinen Kundenempfang. Prüfen Sie bei Fehlern lokale Datei, Netzwerk und Konfiguration. Suchen Sie vor einem erneuten Versuch nach vorhandenen Kopien; setzen Sie keine automatische Fortsetzung oder Duplikatvermeidung voraus. Geben Sie Fehlermeldungen ohne Passwörter weiter."
+ja-JP:
+  project-management:
+    sections:
+      - heading: "プロジェクトと各訪問を区別する"
+        paragraphs:
+          - "プロジェクト名には現場や作業区域を含め、依頼者と場所の情報を記録します。再訪問時は既存のプロジェクトを確認し、履歴の分散を避けてください。退出前に進捗、点検記録、写真、報告書を照合します。プロジェクトの状態だけでは未解決の指摘内容は分かりません。今回の訪問に対応する報告書を選んだか確認してください。"
+  inspection-checklists:
+    sections:
+      - heading: "繰り返し点検を比較しやすくする"
+        paragraphs:
+          - "初回の実施前に、各点検項目の場所と対象を明確にします。範囲が同じなら計画を再利用し、区域や目的が変わる場合は項目を見直します。中断した点検を再開する前に進捗と履歴を確認してください。通知は実施済みの証明ではありません。報告書を作る前に未完了の項目を確認します。"
+  photo-evidence:
+    sections:
+      - heading: "写真の現場情報を残す"
+        paragraphs:
+          - "写真を追加する前に正しい点検項目を開きます。区域が分かる全景と不具合が分かる近接写真を組み合わせ、現場で鮮明さを確認してください。部屋と観察内容をメモします。端末の位置情報はこれらの説明の代わりにはならず、権限と利用状況に依存します。報告書でも写真と記録の対応を確認します。"
+  field-notes-and-signatures:
+    sections:
+      - heading: "観察事実と改善提案を分ける"
+        paragraphs:
+          - "場所と観察した状態を先に記録し、写真などの根拠を示してから改善提案を記します。推測した原因を確定した事実として書かないでください。出力前に署名プロフィールと担当者を確認し、出力後に表示を確認します。署名画像だけで特定の法的承認手続きが完了したとは判断できません。"
+  report-generation:
+    sections:
+      - heading: "送付するファイルを開いて確認する"
+        paragraphs:
+          - "作成前にプロジェクト、結果、写真、メモ、署名情報を確認します。PDFを開いて読みやすさと表示を点検してください。情報が不足している場合は記録とテンプレート設定を確認し、再作成します。新しいファイルも開き、共有時にその版を選んでください。作成の成功と相手の受領は別々に確認します。"
+  export-and-upload:
+    sections:
+      - heading: "転送前に保存先を確認する"
+        paragraphs:
+          - "ローカルの報告書を確認し、利用可能なPDF、画像、ZIPから形式を選びます。サーバーへの転送では管理者にプロトコル、アドレス、アカウント、保存先パスを確認してください。FTP、FTPS、SFTP、WebDAV、SMB/NASは相互に置き換えられません。フォルダーを閲覧できても書き込めるとは限りません。不明な転送先のテストには顧客情報のないファイルを使います。"
+      - heading: "受領の確認と失敗時の切り分け"
+        paragraphs:
+          - "転送後は状態を確認し、保存先のコピーを開いてください。他の共有アプリへの受け渡しは顧客の受領確認ではありません。失敗した場合はローカルファイル、ネットワーク、設定の順に確認します。再試行前に既存のコピーを調べ、自動再開や重複回避を前提にしないでください。問い合わせにはパスワードを含めずエラー内容を伝えます。"
+ko-KR:
+  project-management:
+    sections:
+      - heading: "프로젝트와 개별 방문 구분하기"
+        paragraphs:
+          - "프로젝트 이름에 현장이나 작업 구역을 포함하고 고객과 위치 정보를 기록하세요. 재방문할 때는 기존 프로젝트를 확인하여 이력이 흩어지지 않게 합니다. 현장을 떠나기 전에 진행 상황을 점검 기록, 사진, 보고서와 대조하세요. 프로젝트 상태만으로는 미해결 문제를 알 수 없습니다. 이번 방문에 해당하는 보고서를 선택했는지 확인하세요."
+  inspection-checklists:
+    sections:
+      - heading: "반복 점검을 비교하기 쉽게 만들기"
+        paragraphs:
+          - "처음 실행하기 전에 각 점검 항목의 위치와 대상을 정하세요. 범위가 같으면 계획을 재사용하고 구역이나 목적이 바뀌면 항목을 검토합니다. 중단한 점검을 계속하기 전에 진행 상황과 이력을 확인하세요. 알림은 점검 완료의 증거가 아닙니다. 보고서를 만들기 전에 미완료 항목을 확인하세요."
+  photo-evidence:
+    sections:
+      - heading: "사진의 현장 맥락 남기기"
+        paragraphs:
+          - "사진을 추가하기 전에 올바른 점검 항목을 여세요. 구역을 보여 주는 전체 사진과 문제를 보여 주는 근접 사진을 함께 촬영하고 현장에서 선명도를 확인합니다. 메모에 방과 관찰 내용을 적으세요. 기기의 위치 정보는 이 설명을 대신하지 못하며 권한과 사용 가능 여부에 따라 달라집니다. 보고서에서도 사진과 기록의 연결을 확인하세요."
+  field-notes-and-signatures:
+    sections:
+      - heading: "관찰 사실과 권고 사항 구분하기"
+        paragraphs:
+          - "위치와 관찰한 상태를 먼저 기록하고 근거 사진을 제시한 뒤 개선 권고를 작성하세요. 추측한 원인을 확인된 사실로 적지 마세요. 생성 전에 서명 프로필과 담당자를 확인하고 생성 후에는 파일의 표시를 확인합니다. 서명 이미지 자체가 특정 법적 승인 절차의 완료를 입증하지는 않습니다."
+  report-generation:
+    sections:
+      - heading: "보낼 파일을 직접 열어 확인하기"
+        paragraphs:
+          - "생성 전에 프로젝트, 결과, 사진, 메모와 서명을 검토하세요. PDF를 열어 가독성과 표시 상태를 확인합니다. 빠진 내용이 있으면 기록과 템플릿 설정을 확인하고 다시 생성하세요. 새 파일도 열어 확인한 뒤 공유할 때 해당 버전을 선택합니다. 파일 생성 성공과 상대방의 수신은 별도로 확인해야 합니다."
+  export-and-upload:
+    sections:
+      - heading: "전송 전에 저장 위치 확인하기"
+        paragraphs:
+          - "로컬 보고서를 검토하고 사용 가능한 PDF, 이미지, ZIP 중 형식을 선택하세요. 서버 전송은 관리자에게 프로토콜, 주소, 계정, 대상 경로를 확인해야 합니다. FTP, FTPS, SFTP, WebDAV, SMB/NAS는 서로 대체할 수 없습니다. 폴더를 볼 수 있어도 쓰기 권한이 있다는 뜻은 아닙니다. 확인되지 않은 위치를 시험할 때는 고객 정보가 없는 파일을 사용하세요."
+      - heading: "수신 확인과 오류 점검"
+        paragraphs:
+          - "전송 후에는 상태를 확인하고 대상 위치의 복사본을 여세요. 공유 앱으로 전달했다고 고객 수신까지 확인된 것은 아닙니다. 실패하면 로컬 파일, 네트워크, 설정을 확인하세요. 재시도 전에 기존 복사본을 확인하고 자동 재개나 중복 제거를 가정하지 마세요. 지원 요청에는 암호를 제외한 오류 메시지를 전달합니다."
+ar:
+  project-management:
+    sections:
+      - heading: "التمييز بين المشروع وكل زيارة"
+        paragraphs:
+          - "ضمّن الموقع أو منطقة العمل في اسم المشروع وسجل معلومات العميل والمكان. راجع المشروع الموجود قبل زيارة المتابعة حتى لا يتوزع السجل بين مشاريع متعددة. قبل المغادرة قارن التقدم بالملاحظات والصور والتقارير؛ فحالة المشروع وحدها لا توضح المشكلة غير المحلولة. تأكد أن التقرير المختار يخص الزيارة المطلوبة."
+  inspection-checklists:
+    sections:
+      - heading: "جعل الزيارات المتكررة قابلة للمقارنة"
+        paragraphs:
+          - "حدد مكان كل نقطة وما يجب فحصه قبل التنفيذ الأول. أعد استخدام الخطة إذا لم يتغير النطاق، وراجع النقاط عند تغير المنطقة أو الهدف. تحقق من التقدم والسجل قبل استئناف فحص غير مكتمل. التذكير لا يثبت تنفيذ الفحص. راجع النقاط غير المكتملة قبل إنشاء التقرير."
+  photo-evidence:
+    sections:
+      - heading: "الحفاظ على سياق الصورة"
+        paragraphs:
+          - "افتح نقطة الفحص الصحيحة قبل إضافة الصورة. يمكن الجمع بين صورة عامة للمنطقة وصورة قريبة للملاحظة، مع التحقق من الوضوح في الموقع. اكتب الغرفة والحالة المشاهدة في الملاحظات. موقع الجهاز لا يحل محل هذا الوصف ويتوقف على الأذونات والتوفر. راجع ارتباط الصورة بالسجل داخل التقرير أيضاً."
+  field-notes-and-signatures:
+    sections:
+      - heading: "فصل الملاحظة عن التوصية"
+        paragraphs:
+          - "صف المكان والحالة المشاهدة أولاً، ثم حدد الدليل واكتب التوصية التصحيحية. لا تعرض السبب المفترض كحقيقة مؤكدة. راجع ملفات التوقيع والأشخاص المعنيين قبل إنشاء التقرير ثم تحقق من ظهورها في الملف. صورة التوقيع وحدها لا تثبت اكتمال إجراء قانوني محدد للموافقة."
+  report-generation:
+    sections:
+      - heading: "فتح الملف الذي سترسله ومراجعته"
+        paragraphs:
+          - "راجع المشروع والنتائج والصور والملاحظات والتوقيعات قبل الإنشاء. افتح ملف PDF وتحقق من وضوح المحتوى وعرضه. إذا كانت معلومات مفقودة، راجع السجل وخيارات القالب قبل إنشاء بديل. افتح الملف الجديد أيضاً واختر هذه النسخة عند المشاركة. نجاح إنشاء الملف وتأكيد استلامه خطوتان منفصلتان."
+  export-and-upload:
+    sections:
+      - heading: "تأكيد الوجهة قبل الإرسال"
+        paragraphs:
+          - "راجع التقرير المحلي واختر PDF أو الصور أو ZIP من الصيغ المتاحة. للإرسال إلى خادم، أكد البروتوكول والعنوان والحساب والمسار مع المسؤول. بروتوكولات FTP وFTPS وSFTP وWebDAV وSMB/NAS ليست قابلة للاستبدال. عرض مجلد لا يثبت صلاحية الكتابة فيه. استخدم ملفاً بلا بيانات عملاء لاختبار وجهة غير مؤكدة."
+      - heading: "التحقق من الاستلام وعزل سبب الفشل"
+        paragraphs:
+          - "بعد الإرسال راجع حالة الرفع وافتح النسخة في الوجهة. تسليم الملف لتطبيق مشاركة لا يؤكد استلام العميل. عند الفشل تحقق من الملف المحلي والشبكة والإعدادات. ابحث عن نسخة موجودة قبل إعادة المحاولة؛ لا تفترض الاستئناف أو منع التكرار تلقائياً. أرسل رسالة الخطأ للدعم من دون كلمات مرور."
+es-ES:
+  project-management:
+    title: "Preparar un proyecto antes de la primera inspección"
+    sections:
+      - heading: "Distinguir el proyecto de cada visita"
+        paragraphs:
+          - "Usa un nombre que identifique el sitio, edificio o zona de trabajo. Añade suficiente contexto de ubicación y cliente para que otro inspector reconozca el encargo. Antes de una visita de seguimiento, revisa el proyecto existente para no repartir el historial entre varios registros."
+          - "Antes de salir, compara el progreso con los registros, las fotos y los informes. Un estado de proyecto no explica por sí solo un hallazgo pendiente. Conserva la observación junto con su evidencia y comprueba que el informe elegido corresponde a la visita que vas a entregar."
+  inspection-checklists:
+    title: "Preparar una lista reutilizable para inspecciones periódicas"
+    sections:
+      - heading: "Hacer comparables las visitas"
+        paragraphs:
+          - "Define el lugar y el objeto de cada punto antes de empezar. Una indicación como «revisar el sitio» aporta menos contexto que una ubicación y una observación concreta. Reutiliza el plan si el alcance no cambia; revisa los puntos cuando cambien la zona o el objetivo."
+          - "Al terminar, revisa los puntos incompletos y añade notas y fotos a los problemas registrados. Un recordatorio no demuestra que la inspección se haya realizado. Para continuar una visita pendiente, comprueba su progreso e historial antes de iniciar otra."
+  photo-evidence:
+    title: "Tomar fotos de inspección que conserven su contexto"
+    sections:
+      - heading: "Explicar la evidencia a quien no estuvo allí"
+        paragraphs:
+          - "Abre el punto correcto antes de añadir la foto. Para un defecto, considera una vista general que identifique la zona y otra cercana que muestre el detalle. Comprueba el enfoque y la legibilidad antes de salir del sitio: una nota posterior no recupera una imagen borrosa."
+          - "Anota la habitación, el punto y la condición observada. La ubicación del dispositivo es información complementaria, no sustituye esos datos. Si falta, revisa la disponibilidad y los permisos; no supongas que una foto de la galería contiene ubicación completa. Comprueba después la evidencia en el informe generado."
+  field-notes-and-signatures:
+    title: "Documentar hallazgos y revisar las firmas del informe"
+    sections:
+      - heading: "Separar la observación de la recomendación"
+        paragraphs:
+          - "Describe qué observaste, dónde y qué foto lo respalda. Después indica la recomendación correctiva. Por ejemplo, identifica primero el elemento dañado y su ubicación antes de recomendar una reparación. No presentes una causa supuesta como un hecho comprobado."
+          - "Antes de generar el informe, revisa los perfiles de firma y las personas o funciones que representan. Abre el archivo para comprobar su presentación, que depende de la plantilla. Una imagen de firma no acredita por sí sola un procedimiento legal de aprobación."
+  report-generation:
+    title: "Revisar un informe PDF antes de enviarlo al cliente"
+    sections:
+      - heading: "Comprobar el registro y el PDF exportado"
+        paragraphs:
+          - "Revisa los datos del proyecto, resultados, fotos, notas y firmas antes de generar el archivo. Elige la plantilla, el estilo y la inclusión de firmas según el destinatario. Algunos estilos dependen de la edición o del plan de acceso: comprueba las opciones de tu versión instalada."
+          - "Abre el PDF y revisa el nombre del proyecto, las imágenes, los hallazgos y las firmas. Si falta algo, comprueba el registro y la plantilla antes de generar otro archivo. Abre también el reemplazo y selecciona esa versión al compartir. Generar un PDF y entregarlo son comprobaciones distintas."
+  export-and-upload:
+    title: "Exportar un informe y verificar su entrega al servidor"
+    sections:
+      - heading: "Elegir entre compartir y enviar al servidor"
+        paragraphs:
+          - "Genera y revisa el informe antes de elegir PDF, imágenes o ZIP entre los formatos disponibles. Compartir desde el dispositivo entrega el archivo a otra aplicación instalada. El envío al servidor requiere un destino accesible y un perfil de entrega adecuado."
+          - "SiteReport admite configuraciones FTP, FTPS, SFTP, WebDAV y SMB/NAS. Los protocolos no son intercambiables. Pide al administrador el protocolo, la dirección, los permisos de la cuenta y la ruta de destino; no deduzcas la configuración a partir de una página de acceso web."
+      - heading: "Verificar permisos y comprobar la copia recibida"
+        paragraphs:
+          - "Confirma el servidor y la carpeta con la persona responsable del almacenamiento. Poder ver una carpeta no demuestra que la cuenta pueda escribir en ella. Si necesitas probar el acceso, usa primero un informe sin datos de clientes ni del sitio."
+          - "Después del envío, revisa el estado de carga y comprueba que el archivo esperado existe y se abre en el destino. Generarlo localmente no confirma su recepción. Entregarlo a una aplicación para compartir tampoco confirma que el cliente lo haya recibido."
+      - heading: "Qué comprobar si falla la entrega"
+        paragraphs:
+          - "Primero abre el archivo local. Después revisa la red, el protocolo, la dirección, la cuenta y la ruta remota. Un servidor privado puede exigir acceso a la red de la empresa. Conserva el mensaje de error para soporte sin incluir contraseñas."
+          - "Antes de reintentar, comprueba si ya existe una copia en el destino. No supongas que los reintentos reanudan, eliminan duplicados o cambian nombres automáticamente. Conserva la exportación local revisada y acuerda otra vía con el destinatario si no puedes restaurar el acceso."

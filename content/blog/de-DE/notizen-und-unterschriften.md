@@ -2,9 +2,8 @@
 contentId: field-notes-and-signatures
 locale: de-DE
 status: machine-draft
-title: 'Notizen und Unterschriften: what it does in SiteReport'
-description: Feststellungen, Empfehlungen und Signaturdaten dokumentieren. Learn the
-  exact problem, options, verified steps, and known limitations.
+title: 'Notizen und Unterschriften: Praxisleitfaden für SiteReport'
+description: Feststellungen, Empfehlungen und Signaturdaten dokumentieren.
 slug: notizen-und-unterschriften
 intent: feature education
 audience: app users
@@ -13,34 +12,38 @@ evidence:
 - SiteReport.md
 - feature/feature_res/src/main/res/strings.xml
 - feature/feature_app/src/main/res/layout/fragment_new_signature.xml
-primaryKeyword: 'Notizen und Unterschriften: what it does in SiteReport'
+primaryKeyword: 'Notizen und Unterschriften: Praxisleitfaden für SiteReport'
 relatedPages:
 - /
 - /support.html
 template: standard-article
 ---
 
-# Notizen und Unterschriften: what it does in SiteReport
+# Notizen und Unterschriften: Praxisleitfaden für SiteReport
 
 Feststellungen und Unterschriften können außerhalb des Berichts bleiben, wenn sie separat erfasst werden.
 
-## What this feature helps you do
+## Möglichkeiten
 
 - Ergebnisse und Empfehlungen erfassen
 - Signaturprofile verwalten
 - Notizen und Unterschriften in den Bericht aufnehmen
 
-## Where it fits in the workflow
+## Vorgehensweise
 
 - Prüfpunkt öffnen
 - Feststellungen erfassen
 - Vor dem Bericht Signaturdaten hinzufügen
 
-## What to check before export
+## Zu prüfende Optionen
 
 - Prüfer, Sicherheitsbeauftragter und Vorgesetzter
 
-## What to keep in mind
+## Einschränkungen
 
 - Felder hängen von der gewählten Vorlage ab.
+
+## Beobachtung und Empfehlung trennen
+
+Beschreiben Sie zuerst Ort und Beobachtung, nennen Sie den Beleg und ergänzen Sie dann die Empfehlung. Stellen Sie eine vermutete Ursache nicht als Tatsache dar. Prüfen Sie die Unterschriftsprofile und zugehörigen Personen vor der Erstellung sowie ihre Darstellung im fertigen Bericht. Ein Unterschriftsbild allein belegt keinen bestimmten rechtlichen Freigabeprozess.
 

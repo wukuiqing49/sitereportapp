@@ -2,9 +2,8 @@
 contentId: report-generation
 locale: de-DE
 status: machine-draft
-title: How to use PDF-Berichte in SiteReport
-description: Strukturierte Berichte aus den Prüfdaten erzeugen. Learn the exact problem,
-  options, verified steps, and known limitations.
+title: PDF-Berichte in SiteReport verwenden
+description: Strukturierte Berichte aus den Prüfdaten erzeugen.
 slug: pdf-berichte
 intent: feature education
 audience: app users
@@ -13,34 +12,38 @@ evidence:
 - SiteReport.md
 - core/core_pdf/src/main/java/com/wkq/nativepdf/NativeReportPdfRenderer.kt
 - feature/feature_app/src/main/java/com/wkq/feature/app/upload/NativeSiteReportPdfGateway.kt
-primaryKeyword: How to use PDF-Berichte in SiteReport
+primaryKeyword: PDF-Berichte in SiteReport verwenden
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use PDF-Berichte in SiteReport
+# PDF-Berichte in SiteReport verwenden
 
 Beobachtungen in einen einheitlichen Bericht zu übertragen, kann viel manuelle Formatierung erfordern.
 
-## What this feature helps you do
+## Möglichkeiten
 
 - PDF-Feldbericht erzeugen
 - Ergebnisse, Fotos, Standort, Notizen und Signaturen aufnehmen
 - Erzeugte Dateien prüfen
 
-## Where it fits in the workflow
+## Vorgehensweise
 
 - Datensatz abschließen
 - Optionen wählen
 - Dateien erzeugen und prüfen
 
-## What to check before export
+## Zu prüfende Optionen
 
 - Vorlage, Stil, Format und Signaturen
 
-## What to keep in mind
+## Einschränkungen
 
 - Einige Stile hängen von Edition oder Zugangsplan ab.
+
+## Die zu versendende Datei prüfen
+
+Prüfen Sie Projekt, Ergebnisse, Fotos, Notizen und Unterschriften vor der Erstellung. Öffnen Sie das PDF und kontrollieren Sie Lesbarkeit und Darstellung. Fehlen Angaben, prüfen Sie den Datensatz und die Vorlage, bevor Sie eine Ersatzdatei erstellen. Öffnen Sie auch diese und wählen Sie beim Teilen die richtige Version. Erstellung und bestätigter Empfang sind getrennte Prüfungen.
 

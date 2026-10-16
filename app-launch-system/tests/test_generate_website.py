@@ -12,10 +12,47 @@ import yaml
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from generate_website import GenerationError, generate, render_screenshots  # noqa: E402
+from generate_website import GenerationError, generate, render_screenshots, blog_labels, feature_labels, blog_article_text  # noqa: E402
 
 
 class GenerateWebsiteTests(unittest.TestCase):
+    def test_editorial_survives_regeneration_in_both_article_templates(self) -> None:
+        editorial = self.root / "content/blog/editorial.yaml"
+        editorial.parent.mkdir(parents=True)
+        editorial.write_text(yaml.safe_dump({"en-US": {"visual-notes": {
+            "title": "Review a note before delivery",
+            "sections": [{"heading": "Check <the output>", "paragraphs": ["Keep <private> & public separate."]}],
+        }}}), encoding="utf-8")
+        for template in ("standard-article", "tutorial"):
+            with self.subTest(template=template):
+                data = self.app_data()
+                data["features"][0]["blog"] = {"template": template}
+                path = self.root / "app-info.yaml"
+                path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+                generate(path, self.output, self.locales, True)
+                article = (self.output / "blog/visual-notes/index.html").read_text(encoding="utf-8")
+                self.assertIn('href="#guide-1"', article)
+                self.assertIn('id="guide-1"', article)
+                self.assertIn("Keep &lt;private&gt; &amp; public separate.", article)
+                self.assertIn("Review a note before delivery", article)
+                self.assertIn('href="../../features/visual-notes/"', article)
+                markdown = (self.output / "content/blog/en-US/visual-notes.md").read_text(encoding="utf-8")
+                self.assertIn("## Check <the output>", markdown)
+        editorial.write_text(yaml.safe_dump({"en-US": {"visual-notes": {"sections": [{"heading": "Missing paragraphs"}]}}}), encoding="utf-8")
+        with self.assertRaisesRegex(GenerationError, "invalid blog editorial sections"):
+            generate(path, self.output, self.locales, True)
+
+    def test_foreign_article_chrome_does_not_fall_back_to_english(self) -> None:
+        for locale in ("es-ES", "pt-BR", "fr-FR", "de-DE", "ja-JP", "ko-KR", "ar"):
+            with self.subTest(locale=locale):
+                labels = blog_labels(locale, "Example")
+                self.assertNotEqual(labels["contents"], "On this page")
+                self.assertNotEqual(feature_labels(locale)["steps"], "Workflow")
+                text = blog_article_text(locale, "Example", "Local feature", "Local description", {})
+                self.assertNotIn("what it does in", text["standardTitle"])
+                self.assertNotIn("How to use", text["tutorialTitle"])
+                self.assertEqual(text["summary"], "Local description")
+
     def test_screenshot_alt_uses_each_images_caption(self) -> None:
         content = {"home": {"heroScreenshotAlt": "App screenshot"}}
         screenshots = [

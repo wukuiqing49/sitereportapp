@@ -2,7 +2,7 @@
 contentId: photo-evidence
 locale: en-US
 status: draft
-title: 'Photo evidence and location records: what it does in SiteReport'
+title: Capture inspection photos that keep their site context
 description: Capture photos for inspection items and associate them with notes, time,
   and location information. Learn the exact problem, options, verified steps, and
   known limitations.
@@ -14,14 +14,14 @@ evidence:
 - SiteReport.md
 - core/core_camera/src/main/res/values/strings.xml
 - feature/feature_app/src/main/java/com/wkq/feature/app/photo/PhotoEvidenceWriter.kt
-primaryKeyword: 'Photo evidence and location records: what it does in SiteReport'
+primaryKeyword: Capture inspection photos that keep their site context
 relatedPages:
 - /
 - /support.html
 template: standard-article
 ---
 
-# Photo evidence and location records: what it does in SiteReport
+# Capture inspection photos that keep their site context
 
 A photo without its inspection context is difficult to use as evidence later.
 
@@ -44,4 +44,10 @@ A photo without its inspection context is difficult to use as evidence later.
 ## What to keep in mind
 
 - Location details depend on device location availability and permission.
+
+## Make a photo useful to someone who was not there
+
+Open the relevant inspection point before adding a photo so that the image is linked to the correct record. For a defect, consider taking an overview that identifies the area and a close view that shows the observation. Check focus and legibility while you are still on site; a detailed note cannot recover an unreadable image.
+
+Add the location within the site and the observed condition to your notes. Device location is supporting context, not a substitute for identifying the room or inspection point. If location data is absent, check device availability and permissions; do not assume a gallery image will provide complete location information. Review the evidence again in the generated report.
 

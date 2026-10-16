@@ -2,9 +2,8 @@
 contentId: report-generation
 locale: pt-BR
 status: machine-draft
-title: How to use Relatórios em PDF in SiteReport
-description: Gere relatórios estruturados a partir dos dados da inspeção. Learn the
-  exact problem, options, verified steps, and known limitations.
+title: Como usar Relatórios em PDF no SiteReport
+description: Gere relatórios estruturados a partir dos dados da inspeção.
 slug: relatórios-em-pdf
 intent: feature education
 audience: app users
@@ -13,34 +12,38 @@ evidence:
 - SiteReport.md
 - core/core_pdf/src/main/java/com/wkq/nativepdf/NativeReportPdfRenderer.kt
 - feature/feature_app/src/main/java/com/wkq/feature/app/upload/NativeSiteReportPdfGateway.kt
-primaryKeyword: How to use Relatórios em PDF in SiteReport
+primaryKeyword: Como usar Relatórios em PDF no SiteReport
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use Relatórios em PDF in SiteReport
+# Como usar Relatórios em PDF no SiteReport
 
 Transformar observações em um relatório consistente pode exigir muita formatação manual.
 
-## What this feature helps you do
+## O que você pode fazer
 
 - Gerar um relatório em PDF
 - Incluir resultados, fotos, localização, notas e assinaturas
 - Visualizar arquivos gerados
 
-## Where it fits in the workflow
+## Procedimento
 
 - Conclua o registro
 - Escolha as opções
 - Gere e revise os arquivos
 
-## What to check before export
+## Opções a revisar
 
 - Modelo, estilo, formato e assinaturas
 
-## What to keep in mind
+## Limitações
 
 - Alguns estilos dependem da edição ou do plano de acesso.
+
+## Revisar o arquivo que será enviado
+
+Confira projeto, resultados, fotos, notas e assinaturas antes da geração. Abra o PDF e verifique a legibilidade e a apresentação das informações. Se algo faltar, revise o registro e as opções do modelo antes de gerar um substituto. Abra também o novo arquivo e selecione essa versão ao compartilhar. Gerar o PDF e confirmar a entrega são verificações diferentes.
 

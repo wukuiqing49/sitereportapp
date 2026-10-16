@@ -2,9 +2,8 @@
 contentId: inspection-checklists
 locale: es-ES
 status: machine-draft
-title: How to use Listas de inspección in SiteReport
-description: Usa planes y plantillas reutilizables para estandarizar el trabajo. Learn
-  the exact problem, options, verified steps, and known limitations.
+title: Preparar una lista reutilizable para inspecciones periódicas
+description: Usa planes y plantillas reutilizables para estandarizar el trabajo.
 slug: listas-de-inspección
 intent: feature education
 audience: app users
@@ -13,34 +12,40 @@ evidence:
 - SiteReport.md
 - feature/feature_res/src/main/res/workflow_strings.xml
 - feature/feature_app/src/main/res/layout/fragment_workflow_editor.xml
-primaryKeyword: How to use Listas de inspección in SiteReport
+primaryKeyword: Preparar una lista reutilizable para inspecciones periódicas
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use Listas de inspección in SiteReport
+# Preparar una lista reutilizable para inspecciones periódicas
 
 Las inspecciones repetidas son difíciles de comparar si cada visita usa controles distintos.
 
-## What this feature helps you do
+## Qué puedes hacer
 
 - Crear planes reutilizables
 - Elegir plantillas y puntos de inspección
 - Reanudar una inspección y ver su historial
 
-## Where it fits in the workflow
+## Procedimiento
 
 - Crea o elige un plan
 - Selecciona plantilla y entrega
 - Ejecuta y completa cada punto
 
-## What to check before export
+## Opciones que debes revisar
 
 - Plantilla, entrega, frecuencia y hora
 
-## What to keep in mind
+## Limitaciones
 
 - Los recordatorios no inician una inspección automáticamente.
+
+## Hacer comparables las visitas
+
+Define el lugar y el objeto de cada punto antes de empezar. Una indicación como «revisar el sitio» aporta menos contexto que una ubicación y una observación concreta. Reutiliza el plan si el alcance no cambia; revisa los puntos cuando cambien la zona o el objetivo.
+
+Al terminar, revisa los puntos incompletos y añade notas y fotos a los problemas registrados. Un recordatorio no demuestra que la inspección se haya realizado. Para continuar una visita pendiente, comprueba su progreso e historial antes de iniciar otra.
 

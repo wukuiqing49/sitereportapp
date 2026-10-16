@@ -2,9 +2,8 @@
 contentId: report-generation
 locale: fr-FR
 status: machine-draft
-title: How to use Rapports PDF in SiteReport
-description: Générez des rapports structurés à partir des données d’inspection. Learn
-  the exact problem, options, verified steps, and known limitations.
+title: Comment utiliser Rapports PDF dans SiteReport
+description: Générez des rapports structurés à partir des données d’inspection.
 slug: rapports-pdf
 intent: feature education
 audience: app users
@@ -13,34 +12,38 @@ evidence:
 - SiteReport.md
 - core/core_pdf/src/main/java/com/wkq/nativepdf/NativeReportPdfRenderer.kt
 - feature/feature_app/src/main/java/com/wkq/feature/app/upload/NativeSiteReportPdfGateway.kt
-primaryKeyword: How to use Rapports PDF in SiteReport
+primaryKeyword: Comment utiliser Rapports PDF dans SiteReport
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use Rapports PDF in SiteReport
+# Comment utiliser Rapports PDF dans SiteReport
 
 Transformer des observations en rapport cohérent peut demander beaucoup de mise en forme manuelle.
 
-## What this feature helps you do
+## Ce que vous pouvez faire
 
 - Générer un rapport PDF
 - Inclure résultats, photos, lieu, notes et signatures
 - Prévisualiser les fichiers générés
 
-## Where it fits in the workflow
+## Procédure
 
 - Terminez l’enregistrement
 - Choisissez les options
 - Générez et vérifiez les fichiers
 
-## What to check before export
+## Options à vérifier
 
 - Modèle, style, format et signatures
 
-## What to keep in mind
+## Limites à connaître
 
 - Certains styles dépendent de l’édition ou du plan d’accès.
+
+## Relire le fichier destiné au client
+
+Vérifiez le projet, les résultats, les photos, les notes et les signatures avant la génération. Ouvrez le PDF et contrôlez leur lisibilité. En cas d’omission, revoyez le dossier et les options du modèle avant de produire un remplacement. Ouvrez également ce nouveau fichier et sélectionnez cette version au partage. Produire le PDF et confirmer sa réception sont deux contrôles distincts.
 

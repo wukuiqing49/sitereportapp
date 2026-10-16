@@ -2,9 +2,8 @@
 contentId: inspection-checklists
 locale: de-DE
 status: machine-draft
-title: How to use Prüf-Checklisten in SiteReport
+title: Prüf-Checklisten in SiteReport verwenden
 description: Wiederverwendbare Pläne und Vorlagen für standardisierte Abläufe nutzen.
-  Learn the exact problem, options, verified steps, and known limitations.
 slug: prüf-checklisten
 intent: feature education
 audience: app users
@@ -13,34 +12,38 @@ evidence:
 - SiteReport.md
 - feature/feature_res/src/main/res/workflow_strings.xml
 - feature/feature_app/src/main/res/layout/fragment_workflow_editor.xml
-primaryKeyword: How to use Prüf-Checklisten in SiteReport
+primaryKeyword: Prüf-Checklisten in SiteReport verwenden
 relatedPages:
 - /
 - /support.html
 template: tutorial
 ---
 
-# How to use Prüf-Checklisten in SiteReport
+# Prüf-Checklisten in SiteReport verwenden
 
 Wiederholte Prüfungen lassen sich schwer vergleichen, wenn jeder Besuch andere Kontrollen nutzt.
 
-## What this feature helps you do
+## Möglichkeiten
 
 - Wiederverwendbare Prüfpläne erstellen
 - Vorlagen und Prüfpunkte wählen
 - Prüfung fortsetzen und Verlauf ansehen
 
-## Where it fits in the workflow
+## Vorgehensweise
 
 - Plan erstellen oder wählen
 - Vorlage und Zustellung auswählen
 - Prüfung durchführen und Punkte abschließen
 
-## What to check before export
+## Zu prüfende Optionen
 
 - Vorlage, Zustellung, Häufigkeit und Zeit
 
-## What to keep in mind
+## Einschränkungen
 
 - Erinnerungen starten keine Prüfung automatisch.
+
+## Wiederholte Besuche vergleichbar machen
+
+Bestimmen Sie Ort und Gegenstand jedes Prüfpunkts vor dem ersten Durchlauf. Verwenden Sie den Plan bei gleichem Umfang erneut und prüfen Sie die Punkte bei Änderungen. Kontrollieren Sie vor dem Fortsetzen Fortschritt und Historie. Eine Erinnerung bedeutet nicht, dass die Inspektion stattgefunden hat. Prüfen Sie offene Punkte vor der Berichtserstellung.
 

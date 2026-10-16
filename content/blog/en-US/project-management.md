@@ -2,7 +2,7 @@
 contentId: project-management
 locale: en-US
 status: draft
-title: 'Inspection projects: what it does in SiteReport'
+title: Organize a site inspection project before the first visit
 description: Create projects and keep site information, progress, photos, and reports
   together. Learn the exact problem, options, verified steps, and known limitations.
 slug: project-management
@@ -13,14 +13,14 @@ evidence:
 - SiteReport.md
 - feature/feature_app/src/main/res/layout/fragment_projects.xml
 - feature/feature_res/src/main/res/home_workspace_strings.xml
-primaryKeyword: 'Inspection projects: what it does in SiteReport'
+primaryKeyword: Organize a site inspection project before the first visit
 relatedPages:
 - /
 - /support.html
 template: standard-article
 ---
 
-# Inspection projects: what it does in SiteReport
+# Organize a site inspection project before the first visit
 
 Field records become difficult to follow when project details, photos, and reports are kept separately.
 
@@ -43,4 +43,10 @@ Field records become difficult to follow when project details, photos, and repor
 ## What to keep in mind
 
 - The available project fields and report outputs depend on the installed app version.
+
+## Separate the project from the individual visit
+
+Use a project name that identifies the site, building, or work package. Put enough location and client context in the record that another inspector can recognize the job without relying on a photograph. For repeat visits, review the existing project before creating another one: splitting the same job across several projects makes its history harder to follow.
+
+Before leaving the site, review progress alongside the inspection records, photos, and generated reports. A project status alone does not explain an unresolved finding. Keep the observation and its evidence together, and check which report corresponds to the visit you intend to deliver. Available fields depend on the installed version.
 
