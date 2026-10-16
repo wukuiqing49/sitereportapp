@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 import unittest
@@ -36,6 +37,10 @@ class GenerateWebsiteTests(unittest.TestCase):
                 self.assertIn("Keep &lt;private&gt; &amp; public separate.", article)
                 self.assertIn("Review a note before delivery", article)
                 self.assertIn('href="../../features/visual-notes/"', article)
+                schemas = [json.loads(value) for value in re.findall(r'<script type="application/ld\+json">(.*?)</script>', article)]
+                schema = next(value for value in schemas if value.get("@type") == ("HowTo" if template == "tutorial" else "Article"))
+                self.assertEqual(schema["inLanguage"], "en-US")
+                self.assertNotIn("datePublished", schema)
                 markdown = (self.output / "content/blog/en-US/visual-notes.md").read_text(encoding="utf-8")
                 self.assertIn("## Check <the output>", markdown)
         editorial.write_text(yaml.safe_dump({"en-US": {"visual-notes": {"sections": [{"heading": "Missing paragraphs"}]}}}), encoding="utf-8")
@@ -465,13 +470,22 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertTrue((self.output / "ja-JP" / "features" / "ビジュアルノート" / "index.html").is_file())
 
     def test_blog_uses_feature_facts_and_omits_unconfirmed_publish_date(self) -> None:
-        app_info = self.write_app_info()
+        data = self.app_data()
+        data["websiteUrl"] = "https://example.pages.dev/"
+        app_info = self.root / "app-info.yaml"
+        app_info.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
         generate(app_info, self.output, self.locales)
         article = (self.output / "blog" / "visual-notes" / "index.html").read_text(encoding="utf-8")
         self.assertIn("Create image notes", article)
         self.assertIn("Choose an image", article)
         self.assertNotIn("datePublished", article)
         self.assertNotIn("2026-08-08", article)
+        schemas = [json.loads(value) for value in re.findall(r'<script type="application/ld\+json">(.*?)</script>', article)]
+        self.assertTrue(schemas)
+        schema = next(value for value in schemas if value.get("@type") in ("Article", "HowTo"))
+        self.assertEqual(schema["inLanguage"], "en-US")
+        self.assertNotIn("datePublished", schema)
+        self.assertEqual(schema["mainEntityOfPage"]["@id"], schema["url"])
 
     def test_incomplete_feature_stays_on_homepage_without_thin_pages(self) -> None:
         data = self.app_data()

@@ -1936,17 +1936,23 @@ def render_blog(
             article_data: dict[str, object] = {
                 "@context": "https://schema.org", "@type": "Article", "headline": item["title"],
                 "description": item["summary"],
+                "inLanguage": locale,
                 "about": {"@type": "SoftwareApplication", "name": app_name, "operatingSystem": "Android"},
             }
+            if base_url:
+                article_url = urljoin(base_url, article_page.removesuffix("index.html"))
+                article_data["mainEntityOfPage"] = {"@type": "WebPage", "@id": article_url}
+                article_data["url"] = article_url
+                if item["image"]:
+                    article_data["image"] = urljoin(base_url, item["image"])
             if date:
                 article_data["datePublished"] = date
                 article_data["dateModified"] = updated_date or date
             if organization_data:
-                article_data["author"] = {"@id": organization_data["@id"]}
-                article_data["publisher"] = {"@id": organization_data["@id"]}
+                article_data["author"] = organization_data
+                article_data["publisher"] = organization_data
             structured = (
                 '<script type="application/ld+json">' + json.dumps(article_data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>"
-                if date else ""
             )
             common = {
                 "LANG": esc(locale), "TEXT_DIRECTION": esc(contents[locale]["direction"]),
@@ -2006,7 +2012,6 @@ def render_blog(
                 tutorial_values = merge(common, {
                     "HOW_TO_STRUCTURED_DATA": (
                         '<script type="application/ld+json">' + json.dumps(howto, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>"
-                        if date else ""
                     ),
                     "TUTORIAL_LABEL": esc(labels["tutorial"]), "TUTORIAL_OVERVIEW_LABEL": esc(labels["overview"]),
                     "DIFFICULTY_LABEL": esc(labels["difficulty"]), "DIFFICULTY_VALUE": esc(labels["easy"]),
