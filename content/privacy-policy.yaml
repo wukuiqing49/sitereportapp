@@ -1,0 +1,97 @@
+updatedAt: '2026-10-16'
+fallbackLocale: en-US
+updatedLabels:
+  en-US: Last updated
+  zh-CN: 最后更新
+  es-ES: Última actualización
+  pt-BR: Última atualização
+  fr-FR: Dernière mise à jour
+  de-DE: Zuletzt aktualisiert
+  ja-JP: 最終更新日
+  ko-KR: 최종 업데이트
+  ar: آخر تحديث
+fallbackNotices:
+  es-ES: 'La política completa se ofrece a continuación en inglés. Para consultas o solicitudes de eliminación en español, escriba a wukuiqing@gmail.com.'
+  pt-BR: 'A política completa está disponível abaixo em inglês. Para dúvidas ou pedidos de exclusão em português, escreva para wukuiqing@gmail.com.'
+  fr-FR: 'La politique complète figure ci-dessous en anglais. Pour toute question ou demande de suppression en français, écrivez à wukuiqing@gmail.com.'
+  de-DE: 'Die vollständige Richtlinie steht unten auf Englisch. Fragen und Löschanfragen auf Deutsch richten Sie bitte an wukuiqing@gmail.com.'
+  ja-JP: '完全なプライバシーポリシーは以下に英語で掲載しています。日本語でのお問い合わせや削除依頼は wukuiqing@gmail.com までお送りください。'
+  ko-KR: '전체 개인정보 처리방침은 아래에 영어로 제공됩니다. 한국어 문의 및 삭제 요청은 wukuiqing@gmail.com 으로 보내 주세요.'
+  ar: 'ترد السياسة الكاملة أدناه باللغة الإنجليزية. للاستفسارات أو طلبات الحذف باللغة العربية، يرجى مراسلة wukuiqing@gmail.com.'
+locales:
+  en-US:
+    heading: Privacy Policy
+    sections:
+      - heading: 1. Who we are and scope
+        paragraphs:
+          - 'SiteReport (Android package com.wkq.site) is provided by 上海促动科技有限公司 under the developer name AndroidManTou. Contact: wukuiqing@gmail.com. This policy explains how the Android app and this product website handle information. It takes effect on 16 October 2026.'
+      - heading: 2. Inspection content and permissions
+        paragraphs:
+          - 'Projects, checklists, notes, selected or captured photos, annotations, signatures, branding, templates and generated reports are stored on your device for inspection work. Camera access captures photos; location access adds coordinates to evidence when you use location features. Photos and reports can contain location, time, names, signatures and other personal or client information. Review them before sharing. You can revoke camera, location or notification permissions in Android settings; related features may then be unavailable.'
+          - 'The release app uses Google Play services or Android system location services. It does not request background-location permission. Notifications and foreground data-sync services support report delivery and its progress. Core inspection content is not sent to our purchase-verification service as part of its analytics.'
+      - heading: 3. Sign-in and purchases
+        paragraphs:
+          - 'Optional Google Sign-In provides an account identifier, email, display name, profile image and authentication token for sign-in and account display. Google handles authentication. The app can associate the signed-in user identifier with Firebase analytics. Google Play handles payment; our app does not collect payment-card details.'
+          - 'Our developer-operated DevHub service processes purchase tokens, product or subscription type, verification results and a random installation identifier to verify purchases, reconcile entitlements and prevent abuse. Its current default configuration does not forward your Google ID token for purchase-account linking.'
+      - heading: 4. Analytics, diagnostics and advertising
+        paragraphs:
+          - 'The release app enables Google Firebase Analytics and Crashlytics for usage measurement, crash diagnosis and stability. These services can process app-instance identifiers, app interactions, device and operating-system information, crash traces, diagnostics and network information. DevHub separately receives first-open and basic activity events, manufacturer, model, Android version, language and country/region settings. Country/region settings are not GPS coordinates. DevHub custom inspection events and custom event properties are disabled.'
+          - 'The current release configuration disables AdMob advertising and advertising-ID collection. We do not describe this app as having no data collection: analytics, diagnostics, sign-in and purchase verification involve the processing described above.'
+      - heading: 5. Export, upload and recipients
+        paragraphs:
+          - 'When you share or export a report, the selected app, recipient or storage provider receives its contents. When you configure a delivery server, the app stores connection settings and credentials locally and sends selected reports to that destination. Enabling automatic upload or retry can cause later transfers without another tap. Disable automatic delivery and pending retries if you want to stop them. We do not control your chosen server or recipients; ask them separately to delete their copies.'
+          - 'Service providers include Google (sign-in, billing, location, analytics and diagnostics), our DevHub backend and its hosting infrastructure, and Cloudflare for this website and hosted infrastructure. They process data for the relevant services; Google also provides its own privacy terms. Information may be disclosed where required by law, to protect rights or security, or in a business transfer subject to applicable requirements.'
+      - heading: 6. Website storage and third-party links
+        paragraphs:
+          - 'This website remembers your selected language in browser local storage. You can remove it through browser site-data controls. Hosting providers process connection information such as IP address, request time and browser details to deliver and protect the website. Following Google Play, YouTube or other external links sends you to services governed by their policies. The video link does not load a YouTube player automatically.'
+      - heading: 7. Security and international processing
+        paragraphs:
+          - 'The app uses Android app-private storage and permission controls for app-managed data. DevHub requests use HTTPS. Delivery-server security depends on your selected protocol and configuration: unencrypted connections can expose files or credentials, so use encrypted transport and trusted recipients. No storage or transmission method is completely secure. Providers and recipients may process information outside your country; applicable safeguards depend on the service and law.'
+      - heading: 8. Retention, local cleanup and server deletion
+        paragraphs:
+          - 'Local records remain until you delete them, clear app data or uninstall the app. The in-app account-removal action clears the local account association, inspection database, app-managed report files, templates, signature assets and delivery settings. It does not delete files already exported to shared storage, sent to another app or uploaded to a server. Android cloud backup and device-transfer backup are disabled for app-managed data.'
+          - 'Purchase-verification records are retained as needed for entitlement restoration, reconciliation, security, fraud prevention, disputes and legal obligations. Analytics and diagnostic retention is governed by the relevant service configuration and provider policies. To request deletion of developer-held server data, email wukuiqing@gmail.com with the subject “SiteReport data deletion” and enough account or purchase information to locate the records. Do not send passwords, authentication tokens or full card details. We may verify ownership; records that must be retained for the stated purposes may be restricted or de-identified. Local account removal does not automatically erase server purchase records, delete your Google account or cancel a Google Play subscription; manage subscriptions in Google Play.'
+      - heading: 9. Your choices and children
+        paragraphs:
+          - 'Depending on applicable law, you may request access, correction, deletion, a copy of your information, restriction or objection to processing, or withdrawal of consent where consent applies. Contact the email above; you may also contact your local data-protection authority. Google account, payment and provider-held data can require a separate request to Google. SiteReport is intended for professional inspection work and is not directed to children under 13. If a child has supplied personal information, contact us so it can be investigated and removed where appropriate.'
+      - heading: 10. Changes and contact
+        paragraphs:
+          - 'We will update this page and its revision date when data practices change, with additional notice or consent where required. Privacy and deletion requests: wukuiqing@gmail.com. Google privacy information: https://policies.google.com/privacy. Firebase privacy information: https://firebase.google.com/support/privacy. Cloudflare privacy information: https://www.cloudflare.com/privacypolicy/.'
+  zh-CN:
+    heading: 隐私政策
+    sections:
+      - heading: 1. 运营主体与适用范围
+        paragraphs:
+          - 'SiteReport（Android 包名 com.wkq.site）由上海促动科技有限公司以 AndroidManTou 开发者名称提供。联系邮箱：wukuiqing@gmail.com。本政策说明 Android 应用及本产品网站如何处理信息，自 2026 年 10 月 16 日起生效。'
+      - heading: 2. 巡检内容与系统权限
+        paragraphs:
+          - '项目、检查清单、备注、拍摄或选择的照片、标注、签名、品牌资料、模板及生成的报告主要保存在您的设备上，用于巡检记录与报告制作。相机权限用于拍照；使用定位功能时，位置权限用于为证据添加坐标。照片和报告可能包含位置、时间、姓名、签名及其他个人或客户信息，请在分享前检查。您可在 Android 设置中撤销相机、位置或通知权限，对应功能可能因此不可用。'
+          - '正式版使用 Google Play 服务或 Android 系统定位，不申请后台定位权限。通知和前台数据同步服务用于报告交付及进度提示。巡检正文、照片和报告不会作为统计内容发送至我们的购买校验服务。'
+      - heading: 3. 登录与购买
+        paragraphs:
+          - '可选的 Google 登录提供账号标识、邮箱、显示名称、头像和认证令牌，用于身份验证与账号展示。身份验证由 Google 处理；应用可将已登录用户标识与 Firebase 统计关联。支付由 Google Play 处理，应用不收集银行卡详情。'
+          - '开发者运营的 DevHub 服务处理购买令牌、商品或订阅类型、校验结果及随机安装标识，用于购买校验、权益核对和防止滥用。当前默认配置不向该服务发送用于购买账号关联的 Google ID 令牌。'
+      - heading: 4. 统计、诊断与广告
+        paragraphs:
+          - '正式版启用 Google Firebase Analytics 与 Crashlytics，用于使用情况统计、崩溃诊断和稳定性改进，可处理应用实例标识、应用交互、设备与系统信息、崩溃堆栈、诊断及网络信息。DevHub 另行接收首次打开、基础活跃事件、制造商、型号、Android 版本、语言及国家或地区设置；国家或地区设置不等于 GPS 坐标。DevHub 未启用自定义巡检事件及自定义事件属性。'
+          - '当前正式版配置关闭 AdMob 广告和广告标识采集。应用并非“零数据收集”：统计、诊断、登录及购买校验涉及上述信息处理。'
+      - heading: 5. 导出、上传及信息接收方
+        paragraphs:
+          - '分享或导出报告时，您选择的应用、接收方或存储服务会收到文件内容。配置交付服务器后，应用在本地保存连接设置与凭据，并向该地址发送选定报告。启用自动上传或重试后，后续传输可能无需再次点击；如需停止，请关闭自动交付并取消待重试任务。我们无法控制您选择的服务器和接收方，其副本需另行向对方申请删除。'
+          - '服务提供方包括 Google（登录、支付、定位、统计及诊断）、开发者的 DevHub 后端及托管基础设施，以及提供本网站和相关基础设施托管的 Cloudflare。各方为对应服务处理信息，Google 服务还适用其自身隐私条款。在法律要求、保护权利或安全、或业务转让且符合适用要求时，也可能披露相关信息。'
+      - heading: 6. 网站存储与外部链接
+        paragraphs:
+          - '本网站通过浏览器本地存储记住您选择的语言，可在浏览器网站数据设置中清除。托管服务为提供网站及保障安全处理 IP 地址、请求时间、浏览器信息等连接数据。点击 Google Play、YouTube 等外部链接后，适用对应服务的政策；网站的视频链接不会自动加载 YouTube 播放器。'
+      - heading: 7. 安全与跨境处理
+        paragraphs:
+          - '应用对自行管理的数据使用 Android 应用私有存储及权限控制，DevHub 请求使用 HTTPS。交付服务器的安全性取决于您选择的协议与配置；未加密连接可能暴露文件或凭据，请使用加密传输及可信接收方。任何存储和传输方式都不能保证绝对安全。提供方或接收方可能在您所在国家以外处理数据，相关保障取决于服务及适用法律。'
+      - heading: 8. 保存期限、本地清理与服务器删除
+        paragraphs:
+          - '本地记录保存至您主动删除、清除应用数据或卸载应用。应用内注销并清理操作会清除本地账号关联、巡检数据库、应用管理的报告、模板、签名素材及交付设置，不会删除已经导出到共享存储、发送至其他应用或上传至服务器的副本。应用管理的数据已禁用 Android 云备份及设备迁移备份。'
+          - '购买校验记录在恢复权益、核对订单、安全、防欺诈、争议处理及法定义务所需范围内保留。统计和诊断数据的保存受相关服务配置及提供方政策约束。如需删除开发者持有的服务器数据，请发送邮件至 wukuiqing@gmail.com，主题注明“SiteReport 数据删除”，并提供足以定位记录的账号或购买信息；请勿发送密码、认证令牌或完整银行卡信息。我们可能核实归属，对因上述目的必须保留的记录限制处理或去标识化。本地注销不会自动删除服务器购买记录、删除 Google 账号或取消 Google Play 订阅；请在 Google Play 管理订阅。'
+      - heading: 9. 您的选择与未成年人
+        paragraphs:
+          - '根据适用法律，您可申请访问、更正、删除或获取信息副本，限制或反对处理，或在基于同意的处理场景撤回同意。请通过上述邮箱联系我们，也可联系当地数据保护主管机构。Google 账号、支付及其持有的数据可能需要另行向 Google 申请。SiteReport 面向专业巡检工作，不以 13 岁以下儿童为服务对象；如儿童提供了个人信息，请联系我们核实并在适当情况下删除。'
+      - heading: 10. 政策更新与联系方式
+        paragraphs:
+          - '数据处理方式发生变化时，我们会更新本页及修订日期，并在需要时另行通知或征求同意。隐私与删除请求邮箱：wukuiqing@gmail.com。Google 隐私说明：https://policies.google.com/privacy；Firebase 隐私说明：https://firebase.google.com/support/privacy；Cloudflare 隐私说明：https://www.cloudflare.com/privacypolicy/。'

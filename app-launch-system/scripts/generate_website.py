@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import datetime
 import hashlib
 import html
 import io
@@ -1116,8 +1117,48 @@ def render_privacy_content(content: dict) -> str:
         heading = section.get("heading")
         paragraphs = [item for item in (section.get("paragraphs") or []) if isinstance(item, str) and item.strip()]
         body = "".join(f"<p>{esc(item)}</p>" for item in paragraphs)
-        sections.append((f"<section><h2>{esc(heading)}</h2>{body}</section>" if heading else body))
+        language = f' lang="{esc(section["language"])}"' if section.get("language") else ""
+        if language:
+            language += ' dir="rtl"' if str(section["language"]).split("-")[0] in {"ar", "he", "fa", "ur"} else ' dir="ltr"'
+        sections.append((f"<section{language}><h2>{esc(heading)}</h2>{body}</section>" if heading else body))
     return "\n    ".join(sections)
+
+
+def apply_privacy_policy(contents: dict[str, dict], path: Path) -> None:
+    if not path.is_file():
+        return
+    policy = load_yaml(path)
+    updated = str(policy.get("updatedAt") or "")
+    try:
+        datetime.date.fromisoformat(updated)
+    except (ValueError, AttributeError) as error:
+        raise GenerationError(f"invalid privacy policy updatedAt: {path}") from error
+    translations = policy.get("locales") or {}
+    fallback_locale = str(policy.get("fallbackLocale") or "")
+    for locale, content in contents.items():
+        localized = translations.get(locale) or translations.get(fallback_locale)
+        if not isinstance(localized, dict):
+            raise GenerationError(f"missing privacy policy locale {locale}: {path}")
+        sections = localized.get("sections")
+        if not isinstance(sections, list) or not sections or any(
+            not isinstance(section, dict) or not str(section.get("heading") or "").strip()
+            or not isinstance(section.get("paragraphs"), list) or not section["paragraphs"]
+            or any(not isinstance(paragraph, str) or not paragraph.strip() for paragraph in section["paragraphs"])
+            for section in sections
+        ):
+            raise GenerationError(f"invalid privacy policy sections for {locale}: {path}")
+        rendered_sections = [{**section, "language": locale if locale in translations else fallback_locale} for section in sections]
+        if locale not in translations:
+            notice = (policy.get("fallbackNotices") or {}).get(locale)
+            if not isinstance(notice, str) or not notice.strip():
+                raise GenerationError(f"missing privacy policy fallback notice for {locale}: {path}")
+            rendered_sections.insert(0, {"heading": content["privacy"]["heading"], "paragraphs": [notice]})
+        content["privacy"].update({"content": rendered_sections, "updatedAt": updated})
+        updated_label = (policy.get("updatedLabels") or {}).get(locale)
+        if updated_label:
+            content["privacy"]["lastUpdatedLabel"] = updated_label
+        if locale in translations:
+            content["privacy"]["heading"] = localized["heading"]
 
 
 def render_faq(content: dict) -> str:
@@ -2436,6 +2477,7 @@ def render_site(
         raise GenerationError("at least one feature with confidence: verified and evidence is required")
 
     source, targets, contents = resolve_locales(app, locales_root, features)
+    apply_privacy_policy(contents, app_info_path.parent / "content/privacy-policy.yaml")
     locales = [source, *targets]
     assets = copy_assets(app, app_info_path, stage)
     aliases = nested(app, "languages.routing.aliases", {}) or {}
@@ -2652,8 +2694,8 @@ def render_site(
             "PRIVACY_PAGE_TITLE": esc(nested(content, "privacy.pageTitle")),
             "PRIVACY_META_DESCRIPTION": esc(nested(content, "privacy.metaDescription")),
             "LAST_UPDATED_LINE": (
-                f'<p class="category">{esc(nested(content, "privacy.lastUpdatedLabel"))}: {esc(date)}</p>'
-                if date != "Not provided"
+                f'<p class="category">{esc(nested(content, "privacy.lastUpdatedLabel"))}: {esc(nested(content, "privacy.updatedAt", ""))}</p>'
+                if nested(content, "privacy.updatedAt", "")
                 else ""
             ),
             "PRIVACY_HEADING": esc(nested(content, "privacy.heading")),

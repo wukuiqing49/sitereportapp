@@ -373,10 +373,10 @@ editorial:
   publishedAt: ""
   updatedAt: ""
 support:
-  email: ""
+  email: "wukuiqing@gmail.com"
   url: ""
 privacy:
-  policyUrl: ""
+  policyUrl: "https://sitereport-app.pages.dev/privacy"
   dataPractices: []
 
 permissions:
@@ -411,9 +411,6 @@ evidence:
     supports:
       - "photo evidence metadata"
 unknowns:
-  - "Official website domain is not confirmed."
-  - "Public support email and privacy policy URL are not confirmed."
-  - "Developer identity for this specific app is not confirmed in the Android source project."
   - "Exact pricing and edition limits require product-owner confirmation."
 claimsToAvoid:
   - "Google Play availability"

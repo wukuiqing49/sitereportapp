@@ -13,10 +13,43 @@ import yaml
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-from generate_website import GenerationError, generate, render_screenshots, blog_labels, feature_labels, blog_article_text  # noqa: E402
+from generate_website import GenerationError, generate, render_screenshots, blog_labels, feature_labels, blog_article_text, apply_privacy_policy  # noqa: E402
 
 
 class GenerateWebsiteTests(unittest.TestCase):
+    def test_privacy_policy_survives_generation_with_explicit_language_fallback(self) -> None:
+        app_info = self.write_app_info(["ja-JP"])
+        (self.locales / "ja-JP.yaml").write_text(
+            yaml.safe_dump(self.target_content(), allow_unicode=True, sort_keys=False), encoding="utf-8"
+        )
+        policy_path = self.root / "content/privacy-policy.yaml"
+        policy_path.parent.mkdir(parents=True, exist_ok=True)
+        policy = {
+            "updatedAt": "2026-10-16", "fallbackLocale": "en-US",
+            "fallbackNotices": {"ja-JP": "Full English policy below"},
+            "locales": {"en-US": {"heading": "Privacy Policy", "sections": [
+                {"heading": "Deletion", "paragraphs": ["Email <privacy> & request deletion."]}
+            ]}},
+        }
+        policy_path.write_text(yaml.safe_dump(policy), encoding="utf-8")
+        for _ in range(2):
+            generate(app_info, self.output, self.locales, True)
+            english = (self.output / "privacy.html").read_text(encoding="utf-8")
+            japanese = (self.output / "ja-JP/privacy.html").read_text(encoding="utf-8")
+            self.assertIn("2026-10-16", english)
+            self.assertIn("Email &lt;privacy&gt; &amp; request deletion.", japanese)
+            self.assertIn('lang="en-US" dir="ltr"', japanese)
+            self.assertIn("Full English policy below", japanese)
+            self.assertNotIn("A complete reviewed privacy policy has not been provided", english)
+        policy["fallbackNotices"] = {}
+        policy_path.write_text(yaml.safe_dump(policy), encoding="utf-8")
+        with self.assertRaisesRegex(GenerationError, "fallback notice"):
+            generate(app_info, self.output, self.locales, True)
+        policy["updatedAt"] = "not-a-date"
+        policy_path.write_text(yaml.safe_dump(policy), encoding="utf-8")
+        with self.assertRaisesRegex(GenerationError, "updatedAt"):
+            apply_privacy_policy({}, policy_path)
+
     def test_editorial_survives_regeneration_in_both_article_templates(self) -> None:
         editorial = self.root / "content/blog/editorial.yaml"
         editorial.parent.mkdir(parents=True)
