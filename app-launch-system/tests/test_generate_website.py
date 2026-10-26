@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import html
 import re
 import sys
 import tempfile
@@ -374,6 +375,29 @@ class GenerateWebsiteTests(unittest.TestCase):
         self.assertIn('rel="canonical" href="https://pixel-notes.pages.dev/about"', about)
         self.assertNotIn("https://pixel-notes.pages.dev/about.html", about)
 
+    def test_localized_pages_have_direct_language_links_without_javascript(self) -> None:
+        app_info = self.write_app_info(["ja-JP"])
+        (self.locales / "ja-JP.yaml").write_text(
+            yaml.safe_dump(self.target_content(), allow_unicode=True, sort_keys=False), encoding="utf-8"
+        )
+        generate(app_info, self.output, self.locales)
+        checked = 0
+        for path in self.output.rglob("*.html"):
+            page = path.read_text(encoding="utf-8")
+            match = re.search(r'<script id="locale-routes" type="application/json">(.*?)</script>', page)
+            if not match:
+                continue
+            config = json.loads(match.group(1))
+            nav = re.search(r'<nav class="language-links".*?</nav>', page, re.S)
+            self.assertIsNotNone(nav, str(path))
+            for route in config["locales"]:
+                self.assertIn(f'href="{html.escape(route["url"], quote=True)}"', nav.group(0))
+                self.assertIn(f'hreflang="{route["code"]}"', nav.group(0))
+                self.assertIn(html.escape(route["name"], quote=True), nav.group(0))
+            self.assertEqual(nav.group(0).count('aria-current="page"'), 1)
+            checked += 1
+        self.assertGreaterEqual(checked, 8)
+
     def test_clean_url_references_validate_against_html_assets(self) -> None:
         data = self.app_data()
         data["websiteUrl"] = "https://pixel-notes.pages.dev/"
@@ -382,7 +406,13 @@ class GenerateWebsiteTests(unittest.TestCase):
         generate(app_info, self.output, self.locales)
         page = (self.output / "about.html").read_text(encoding="utf-8")
         self.assertNotIn("../about.html", page)
-        self.assertIn("privacy.html", page)
+        self.assertIn('href="privacy"', page)
+        for html_file in self.output.rglob("*.html"):
+            self.assertNotRegex(
+                html_file.read_text(encoding="utf-8"),
+                r'href="[^"?#]*(?:privacy|support|about)\.html(?:["?#])',
+                str(html_file),
+            )
 
     def test_search_console_html_tag_token_renders(self) -> None:
         data = self.app_data()

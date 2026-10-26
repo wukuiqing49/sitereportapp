@@ -866,6 +866,8 @@ SEO_LANDING_PAGES = (
             ("Plan the inspection points", "Create or select an inspection plan, choose checklist templates, and define the points that need to be reviewed during a site visit."),
             ("Complete checks with context", "Record results while attaching photos, notes, and available location details to the inspection item that they support."),
             ("Review progress and report", "Resume an in-progress inspection, review completion progress, and use the completed checklist as part of a generated field report."),
+            ("A reusable checklist item example", "Write one observable check per item. Instead of 'check the room', use 'record the condition of the north wall in room 204'. Record the location, observation, result, photo reference, and any follow-up needed. Keep the same item names on repeat visits so records remain comparable."),
+            ("Separate an observation from a conclusion", "Describe what you can see before deciding what it means. For example: 'paint peeling beside window W2; close-up and room-view photos attached'. If an area was inaccessible, record that limitation rather than marking the item complete without evidence. Review unresolved observations before sharing the report."),
         ),
         "supporting": ("inspection check list", "inspection check sheet", "inspection checklist app", "mobile inspection software"),
         "faq": (
@@ -884,6 +886,9 @@ SEO_LANDING_PAGES = (
             ("Start with a repeatable site visit checklist", "Use inspection plans and checklist templates to make recurring construction visits easier to follow and compare."),
             ("Link photos to checklist items", "Capture or select evidence photos for the current inspection item and keep notes, time, and available location information with the record."),
             ("Export a construction field report", "Combine completed checks and supporting evidence into a generated report that can be previewed, shared, or delivered through supported options."),
+            ("Before the visit: identify the work being reviewed", "Record the project, visit date, inspector, work area, and purpose of the inspection. Note the drawing or specification revision used for the visit, where applicable. Break the checklist into identifiable areas or work packages so a later reader can locate each observation."),
+            ("During the visit: record progress and exceptions", "For each planned point, describe the work observed, its location, and any difference that needs follow-up. Capture an overview photo and a detail photo when both help explain the finding. Note areas that were not accessible or work that was not ready for review; a missing observation should not be treated as an accepted result."),
+            ("After the visit: make follow-up traceable", "Review the notes with the people receiving the report. In the inspection record, identify the action requested, the person or team to contact, and the agreed review date where available. On a return visit, reference the earlier finding and capture new evidence rather than overwriting the original observation."),
         ),
         "supporting": ("construction site visit checklist", "construction site inspection app", "construction site visit report", "building inspection checklist"),
         "faq": (
@@ -902,6 +907,9 @@ SEO_LANDING_PAGES = (
             ("Organize building inspection observations", "Create an inspection project and work through the points relevant to the visit, with progress and report history kept together."),
             ("Record condition evidence", "Add photos, notes, and available location details to the inspection item they describe so the report retains its context."),
             ("Prepare a documented report", "Generate a report containing supported project information, checklist results, photos, notes, and sign-off details for review and sharing."),
+            ("Define a room-by-room inspection record", "Start with the building address, visit date, purpose, and areas included in the visit. Give rooms and shared areas consistent identifiers. Record access limitations and any areas excluded from the agreed scope so readers can distinguish inspected areas from those that were not reviewed."),
+            ("Example: document a visible condition", "For a visible mark on an internal wall, record the room, wall position, approximate extent, and appearance. Add a room-view photo to establish location and a close-up for detail. State what was observed; a photograph alone does not establish the cause of a mark or the condition of concealed building elements."),
+            ("Compare findings on a follow-up visit", "Use the same room and item identifiers when revisiting a finding. Compare dated photos and notes, record what has changed, and flag observations that still need review. Keep the earlier report available so the recipient can follow the condition history."),
         ),
         "supporting": ("inspection check sheet", "property inspection checklist app", "inspection checklist app", "site inspection report"),
         "faq": (
@@ -999,6 +1007,24 @@ def seo_primary_query(locale: str, app: dict) -> str:
     )
 
 
+def add_language_links(page: str, routes_json: str) -> str:
+    """Expose equivalent pages as usable links without requiring JavaScript."""
+    if not routes_json or "</footer>" not in page:
+        return page
+    config = json.loads(routes_json)
+    routes = config.get("locales", [])
+    if len(routes) < 2:
+        return page
+    links = "".join(
+        f'<a href="{esc(route["url"])}" hreflang="{esc(route["code"])}" '
+        f'lang="{esc(route["code"])}"'
+        + (' aria-current="page"' if route["code"] == config["currentLocale"] else "")
+        + f'>{esc(route.get("name", route["code"]))}</a>'
+        for route in routes
+    )
+    return page.replace("</footer>", f'<nav class="language-links" aria-label="Language">{links}</nav>\n  </footer>', 1)
+
+
 def render_template(name: str, values: dict[str, str]) -> str:
     result = (TEMPLATE_ROOT / name).read_text(encoding="utf-8")
     for token, value in values.items():
@@ -1006,7 +1032,7 @@ def render_template(name: str, values: dict[str, str]) -> str:
     unresolved = TOKEN_PATTERN.findall(result)
     if unresolved:
         raise GenerationError(f"unresolved tokens in {name}: {', '.join(sorted(set(unresolved)))}")
-    return result
+    return add_language_links(result, values.get("LOCALE_ROUTES_JSON", ""))
 
 
 def page_relative(locale: str, source: str, page: str) -> str:
@@ -1068,7 +1094,7 @@ def locale_controls(
     remember_selection: bool,
 ) -> tuple[str, str]:
     routes = [
-        {"code": locale, "url": route_url(current, locale, source, page, base_url)}
+        {"code": locale, "name": contents[locale]["languageName"], "url": route_url(current, locale, source, page, base_url)}
         for locale in locales
     ]
     config = {
@@ -1208,7 +1234,7 @@ def render_blog_template(name: str, values: dict[str, str]) -> str:
     unresolved = TOKEN_PATTERN.findall(result)
     if unresolved:
         raise GenerationError(f"unresolved tokens in blog template {name}: {', '.join(sorted(set(unresolved)))}")
-    return result
+    return add_language_links(result, values.get("LOCALE_ROUTES_JSON", ""))
 
 
 def slugify(value: str, fallback: str) -> str:
@@ -1291,7 +1317,7 @@ def relative_href(current_page: str, target_page: str) -> str:
         target_dir = posixpath.dirname(target_page)
         relative = posixpath.relpath(target_dir or ".", current_dir or ".")
         return "./" if relative == "." else relative.rstrip("/") + "/"
-    return posixpath.relpath(target_page, current_dir or ".")
+    return posixpath.relpath(target_page.removesuffix(".html"), current_dir or ".")
 
 
 def blog_labels(locale: str, app_name: str) -> dict[str, str]:
@@ -1460,7 +1486,7 @@ def render_feature_pages(
                 target_slug = feature_slug(target, source, contents[target], feature)
                 target_page = feature_page_path(target, source, target_slug)
                 target_url = urljoin(base_url, target_page.removesuffix("index.html")) if base_url else relative_href(current_page, target_page)
-                routes.append({"code": target, "url": target_url})
+                routes.append({"code": target, "name": contents[target]["languageName"], "url": target_url})
                 if base_url:
                     alternate_tags.append(f'<link rel="alternate" hreflang="{esc(target)}" href="{esc(target_url)}">')
             canonical_url = urljoin(base_url, current_page.removesuffix("index.html")) if base_url else ""
@@ -1729,7 +1755,7 @@ def render_seo_landing_pages(
             "SEO_SECTIONS": sections,
             "SEO_SUPPORTING": ", ".join(page["supporting"]),
             "SEO_FAQ": faq,
-            "SEO_RELATED": "".join(related),
+            "SEO_RELATED": "".join(link for link in related if f'href="../{page["slug"]}/"' not in link),
             "GOOGLE_PLAY_ACTION": (
                 f'<a class="primary-action" href="{esc(app["googlePlayUrl"])}">Get it on Google Play</a>'
                 if app.get("googlePlayUrl") else ""
@@ -1833,7 +1859,7 @@ def render_blog(
             slug = model_for(locale, content_id)["slug"] if content_id else ""
             target_page = blog_page_path(locale, source, slug)
             url = urljoin(base_url, target_page.removesuffix("index.html")) if base_url else relative_href(current_page, target_page)
-            route_items.append({"code": locale, "url": url})
+            route_items.append({"code": locale, "name": contents[locale]["languageName"], "url": url})
             if base_url:
                 canonical_lines.append(f'<link rel="alternate" hreflang="{esc(locale)}" href="{esc(url)}">')
         current_slug = model_for(current, content_id)["slug"] if content_id else ""
@@ -2602,9 +2628,9 @@ def render_site(
                 "HOME_H1": esc(nested(content, "home.heading", app_name)),
                 "BRAND_LOGO": brand_logo,
                 "HOME_URL": "./" if page == "index.html" else "./",
-                "PRIVACY_URL": "privacy.html",
-                "SUPPORT_URL": "support.html",
-                "ABOUT_URL": "about.html",
+                "PRIVACY_URL": "privacy",
+                "SUPPORT_URL": "support",
+                "ABOUT_URL": "about",
                 "BLOG_URL": blog_url,
                 "BLOG_NAV_ITEM": blog_nav_item,
                 "LANGUAGE_SWITCHER": switcher,

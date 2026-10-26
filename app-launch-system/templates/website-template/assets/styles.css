@@ -125,7 +125,10 @@ h2 { font-size: 2.5rem; }
 .seo-sections h2 { margin: 0; font-size: 1.75rem; }
 .seo-related { max-width: 52rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
 .seo-related li + li { margin-top: 0.55rem; }
-footer { border-top: 1px solid var(--line); color: var(--muted); }
+footer { border-top: 1px solid var(--line); color: var(--muted); flex-wrap: wrap; }
+.language-links { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.9rem; }
+.language-links a { padding-block: 0.25rem; }
+.language-links a[aria-current="page"] { font-weight: 700; }
 
 @media (max-width: 760px) {
   .site-header, footer { align-items: flex-start; flex-direction: column; }
