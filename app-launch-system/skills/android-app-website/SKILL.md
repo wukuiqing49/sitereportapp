@@ -13,7 +13,7 @@ Treat the Android project path as the only required user input. Hide the interna
 2. Read `../app-analyzer-skill/SKILL.md` and analyze the project. Write `analysis-evidence.json` and the verified `app-info.yaml` directly to the site root. Do not ask the user to prepare either file.
 3. Inspect every configured image under `app-launch-system/config/assets/`. Prefer these images over repository images. Require at least one valid current screenshot; use the app icon and cover when supplied.
 4. Resolve the source language from verified Android resources or explicit input. Resolve target languages from explicit input or verified app resources. Prepare complete `content/locales/<locale>.yaml` files for targets; do not copy source text as fake translation. Mark unreviewed translations `machine-draft`.
-5. Read `../website-generator-skill/references/site-contract.md`, then run from the site root:
+5. Read `../website-generator-skill/references/site-contract.md` and `../website-generator-skill/references/app-website-design.md`. Preserve the approved app presentation, adapt screenshot framing to the actual assets, and include the app favicon on every page. Then run from the site root:
 
    ```powershell
    python app-launch-system/scripts/launch.py generate-website
@@ -46,4 +46,4 @@ Generate a dependency-free static site at the site root:
 
 Keep the source locale at the root and target locales in BCP 47 directories. Use browser language detection and a remembered manual selection. Omit unconfirmed canonical URLs, ratings, pricing, privacy claims, and store links rather than inventing them.
 
-The site must work by opening `index.html` directly and must require no Node build, framework runtime, database, API, or server-side rendering. Treat only paths listed in `static-site-manifest.json` as deployable public files.
+The site must require no Node build, framework runtime, database, API, or server-side rendering. Preview it through a static HTTP server; Cloudflare clean URLs should be checked on a compatible host rather than inferred from `file://` navigation. Treat only paths listed in `static-site-manifest.json` as deployable public files.

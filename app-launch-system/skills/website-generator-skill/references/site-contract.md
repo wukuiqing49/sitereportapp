@@ -7,9 +7,10 @@
 - `support.html`: Confirmed support route, common questions, app version, and contact details.
 - `404.html`: Source-locale static not-found page with a root-home link and `noindex`.
 - `_headers`: Cloudflare Pages-compatible security and cache headers.
-- `styles.css`: Responsive, accessible styling with no external runtime dependency by default.
-- `app.js`: Progressive enhancement only; core content must work without JavaScript.
-- `locale-router.js`: Browser-language matching and remembered manual locale selection.
+- `assets/styles.css`: Responsive, accessible styling with no external runtime dependency by default.
+- `assets/app.js`: Progressive enhancement only; core content must work without JavaScript.
+- `assets/locale-router.js`: Browser-language matching and remembered manual locale selection.
+- A copied verified app icon, referenced by an explicit `link rel="icon"` in every HTML page's head, including nested pages and 404. Manifest icons alone are insufficient.
 - `robots.txt`, `sitemap.xml`, and `site.webmanifest`.
 - `localization-status.yaml`: Locale, source, generation status, reviewer, and review date.
 
@@ -33,6 +34,8 @@ python app-launch-system/scripts/launch.py generate-website
 Defaults are `app-info.yaml`, the current project root, and `content/locales/`. Use `--force` only for an explicitly approved refresh of existing generated files. Every target in `languages.targets` requires `content/locales/<locale>.yaml`; missing or incomplete target content is a hard failure, not a translation fallback.
 
 ## URL model
+
+For Cloudflare Pages, keep `.html` files on disk but use clean public URLs in navigation, canonical tags, alternate routes, and sitemap entries (for example `/privacy`, not `/privacy.html`). Preserve existing route helpers rather than assembling URLs ad hoc. Include crawlable footer links to the equivalent pages in available languages.
 
 Keep the source locale at the root for both single- and multi-locale sites. Put each non-source locale in a stable BCP 47 directory such as `/en-US/` or `/ja-JP/`. Root pages are also `x-default`; do not duplicate the source locale in another directory.
 
@@ -85,7 +88,8 @@ Use `SoftwareApplication` for the product and `Organization` only when the devel
 - Exactly one descriptive `h1` per page.
 - Unique title and meta description per indexable page.
 - Valid JSON-LD and manifest JSON.
-- No horizontal scrolling at 320 CSS pixels.
+- No page-level horizontal scrolling at 320 CSS pixels; a named, keyboard-focusable screenshot gallery may scroll internally.
+- Explicit favicon references resolve at root and nested locale depths and are not duplicated on regeneration.
 - Interactive elements work by keyboard and expose accessible names.
 - `websiteUrl` is required before SEO/GEO can be marked ready.
 - `googlePlayUrl` is required before ASO can move beyond draft/blocked.

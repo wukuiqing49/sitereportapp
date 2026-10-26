@@ -21,6 +21,8 @@ The site source root also contains private generation inputs such as `app-launch
 - Open the root and localized pages through a static HTTP server.
 - Confirm that direct locale URLs remain stable and source-root language detection works.
 - Confirm all local links and images resolve.
+- Confirm explicit favicon links resolve to the app icon on root, localized, nested feature/blog, and 404 pages; the manifest is not a substitute.
+- Check the app presentation at desktop and mobile widths, including actual screenshot framing and page-level overflow, following the shared app website design reference.
 - Confirm `_headers` and `404.html` are present.
 - Confirm `sitemap.xml` contains absolute URLs only when `websiteUrl` is verified.
 - Treat deployment and domain configuration as separate explicit operations.
