@@ -3020,6 +3020,18 @@ def render_site(
         render_template("404.html", not_found_values), encoding="utf-8"
     )
     shutil.copy2(TEMPLATE_ROOT / "_headers", stage / "_headers")
+    if icon_relative:
+        # Declare the app icon on every page, including nested and localized pages.
+        # A web manifest alone does not provide the browser tab favicon.
+        for page in stage.rglob("*.html"):
+            markup = page.read_text(encoding="utf-8")
+            if "</head>" not in markup:
+                continue
+            icon_href = relative_href(page.relative_to(stage).as_posix(), str(icon_relative))
+            markup = markup.replace(
+                "</head>", f'  <link rel="icon" href="{esc(icon_href)}">\n</head>', 1
+            )
+            page.write_text(markup, encoding="utf-8")
     verification_files = [item for item in (search_console_file, bing_webmaster_file, index_now_file) if item]
     if verification_files:
         for file_name, file_content in verification_files:
