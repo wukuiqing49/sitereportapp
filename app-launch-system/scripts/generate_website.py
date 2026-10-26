@@ -1135,6 +1135,45 @@ def render_feature_items(content: dict, features: list[dict], locale: str, sourc
     return "\n        ".join(cards)
 
 
+def render_product_showcase(content: dict, screenshots: list[dict], base_path: str) -> str:
+    """Frame the existing product artwork, keeping the app itself in focus."""
+    frames = []
+    for index, screen_index in enumerate((0, min(2, len(screenshots) - 1))):
+        image = screenshots[screen_index]
+        feature_id = "project-management" if index == 0 else "report-generation"
+        caption = nested(content, f"home.features.{feature_id}.name", nested(content, "home.heroScreenshotAlt"))
+        frames.append(
+            f'<div class="product-device device-{index + 1}"><img '
+            f'src="{esc(base_path + image["path"])}" alt="{esc(caption)}" '
+            'width="1080" height="1920" fetchpriority="high"></div>'
+        )
+    return '<div class="product-showcase"><div class="showcase-orbit" aria-hidden="true"></div>' + "".join(frames) + '</div>'
+
+
+def render_product_stories(content: dict, features: list[dict], screenshots: list[dict], locale: str, source: str, base_path: str) -> str:
+    """Connect product capabilities to their corresponding existing artwork."""
+    if len(screenshots) < 3:
+        return ""
+    stories = []
+    for feature_id, screen_index in (("photo-evidence", 1), ("report-generation", 2)):
+        feature = next((item for item in content_ready_features(features) if item["id"] == feature_id), None)
+        if not feature:
+            continue
+        details = localized_feature_details(content, feature)
+        title = nested(content, f"home.features.{feature_id}.name", feature["name"])
+        description = nested(content, f"home.features.{feature_id}.description", feature["description"])
+        slug = feature_slug(locale, source, content, feature)
+        capabilities = "".join(f'<li>{esc(item)}</li>' for item in details.get("capabilities", [])[:3])
+        stories.append(
+            '<section class="product-story"><div class="story-visual"><div class="story-device">'
+            f'<img src="{esc(base_path + screenshots[screen_index]["path"])}" alt="{esc(title)}" '
+            'width="1080" height="1920" loading="lazy"></div></div>'
+            f'<div class="story-copy"><h2><a href="features/{esc(slug)}/">{esc(title)}</a></h2>'
+            f'<p>{esc(description)}</p><ul>{capabilities}</ul></div></section>'
+        )
+    return '<div class="product-stories">' + "".join(stories) + '</div>' if stories else ""
+
+
 def render_privacy_content(content: dict) -> str:
     sections = []
     for section in nested(content, "privacy.content", []) or []:
@@ -1221,7 +1260,7 @@ def render_screenshots(content: dict, screenshots: list[dict], base_path: str, u
         + esc(nested(content, "home.screenshotsHeading"))
         + "</h2><p>"
         + esc(nested(content, "home.screenshotsIntro"))
-        + '</p></div><div class="screenshot-list">'
+        + '</p></div><div class="screenshot-list" tabindex="0" role="region" aria-labelledby="screenshots-title">'
         + "".join(figures)
         + "</div></section>"
     )
@@ -2590,6 +2629,28 @@ def render_site(
                 f'<figure class="hero-media"><img src="{esc(base_path + str(hero_relative))}" '
                 f'alt="{esc(nested(content, "home.heroScreenshotAlt"))}"><figcaption>{esc(hero_caption)}</figcaption></figure>'
             )
+        secondary_action = (
+            f'<a class="secondary-action" href="#screenshots">{esc(nested(content, "navigation.screenshots"))}</a>'
+        )
+        demo_section = ""
+        if len(assets["screenshots"]) >= 3:
+            if video_url:
+                demo_section = (
+                    '<section id="demo" class="demo-section"><div class="demo-copy">'
+                    f'<h2>{esc(video_labels["heading"])}</h2><p>{esc(video_labels["intro"])}</p></div>'
+                    + hero_media + '</section>'
+                )
+                secondary_action = (
+                    f'<a class="secondary-action play-action" href="#demo">{esc(video_labels["heading"])}</a>'
+                )
+            hero_media = render_product_showcase(content, assets["screenshots"], base_path)
+        capability_labels = [
+            nested(content, f"home.features.{feature_id}.name", "")
+            for feature_id in ("inspection-checklists", "photo-evidence", "report-generation")
+        ]
+        hero_capabilities = '<ul class="hero-capabilities">' + "".join(
+            f'<li>{esc(label)}</li>' for label in capability_labels if label
+        ) + '</ul>'
         workflow_steps = [item for item in (nested(content, "home.workflowSteps", []) or []) if isinstance(item, str) and item.strip()]
         workflow_html = ""
         if workflow_steps:
@@ -2701,6 +2762,10 @@ def render_site(
                 or nested(content, "home.shortDescription")
             ),
             "PRIMARY_ACTION": primary_action,
+            "SECONDARY_ACTION": secondary_action,
+            "HERO_CAPABILITIES": hero_capabilities,
+            "PRODUCT_STORIES": render_product_stories(content, features, assets["screenshots"], locale, source, base_path),
+            "DEMO_SECTION": demo_section,
             "HERO_MEDIA": hero_media,
             "OVERVIEW_SECTION": render_overview_section(content, locale),
             "FEATURES_HEADING": esc(nested(content, "home.featuresHeading")),

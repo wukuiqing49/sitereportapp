@@ -15,7 +15,7 @@
   <script id="locale-routes" type="application/json">{{LOCALE_ROUTES_JSON}}</script>
   <script src="{{BASE_PATH}}assets/locale-router.js" defer></script>
 </head>
-<body>
+<body class="app-landing">
   <a class="skip-link" href="#main">{{SKIP_TO_CONTENT}}</a>
   <header class="site-header">
     <a class="brand" href="{{HOME_URL}}" aria-label="{{APP_NAME}}">
@@ -35,18 +35,19 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="category">{{CATEGORY}}</p>
+        <p class="category">{{APP_NAME}} <span>Android</span></p>
         <h1 id="hero-title">{{HOME_H1}}</h1>
         <p class="tagline">{{TAGLINE}}</p>
         <p class="summary">{{SHORT_DESCRIPTION}}</p>
-        {{PRIMARY_ACTION}}
+        <div class="hero-actions">{{PRIMARY_ACTION}}{{SECONDARY_ACTION}}</div>
+        {{HERO_CAPABILITIES}}
       </div>
       {{HERO_MEDIA}}
     </section>
 
     {{OVERVIEW_SECTION}}
 
-    {{SCREENSHOT_SECTION}}
+    {{PRODUCT_STORIES}}
 
     <section id="features" class="content-band" aria-labelledby="features-title">
       <div class="section-heading">
@@ -59,6 +60,10 @@
     </section>
 
     {{WORKFLOW_SECTION}}
+
+    {{SCREENSHOT_SECTION}}
+
+    {{DEMO_SECTION}}
 
 {{SEO_TOPIC_SECTION}}
 

@@ -28,7 +28,7 @@
   <script id="locale-routes" type="application/json">{"sourceLocale":"en-US","currentLocale":"ja-JP","autoRedirect":false,"rememberSelection":true,"storageKey":"com.wkq.site:locale","aliases":{"en":"en-US","es":"es-ES","pt":"pt-BR","fr":"fr-FR","de":"de-DE","ja":"ja-JP","ko":"ko-KR"},"locales":[{"code":"en-US","name":"English","url":"https://sitereport-app.pages.dev/"},{"code":"zh-CN","name":"简体中文","url":"https://sitereport-app.pages.dev/zh-CN/"},{"code":"es-ES","name":"Español","url":"https://sitereport-app.pages.dev/es-ES/"},{"code":"pt-BR","name":"Português (Brasil)","url":"https://sitereport-app.pages.dev/pt-BR/"},{"code":"fr-FR","name":"Français","url":"https://sitereport-app.pages.dev/fr-FR/"},{"code":"de-DE","name":"Deutsch","url":"https://sitereport-app.pages.dev/de-DE/"},{"code":"ja-JP","name":"日本語","url":"https://sitereport-app.pages.dev/ja-JP/"},{"code":"ko-KR","name":"한국어","url":"https://sitereport-app.pages.dev/ko-KR/"},{"code":"ar","name":"العربية","url":"https://sitereport-app.pages.dev/ar/"}]}</script>
   <script src="../assets/locale-router.js" defer></script>
 </head>
-<body>
+<body class="app-landing">
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="SiteReport">
@@ -48,18 +48,19 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="category">現場業務</p>
+        <p class="category">SiteReport <span>Android</span></p>
         <h1 id="hero-title">SiteReport</h1>
         <p class="tagline">現場レポートを、必要なときに</p>
         <p class="summary">現場の証拠を記録し、検査の流れを共有できるレポートにまとめます。</p>
-        <a class="primary-action google-play-action" href="https://play.google.com/store/apps/details?id=com.wkq.site"><img class="google-play-badge" src="../assets/google-play-badge.png" alt="Google Play で入手" width="160" height="62"></a>
+        <div class="hero-actions"><a class="primary-action google-play-action" href="https://play.google.com/store/apps/details?id=com.wkq.site"><img class="google-play-badge" src="../assets/google-play-badge.png" alt="Google Play で入手" width="160" height="62"></a><a class="secondary-action play-action" href="#demo">SiteReport の紹介動画を見る</a></div>
+        <ul class="hero-capabilities"><li>検査チェックリスト</li><li>写真と位置情報</li><li>PDFレポート</li></ul>
       </div>
-      <figure class="hero-media hero-video"><a class="hero-video-poster" href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube で見る: SiteReport 紹介動画"><img src="../assets/youtube-poster.jpg" alt="SiteReport 紹介動画" width="1280" height="720"><span class="video-play-icon" aria-hidden="true"></span></a><figcaption>SiteReport が現場の証拠を共有できるレポートにまとめる流れをご覧ください。<br><a href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer">YouTube で見る</a></figcaption></figure>
+      <div class="product-showcase"><div class="showcase-orbit" aria-hidden="true"></div><div class="product-device device-1"><img src="../assets/screenshots/01-01-professional-site-inspection.png" alt="検査プロジェクト" width="1080" height="1920" fetchpriority="high"></div><div class="product-device device-2"><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="PDFレポート" width="1080" height="1920" fetchpriority="high"></div></div>
     </section>
 
     <section class="overview-band" aria-labelledby="overview-title"><div class="section-heading"><h2 id="overview-title">One workflow from site visit to signed report</h2><p>Plan the inspection, capture evidence in context, and deliver a clear report without moving between separate tools.</p></div><div class="overview-points"><article class="overview-point"><h3>検査プロジェクト</h3><p>現場情報、進捗、写真、レポートをまとめて管理します。</p></article><article class="overview-point"><h3>写真と位置情報</h3><p>写真を項目に関連付け、可能な場合はメモ、時刻、位置を記録します。</p></article><article class="overview-point"><h3>PDFレポート</h3><p>検査データから構造化されたレポートを作成します。</p></article></div></section>
 
-    <section id="screenshots" class="screenshot-band" aria-labelledby="screenshots-title"><div class="section-heading"><h2 id="screenshots-title">アプリを見る</h2><p>現在のプロジェクトに含まれる実際の画面です。</p></div><div class="screenshot-list"><figure><img src="../assets/screenshots/01-01-professional-site-inspection.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/02-02-capture-everything.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/04-04-works-offline.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/05-05-share-anywhere.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure></div></section>
+    <div class="product-stories"><section class="product-story"><div class="story-visual"><div class="story-device"><img src="../assets/screenshots/02-02-capture-everything.png" alt="写真と位置情報" width="1080" height="1920" loading="lazy"></div></div><div class="story-copy"><h2><a href="features/写真と位置情報/">写真と位置情報</a></h2><p>写真を項目に関連付け、可能な場合はメモ、時刻、位置を記録します。</p><ul><li>1枚または複数の写真を撮影</li><li>記録に写真を関連付け</li><li>利用できる場合は位置と撮影時刻を記録</li></ul></div></section><section class="product-story"><div class="story-visual"><div class="story-device"><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="PDFレポート" width="1080" height="1920" loading="lazy"></div></div><div class="story-copy"><h2><a href="features/pdfレポート/">PDFレポート</a></h2><p>検査データから構造化されたレポートを作成します。</p><ul><li>PDF現場レポートを生成</li><li>結果、写真、位置、メモ、署名を含める</li><li>生成したファイルを確認</li></ul></div></section></div>
 
     <section id="features" class="content-band" aria-labelledby="features-title">
       <div class="section-heading">
@@ -77,6 +78,10 @@
     </section>
 
     <section class="workflow" aria-labelledby="workflow-title"><div class="section-heading"><h2 id="workflow-title">明確な作業フロー</h2><p></p></div><ol><li>プロジェクトを作成してテンプレートを選ぶ</li><li>写真を撮影して結果を記録する</li><li>レポートを作成して共有または配信する</li></ol></section>
+
+    <section id="screenshots" class="screenshot-band" aria-labelledby="screenshots-title"><div class="section-heading"><h2 id="screenshots-title">アプリを見る</h2><p>現在のプロジェクトに含まれる実際の画面です。</p></div><div class="screenshot-list" tabindex="0" role="region" aria-labelledby="screenshots-title"><figure><img src="../assets/screenshots/01-01-professional-site-inspection.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/02-02-capture-everything.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/04-04-works-offline.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure><figure><img src="../assets/screenshots/05-05-share-anywhere.png" alt="プロジェクトと検査の進捗を管理" loading="lazy"><figcaption>プロジェクトと検査の進捗を管理</figcaption></figure></div></section>
+
+    <section id="demo" class="demo-section"><div class="demo-copy"><h2>SiteReport の紹介動画を見る</h2><p>SiteReport が現場の証拠を共有できるレポートにまとめる流れをご覧ください。</p></div><figure class="hero-media hero-video"><a class="hero-video-poster" href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube で見る: SiteReport 紹介動画"><img src="../assets/youtube-poster.jpg" alt="SiteReport 紹介動画" width="1280" height="720"><span class="video-play-icon" aria-hidden="true"></span></a><figcaption>SiteReport が現場の証拠を共有できるレポートにまとめる流れをご覧ください。<br><a href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer">YouTube で見る</a></figcaption></figure></section>
 
 
 

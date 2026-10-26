@@ -28,7 +28,7 @@
   <script id="locale-routes" type="application/json">{"sourceLocale":"en-US","currentLocale":"ko-KR","autoRedirect":false,"rememberSelection":true,"storageKey":"com.wkq.site:locale","aliases":{"en":"en-US","es":"es-ES","pt":"pt-BR","fr":"fr-FR","de":"de-DE","ja":"ja-JP","ko":"ko-KR"},"locales":[{"code":"en-US","name":"English","url":"https://sitereport-app.pages.dev/"},{"code":"zh-CN","name":"简体中文","url":"https://sitereport-app.pages.dev/zh-CN/"},{"code":"es-ES","name":"Español","url":"https://sitereport-app.pages.dev/es-ES/"},{"code":"pt-BR","name":"Português (Brasil)","url":"https://sitereport-app.pages.dev/pt-BR/"},{"code":"fr-FR","name":"Français","url":"https://sitereport-app.pages.dev/fr-FR/"},{"code":"de-DE","name":"Deutsch","url":"https://sitereport-app.pages.dev/de-DE/"},{"code":"ja-JP","name":"日本語","url":"https://sitereport-app.pages.dev/ja-JP/"},{"code":"ko-KR","name":"한국어","url":"https://sitereport-app.pages.dev/ko-KR/"},{"code":"ar","name":"العربية","url":"https://sitereport-app.pages.dev/ar/"}]}</script>
   <script src="../assets/locale-router.js" defer></script>
 </head>
-<body>
+<body class="app-landing">
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="SiteReport">
@@ -48,18 +48,19 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="category">현장 업무</p>
+        <p class="category">SiteReport <span>Android</span></p>
         <h1 id="hero-title">SiteReport</h1>
         <p class="tagline">필요할 때 바로 준비되는 현장 보고서</p>
         <p class="summary">현장 증거를 기록하고 검사 흐름을 공유 가능한 보고서로 정리합니다.</p>
-        <a class="primary-action google-play-action" href="https://play.google.com/store/apps/details?id=com.wkq.site"><img class="google-play-badge" src="../assets/google-play-badge.png" alt="Google Play에서 이용 가능" width="160" height="62"></a>
+        <div class="hero-actions"><a class="primary-action google-play-action" href="https://play.google.com/store/apps/details?id=com.wkq.site"><img class="google-play-badge" src="../assets/google-play-badge.png" alt="Google Play에서 이용 가능" width="160" height="62"></a><a class="secondary-action play-action" href="#demo">SiteReport 소개 영상 보기</a></div>
+        <ul class="hero-capabilities"><li>검사 체크리스트</li><li>사진과 위치 기록</li><li>PDF 보고서</li></ul>
       </div>
-      <figure class="hero-media hero-video"><a class="hero-video-poster" href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube에서 보기: SiteReport 소개 영상"><img src="../assets/youtube-poster.jpg" alt="SiteReport 소개 영상" width="1280" height="720"><span class="video-play-icon" aria-hidden="true"></span></a><figcaption>SiteReport가 현장 증거를 공유 가능한 보고서로 정리하는 과정을 확인해 보세요.<br><a href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer">YouTube에서 보기</a></figcaption></figure>
+      <div class="product-showcase"><div class="showcase-orbit" aria-hidden="true"></div><div class="product-device device-1"><img src="../assets/screenshots/01-01-professional-site-inspection.png" alt="검사 프로젝트" width="1080" height="1920" fetchpriority="high"></div><div class="product-device device-2"><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="PDF 보고서" width="1080" height="1920" fetchpriority="high"></div></div>
     </section>
 
     <section class="overview-band" aria-labelledby="overview-title"><div class="section-heading"><h2 id="overview-title">One workflow from site visit to signed report</h2><p>Plan the inspection, capture evidence in context, and deliver a clear report without moving between separate tools.</p></div><div class="overview-points"><article class="overview-point"><h3>검사 프로젝트</h3><p>현장 정보, 진행률, 사진과 보고서를 한곳에서 관리합니다.</p></article><article class="overview-point"><h3>사진과 위치 기록</h3><p>가능한 경우 사진을 항목에 연결하고 메모, 시간, 위치를 기록합니다.</p></article><article class="overview-point"><h3>PDF 보고서</h3><p>검사 데이터에서 구조화된 현장 보고서를 생성합니다.</p></article></div></section>
 
-    <section id="screenshots" class="screenshot-band" aria-labelledby="screenshots-title"><div class="section-heading"><h2 id="screenshots-title">앱 화면 보기</h2><p>현재 프로젝트의 실제 화면입니다.</p></div><div class="screenshot-list"><figure><img src="../assets/screenshots/01-01-professional-site-inspection.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/02-02-capture-everything.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/04-04-works-offline.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/05-05-share-anywhere.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure></div></section>
+    <div class="product-stories"><section class="product-story"><div class="story-visual"><div class="story-device"><img src="../assets/screenshots/02-02-capture-everything.png" alt="사진과 위치 기록" width="1080" height="1920" loading="lazy"></div></div><div class="story-copy"><h2><a href="features/사진과-위치-기록/">사진과 위치 기록</a></h2><p>가능한 경우 사진을 항목에 연결하고 메모, 시간, 위치를 기록합니다.</p><ul><li>한 장 이상 사진 촬영</li><li>검사 기록에 사진 연결</li><li>가능한 경우 위치와 촬영 시간 기록</li></ul></div></section><section class="product-story"><div class="story-visual"><div class="story-device"><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="PDF 보고서" width="1080" height="1920" loading="lazy"></div></div><div class="story-copy"><h2><a href="features/pdf-보고서/">PDF 보고서</a></h2><p>검사 데이터에서 구조화된 현장 보고서를 생성합니다.</p><ul><li>PDF 현장 보고서 생성</li><li>결과, 사진, 위치, 메모와 서명 포함</li><li>생성된 파일 확인</li></ul></div></section></div>
 
     <section id="features" class="content-band" aria-labelledby="features-title">
       <div class="section-heading">
@@ -77,6 +78,10 @@
     </section>
 
     <section class="workflow" aria-labelledby="workflow-title"><div class="section-heading"><h2 id="workflow-title">명확한 작업 흐름</h2><p></p></div><ol><li>프로젝트를 만들고 템플릿 선택</li><li>사진을 촬영하고 결과 기록</li><li>보고서를 생성하고 공유 또는 전송</li></ol></section>
+
+    <section id="screenshots" class="screenshot-band" aria-labelledby="screenshots-title"><div class="section-heading"><h2 id="screenshots-title">앱 화면 보기</h2><p>현재 프로젝트의 실제 화면입니다.</p></div><div class="screenshot-list" tabindex="0" role="region" aria-labelledby="screenshots-title"><figure><img src="../assets/screenshots/01-01-professional-site-inspection.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/02-02-capture-everything.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/03-03-build-professional-reports.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/04-04-works-offline.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure><figure><img src="../assets/screenshots/05-05-share-anywhere.png" alt="프로젝트와 검사 진행률 관리" loading="lazy"><figcaption>프로젝트와 검사 진행률 관리</figcaption></figure></div></section>
+
+    <section id="demo" class="demo-section"><div class="demo-copy"><h2>SiteReport 소개 영상 보기</h2><p>SiteReport가 현장 증거를 공유 가능한 보고서로 정리하는 과정을 확인해 보세요.</p></div><figure class="hero-media hero-video"><a class="hero-video-poster" href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube에서 보기: SiteReport 소개 영상"><img src="../assets/youtube-poster.jpg" alt="SiteReport 소개 영상" width="1280" height="720"><span class="video-play-icon" aria-hidden="true"></span></a><figcaption>SiteReport가 현장 증거를 공유 가능한 보고서로 정리하는 과정을 확인해 보세요.<br><a href="https://www.youtube.com/watch?v=w5BVcThNpvQ" target="_blank" rel="noopener noreferrer">YouTube에서 보기</a></figcaption></figure></section>
 
 
 
